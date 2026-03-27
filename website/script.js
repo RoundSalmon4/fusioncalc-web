@@ -334,28 +334,10 @@ function renderDamageTable(effectiveness) {
     return html;
 }
 
-const FORM_PREFIXES = [
-    'Mega', 'Primal', 'Gigantamax', 'Gmax', 'Alolan', 'Galarian', 'Hisuian',
-    'Paldean', 'Zen', 'Blade', 'Origin', 'Therian', 'Incarnate', 'Average',
-    'Midnight', 'Dusk', 'Dawn', 'Summer', 'Winter', 'Spring', 'Autumn',
-    'Male', 'Female', 'Baile', 'Aria', 'Pom', 'Pom Pentagon', 'Sensu',
-    'Mow', 'Wash', 'Fan', 'Frost', 'Heat', 'Shock', 'Burn', 'Chill', 'Drench',
-    'Active', 'Eternamax', 'Ultra', 'Rider', 'Busted', 'Confined', 'Unbound',
-    'School', 'Gulping', 'Gorging', 'P公约限', 'Roken', 'Jer', 'Kris', 'Hero',
-    'Dummy', 'Unknown'
-];
-
-function hasSprite(pokemon, name) {
-    if (!pokemon || !pokemon.id) return false;
-    for (const prefix of FORM_PREFIXES) {
-        if (name.startsWith(prefix)) return false;
-    }
-    return true;
-}
-
 function getPokemonSprite(pokemon, name) {
-    if (!pokemon || !pokemon.id || !hasSprite(pokemon, name)) return '';
-    return `<div class="pokemon-sprite"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}"></div>`;
+    if (!pokemon || !pokemon.id) return '';
+    const imgId = pokemon.img || pokemon.id;
+    return `<div class="pokemon-sprite"><img src="images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'"></div>`;
 }
 
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
