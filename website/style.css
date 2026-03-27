@@ -134,6 +134,14 @@ h4 {
     padding: 20px;
 }
 
+/* Top Buttons Bar */
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
 .btn-primary, .btn-secondary, .btn-danger {
     padding: 12px 24px;
     border: none;
