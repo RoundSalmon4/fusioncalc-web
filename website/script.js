@@ -598,11 +598,13 @@ function selectPokemon(name, listId) {
     if (panel === 'p1') {
         selectedP1 = pokemonData[name];
         selectedP1.name = name;
+        document.getElementById('title-p1').textContent = name;
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
         setupEvolutionLinks('p1');
     } else {
         selectedP2 = pokemonData[name];
         selectedP2.name = name;
+        document.getElementById('title-p2').textContent = name;
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
         populateActiveAbilityDropdown(selectedP2);
@@ -625,11 +627,13 @@ function setupEvolutionLinks(panel) {
                 if (panel === 'p1') {
                     selectedP1 = pokemonData[name];
                     selectedP1.name = name;
+                    document.getElementById('title-p1').textContent = name;
                     document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
                     setupEvolutionLinks('p1');
                 } else {
                     selectedP2 = pokemonData[name];
                     selectedP2.name = name;
+                    document.getElementById('title-p2').textContent = name;
                     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
                     setupEvolutionLinks('p2');
                     populateActiveAbilityDropdown(selectedP2);
@@ -696,6 +700,8 @@ function swap() {
     selectedP1 = selectedP2;
     selectedP2 = temp;
     
+    document.getElementById('title-p1').textContent = selectedP1 ? selectedP1.name : 'Pokémon 1';
+    document.getElementById('title-p2').textContent = selectedP2 ? selectedP2.name : 'Pokémon 2';
     document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
     populateList('list-p1', document.getElementById('search-p1').value);
@@ -708,6 +714,8 @@ function clearSelections() {
     selectedP1 = null;
     selectedP2 = null;
     hasFusion = false;
+    document.getElementById('title-p1').textContent = 'Pokémon 1';
+    document.getElementById('title-p2').textContent = 'Pokémon 2';
     document.getElementById('details-p1').innerHTML = '';
     document.getElementById('details-p2').innerHTML = '';
     document.getElementById('fusion-details').innerHTML = '';

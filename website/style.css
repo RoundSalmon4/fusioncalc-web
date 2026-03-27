@@ -114,6 +114,49 @@ h4 {
     margin-bottom: 10px;
 }
 
+.fusion-column {
+    background: #3a3a3a;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fusion-top {
+    flex: 1;
+}
+
+.fusion-top h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fusion-notes {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border-top: 1px solid #555;
+}
+
+.fusion-notes h4 {
+    color: #ffe66d;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.fusion-notes ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.fusion-notes li {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #ccc;
+}
+
 .pokemon-id {
     color: #888;
     font-size: 12px;
