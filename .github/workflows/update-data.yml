@@ -1,4 +1,4 @@
-name: Build pokemon_data.csv
+name: Build pokemon_data.csv and sync sprites
 
 on:
   workflow_dispatch: {}
@@ -32,6 +32,16 @@ jobs:
             https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/filter_data.js
           curl -fL -o website/lang/en.js \
             https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/lang/en.js
+
+          # Download sprites from PokeRogue-Dex images folder
+          # Using sparse-checkout to only get images directory
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/Sandstormer/PokeRogue-Dex.git temp-pokedex
+          cd temp-pokedex
+          git sparse-checkout set images
+          # Copy images to website (use rsync to handle large number of files efficiently)
+          rsync -a --delete images/ ../website/images/
+          cd ..
+          rm -rf temp-pokedex
 
           # Record the source version (Dex main SHA)
           DEX_SHA="$(git ls-remote https://github.com/Sandstormer/PokeRogue-Dex.git refs/heads/main | awk '{print $1}')"
@@ -190,18 +200,21 @@ jobs:
             if (Number.isFinite(Number(rec?.id))) idVal = Number(rec.id);
             else if (Number.isFinite(Number(rec?.dex))) idVal = Number(rec.dex);
 
+            // Get sprite identifier from img field (e.g., "1", "3-mega", "25-partner")
+            const imgVal = rec.img || String(idVal);
+
             rows.push({
               name,
               id: idVal,
               hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd, speed: spe,
               bst, type1, type2,
-              abilities, passive, 'evolution line': evoLine
+              abilities, passive, 'evolution line': evoLine, img: imgVal
             });
           });
 
           // ---- Write CSV ----
           const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
-                        'type1','type2','abilities','passive','evolution line'];
+                        'type1','type2','abilities','passive','evolution line','img'];
 
           function esc(v) {
             if (v === null || v === undefined) v = '';
@@ -229,7 +242,8 @@ jobs:
               type2: r.type2,
               abilities: r.abilities,
               passive: r.passive,
-              evolution: r['evolution line']
+              evolution: r['evolution line'],
+              img: r.img
             };
           }
           fs.writeFileSync('website/pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
@@ -240,12 +254,12 @@ jobs:
         run: |
           echo "PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}" > data_version.txt
 
-      - name: Commit updated data + version (if changed)
+      - name: Commit updated data + version + sprites (if changed)
         run: |
           set -euxo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add pokemon_data.csv data_version.txt website/pokemon_data.js
+          git add pokemon_data.csv data_version.txt website/pokemon_data.js website/images
           if ! git diff --cached --quiet; then
             git commit -m "chore(data): auto-update from PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}"
             git push
