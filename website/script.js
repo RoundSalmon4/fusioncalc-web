@@ -334,22 +334,28 @@ function renderDamageTable(effectiveness) {
     return html;
 }
 
-function hasUniqueId(pokemon) {
+const FORM_PREFIXES = [
+    'Mega', 'Primal', 'Gigantamax', 'Gmax', 'Alolan', 'Galarian', 'Hisuian',
+    'Paldean', 'Zen', 'Blade', 'Origin', 'Therian', 'Incarnate', 'Average',
+    'Midnight', 'Dusk', 'Dawn', 'Summer', 'Winter', 'Spring', 'Autumn',
+    'Male', 'Female', 'Baile', 'Aria', 'Pom', 'Pom Pentagon', 'Sensu',
+    'Mow', 'Wash', 'Fan', 'Frost', 'Heat', 'Shock', 'Burn', 'Chill', 'Drench',
+    'Active', 'Eternamax', 'Ultra', 'Rider', 'Busted', 'Confined', 'Unbound',
+    'School', 'Gulping', 'Gorging', 'P公约限', 'Roken', 'Jer', 'Kris', 'Hero',
+    'Dummy', 'Unknown'
+];
+
+function hasSprite(pokemon, name) {
     if (!pokemon || !pokemon.id) return false;
-    const pokeId = pokemon.id;
-    let count = 0;
-    for (const name in pokemonData) {
-        if (pokemonData[name].id === pokeId) {
-            count++;
-            if (count > 1) return false;
-        }
+    for (const prefix of FORM_PREFIXES) {
+        if (name.startsWith(prefix)) return false;
     }
     return true;
 }
 
-function getPokemonSprite(pokemon) {
-    if (!pokemon || !pokemon.id || !hasUniqueId(pokemon)) return '';
-    return `<div class="pokemon-sprite"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name || 'Pokemon'}"></div>`;
+function getPokemonSprite(pokemon, name) {
+    if (!pokemon || !pokemon.id || !hasSprite(pokemon, name)) return '';
+    return `<div class="pokemon-sprite"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}"></div>`;
 }
 
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
@@ -367,9 +373,10 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     let html = '';
     
-    // Sprite (only for Pokemon 1 and 2 with unique IDs)
+    // Sprite (only for Pokemon 1 and 2 - excluded for forms like Mega, Gigantamax, etc)
     if (!isFusion && (panelKey === 'p1' || panelKey === 'p2')) {
-        html += getPokemonSprite(pokemon);
+        const name = pokemon.name || '';
+        html += getPokemonSprite(pokemon, name);
     }
     
     // Type
