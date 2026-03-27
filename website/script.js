@@ -334,6 +334,24 @@ function renderDamageTable(effectiveness) {
     return html;
 }
 
+function hasUniqueId(pokemon) {
+    if (!pokemon || !pokemon.id) return false;
+    const pokeId = pokemon.id;
+    let count = 0;
+    for (const name in pokemonData) {
+        if (pokemonData[name].id === pokeId) {
+            count++;
+            if (count > 1) return false;
+        }
+    }
+    return true;
+}
+
+function getPokemonSprite(pokemon) {
+    if (!pokemon || !pokemon.id || !hasUniqueId(pokemon)) return '';
+    return `<div class="pokemon-sprite"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name || 'Pokemon'}"></div>`;
+}
+
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (!pokemon) return '<p>Select a Pokémon...</p>';
     
@@ -348,6 +366,11 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     const hiddenAbility = abilities[1] || '';
     
     let html = '';
+    
+    // Sprite (only for Pokemon 1 and 2 with unique IDs)
+    if (!isFusion && (panelKey === 'p1' || panelKey === 'p2')) {
+        html += getPokemonSprite(pokemon);
+    }
     
     // Type
     if (opts.type) {
