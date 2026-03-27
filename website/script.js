@@ -588,10 +588,12 @@ function selectPokemon(name, listId) {
     
     if (panel === 'p1') {
         selectedP1 = pokemonData[name];
+        selectedP1.name = name;
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
         setupEvolutionLinks('p1');
     } else {
         selectedP2 = pokemonData[name];
+        selectedP2.name = name;
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
         populateActiveAbilityDropdown(selectedP2);
@@ -605,18 +607,30 @@ function selectPokemon(name, listId) {
 function setupEvolutionLinks(panel) {
     const container = panel === 'p1' ? document.getElementById('details-p1') : document.getElementById('details-p2');
     container.querySelectorAll('.evo-species').forEach(el => {
-        el.addEventListener('click', () => {
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
             const name = el.dataset.name;
             if (pokemonData[name]) {
                 if (panel === 'p1') {
                     selectedP1 = pokemonData[name];
+                    selectedP1.name = name;
                     document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
+                    setupEvolutionLinks('p1');
                     populateList('list-p1', document.getElementById('search-p1').value);
+                    setStatus(`Selected ${name}`);
                 } else {
                     selectedP2 = pokemonData[name];
+                    selectedP2.name = name;
                     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
+                    setupEvolutionLinks('p2');
+                    populateActiveAbilityDropdown(selectedP2);
                     populateList('list-p2', document.getElementById('search-p2').value);
+                    setStatus(`Selected ${name}`);
                 }
+                hasFusion = false;
+                document.getElementById('fusion-details').innerHTML = '';
+            } else {
+                setStatus(`Pokemon ${name} not found in data`);
             }
         });
     });
