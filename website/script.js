@@ -138,7 +138,7 @@ function pokemonPassesFilters(stats) {
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
-    fusion: { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, quick_compare: true, damage: true }
+    fusion: { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
 };
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
@@ -482,51 +482,6 @@ function renderFusionDetails(p1, p2) {
         html += `<div class="stat-line"><span class="stat-label">Diff from ${p2.name}:</span><span class="stat-value">${formatNumber(fusedBST - p2BST)}</span></div>`;
     }
     
-    // Quick Compare
-    if (opts.quick_compare) {
-        const targetKey = document.getElementById('quickCompareTarget') ? document.getElementById('quickCompareTarget').value : 'p2';
-        const target = targetKey === 'p1' ? p1 : p2;
-        const targetName = target.name || targetKey;
-        
-        const effFused = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
-        const effBase = calculateTypeEffectiveness(target.type1, target.type2);
-        
-        const getGroups = (eff) => {
-            const g = { 0: new Set(), 0.25: new Set(), 0.5: new Set(), 1: new Set(), 2: new Set(), 4: new Set() };
-            for (const [t, v] of Object.entries(eff)) {
-                if (v <= 0) g[0].add(t);
-                else if (v <= 0.25) g[0.25].add(t);
-                else if (v <= 0.5) g[0.5].add(t);
-                else if (v >= 4) g[4].add(t);
-                else if (v >= 2) g[2].add(t);
-                else g[1].add(t);
-            }
-            return g;
-        };
-        
-        const gf = getGroups(effFused);
-        const gb = getGroups(effBase);
-        
-        const newImm = [...gf[0]].filter(x => !gb[0].has(x)).sort();
-        const lostImm = [...gb[0]].filter(x => !gf[0].has(x)).sort();
-        const newWk = [...gf[2], ...gf[4]].filter(x => !gb[2].has(x) && !gb[4].has(x)).sort();
-        const lostWk = [...gb[2], ...gb[4]].filter(x => !gf[2].has(x) && !gf[4].has(x)).sort();
-        const newRes = [...gf[0.25], ...gf[0.5]].filter(x => !gb[0.25].has(x) && !gb[0.5].has(x)).sort();
-        const lostRes = [...gb[0.25], ...gb[0.5]].filter(x => !gf[0.25].has(x) && !gf[0.5].has(x)).sort();
-        
-        html += '<div class="quick-compare"><h4>Quick Compare vs ' + targetName + ':</h4>';
-        if (newImm.length) html += `<div>New immunities: ${newImm.join(', ')}</div>`;
-        if (lostImm.length) html += `<div>Lost immunities: ${lostImm.join(', ')}</div>`;
-        if (newWk.length) html += `<div>Gained weaknesses (≥2x): ${newWk.join(', ')}</div>`;
-        if (lostWk.length) html += `<div>Lost weaknesses (≥2x): ${lostWk.join(', ')}</div>`;
-        if (newRes.length) html += `<div>Gained resistances (≤1/2x): ${newRes.join(', ')}</div>`;
-        if (lostRes.length) html += `<div>Lost resistances (≤1/2x): ${lostRes.join(', ')}</div>`;
-        if (!newImm.length && !lostImm.length && !newWk.length && !lostWk.length && !newRes.length && !lostRes.length) {
-            html += '<div>No changes in immunities/weaknesses/resistances.</div>';
-        }
-        html += '</div>';
-    }
-    
     // Damage Taken
     if (opts.damage) {
         const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
@@ -614,24 +569,31 @@ function setupEvolutionLinks(panel) {
             e.stopPropagation();
             const name = el.dataset.name;
             if (pokemonData[name]) {
+                const listId = panel === 'p1' ? 'list-p1' : 'list-p2';
+                
                 if (panel === 'p1') {
                     selectedP1 = pokemonData[name];
                     selectedP1.name = name;
                     document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
                     setupEvolutionLinks('p1');
-                    populateList('list-p1', document.getElementById('search-p1').value);
-                    setStatus(`Selected ${name}`);
                 } else {
                     selectedP2 = pokemonData[name];
                     selectedP2.name = name;
                     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
                     setupEvolutionLinks('p2');
                     populateActiveAbilityDropdown(selectedP2);
-                    populateList('list-p2', document.getElementById('search-p2').value);
-                    setStatus(`Selected ${name}`);
                 }
-                hasFusion = false;
-                document.getElementById('fusion-details').innerHTML = '';
+                
+                // Populate and highlight in list
+                populateList(listId, name);
+                document.querySelectorAll(`#${listId} .pokemon-list-item`).forEach(item => {
+                    if (item.textContent === name) {
+                        item.classList.add('selected');
+                        item.scrollIntoView({ block: 'center' });
+                    }
+                });
+                
+                setStatus(`Selected ${name}`);
             } else {
                 setStatus(`Pokemon ${name} not found in data`);
             }
@@ -870,11 +832,6 @@ function init() {
     
     // Active ability selector
     document.getElementById('activeAbility').addEventListener('change', () => {
-        if (hasFusion) fuse();
-    });
-    
-    // Quick Compare target selector
-    document.getElementById('quickCompareTarget').addEventListener('change', () => {
         if (hasFusion) fuse();
     });
     
