@@ -337,7 +337,7 @@ function renderDamageTable(effectiveness) {
 function getPokemonSprite(pokemon, name) {
     if (!pokemon || !pokemon.id) return '';
     const imgId = pokemon.img || pokemon.id;
-    return `<div class="pokemon-sprite"><img src="images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'"></div>`;
+    return `<div class="pokemon-sprite"><img src="website/images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');"></div>`;
 }
 
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
