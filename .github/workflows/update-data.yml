@@ -1,0 +1,251 @@
+name: Build pokemon_data.csv
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 9 * * *"   # Daily 09:00 UTC; adjust as needed
+
+permissions:
+  contents: write
+
+jobs:
+  build-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v6
+
+      - name: Fetch SearchDex data files (PokeRogue-Dex)
+        id: fetch
+        run: |
+          set -euxo pipefail
+          mkdir -p website/lang
+
+          # Download SearchDex data (generated from the PokéRogue game source)
+          curl -fL -o website/pokedex_data.js \
+            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/pokedex_data.js
+          curl -fL -o website/filter_data.js \
+            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/filter_data.js
+          curl -fL -o website/lang/en.js \
+            https://raw.githubusercontent.com/Sandstormer/PokeRogue-Dex/main/lang/en.js
+
+          # Record the source version (Dex main SHA)
+          DEX_SHA="$(git ls-remote https://github.com/Sandstormer/PokeRogue-Dex.git refs/heads/main | awk '{print $1}')"
+          echo "dex_sha=$DEX_SHA" >> "$GITHUB_OUTPUT"
+          echo "dex_short=${DEX_SHA:0:7}" >> "$GITHUB_OUTPUT"
+
+      - name: Convert JS -> CSV (Node VM sandbox; shared context with stubs)
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+
+          const PO = 'website/pokedex_data.js';
+          const FI = 'website/filter_data.js';
+          const LA = 'website/lang/en.js';
+          const OUT = 'pokemon_data.csv';
+
+          function stripExport(txt) {
+            return txt.replace(/\bexport\s+(default\s+)?/g, '').trim();
+          }
+
+          function loadLiteralFromFile(path) {
+            // Read file, drop 'export' or 'export default' and optional LHS, keep RHS literal.
+            let txt = fs.readFileSync(path, 'utf8');
+            txt = stripExport(txt);
+            const m = txt.match(/=\s*/);
+            if (m) txt = txt.slice(m.index + m[0].length).trim(); // keep RHS only when present
+            txt = txt.replace(/;\s*$/, ''); // strip trailing semicolon
+            // Evaluate JS literal safely in a new context and return the value
+            return vm.runInNewContext('(' + txt + ')', Object.create(null), { timeout: 3000 });
+          }
+
+          // ---- Shared context so scripts can "see" each other (e.g., fidThreshold, col) ----
+          // Minimal "window" plus a permissive "col" stub for help-text templates
+          const colProxy = new Proxy({}, { get: () => '#cccccc' });
+          const ctx = { window: {}, col: colProxy };
+          ctx.window.col = ctx.col;   // some builds reference window.col
+          vm.createContext(ctx);
+
+          // 1) Evaluate filter_data.js first (defines fidThreshold, etc.)
+          const filterCode = stripExport(fs.readFileSync(FI, 'utf8'));
+          vm.runInContext(filterCode, ctx, { timeout: 7000 });
+
+          // Mirror fidThreshold to window if needed by lang templates
+          if (Array.isArray(ctx.fidThreshold)) ctx.window.fidThreshold = ctx.fidThreshold;
+
+          // 2) Evaluate lang/en.js in the SAME context (uses fidThreshold and col)
+          const langCode = stripExport(fs.readFileSync(LA, 'utf8'));
+          vm.runInContext(langCode, ctx, { timeout: 7000 });
+
+          // Extract arrays from context (some builds export on window, others as globals)
+          const speciesNames = Array.isArray(ctx.speciesNames) ? ctx.speciesNames
+                                  : Array.isArray(ctx.window.speciesNames) ? ctx.window.speciesNames : [];
+          const fidToName    = Array.isArray(ctx.fidToName) ? ctx.fidToName
+                                  : Array.isArray(ctx.window.fidToName) ? ctx.window.fidToName : [];
+          const fidThreshold = Array.isArray(ctx.fidThreshold) ? ctx.fidThreshold
+                                  : Array.isArray(ctx.window.fidThreshold) ? ctx.window.fidThreshold : [];
+
+          if (!Array.isArray(speciesNames) || !Array.isArray(fidToName)) {
+            throw new Error('Failed to extract speciesNames/fidToName from lang/en.js');
+          }
+
+          // 3) Load pokedex_data.js as a pure literal
+          const pokedex = loadLiteralFromFile(PO);
+
+          // ---- Build maps ----
+          const abilityUpper = Array.isArray(fidThreshold) && fidThreshold.length > 1
+            ? Number(fidThreshold[1]) : null;
+
+          const speciesMap = {};
+          for (let i = 0; i < speciesNames.length; i++) {
+            const nm = speciesNames[i];
+            if (typeof nm === 'string' && nm) speciesMap[i + 1] = nm; // index base 1
+          }
+
+          const typeMap = {};
+          const abMap   = {};
+          if (fidToName.length >= 18) {
+            for (let i = 0; i < 18; i++) {
+              const v = fidToName[i];
+              if (typeof v === 'string' && v) typeMap[i] = v;
+            }
+            const end = abilityUpper && Number.isFinite(abilityUpper)
+              ? Math.min(abilityUpper, fidToName.length)
+              : fidToName.length;
+            for (let i = 18; i < end; i++) {
+              const v = fidToName[i];
+              if (typeof v === 'string' && v) abMap[i] = v;
+            }
+          }
+
+          // ---- Families for evolution line ----
+          const families = new Map(); // fa -> [ [fsSort, idx, name], ... ]
+          pokedex.forEach((rec, idx0) => {
+            const idx = idx0 + 1;
+            if (!rec || typeof rec !== 'object') return;
+            const fa = rec.fa;
+            const fsVal = rec.fs;
+            const name = speciesMap[idx] || `Species #${idx}`;
+            if (Number.isInteger(fa)) {
+              const arr = families.get(fa) || [];
+              arr.push([Number.isInteger(fsVal) ? fsVal : 0, idx, name]);
+              families.set(fa, arr);
+            }
+          });
+
+          // ---- Helpers ----
+          function num(v, d=0) { const n = Number(v); return Number.isFinite(n) ? n : d; }
+
+          // ---- Build rows ----
+          const rows = [];
+          pokedex.forEach((rec, idx0) => {
+            const idx = idx0 + 1;
+            if (!rec || typeof rec !== 'object') return;
+            const name = speciesMap[idx] || `Species #${idx}`;
+
+            const hp  = num(rec.hp);
+            const atk = num(rec.atk);
+            const dfn = num(rec.def);
+            const spa = num(rec.spa);
+            const spd = num(rec.spd);
+            const spe = num(rec.spe);
+            const bst = Number.isFinite(Number(rec?.bst)) ? Number(rec.bst) : (hp + atk + dfn + spa + spd + spe);
+
+            const t1  = rec.t1; const t2 = rec.t2;
+            let type1 = (t1 != null && typeMap[Number(t1)]) ? typeMap[Number(t1)] : '';
+            let type2 = (t2 != null && typeMap[Number(t2)]) ? typeMap[Number(t2)] : '';
+            if (type2 === type1) type2 = '';
+
+            const abCodes = [];
+            for (const k of ['a1','a2','a3','ha']) {
+              if (k in rec && rec[k] != null && Number.isFinite(Number(rec[k]))) {
+                abCodes.push(Number(rec[k]));
+              }
+            }
+            const abilities = abCodes.map(c => abMap[c] || String(c)).join(', ');
+
+            const passiveCode = rec.pa;
+            const passive = (passiveCode != null && abMap[Number(passiveCode)]) ? abMap[Number(passiveCode)] : '';
+
+            // evolution line
+            let evoLine = '';
+            const fa = rec.fa;
+            if (Number.isInteger(fa) && families.has(fa)) {
+              const fam = families.get(fa).slice().sort((a,b)=> (a[0]-b[0]) || (a[1]-b[1]));
+              const names = [];
+              const seen = new Set();
+              for (const [, , n] of fam) {
+                if (!seen.has(n)) { names.push(n); seen.add(n); }
+              }
+              evoLine = names.join(', ');
+            }
+
+            let idVal = 0;
+            if (Number.isFinite(Number(rec?.id))) idVal = Number(rec.id);
+            else if (Number.isFinite(Number(rec?.dex))) idVal = Number(rec.dex);
+
+            rows.push({
+              name,
+              id: idVal,
+              hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd, speed: spe,
+              bst, type1, type2,
+              abilities, passive, 'evolution line': evoLine
+            });
+          });
+
+          // ---- Write CSV ----
+          const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
+                        'type1','type2','abilities','passive','evolution line'];
+
+          function esc(v) {
+            if (v === null || v === undefined) v = '';
+            v = String(v);
+            return /[",\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v;
+          }
+          const lines = [cols.join(',')];
+          for (const r of rows) lines.push(cols.map(c => esc(r[c])).join(','));
+          fs.writeFileSync(OUT, lines.join('\n'), 'utf8');
+          console.log('Wrote', OUT, 'rows=', rows.length);
+
+          // ---- Also write JSON for web version ----
+          const dataObj = {};
+          for (const r of rows) {
+            dataObj[r.name] = {
+              id: r.id,
+              hp: r.hp,
+              attack: r.attack,
+              defense: r.defense,
+              spAttack: r.spAttack,
+              spDefense: r.spDefense,
+              speed: r.speed,
+              bst: r.bst,
+              type1: r.type1,
+              type2: r.type2,
+              abilities: r.abilities,
+              passive: r.passive,
+              evolution: r['evolution line']
+            };
+          }
+          fs.writeFileSync('website/pokemon_data.js', 'const POKEMON_DATA = ' + JSON.stringify(dataObj, null, 2) + ';\n', 'utf8');
+          console.log('Wrote website/pokemon_data.js');
+          NODE
+
+      - name: Write data_version.txt (Dex commit)
+        run: |
+          echo "PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}" > data_version.txt
+
+      - name: Commit updated data + version (if changed)
+        run: |
+          set -euxo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pokemon_data.csv data_version.txt website/pokemon_data.js
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): auto-update from PokeRogue-Dex ${{ steps.fetch.outputs.dex_short }}"
+            git push
+          else
+            echo "No changes."
+          fi
