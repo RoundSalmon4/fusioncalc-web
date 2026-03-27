@@ -32,7 +32,7 @@
 
         <div class="main-content three-panel">
             <div class="pokemon-column">
-                <h3>Pokémon 1</h3>
+                <h3 id="title-p1">Pokémon 1</h3>
                 <input type="text" id="search-p1" class="search-input" placeholder="Search Pokémon...">
                 <div class="nature-selector">
                     <label for="activeNature">Active Nature:</label>
@@ -45,13 +45,23 @@
                 <div class="pokemon-id" id="id-p1"></div>
             </div>
 
-            <div class="pokemon-column">
-                <h3>Fusion Result</h3>
-                <div class="pokemon-details fusion-details" id="fusion-details"></div>
+            <div class="fusion-column">
+                <div class="fusion-top">
+                    <h3>Fusion Result</h3>
+                    <div class="pokemon-details fusion-details" id="fusion-details"></div>
+                </div>
+                <div class="fusion-notes">
+                    <h4>Fusion Mechanics</h4>
+                    <ul>
+                        <li>Use <strong>DNA Splicer</strong> on 2 non-spliced Pokémon. First = Primary, Second = Sacrifice.</li>
+                        <li>Unfuse free from party menu (not during wave rewards). Sacrifice is <strong>LOST</strong> when unsplicing.</li>
+                        <li>After unsplicing: Typing, Ability, and Luck return to Primary. Splice again with another DNA Splicer.</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="pokemon-column">
-                <h3>Pokémon 2</h3>
+                <h3 id="title-p2">Pokémon 2</h3>
                 <input type="text" id="search-p2" class="search-input" placeholder="Search Pokémon...">
                 <div class="ability-selector">
                     <label for="activeAbility">Active Ability:</label>
