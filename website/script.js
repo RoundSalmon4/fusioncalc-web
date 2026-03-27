@@ -9,6 +9,132 @@ let selectedP1 = null;
 let selectedP2 = null;
 let hasFusion = false;
 
+// Generation boundaries and overrides (from fusioncalc.py)
+const GEN_BOUNDARIES = [[1,151],[152,251],[252,386],[387,493],[494,649],[650,721],[722,809],[810,905],[906,1025]];
+const GEN_OVERRIDES = {
+    2670: 6, 2019: 7, 2020: 7, 2027: 7, 2028: 7, 2037: 7, 2038: 7, 2050: 7, 2051: 7, 2052: 7, 2053: 7, 2074: 7, 2075: 7, 2076: 7, 2088: 7, 2089: 7,
+    4052: 8, 863: 8, 4077: 8, 4078: 8, 4079: 8, 4080: 8, 4199: 8, 4083: 8, 865: 8, 4144: 8, 4145: 8, 4146: 8, 4222: 8, 864: 8, 4263: 8, 4264: 8, 862: 8, 4554: 8, 4555: 8, 4562: 8, 867: 8, 4618: 8, 6058: 8, 6059: 8, 6100: 8, 6101: 8, 6211: 8, 904: 8, 6215: 8, 903: 8, 6570: 8, 6571: 8,
+    8128: 9, 8194: 9, 980: 9, 8901: 9
+};
+
+function idToGen(pokeId) {
+    if (GEN_OVERRIDES[pokeId]) return GEN_OVERRIDES[pokeId];
+    for (let i = 0; i < GEN_BOUNDARIES.length; i++) {
+        if (GEN_BOUNDARIES[i][0] <= pokeId && pokeId <= GEN_BOUNDARIES[i][1]) return i + 1;
+    }
+    return 9;
+}
+
+const ALL_TYPES = ['Normal','Fire','Water','Grass','Electric','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
+
+const FILTER_STATE = {
+    enabled: false,
+    scope: 'both',
+    sortKey: 'ID',
+    sortAsc: true,
+    genFilter: 0,
+    typeFilter: { mode: 'any', typeA: '', typeB: '' },
+    damageFilter: { on: false, typeName: '', op: '>=', value: 1.0 },
+    rules: {
+        'HP': { on: false, op: '>=', value: 0 },
+        'Attack': { on: false, op: '>=', value: 0 },
+        'Defense': { on: false, op: '>=', value: 0 },
+        'Sp. Atk': { on: false, op: '>=', value: 0 },
+        'Sp. Def': { on: false, op: '>=', value: 0 },
+        'Speed': { on: false, op: '>=', value: 0 },
+        'BST': { on: false, op: '>=', value: 0 },
+        'ID': { on: false, op: '>=', value: 0 }
+    }
+};
+
+const STAT_KEYMAP = {
+    'HP': 'HP', 'Attack': 'Attack', 'Defense': 'Defense',
+    'Sp. Atk': 'Sp. Atk', 'Sp. Def': 'Sp. Def',
+    'Speed': 'Speed', 'BST': 'bst', 'ID': 'id'
+};
+
+const OPS = {
+    '>': (a, b) => a > b,
+    '>=': (a, b) => a >= b,
+    '<': (a, b) => a < b,
+    '<=': (a, b) => a <= b,
+    '=': (a, b) => a === b
+};
+
+function pokemonPassesFilters(stats) {
+    if (!FILTER_STATE.enabled) return true;
+    
+    const flipOn = document.getElementById('flipStatChallenge').checked;
+    
+    // Generation filter
+    if (FILTER_STATE.genFilter !== 0) {
+        const pokeGen = idToGen(parseInt(stats.id) || 0);
+        if (pokeGen !== FILTER_STATE.genFilter) return false;
+    }
+    
+    // Stat filters
+    for (const [stat, rule] of Object.entries(FILTER_STATE.rules)) {
+        if (!rule.on) continue;
+        const op = OPS[rule.op];
+        if (!op) return false;
+        
+        let lookupKey = STAT_KEYMAP[stat];
+        if (flipOn && FLIP_MAP[stat]) {
+            lookupKey = STAT_KEYMAP[FLIP_MAP[stat]];
+        }
+        
+        const left = parseFloat(stats[lookupKey] || 0);
+        const right = parseFloat(rule.value);
+        if (!op(left, right)) return false;
+    }
+    
+    // Type filter
+    const tf = FILTER_STATE.typeFilter;
+    if (tf.mode !== 'any') {
+        const t1 = (stats.type1 || '').toLowerCase();
+        const t2 = (stats.type2 || '').toLowerCase();
+        const ta = (tf.typeA || '').toLowerCase();
+        const tb = (tf.typeB || '').toLowerCase();
+        const t2Empty = !t2 || t2 === t1;
+        
+        if (tf.mode === 'mono') {
+            if (ta && (t1 !== ta || !t2Empty)) return false;
+        } else if (tf.mode === 'dual') {
+            if (ta && tb) {
+                if (!((t1 === ta && t2 === tb) || (t1 === tb && t2 === ta))) return false;
+            } else if (ta) {
+                if (!(t1 === ta && t2Empty)) return false;
+            }
+        } else if (tf.mode === 'a_or_b') {
+            const hasA = !ta || t1 === ta || t2 === ta;
+            const hasB = !tb || t1 === tb || t2 === tb;
+            if (!hasA && !hasB) return false;
+        }
+    }
+    
+    // Damage filter
+    const df = FILTER_STATE.damageFilter;
+    if (df.on && df.typeName) {
+        const invOn = document.getElementById('inverseBattle').checked;
+        const eff = calculateTypeEffectiveness(stats.type1, stats.type2);
+        let dmg = parseFloat(eff[df.typeName] || 1.0);
+        
+        if (invOn) {
+            if (dmg <= 0) dmg = 2;
+            else if (dmg <= 0.25) dmg = 4;
+            else if (dmg <= 0.5) dmg = 2;
+            else if (dmg >= 4) dmg = 0.25;
+            else if (dmg >= 2) dmg = 0.5;
+            else dmg = 1;
+        }
+        
+        const op = OPS[df.op];
+        if (op && !op(dmg, parseFloat(df.value))) return false;
+    }
+    
+    return true;
+}
+
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
@@ -412,12 +538,39 @@ function populateList(listId, filter = '') {
     const list = document.getElementById(listId);
     list.innerHTML = '';
     
+    const panel = listId.replace('list-', '');
     const filterLower = filter.toLowerCase();
-    const pokemonNames = Object.keys(pokemonData).filter(name => 
-        !filterLower || name.toLowerCase().includes(filterLower)
-    ).sort((a, b) => (pokemonData[a].id || 0) - (pokemonData[b].id || 0));
     
-    for (const name of pokemonNames) {
+    let pokemonList = Object.entries(pokemonData).filter(([name, stats]) => {
+        // Name filter
+        if (filterLower && !name.toLowerCase().includes(filterLower)) return false;
+        
+        // Scope check
+        if (FILTER_STATE.scope === 'p1' && panel === 'p2') return true;
+        if (FILTER_STATE.scope === 'p2' && panel === 'p1') return true;
+        
+        // Apply filters
+        return pokemonPassesFilters(stats);
+    });
+    
+    // Sort
+    const sk = FILTER_STATE.sortKey;
+    const sa = FILTER_STATE.sortAsc;
+    pokemonList.sort((a, b) => {
+        let valA, valB;
+        if (sk === 'Name') {
+            valA = a[0].toLowerCase();
+            valB = b[0].toLowerCase();
+            return sa ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        } else {
+            const key = STAT_KEYMAP[sk];
+            valA = parseFloat(a[1][key] || 0);
+            valB = parseFloat(b[1][key] || 0);
+            return sa ? valA - valB : valB - valA;
+        }
+    });
+    
+    for (const [name] of pokemonList) {
         const item = document.createElement('div');
         item.className = 'pokemon-list-item';
         item.textContent = name;
@@ -543,6 +696,126 @@ function refreshDisplay() {
     if (hasFusion && selectedP1 && selectedP2) fuse();
 }
 
+// ===== FILTERS =====
+function toggleFiltersModal() {
+    document.getElementById('filtersModal').classList.toggle('show');
+}
+
+function initFilters() {
+    // Populate type dropdowns
+    const typeA = document.getElementById('typeA');
+    const typeB = document.getElementById('typeB');
+    const damageType = document.getElementById('damageType');
+    
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = 'Type';
+    
+    ALL_TYPES.forEach(type => {
+        typeA.add(new Option(type, type));
+        typeB.add(new Option(type, type));
+        damageType.add(new Option(type, type));
+    });
+    
+    // Generate stat filters
+    const statFiltersEl = document.getElementById('statFilters');
+    statFiltersEl.innerHTML = '';
+    
+    const statLabels = { 'HP': 'HP', 'Attack': 'Attack', 'Defense': 'Defense', 'Sp. Atk': 'Sp. Atk', 'Sp. Def': 'Sp. Def', 'Speed': 'Speed', 'BST': 'BST', 'ID': 'ID' };
+    
+    for (const [stat, label] of Object.entries(statLabels)) {
+        const row = document.createElement('div');
+        row.className = 'stat-filter-row';
+        
+        const rule = FILTER_STATE.rules[stat];
+        
+        row.innerHTML = `
+            <label>${label}</label>
+            <input type="checkbox" data-stat="${stat}" ${rule.on ? 'checked' : ''}>
+            <select data-stat="${stat}" class="stat-op">
+                <option value=">=" ${rule.op === '>=' ? 'selected' : ''}>>=</option>
+                <option value="<=" ${rule.op === '<=' ? 'selected' : ''}><=</option>
+                <option value=">" ${rule.op === '>' ? 'selected' : ''}>></option>
+                <option value="<" ${rule.op === '<' ? 'selected' : ''}><</option>
+                <option value="=" ${rule.op === '=' ? 'selected' : ''}>=</option>
+            </select>
+            <input type="number" data-stat="${stat}" value="${rule.value}" min="0" step="1">
+        `;
+        
+        statFiltersEl.appendChild(row);
+    }
+}
+
+function applyFilters() {
+    FILTER_STATE.enabled = document.getElementById('filterEnabled').checked;
+    FILTER_STATE.scope = document.getElementById('filterScope').value;
+    FILTER_STATE.sortKey = document.getElementById('sortKey').value;
+    FILTER_STATE.sortAsc = document.getElementById('sortOrder').value === 'asc';
+    FILTER_STATE.genFilter = parseInt(document.getElementById('genFilter').value);
+    
+    // Type filter
+    FILTER_STATE.typeFilter.mode = document.getElementById('typeMode').value;
+    FILTER_STATE.typeFilter.typeA = document.getElementById('typeA').value;
+    FILTER_STATE.typeFilter.typeB = document.getElementById('typeB').value;
+    
+    // Stat filters
+    document.querySelectorAll('#statFilters .stat-filter-row').forEach(row => {
+        const stat = row.querySelector('input[type="checkbox"]').dataset.stat;
+        FILTER_STATE.rules[stat].on = row.querySelector('input[type="checkbox"]').checked;
+        FILTER_STATE.rules[stat].op = row.querySelector('.stat-op').value;
+        FILTER_STATE.rules[stat].value = parseFloat(row.querySelector('input[type="number"]').value) || 0;
+    });
+    
+    // Damage filter
+    FILTER_STATE.damageFilter.on = document.getElementById('damageFilterEnabled').checked;
+    FILTER_STATE.damageFilter.typeName = document.getElementById('damageType').value;
+    FILTER_STATE.damageFilter.op = document.getElementById('damageOp').value;
+    FILTER_STATE.damageFilter.value = parseFloat(document.getElementById('damageValue').value) || 1;
+    
+    populateList('list-p1', document.getElementById('search-p1').value);
+    populateList('list-p2', document.getElementById('search-p2').value);
+    setStatus('Filters applied');
+}
+
+function clearFilters() {
+    FILTER_STATE.enabled = false;
+    FILTER_STATE.scope = 'both';
+    FILTER_STATE.sortKey = 'ID';
+    FILTER_STATE.sortAsc = true;
+    FILTER_STATE.genFilter = 0;
+    FILTER_STATE.typeFilter = { mode: 'any', typeA: '', typeB: '' };
+    FILTER_STATE.damageFilter = { on: false, typeName: '', op: '>=', value: 1.0 };
+    
+    for (const stat in FILTER_STATE.rules) {
+        FILTER_STATE.rules[stat] = { on: false, op: '>=', value: 0 };
+    }
+    
+    // Reset UI
+    document.getElementById('filterEnabled').checked = false;
+    document.getElementById('filterScope').value = 'both';
+    document.getElementById('sortKey').value = 'ID';
+    document.getElementById('sortOrder').value = 'asc';
+    document.getElementById('genFilter').value = '0';
+    document.getElementById('typeMode').value = 'any';
+    document.getElementById('typeA').value = '';
+    document.getElementById('typeB').value = '';
+    document.getElementById('damageFilterEnabled').checked = false;
+    document.getElementById('damageType').value = '';
+    document.getElementById('damageOp').value = '>=';
+    document.getElementById('damageValue').value = '1';
+    
+    document.querySelectorAll('#statFilters .stat-filter-row').forEach(row => {
+        const stat = row.querySelector('input[type="checkbox"]').dataset.stat;
+        row.querySelector('input[type="checkbox"]').checked = false;
+        row.querySelector('.stat-op').value = '>=';
+        row.querySelector('input[type="number"]').value = '0';
+    });
+    
+    populateList('list-p1', document.getElementById('search-p1').value);
+    populateList('list-p2', document.getElementById('search-p2').value);
+    setStatus('Filters cleared');
+}
+
 // ===== INITIALIZATION =====
 function init() {
     // Load data from global pokemonData
@@ -558,6 +831,9 @@ function init() {
     populateList('list-p1');
     populateList('list-p2');
     
+    // Initialize filters
+    initFilters();
+    
     // Search handlers
     document.getElementById('search-p1').addEventListener('input', (e) => populateList('list-p1', e.target.value));
     document.getElementById('search-p2').addEventListener('input', (e) => populateList('list-p2', e.target.value));
@@ -568,6 +844,12 @@ function init() {
     document.getElementById('clearBtn').addEventListener('click', clearSelections);
     document.getElementById('displayOptionsBtn').addEventListener('click', toggleDisplayOptions);
     document.getElementById('closeOptionsBtn').addEventListener('click', toggleDisplayOptions);
+    
+    // Filter handlers
+    document.getElementById('filtersBtn').addEventListener('click', toggleFiltersModal);
+    document.getElementById('closeFiltersBtn').addEventListener('click', toggleFiltersModal);
+    document.getElementById('applyFiltersBtn').addEventListener('click', applyFilters);
+    document.getElementById('clearFiltersBtn').addEventListener('click', clearFilters);
     
     // Active ability selector
     document.getElementById('activeAbility').addEventListener('change', () => {
