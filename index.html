@@ -23,25 +23,33 @@
             <button id="clearBtn" class="btn-danger">Clear</button>
         </div>
 
-        <div class="main-content">
-            <div class="pokemon-panel" id="panel-p1">
+        <div class="main-content three-panel">
+            <div class="pokemon-column">
                 <h3>Pokémon 1</h3>
                 <input type="text" id="search-p1" class="search-input" placeholder="Search Pokémon...">
                 <div class="pokemon-list" id="list-p1"></div>
                 <div class="pokemon-details" id="details-p1"></div>
+                <div class="pokemon-id" id="id-p1"></div>
             </div>
 
-            <div class="pokemon-panel" id="panel-p2">
+            <div class="pokemon-column">
+                <h3>Fusion Result</h3>
+                <div class="pokemon-details fusion-details" id="fusion-details"></div>
+            </div>
+
+            <div class="pokemon-column">
                 <h3>Pokémon 2</h3>
                 <input type="text" id="search-p2" class="search-input" placeholder="Search Pokémon...">
+                <div class="ability-selector">
+                    <label for="activeAbility">Active Ability:</label>
+                    <select id="activeAbility">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
                 <div class="pokemon-list" id="list-p2"></div>
                 <div class="pokemon-details" id="details-p2"></div>
+                <div class="pokemon-id" id="id-p2"></div>
             </div>
-        </div>
-
-        <div class="fusion-result" id="fusion-panel">
-            <h3>Fusion Result</h3>
-            <div id="fusion-details"></div>
         </div>
     </div>
 
