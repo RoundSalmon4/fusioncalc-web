@@ -11,9 +11,15 @@
         <h1 class="text-center">PokéRogue Fusion Calculator</h1>
         
         <div class="controls-bar">
-            <label><input type="checkbox" id="flipStatChallenge"> Flip Stat Challenge</label>
-            <label><input type="checkbox" id="inverseBattle"> Inverse Battle</label>
-            <label><input type="checkbox" id="passiveActive"> Passive Active</label>
+            <label title="Swap stat roles: HP↔Speed, Atk↔Sp.Def, Def↔Sp.Atk">
+                <input type="checkbox" id="flipStatChallenge"> Flip Stat Challenge
+            </label>
+            <label title="Invert type chart: weaknesses become resistances and vice versa">
+                <input type="checkbox" id="inverseBattle"> Inverse Battle
+            </label>
+            <label title="Enable Pokémon 1's Passive ability in fusion type calculations">
+                <input type="checkbox" id="passiveActive"> Passive Active
+            </label>
             <button id="displayOptionsBtn">Display Options</button>
             <button id="filtersBtn">Filters</button>
         </div>
@@ -35,13 +41,6 @@
 
             <div class="pokemon-column">
                 <h3>Fusion Result</h3>
-                <div class="quick-compare-selector">
-                    <label for="quickCompareTarget">Compare vs:</label>
-                    <select id="quickCompareTarget">
-                        <option value="p2">Pokémon 2</option>
-                        <option value="p1">Pokémon 1</option>
-                    </select>
-                </div>
                 <div class="pokemon-details fusion-details" id="fusion-details"></div>
             </div>
 
@@ -87,7 +86,6 @@
                     <label><input type="checkbox" checked data-panel="fusion" data-key="total_bst"> Total BST</label>
                     <label><input type="checkbox" checked data-panel="fusion" data-key="diffs"> Differences</label>
                     <label><input type="checkbox" checked data-panel="fusion" data-key="ability_effects"> Ability Effects</label>
-                    <label><input type="checkbox" checked data-panel="fusion" data-key="quick_compare"> Quick Compare</label>
                     <label><input type="checkbox" checked data-panel="fusion" data-key="damage"> Damage Taken</label>
                 </div>
                 <div class="options-column">
