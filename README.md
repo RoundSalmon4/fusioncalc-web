@@ -1,20 +1,42 @@
-# Pokerogue Fusion
+# PokéRogue Fusion Calculator
 
-This project is a Pokémon Fusion application. It allows users to select two Pokémon and fuse them together, displaying their combined stats and type effectiveness.
+A web-based Pokémon fusion calculator that combines two Pokémon and displays their fused stats, types, and type effectiveness calculations.
 
-## How to run
+This project is a port of the original Python/Tkinter application (fusioncalc.py) to a web-based interface.
 
-1. Clone the repository.
-2. Navigate to the project directory.
-3. Install dependencies with `npm install`.
-4. Start the application with `npm start`.
+## Features
 
-## Technologies Used
+- Select two Pokémon and fuse them
+- View combined stats (BST averaged)
+- Type effectiveness calculations including:
+  - Dual-type calculations
+  - Flip Stat Challenge mode
+  - Inverse Battle mode
+  - Passive ability effects
+- Filter Pokémon by:
+  - Generation
+  - Type
+  - Stats (HP, Attack, Defense, etc.)
+  - Damage taken from specific types
+- Sort by ID, BST, Name, or individual stats
+- Display options to customize shown information
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- jQuery
-- Axios
-- Select2
+## Usage
+
+Simply open `index.html` in a web browser. No build step or server required.
+
+The application loads Pokémon data from `website/pokemon_data.js`, which is automatically updated daily via GitHub Actions.
+
+## Data Source
+
+Pokémon data is sourced from [PokeRogue-Dex](https://github.com/Sandstormer/PokeRogue-Dex) and automatically updated daily.
+
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+
+## License
+
+BSD 3-Clause License - See LICENSE file for details.
