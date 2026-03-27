@@ -127,6 +127,29 @@ h4 {
     font-size: 12px;
 }
 
+.quick-compare-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.quick-compare-selector label {
+    color: #4ecdc4;
+    white-space: nowrap;
+}
+
+.quick-compare-selector select {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: #e0e0e0;
+    font-size: 12px;
+}
+
 .search-input {
     width: 100%;
     padding: 10px;

@@ -484,7 +484,10 @@ function renderFusionDetails(p1, p2) {
     
     // Quick Compare
     if (opts.quick_compare) {
-        const target = p2;
+        const targetKey = document.getElementById('quickCompareTarget') ? document.getElementById('quickCompareTarget').value : 'p2';
+        const target = targetKey === 'p1' ? p1 : p2;
+        const targetName = target.name || targetKey;
+        
         const effFused = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
         const effBase = calculateTypeEffectiveness(target.type1, target.type2);
         
@@ -504,20 +507,20 @@ function renderFusionDetails(p1, p2) {
         const gf = getGroups(effFused);
         const gb = getGroups(effBase);
         
-        const newImm = [...gf[0]].filter(x => !gb[0].has(x));
-        const lostImm = [...gb[0]].filter(x => !gf[0].has(x));
-        const newWk = [...gf[2], ...gf[4]].filter(x => !gb[2].has(x) && !gb[4].has(x));
-        const lostWk = [...gb[2], ...gb[4]].filter(x => !gf[2].has(x) && !gf[4].has(x));
-        const newRes = [...gf[0.25], ...gf[0.5]].filter(x => !gb[0.25].has(x) && !gb[0.5].has(x));
-        const lostRes = [...gb[0.25], ...gb[0.5]].filter(x => !gf[0.25].has(x) && !gf[0.5].has(x));
+        const newImm = [...gf[0]].filter(x => !gb[0].has(x)).sort();
+        const lostImm = [...gb[0]].filter(x => !gf[0].has(x)).sort();
+        const newWk = [...gf[2], ...gf[4]].filter(x => !gb[2].has(x) && !gb[4].has(x)).sort();
+        const lostWk = [...gb[2], ...gb[4]].filter(x => !gf[2].has(x) && !gf[4].has(x)).sort();
+        const newRes = [...gf[0.25], ...gf[0.5]].filter(x => !gb[0.25].has(x) && !gb[0.5].has(x)).sort();
+        const lostRes = [...gb[0.25], ...gb[0.5]].filter(x => !gf[0.25].has(x) && !gf[0.5].has(x)).sort();
         
-        html += '<div class="quick-compare"><h4>Quick Compare vs ' + target.name + ':</h4>';
+        html += '<div class="quick-compare"><h4>Quick Compare vs ' + targetName + ':</h4>';
         if (newImm.length) html += `<div>New immunities: ${newImm.join(', ')}</div>`;
         if (lostImm.length) html += `<div>Lost immunities: ${lostImm.join(', ')}</div>`;
-        if (newWk.length) html += `<div>New weaknesses: ${newWk.join(', ')}</div>`;
-        if (lostWk.length) html += `<div>Lost weaknesses: ${lostWk.join(', ')}</div>`;
-        if (newRes.length) html += `<div>New resistances: ${newRes.join(', ')}</div>`;
-        if (lostRes.length) html += `<div>Lost resistances: ${lostRes.join(', ')}</div>`;
+        if (newWk.length) html += `<div>Gained weaknesses (≥2x): ${newWk.join(', ')}</div>`;
+        if (lostWk.length) html += `<div>Lost weaknesses (≥2x): ${lostWk.join(', ')}</div>`;
+        if (newRes.length) html += `<div>Gained resistances (≤1/2x): ${newRes.join(', ')}</div>`;
+        if (lostRes.length) html += `<div>Lost resistances (≤1/2x): ${lostRes.join(', ')}</div>`;
         if (!newImm.length && !lostImm.length && !newWk.length && !lostWk.length && !newRes.length && !lostRes.length) {
             html += '<div>No changes in immunities/weaknesses/resistances.</div>';
         }
@@ -867,6 +870,11 @@ function init() {
     
     // Active ability selector
     document.getElementById('activeAbility').addEventListener('change', () => {
+        if (hasFusion) fuse();
+    });
+    
+    // Quick Compare target selector
+    document.getElementById('quickCompareTarget').addEventListener('change', () => {
         if (hasFusion) fuse();
     });
     
