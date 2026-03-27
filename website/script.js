@@ -143,6 +143,34 @@ const displayOptions = {
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
 
+const NATURES = {
+    'Adamant': { increases: 'Attack', decreases: 'Sp. Atk' },
+    'Bashful': { increases: 'Sp. Atk', decreases: 'Sp. Atk' },
+    'Bold': { increases: 'Defense', decreases: 'Attack' },
+    'Brave': { increases: 'Attack', decreases: 'Speed' },
+    'Calm': { increases: 'Sp. Def', decreases: 'Attack' },
+    'Careful': { increases: 'Sp. Def', decreases: 'Sp. Atk' },
+    'Docile': { increases: 'Defense', decreases: 'Defense' },
+    'Gentle': { increases: 'Sp. Def', decreases: 'Defense' },
+    'Hardy': { increases: 'Attack', decreases: 'Attack' },
+    'Hasty': { increases: 'Speed', decreases: 'Defense' },
+    'Impish': { increases: 'Defense', decreases: 'Sp. Atk' },
+    'Jolly': { increases: 'Speed', decreases: 'Sp. Atk' },
+    'Lax': { increases: 'Defense', decreases: 'Sp. Def' },
+    'Lonely': { increases: 'Attack', decreases: 'Defense' },
+    'Mild': { increases: 'Sp. Atk', decreases: 'Defense' },
+    'Modest': { increases: 'Sp. Atk', decreases: 'Attack' },
+    'Naive': { increases: 'Speed', decreases: 'Sp. Def' },
+    'Naughty': { increases: 'Attack', decreases: 'Sp. Def' },
+    'Quiet': { increases: 'Sp. Atk', decreases: 'Speed' },
+    'Quirky': { increases: 'Sp. Def', decreases: 'Sp. Def' },
+    'Rash': { increases: 'Sp. Atk', decreases: 'Sp. Def' },
+    'Relaxed': { increases: 'Defense', decreases: 'Speed' },
+    'Sassy': { increases: 'Sp. Def', decreases: 'Speed' },
+    'Serious': { increases: 'Speed', decreases: 'Speed' },
+    'Timid': { increases: 'Speed', decreases: 'Attack' }
+};
+
 const TYPE_EFFECTIVENESS = {
     Normal: { weaknesses: ['Fighting'], resistances: [], immunities: ['Ghost'] },
     Fire: { weaknesses: ['Water', 'Ground', 'Rock'], resistances: ['Fire', 'Grass', 'Ice', 'Bug', 'Steel', 'Fairy'], immunities: [] },
@@ -435,6 +463,10 @@ function renderFusionDetails(p1, p2) {
     }
     const fusedBST = Object.values(fusedStats).reduce((a, b) => a + b, 0);
     
+    const selectedNatureEl = document.getElementById('activeNature');
+    const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
+    const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
+    
     const abilities = (p2.abilities || '').split(', ').filter(a => a);
     const selectedAbilityEl = document.getElementById('activeAbility');
     const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
@@ -456,6 +488,13 @@ function renderFusionDetails(p1, p2) {
         }
         if (activeAbility) {
             html += `<div class="ability-line"><span class="ability-label">Active:</span> ${activeAbility}</div>`;
+        }
+        if (activeNature) {
+            const inc = natureEffect.increases;
+            const dec = natureEffect.decreases;
+            const incChange = inc !== dec ? ` (+10% ${inc})` : '';
+            const decChange = inc !== dec ? ` (-10% ${dec})` : '';
+            html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${activeNature}${incChange}${decChange}</div>`;
         }
         if (hiddenAbility && activeAbility === hiddenAbility) {
             html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${hiddenAbility}</div>`;
@@ -677,6 +716,23 @@ function clearSelections() {
     setStatus('Ready');
 }
 
+function initNatures() {
+    const select = document.getElementById('activeNature');
+    select.innerHTML = '';
+    
+    const noneOption = document.createElement('option');
+    noneOption.value = '';
+    noneOption.textContent = 'None';
+    select.appendChild(noneOption);
+    
+    Object.keys(NATURES).sort().forEach(nature => {
+        const option = document.createElement('option');
+        option.value = nature;
+        option.textContent = nature;
+        select.appendChild(option);
+    });
+}
+
 function toggleDisplayOptions() {
     document.getElementById('displayOptionsModal').classList.toggle('show');
 }
@@ -825,6 +881,9 @@ function init() {
     // Initialize filters
     initFilters();
     
+    // Initialize natures
+    initNatures();
+    
     // Search handlers
     document.getElementById('search-p1').addEventListener('input', (e) => populateList('list-p1', e.target.value));
     document.getElementById('search-p2').addEventListener('input', (e) => populateList('list-p2', e.target.value));
@@ -844,6 +903,11 @@ function init() {
     
     // Active ability selector
     document.getElementById('activeAbility').addEventListener('change', () => {
+        if (hasFusion) fuse();
+    });
+    
+    // Active nature selector
+    document.getElementById('activeNature').addEventListener('change', () => {
         if (hasFusion) fuse();
     });
     
