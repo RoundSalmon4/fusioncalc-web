@@ -3,69 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Fusion</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <title>PokéRogue Fusion Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-4">Pokémon Fusion</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card pokemon-card">
-                    <div class="card-header">Select Primary Pokémon</div>
-                    <div class="card-body">
-                        <select id="primaryPokemonDropdown" class="form-control"></select>
-                        <button id="fetchPrimary" class="btn btn-primary mt-2">Fetch Primary Pokémon Data</button>
-                        <div id="primarySprite" class="mt-2"></div>
-                        <div id="primaryData" class="mt-3"></div>
-                    </div>
-                </div>
+        <h1 class="text-center">PokéRogue Fusion Calculator</h1>
+        
+        <div class="controls-bar">
+            <label><input type="checkbox" id="flipStatChallenge"> Flip Stat Challenge</label>
+            <label><input type="checkbox" id="inverseBattle"> Inverse Battle</label>
+            <label><input type="checkbox" id="passiveActive"> Passive Active</label>
+            <button id="displayOptionsBtn">Display Options</button>
+        </div>
+
+        <div class="main-content">
+            <div class="pokemon-panel" id="panel-p1">
+                <h3>Pokémon 1</h3>
+                <input type="text" id="search-p1" class="search-input" placeholder="Search Pokémon...">
+                <div class="pokemon-list" id="list-p1"></div>
+                <div class="pokemon-details" id="details-p1"></div>
             </div>
-            <div class="col-md-6">
-                <div class="card pokemon-card">
-                    <div class="card-header">Select Secondary Pokémon</div>
-                    <div class="card-body">
-                        <select id="secondaryPokemonDropdown" class="form-control"></select>
-                        <button id="fetchSecondary" class="btn btn-primary mt-2">Fetch Secondary Pokémon Data</button>
-                        <div id="secondarySprite" class="mt-2"></div>
-                        <div id="secondaryData" class="mt-3"></div>
-                    </div>
-                </div>
+
+            <div class="action-buttons">
+                <button id="fuseBtn" class="btn-primary">Fuse</button>
+                <button id="swapBtn" class="btn-secondary">Swap</button>
+                <button id="clearBtn" class="btn-danger">Clear</button>
+            </div>
+
+            <div class="pokemon-panel" id="panel-p2">
+                <h3>Pokémon 2</h3>
+                <input type="text" id="search-p2" class="search-input" placeholder="Search Pokémon...">
+                <div class="pokemon-list" id="list-p2"></div>
+                <div class="pokemon-details" id="details-p2"></div>
             </div>
         </div>
-        <div class="text-center mt-4">
-            <button id="swapPokemon" class="btn btn-secondary mr-2">Swap Pokémon</button>
-            <button id="searchFusionCandidate" class="btn btn-info mr-2">Search Fusion Candidate</button>
-            <button id="fusePokemon" class="btn btn-success">Fuse Pokémon</button>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card pokemon-card">
-                    <div class="card-header">Fused Pokémon</div>
-                    <div class="card-body">
-                        <div id="fusedSprite"></div>
-                        <div id="fusedData" class="mt-3"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card pokemon-card">
-                    <div class="card-header">Type Effectiveness</div>
-                    <div class="card-body">
-                        <div id="typeEffectiveness" class="mt-4"></div>
-                    </div>
-                </div>
-            </div>
+
+        <div class="fusion-result" id="fusion-panel">
+            <h3>Fusion Result</h3>
+            <div id="fusion-details"></div>
         </div>
     </div>
-    <footer>
-        <p>Pokémon Fusion Simulator - <a href="https://github.com/Scarecrow-g59/pokerogue-fusion" target="_blank">GitHub Repository</a></p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <div class="status-bar" id="status-bar">Ready.</div>
+
+    <!-- Display Options Modal -->
+    <div class="modal" id="displayOptionsModal">
+        <div class="modal-content">
+            <h2>Display Options</h2>
+            <div class="options-grid">
+                <div class="options-column">
+                    <h4>Pokémon 1</h4>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="type"> Type</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="abilities"> Abilities</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="hidden_ability"> Hidden Ability</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="passive"> Passive</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="bst"> BST & Stats</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="total_bst"> Total BST</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="evolution"> Evolution</label>
+                    <label><input type="checkbox" checked data-panel="p1" data-key="damage"> Damage Taken</label>
+                </div>
+                <div class="options-column">
+                    <h4>Fusion</h4>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="fused_type"> Fused Type</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="abilities"> Abilities</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="bst"> BST & Stats</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="total_bst"> Total BST</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="diffs"> Differences</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="ability_effects"> Ability Effects</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="quick_compare"> Quick Compare</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="damage"> Damage Taken</label>
+                </div>
+                <div class="options-column">
+                    <h4>Pokémon 2</h4>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="type"> Type</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="abilities"> Abilities</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="hidden_ability"> Hidden Ability</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="passive"> Passive</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="bst"> BST & Stats</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="total_bst"> Total BST</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="evolution"> Evolution</label>
+                    <label><input type="checkbox" checked data-panel="p2" data-key="damage"> Damage Taken</label>
+                </div>
+            </div>
+            <button id="closeOptionsBtn" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script src="pokemon_data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
