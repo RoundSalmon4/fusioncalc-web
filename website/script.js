@@ -408,7 +408,7 @@ function populateList(listId, filter = '') {
     const filterLower = filter.toLowerCase();
     const pokemonNames = Object.keys(pokemonData).filter(name => 
         !filterLower || name.toLowerCase().includes(filterLower)
-    ).sort();
+    ).sort((a, b) => (pokemonData[a].id || 0) - (pokemonData[b].id || 0));
     
     for (const name of pokemonNames) {
         const item = document.createElement('div');
