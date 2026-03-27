@@ -120,10 +120,11 @@ h4 {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    min-height: 500px;
 }
 
 .fusion-top {
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .fusion-top h3 {
@@ -137,24 +138,55 @@ h4 {
     border-radius: 4px;
     margin-top: 10px;
     border-top: 1px solid #555;
+    flex: 1 1 auto;
+    overflow-y: auto;
 }
 
-.fusion-notes h4 {
+.notes-section {
+    margin-bottom: 12px;
+}
+
+.notes-section:last-child {
+    margin-bottom: 0;
+}
+
+.notes-section h4 {
     color: #ffe66d;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.fusion-notes ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.fusion-notes li {
     margin-bottom: 6px;
-    font-size: 12px;
+    font-size: 13px;
+}
+
+.notes-section ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.notes-section li {
+    margin-bottom: 4px;
+    font-size: 11px;
     line-height: 1.4;
-    color: #ccc;
+    color: #bbb;
+}
+
+.contrib {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+    font-size: 11px;
+}
+
+.contrib strong {
+    color: #4ecdc4;
+}
+
+.contrib span {
+    color: #bbb;
+    padding-left: 8px;
+}
+
+.notes-section small {
+    color: #888;
+    font-size: 10px;
 }
 
 .pokemon-id {
@@ -289,7 +321,8 @@ h4 {
     background: #2a2a2a;
     padding: 15px;
     border-radius: 4px;
-    flex-grow: 1;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* Pokemon Details Styling */
