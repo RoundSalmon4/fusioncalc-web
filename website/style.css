@@ -250,6 +250,17 @@ h4 {
 }
 
 /* Pokemon Details Styling */
+.pokemon-sprite {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pokemon-sprite img {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+}
+
 .pokemon-details .type-line {
     display: flex;
     gap: 5px;
