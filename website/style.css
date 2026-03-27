@@ -261,6 +261,23 @@ h4 {
     image-rendering: pixelated;
 }
 
+.pokemon-sprite.no-sprite {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    background: #444;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-sprite.no-sprite::after {
+    content: '?';
+    font-size: 48px;
+    color: #888;
+}
+
 .pokemon-details .type-line {
     display: flex;
     gap: 5px;
