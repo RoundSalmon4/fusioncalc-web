@@ -270,6 +270,12 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
         html += renderDamageTable(eff);
     }
     
+    // Update Pokedex ID display
+    const idEl = document.getElementById('id-' + panelKey);
+    if (idEl) {
+        idEl.textContent = 'Pokedex ID: ' + (pokemon.id || '?');
+    }
+    
     return html;
 }
 
@@ -292,7 +298,8 @@ function renderFusionDetails(p1, p2) {
     const fusedBST = Object.values(fusedStats).reduce((a, b) => a + b, 0);
     
     const abilities = (p2.abilities || '').split(', ').filter(a => a);
-    const activeAbility = abilities[0] || '';
+    const selectedAbilityEl = document.getElementById('activeAbility');
+    const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
     const hiddenAbility = abilities[1] || '';
     const passiveAbility = p1.passive || '';
     
@@ -434,6 +441,7 @@ function selectPokemon(name, listId) {
         selectedP2 = pokemonData[name];
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
+        populateActiveAbilityDropdown(selectedP2);
     }
     
     hasFusion = false;
@@ -461,6 +469,26 @@ function setupEvolutionLinks(panel) {
     });
 }
 
+function populateActiveAbilityDropdown(pokemon) {
+    const select = document.getElementById('activeAbility');
+    const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
+    
+    select.innerHTML = '';
+    abilities.forEach(ability => {
+        const option = document.createElement('option');
+        option.value = ability;
+        option.textContent = ability;
+        select.appendChild(option);
+    });
+    
+    if (abilities.length === 0) {
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = 'None';
+        select.appendChild(option);
+    }
+}
+
 function fuse() {
     if (!selectedP1 || !selectedP2) {
         setStatus('Please select two Pokémon first');
@@ -473,7 +501,11 @@ function fuse() {
     
     const { fusedType1, fusedType2 } = computeFusedTyping(selectedP1.type1, selectedP1.type2, selectedP2.type1, selectedP2.type2);
     const fusedType = fusedType2 && fusedType2 !== fusedType1 ? `${fusedType1}/${fusedType2}` : fusedType1;
-    setStatus(`Fused: ${selectedP1.name} + ${selectedP2.name} = ${fusedType}`);
+    
+    const activeAbilityEl = document.getElementById('activeAbility');
+    const activeAbility = activeAbilityEl ? activeAbilityEl.value : '';
+    
+    setStatus(`Fused: ${selectedP1.name} + ${selectedP2.name} = ${fusedType} (Active: ${activeAbility || 'None'})`);
 }
 
 function swap() {
@@ -536,6 +568,11 @@ function init() {
     document.getElementById('clearBtn').addEventListener('click', clearSelections);
     document.getElementById('displayOptionsBtn').addEventListener('click', toggleDisplayOptions);
     document.getElementById('closeOptionsBtn').addEventListener('click', toggleDisplayOptions);
+    
+    // Active ability selector
+    document.getElementById('activeAbility').addEventListener('change', () => {
+        if (hasFusion) fuse();
+    });
     
     // Challenge toggles
     document.getElementById('flipStatChallenge').addEventListener('change', refreshDisplay);
