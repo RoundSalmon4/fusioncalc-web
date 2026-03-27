@@ -123,7 +123,7 @@ h4 {
     margin-top: 10px;
 }
 
-.ability-selector {
+.ability-selector, .nature-selector {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -131,12 +131,12 @@ h4 {
     font-size: 12px;
 }
 
-.ability-selector label {
+.ability-selector label, .nature-selector label {
     color: #4ecdc4;
     white-space: nowrap;
 }
 
-.ability-selector select {
+.ability-selector select, .nature-selector select {
     flex: 1;
     padding: 6px;
     border: 1px solid #555;
