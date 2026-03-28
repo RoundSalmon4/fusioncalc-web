@@ -458,8 +458,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Damage Taken
     if (opts.damage) {
-        const passiveOn = document.getElementById('passiveActive')?.checked || false;
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, null, passiveOn ? pokemon.passive : null);
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, null, pokemon.passive || null);
         html += renderDamageTable(eff);
     }
     
@@ -739,8 +738,6 @@ function swap() {
     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
-    
-    if (hasFusion) fuse();
 }
 
 function clearSelections() {
