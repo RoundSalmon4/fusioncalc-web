@@ -339,7 +339,7 @@ h4 {
 .pokemon-sprite img {
     width: 96px;
     height: 96px;
-    object-fit: contain;
+    object-fit: cover;
     image-rendering: pixelated;
 }
 
