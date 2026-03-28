@@ -117,17 +117,12 @@ function pokemonPassesFilters(stats) {
     // Damage filters (all must pass)
     for (const df of FILTER_STATE.damageFilters) {
         if (!df.on || !df.typeName) continue;
-        const invOn = document.getElementById('inverseBattle').checked;
+        const invOn = document.getElementById('inverseBattle')?.checked || false;
         const eff = calculateTypeEffectiveness(stats.type1, stats.type2);
         let dmg = parseFloat(eff[df.typeName] || 1.0);
         
         if (invOn) {
-            if (dmg <= 0) dmg = 2;
-            else if (dmg <= 0.25) dmg = 4;
-            else if (dmg <= 0.5) dmg = 2;
-            else if (dmg >= 4) dmg = 0.25;
-            else if (dmg >= 2) dmg = 0.5;
-            else dmg = 1;
+            dmg = invertValue(dmg);
         }
         
         const op = OPS[df.op];
@@ -230,9 +225,19 @@ function setStatus(msg) {
 }
 
 // ===== TYPE EFFECTIVENESS =====
+function invertValue(v) {
+    if (v <= 0) return 2;
+    if (v <= 0.25) return 4;
+    if (v <= 0.5) return 2;
+    if (v >= 4) return 0.25;
+    if (v >= 2) return 0.5;
+    return 1;
+}
+
 function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility = null) {
     const result = {};
     const types = Object.keys(TYPE_EFFECTIVENESS);
+    const inverseOn = document.getElementById('inverseBattle')?.checked || false;
     
     for (const atkType of types) {
         let v1 = 1.0, v2 = 1.0;
@@ -255,10 +260,9 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             }
         }
         
-        // Inverse battle
-        if (document.getElementById('inverseBattle').checked) {
-            if (v1 > 0) v1 = 1 / v1;
-            if (v2 > 0) v2 = 1 / v2;
+        if (inverseOn) {
+            v1 = invertValue(v1);
+            v2 = invertValue(v2);
         }
         
         result[atkType] = v1 * v2;
