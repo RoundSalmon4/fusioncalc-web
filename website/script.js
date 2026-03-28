@@ -400,12 +400,22 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     const opts = displayOptions[panelKey];
     const flipOn = document.getElementById('flipStatChallenge').checked;
     let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
-    if (flipOn) stats = flipStats(stats);
     
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
     const mainAbility = abilities[0] || '';
     const passiveAbility = pokemon.passive || '';
     const hasWonderGuard = mainAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
+    
+    if (flipOn) {
+        stats = flipStats(stats);
+        // Wonder Guard prevents HP from being swapped
+        if (hasWonderGuard) {
+            const originalHP = pokemon.hp;
+            stats.HP = originalHP;
+        }
+    }
+    
+    // Wonder Guard enforces HP = 1
     if (hasWonderGuard) {
         stats.HP = 1;
     }
@@ -464,7 +474,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Damage Taken
     if (opts.damage) {
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, null, pokemon.passive || null);
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, mainAbility, pokemon.passive || null);
         html += renderDamageTable(eff);
     }
     
@@ -495,25 +505,30 @@ function renderFusionDetails(p1, p2) {
     const hiddenAbility = abilities[1] || '';
     const passiveAbility = p1.passive || '';
     
+    const activeAbilityUpper = activeAbility.toUpperCase();
+    const passiveAbilityUpper = passiveAbility.toUpperCase();
+    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
+    
     const fusedStats = {};
     for (const k of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
         fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
     }
     
-    const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
-    
     let displayStats = fusedStats;
     if (flipOn) {
         displayStats = flipStats(fusedStats);
+        // Wonder Guard prevents HP from being swapped
+        if (hasWonderGuard) {
+            displayStats.HP = fusedStats.HP;
+        }
     }
     
-    // Wonder Guard sets HP to 1
-    const activeAbilityUpper = activeAbility.toUpperCase();
-    const passiveAbilityUpper = passiveAbility.toUpperCase();
-    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
+    // Wonder Guard enforces HP = 1
     if (hasWonderGuard) {
         displayStats.HP = 1;
     }
+    
+    const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
     
     const selectedNatureEl = document.getElementById('activeNature');
     const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
