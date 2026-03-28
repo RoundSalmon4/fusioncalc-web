@@ -336,7 +336,7 @@ h4 {
     margin-bottom: 10px;
 }
 
-.pokemon-sprite img {
+.pokemon-sprite img, .pokemon-sprite canvas {
     image-rendering: pixelated;
 }
 
