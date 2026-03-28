@@ -402,9 +402,15 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
     if (flipOn) stats = flipStats(stats);
     
-    const bst = parseInt(pokemon.bst);
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
     const mainAbility = abilities[0] || '';
+    const passiveAbility = pokemon.passive || '';
+    const hasWonderGuard = mainAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
+    if (hasWonderGuard) {
+        stats.HP = 1;
+    }
+    
+    const bst = parseInt(pokemon.bst);
     const hiddenAbility = abilities[1] || '';
     
     let html = '';
