@@ -135,7 +135,7 @@ function pokemonPassesFilters(stats) {
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
-    fusion: { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
+    fusion: { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
 };
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
@@ -394,6 +394,74 @@ function getPokemonSprite(pokemon, name) {
     return `<div class="pokemon-sprite"><img src="website/images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');"></div>`;
 }
 
+function getFusionSprite(p1, p2) {
+    if (!p1 || !p1.id || !p2 || !p2.id) return '';
+    
+    const imgId1 = p1.img || p1.id;
+    const src1 = `website/images/${imgId1}_0.png`;
+    const type1 = p2.type1;
+    const typeColor = TYPE_COLORS[type1] || TYPE_COLORS['Normal'];
+    const filterStyle = getTypeFilter(typeColor);
+    
+    return `<div class="pokemon-sprite fusion-sprite"><img src="${src1}" style="filter: ${filterStyle};" alt="fusion"></div>`;
+}
+
+const TYPE_COLORS = {
+    'Normal': '#A8A878',
+    'Fire': '#EE8130',
+    'Water': '#6390F0',
+    'Electric': '#F7D02C',
+    'Grass': '#7AC74C',
+    'Ice': '#96D9D6',
+    'Fighting': '#C22E28',
+    'Poison': '#A33EA1',
+    'Ground': '#E2BF65',
+    'Flying': '#A98FF3',
+    'Psychic': '#F95587',
+    'Bug': '#A6B91A',
+    'Rock': '#B6A136',
+    'Ghost': '#735797',
+    'Dragon': '#6F35FC',
+    'Dark': '#705746',
+    'Steel': '#B7B7CE',
+    'Fairy': '#D685AD'
+};
+
+const TYPE_HUE_ROTATIONS = {
+    'Normal': 0,
+    'Fire': -30,
+    'Water': 180,
+    'Electric': 45,
+    'Grass': 90,
+    'Ice': 150,
+    'Fighting': -60,
+    'Poison': 270,
+    'Ground': 30,
+    'Flying': 60,
+    'Psychic': 300,
+    'Bug': 100,
+    'Rock': 20,
+    'Ghost': 250,
+    'Dragon': 200,
+    'Dark': 280,
+    'Steel': 170,
+    'Fairy': 320
+};
+
+function getTypeFilter(typeColor) {
+    const hue = TYPE_HUE_ROTATIONS[typeColor] || 0;
+    return `sepia(0.8) saturate(2) hue-rotate(${hue}deg) brightness(1.1) contrast(1.1)`;
+}
+
+function hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (!pokemon) return '<p>Select a Pokémon...</p>';
     
@@ -547,6 +615,11 @@ function renderFusionDetails(p1, p2) {
     
     const opts = displayOptions.fusion;
     let html = '';
+    
+    // Fused Sprite
+    if (opts.fused_sprite) {
+        html += getFusionSprite(p1, p2);
+    }
     
     // Fused Type
     if (opts.fused_type) {
