@@ -745,6 +745,19 @@ function toggleDisplayOptions() {
     document.getElementById('displayOptionsModal').classList.toggle('show');
 }
 
+function resetDisplayOptions() {
+    displayOptions.p1 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
+    displayOptions.p2 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
+    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true };
+    
+    document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
+        cb.checked = true;
+    });
+    
+    refreshDisplay();
+    setStatus('Display options reset to default');
+}
+
 function refreshDisplay() {
     if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
     if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
@@ -902,6 +915,7 @@ function init() {
     document.getElementById('clearBtn').addEventListener('click', clearSelections);
     document.getElementById('displayOptionsBtn').addEventListener('click', toggleDisplayOptions);
     document.getElementById('closeOptionsBtn').addEventListener('click', toggleDisplayOptions);
+    document.getElementById('resetOptionsBtn').addEventListener('click', resetDisplayOptions);
     
     // Filter handlers
     document.getElementById('filtersBtn').addEventListener('click', toggleFiltersModal);

@@ -321,7 +321,8 @@ h4 {
     background: #2a2a2a;
     padding: 15px;
     border-radius: 4px;
-    max-height: 300px;
+    min-height: 150px;
+    max-height: 400px;
     overflow-y: auto;
 }
 
@@ -508,6 +509,12 @@ h4 {
 .modal-content h2 {
     color: #ffe66d;
     margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .options-grid {
