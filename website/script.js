@@ -483,9 +483,23 @@ function renderFusionDetails(p1, p2) {
     const p1BaseStats = { HP: p1.hp, Attack: p1.attack, Defense: p1.defense, 'Sp. Atk': p1.spAttack, 'Sp. Def': p1.spDefense, Speed: p1.speed };
     const p2BaseStats = { HP: p2.hp, Attack: p2.attack, Defense: p2.defense, 'Sp. Atk': p2.spAttack, 'Sp. Def': p2.spDefense, Speed: p2.speed };
     
+    const abilities = (p2.abilities || '').split(', ').filter(a => a);
+    const selectedAbilityEl = document.getElementById('activeAbility');
+    const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
+    const hiddenAbility = abilities[1] || '';
+    const passiveAbility = p1.passive || '';
+    
     const fusedStats = {};
     for (const k of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
         fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
+    }
+    
+    // Wonder Guard sets HP to 1
+    const activeAbilityUpper = activeAbility.toUpperCase();
+    const passiveAbilityUpper = passiveAbility.toUpperCase();
+    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
+    if (hasWonderGuard) {
+        fusedStats.HP = 1;
     }
     
     const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
@@ -498,12 +512,6 @@ function renderFusionDetails(p1, p2) {
     const selectedNatureEl = document.getElementById('activeNature');
     const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
     const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
-    
-    const abilities = (p2.abilities || '').split(', ').filter(a => a);
-    const selectedAbilityEl = document.getElementById('activeAbility');
-    const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
-    const hiddenAbility = abilities[1] || '';
-    const passiveAbility = p1.passive || '';
     
     const opts = displayOptions.fusion;
     let html = '';
