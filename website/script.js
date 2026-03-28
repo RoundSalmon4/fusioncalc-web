@@ -456,14 +456,20 @@ function renderFusionDetails(p1, p2) {
     const flipOn = document.getElementById('flipStatChallenge').checked;
     const passiveOn = document.getElementById('passiveActive').checked;
     
-    const p1Stats = flipStats({ HP: p1.hp, Attack: p1.attack, Defense: p1.defense, 'Sp. Atk': p1.spAttack, 'Sp. Def': p1.spDefense, Speed: p1.speed });
-    const p2Stats = flipStats({ HP: p2.hp, Attack: p2.attack, Defense: p2.defense, 'Sp. Atk': p2.spAttack, 'Sp. Def': p2.spDefense, Speed: p2.speed });
+    const p1BaseStats = { HP: p1.hp, Attack: p1.attack, Defense: p1.defense, 'Sp. Atk': p1.spAttack, 'Sp. Def': p1.spDefense, Speed: p1.speed };
+    const p2BaseStats = { HP: p2.hp, Attack: p2.attack, Defense: p2.defense, 'Sp. Atk': p2.spAttack, 'Sp. Def': p2.spDefense, Speed: p2.speed };
     
     const fusedStats = {};
     for (const k of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-        fusedStats[k] = avgRound(p1Stats[k], p2Stats[k]);
+        fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
     }
-    const fusedBST = Object.values(fusedStats).reduce((a, b) => a + b, 0);
+    
+    const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
+    
+    let displayStats = fusedStats;
+    if (flipOn) {
+        displayStats = flipStats(fusedStats);
+    }
     
     const selectedNatureEl = document.getElementById('activeNature');
     const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
@@ -518,7 +524,7 @@ function renderFusionDetails(p1, p2) {
     // BST
     if (opts.bst) {
         for (const stat of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-            html += renderStatLine(stat, fusedStats[stat]);
+            html += renderStatLine(stat, displayStats[stat]);
         }
     }
     
