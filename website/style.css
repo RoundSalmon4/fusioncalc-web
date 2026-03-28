@@ -340,6 +340,12 @@ h4 {
     image-rendering: pixelated;
 }
 
+.wonder-guard-note {
+    color: #ff6b6b;
+    font-size: 0.85em;
+    font-weight: normal;
+}
+
 .pokemon-sprite.no-sprite {
     width: 96px;
     height: 96px;

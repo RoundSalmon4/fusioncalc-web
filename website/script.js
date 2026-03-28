@@ -201,15 +201,18 @@ const ABILITY_EFFECTS = {
     'LIGHTNING ROD': { immunities: ['Electric'] },
     'MOTOR DRIVE': { immunities: ['Electric'] },
     'SAP SIPPER': { immunities: ['Grass'] },
-    'SAPSIPPER': { immunities: ['Grass'] },
     'PURIFYING SALT': { halve: ['Ghost'] },
     'THICK FAT': { halve: ['Fire', 'Ice'] },
     'HEATPROOF': { halve: ['Fire'] },
-    'WATER BUBBLE': { halve: ['Fire'] }
+    'WATER BUBBLE': { halve: ['Fire'] },
+    'FILTER': { halveSuperEffective: 0.75 },
+    'SOLID ROCK': { halveSuperEffective: 0.75 },
+    'PRISM ARMOR': { halveSuperEffective: 0.75 },
+    'ICE SCALES': { halveSpecial: 0.5 }
 };
 
 // ===== UTILITY FUNCTIONS =====
-function avgRound(a, b) { return Math.round((parseFloat(a) + parseFloat(b)) / 2 * 10) / 10; }
+function avgRound(a, b) { return Math.ceil((parseFloat(a) + parseFloat(b)) / 2); }
 
 function formatNumber(x) {
     const n = parseFloat(x);
@@ -281,6 +284,18 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             }
             for (const [t, m] of Object.entries(eff.multiply || {})) {
                 if (result[titleCase(t)] !== undefined) result[titleCase(t)] *= m;
+            }
+            // Filter, Solid Rock, Prism Armor - reduce super-effective damage
+            if (eff.halveSuperEffective) {
+                for (const k in result) {
+                    if (result[k] >= 2) result[k] *= eff.halveSuperEffective;
+                }
+            }
+            // Ice Scales - reduce special damage
+            if (eff.halveSpecial) {
+                for (const k in result) {
+                    result[k] *= eff.halveSpecial;
+                }
             }
         }
     }
@@ -483,14 +498,6 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     if (flipOn) {
         stats = flipStats(stats);
-        if (hasWonderGuard) {
-            const originalHP = pokemon.hp;
-            stats.HP = originalHP;
-        }
-    }
-    
-    if (hasWonderGuard) {
-        stats.HP = 1;
     }
     
     const bst = parseInt(pokemon.bst);
@@ -533,7 +540,11 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.bst) {
         html += '<div class="bst-section">';
         for (const stat of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-            html += renderStatLine(stat, stats[stat]);
+            let wonderGuardNote = '';
+            if (stat === 'HP' && hasWonderGuard) {
+                wonderGuardNote = ' <span class="wonder-guard-note">(Max HP: 1)</span>';
+            }
+            html += renderStatLine(stat, stats[stat]) + wonderGuardNote;
         }
         html += '</div>';
     }
@@ -594,20 +605,14 @@ function renderFusionDetails(p1, p2) {
     }
     
     let displayStats = fusedStats;
+    
     if (flipOn) {
         displayStats = flipStats(fusedStats);
-        // Wonder Guard prevents HP from being swapped
-        if (hasWonderGuard) {
-            displayStats.HP = fusedStats.HP;
-        }
     }
     
-    // Wonder Guard enforces HP = 1
-    if (hasWonderGuard) {
-        displayStats.HP = 1;
-    }
+    // Wonder Guard note - don't modify base stat, will show "Max HP: 1" when rendering
     
-    const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
+    const fusedBST = Object.values(fusedStats).reduce((a, b) => a + b, 0);
     
     const selectedNatureEl = document.getElementById('activeNature');
     const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
@@ -666,7 +671,12 @@ function renderFusionDetails(p1, p2) {
     // BST
     if (opts.bst) {
         for (const stat of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-            html += renderStatLine(stat, displayStats[stat]);
+            let statValue = displayStats[stat];
+            let wonderGuardNote = '';
+            if (stat === 'HP' && hasWonderGuard) {
+                wonderGuardNote = ' <span class="wonder-guard-note">(Max HP: 1)</span>';
+            }
+            html += renderStatLine(stat, statValue) + wonderGuardNote;
         }
     }
     
