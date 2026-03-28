@@ -341,8 +341,6 @@ h4 {
     height: 96px;
     object-fit: contain;
     image-rendering: pixelated;
-    background: #222;
-    border-radius: 4px;
 }
 
 .pokemon-sprite.no-sprite {
