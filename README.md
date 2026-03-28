@@ -2,8 +2,6 @@
 
 A web-based Pokémon fusion calculator that combines two Pokémon and displays their fused stats, types, and type effectiveness calculations.
 
-This project is a port of the original Python/Tkinter application (fusioncalc.py) to a web-based interface.
-
 ## Features
 
 - Select two Pokémon and fuse them
