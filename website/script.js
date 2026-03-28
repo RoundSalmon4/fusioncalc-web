@@ -494,15 +494,6 @@ function renderFusionDetails(p1, p2) {
         fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
     }
     
-    const activeAbilityUpper = activeAbility.toUpperCase();
-    const passiveAbilityUpper = passiveAbility.toUpperCase();
-    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
-    
-    // Wonder Guard sets HP to 1 before flip (so HP=1 becomes Speed=1 after flip)
-    if (hasWonderGuard) {
-        fusedStats.HP = 1;
-    }
-    
     const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
     
     let displayStats = fusedStats;
@@ -510,7 +501,10 @@ function renderFusionDetails(p1, p2) {
         displayStats = flipStats(fusedStats);
     }
     
-    // Wonder Guard enforces HP = 1 after flip
+    // Wonder Guard sets HP to 1
+    const activeAbilityUpper = activeAbility.toUpperCase();
+    const passiveAbilityUpper = passiveAbility.toUpperCase();
+    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
     if (hasWonderGuard) {
         displayStats.HP = 1;
     }
