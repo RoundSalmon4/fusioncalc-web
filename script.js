@@ -117,12 +117,17 @@ function pokemonPassesFilters(stats) {
     // Damage filters (all must pass)
     for (const df of FILTER_STATE.damageFilters) {
         if (!df.on || !df.typeName) continue;
-        const invOn = document.getElementById('inverseBattle')?.checked || false;
+        const invOn = document.getElementById('inverseBattle').checked;
         const eff = calculateTypeEffectiveness(stats.type1, stats.type2);
         let dmg = parseFloat(eff[df.typeName] || 1.0);
         
         if (invOn) {
-            dmg = invertValue(dmg);
+            if (dmg <= 0) dmg = 2;
+            else if (dmg <= 0.25) dmg = 4;
+            else if (dmg <= 0.5) dmg = 2;
+            else if (dmg >= 4) dmg = 0.25;
+            else if (dmg >= 2) dmg = 0.5;
+            else dmg = 1;
         }
         
         const op = OPS[df.op];
@@ -135,7 +140,7 @@ function pokemonPassesFilters(stats) {
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
-    fusion: { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true }
+    fusion: { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
 };
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
@@ -167,12 +172,6 @@ const NATURES = {
     'Serious': { increases: 'Speed', decreases: 'Speed' },
     'Timid': { increases: 'Speed', decreases: 'Attack' }
 };
-
-const TERA_TYPES = [
-    'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
-    'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
-    'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy', 'Stellar'
-];
 
 const TYPE_EFFECTIVENESS = {
     Normal: { weaknesses: ['Fighting'], resistances: [], immunities: ['Ghost'] },
@@ -234,29 +233,15 @@ function setStatus(msg) {
 }
 
 // ===== TYPE EFFECTIVENESS =====
-function invertValue(v) {
-    if (v <= 0) return 2;
-    if (v <= 0.25) return 4;
-    if (v <= 0.5) return 2;
-    if (v >= 4) return 0.25;
-    if (v >= 2) return 0.5;
-    return 1;
-}
-
-function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility = null, teraType = null) {
+function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility = null) {
     const result = {};
     const types = Object.keys(TYPE_EFFECTIVENESS);
-    const inverseOn = document.getElementById('inverseBattle')?.checked || false;
-    
-    // Use Tera type if selected (Tera replaces the Pokemon's types)
-    const effectiveT1 = teraType || t1;
-    const effectiveT2 = teraType ? null : t2; // Only use second type if no tera
     
     for (const atkType of types) {
         let v1 = 1.0, v2 = 1.0;
         
-        if (effectiveT1) {
-            const def = TYPE_EFFECTIVENESS[titleCase(effectiveT1)];
+        if (t1) {
+            const def = TYPE_EFFECTIVENESS[titleCase(t1)];
             if (def) {
                 if (def.weaknesses.includes(titleCase(atkType))) v1 *= 2;
                 if (def.resistances.includes(titleCase(atkType))) v1 *= 0.5;
@@ -264,8 +249,8 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             }
         }
         
-        if (effectiveT2 && effectiveT2 !== effectiveT1) {
-            const def = TYPE_EFFECTIVENESS[titleCase(effectiveT2)];
+        if (t2 && t2 !== t1) {
+            const def = TYPE_EFFECTIVENESS[titleCase(t2)];
             if (def) {
                 if (def.weaknesses.includes(titleCase(atkType))) v2 *= 2;
                 if (def.resistances.includes(titleCase(atkType))) v2 *= 0.5;
@@ -273,9 +258,10 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             }
         }
         
-        if (inverseOn) {
-            v1 = invertValue(v1);
-            v2 = invertValue(v2);
+        // Inverse battle
+        if (document.getElementById('inverseBattle').checked) {
+            if (v1 > 0) v1 = 1 / v1;
+            if (v2 > 0) v2 = 1 / v2;
         }
         
         result[atkType] = v1 * v2;
@@ -311,7 +297,7 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
     }
     
     // Wonder Guard
-    if ((activeAbility?.toUpperCase() === 'WONDER GUARD' || passiveAbility?.toUpperCase() === 'WONDER GUARD')) {
+    if ((activeAbility === 'Wonder Guard' || passiveAbility === 'Wonder Guard')) {
         for (const k in result) {
             if (result[k] < 2) result[k] = 0;
         }
@@ -361,7 +347,6 @@ function renderStatLine(label, value) {
 
 function renderDamageTable(effectiveness) {
     const grouped = { 0: [], 0.25: [], 0.5: [], 1: [], 2: [], 4: [] };
-    const otherGroups = {};
     
     for (const [type, val] of Object.entries(effectiveness)) {
         const v = parseFloat(val);
@@ -370,19 +355,12 @@ function renderDamageTable(effectiveness) {
         else if (v <= 0.5) grouped[0.5].push(type);
         else if (v >= 4) grouped[4].push(type);
         else if (v >= 2) grouped[2].push(type);
-        else if (v === 1) grouped[1].push(type);
-        else {
-            if (!otherGroups[v]) otherGroups[v] = [];
-            otherGroups[v].push(type);
-        }
+        else grouped[1].push(type);
     }
     
     let html = '<div class="damage-table">';
-    const order = [0, 0.25, 0.5, 1, 2, 4];
-    for (const val of order) {
-        const types = grouped[val];
-        if (!types || types.length === 0) continue;
-        types.sort();
+    for (const [val, types] of Object.entries(grouped)) {
+        if (types.length === 0) continue;
         
         let label, cls;
         if (val == 0) { label = 'Immune'; cls = 'immune'; }
@@ -391,24 +369,12 @@ function renderDamageTable(effectiveness) {
         else if (val == 1) { label = '1x'; cls = 'normal-dmg'; }
         else if (val == 2) { label = '2x'; cls = 'double'; }
         else if (val == 4) { label = '4x'; cls = 'double'; }
+        else { label = `${val}x`; cls = parseFloat(val) > 1 ? 'double' : 'half'; }
         
         html += `<div class="damage-row"><span class="damage-label ${cls}">${label}:</span><div class="damage-types">`;
         html += types.map(t => renderTypeBadge(t)).join('');
         html += '</div></div>';
     }
-    
-    const otherKeys = Object.keys(otherGroups).map(Number).sort((a, b) => b - a);
-    for (const val of otherKeys) {
-        const types = otherGroups[val];
-        if (!types || types.length === 0) continue;
-        types.sort();
-        const label = `${val}x`;
-        const cls = parseFloat(val) > 1 ? 'double' : 'half';
-        html += `<div class="damage-row"><span class="damage-label ${cls}">${label}:</span><div class="damage-types">`;
-        html += types.map(t => renderTypeBadge(t)).join('');
-        html += '</div></div>';
-    }
-    
     html += '</div>';
     return html;
 }
@@ -426,7 +392,6 @@ function getFusionSprite(p1, p2) {
     const src1 = `website/images/${imgId1}_0.png`;
     const type1 = p2.type1;
     
-    // Use hue rotation to shift toward Pokemon 2's type color
     const hue = TYPE_HUE_ROTATIONS[type1] || 0;
     
     return `<div class="pokemon-sprite fusion-sprite" title="Fusion sprite (${type1} type tint)">
@@ -476,6 +441,11 @@ const TYPE_HUE_ROTATIONS = {
     'Fairy': 320
 };
 
+function getTypeFilter(typeColor) {
+    const hue = TYPE_HUE_ROTATIONS[typeColor] || 0;
+    return `sepia(0.8) saturate(2) hue-rotate(${hue}deg) brightness(1.1) contrast(1.1)`;
+}
+
 function hexToRgb(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
@@ -485,30 +455,64 @@ function hexToRgb(hex) {
     } : null;
 }
 
+
+                
+                if (type2Rgb && !isLight && !isDark) {
+                    r = Math.round(r * 0.7 + type2Rgb.r * 0.3);
+                    g = Math.round(g * 0.7 + type2Rgb.g * 0.3);
+                    b = Math.round(b * 0.7 + type2Rgb.b * 0.3);
+                }
+                
+                data[i] = r;
+                data[i + 1] = g;
+                data[i + 2] = b;
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+            console.log('Fusion sprite complete!');
+        } catch (e) {
+            console.error('Error processing image:', e);
+        }
+    };
+    
+    img.onerror = () => {
+        console.error('Failed to load sprite:', src1);
+    };
+    img.src = src1;
+}
+            
+            if (type2Rgb && !isLight && !isDark) {
+                r = Math.round(r * 0.7 + type2Rgb.r * 0.3);
+                g = Math.round(g * 0.7 + type2Rgb.g * 0.3);
+                b = Math.round(b * 0.7 + type2Rgb.b * 0.3);
+            }
+            
+            data[i] = r;
+            data[i + 1] = g;
+            data[i + 2] = b;
+        }
+        
+        ctx.putImageData(imageData, 0, 0);
+    };
+    
+    img.onerror = () => {
+        console.log('Failed to load sprite:', src1);
+    };
+    img.src = src1;
+}
+
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (!pokemon) return '<p>Select a Pokémon...</p>';
     
     const opts = displayOptions[panelKey];
     const flipOn = document.getElementById('flipStatChallenge').checked;
-    
-    const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
-    const hiddenAbility = abilities[1] || '';
-    const passiveAbility = pokemon.passive || '';
-    
-    const natureSelectId = panelKey === 'p1' ? 'activeNature' : 'activeNature2';
-    const abilitySelectId = panelKey === 'p1' ? 'activeAbility1' : 'activeAbility';
-    const activeNature = document.getElementById(natureSelectId)?.value || '';
-    const activeAbility = document.getElementById(abilitySelectId)?.value || abilities[0] || '';
-    const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
-    
     let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
-    const hasWonderGuard = activeAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
-    
-    if (flipOn) {
-        stats = flipStats(stats);
-    }
+    if (flipOn) stats = flipStats(stats);
     
     const bst = parseInt(pokemon.bst);
+    const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
+    const mainAbility = abilities[0] || '';
+    const hiddenAbility = abilities[1] || '';
     
     let html = '';
     
@@ -527,15 +531,8 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     }
     
     // Abilities
-    if (opts.abilities && activeAbility) {
-        html += `<div class="ability-line"><span class="ability-label">Active:</span> ${activeAbility}</div>`;
-    }
-    if (activeNature) {
-        const inc = natureEffect.increases;
-        const dec = natureEffect.decreases;
-        const incChange = inc !== dec ? ` (+10% ${inc})` : '';
-        const decChange = inc !== dec ? ` (-10% ${dec})` : '';
-        html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${activeNature}${incChange}${decChange}</div>`;
+    if (opts.abilities && mainAbility) {
+        html += `<div class="ability-line"><span class="ability-label">Ability:</span> ${mainAbility}</div>`;
     }
     if (opts.hidden_ability && hiddenAbility) {
         html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${hiddenAbility}</div>`;
@@ -548,11 +545,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.bst) {
         html += '<div class="bst-section">';
         for (const stat of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-            let wonderGuardNote = '';
-            if (stat === 'HP' && hasWonderGuard) {
-                wonderGuardNote = ' <span class="wonder-guard-note">(Max HP: 1)</span>';
-            }
-            html += renderStatLine(stat, stats[stat]) + wonderGuardNote;
+            html += renderStatLine(stat, stats[stat]);
         }
         html += '</div>';
     }
@@ -572,9 +565,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Damage Taken
     if (opts.damage) {
-        const teraSelectId = panelKey === 'p1' ? 'teraType1' : 'teraType2';
-        const teraType = document.getElementById(teraSelectId)?.value || null;
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, pokemon.passive || null, teraType);
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2);
         html += renderDamageTable(eff);
     }
     
@@ -599,34 +590,29 @@ function renderFusionDetails(p1, p2) {
     const p1BaseStats = { HP: p1.hp, Attack: p1.attack, Defense: p1.defense, 'Sp. Atk': p1.spAttack, 'Sp. Def': p1.spDefense, Speed: p1.speed };
     const p2BaseStats = { HP: p2.hp, Attack: p2.attack, Defense: p2.defense, 'Sp. Atk': p2.spAttack, 'Sp. Def': p2.spDefense, Speed: p2.speed };
     
-    const abilities = (p2.abilities || '').split(', ').filter(a => a);
-    const selectedAbilityEl = document.getElementById('activeAbility');
-    const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
-    const hiddenAbility = abilities[1] || '';
-    const passiveAbility = p1.passive || '';
-    
-    const activeAbilityUpper = activeAbility.toUpperCase();
-    const passiveAbilityUpper = passiveAbility.toUpperCase();
-    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
-    
     const fusedStats = {};
     for (const k of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
         fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
     }
     
-    let displayStats = fusedStats;
-    
     if (flipOn) {
-        displayStats = flipStats(fusedStats);
+        const flippedFused = flipStats(fusedStats);
+        for (const k of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
+            fusedStats[k] = flippedFused[k];
+        }
     }
-    
-    // Wonder Guard note - don't modify base stat, will show "Max HP: 1" when rendering
     
     const fusedBST = Object.values(fusedStats).reduce((a, b) => a + b, 0);
     
     const selectedNatureEl = document.getElementById('activeNature');
     const activeNature = selectedNatureEl && selectedNatureEl.value ? selectedNatureEl.value : '';
     const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
+    
+    const abilities = (p2.abilities || '').split(', ').filter(a => a);
+    const selectedAbilityEl = document.getElementById('activeAbility');
+    const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
+    const hiddenAbility = abilities[1] || '';
+    const passiveAbility = p1.passive || '';
     
     const opts = displayOptions.fusion;
     let html = '';
@@ -639,11 +625,6 @@ function renderFusionDetails(p1, p2) {
     // Fused Type
     if (opts.fused_type) {
         html += `<div class="type-line"><span class="ability-label">Fused Type:</span> ${renderTypeBadge(fusedType1)}${fusedType2 ? renderTypeBadge(fusedType2) : ''}</div>`;
-        
-        const teraType = document.getElementById('teraTypeFusion')?.value;
-        if (teraType) {
-            html += `<div class="type-line"><span class="ability-label">Tera Type:</span> ${renderTypeBadge(teraType)} (Terastallized)</div>`;
-        }
     }
     
     // Abilities
@@ -666,22 +647,11 @@ function renderFusionDetails(p1, p2) {
         }
         if (opts.ability_effects && activeAbility) {
             const eff = ABILITY_EFFECTS[activeAbility.toUpperCase()];
-            let parts = [];
-            let iceScalesNote = '';
             if (eff) {
+                let parts = [];
                 if (eff.immunities) parts.push(`immunities: ${eff.immunities.join(', ')}`);
                 if (eff.halve) parts.push(`halves: ${eff.halve.join(', ')}`);
-                if (eff.halveSpecial) {
-                    parts.push(`halves special damage`);
-                    iceScalesNote = ' title="Reduces special damage by 50%. Shown as general reduction since move category is unknown."';
-                }
-                if (eff.halveSuperEffective) parts.push(`reduces super-effective by 25%`);
-            }
-            if (activeAbility.toUpperCase() === 'WONDER GUARD') {
-                parts.push('immune to all non-super-effective');
-            }
-            if (parts.length > 0) {
-                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> <span${iceScalesNote}>${parts.join('; ')}</span></div>`;
+                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> ${parts.join('; ')}</div>`;
             }
         }
         if (passiveAbility && passiveOn) {
@@ -692,12 +662,7 @@ function renderFusionDetails(p1, p2) {
     // BST
     if (opts.bst) {
         for (const stat of ['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']) {
-            let statValue = displayStats[stat];
-            let wonderGuardNote = '';
-            if (stat === 'HP' && hasWonderGuard) {
-                wonderGuardNote = ' <span class="wonder-guard-note">(Max HP: 1)</span>';
-            }
-            html += renderStatLine(stat, statValue) + wonderGuardNote;
+            html += renderStatLine(stat, fusedStats[stat]);
         }
     }
     
@@ -706,10 +671,17 @@ function renderFusionDetails(p1, p2) {
         html += `<div class="total-bst">Total BST: ${formatNumber(fusedBST)}</div>`;
     }
     
+    // Differences
+    if (opts.diffs) {
+        const p1BST = parseInt(p1.bst);
+        const p2BST = parseInt(p2.bst);
+        html += `<div class="stat-line"><span class="stat-label">Diff from ${p1.name}:</span><span class="stat-value">${formatNumber(fusedBST - p1BST)}</span></div>`;
+        html += `<div class="stat-line"><span class="stat-label">Diff from ${p2.name}:</span><span class="stat-value">${formatNumber(fusedBST - p2BST)}</span></div>`;
+    }
+    
     // Damage Taken
     if (opts.damage) {
-        const teraType = document.getElementById('teraTypeFusion')?.value || null;
-        const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null, teraType);
+        const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
         html += renderDamageTable(eff);
     }
     
@@ -775,14 +747,13 @@ function selectPokemon(name, listId) {
         document.getElementById('title-p1').textContent = name;
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
         setupEvolutionLinks('p1');
-        populateActiveAbilityDropdown(selectedP1, 'p1');
     } else {
         selectedP2 = pokemonData[name];
         selectedP2.name = name;
         document.getElementById('title-p2').textContent = name;
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
-        populateActiveAbilityDropdown(selectedP2, 'p2');
+        populateActiveAbilityDropdown(selectedP2);
     }
     
     hasFusion = false;
@@ -831,9 +802,8 @@ function setupEvolutionLinks(panel) {
     });
 }
 
-function populateActiveAbilityDropdown(pokemon, panel) {
-    const selectId = panel === 'p1' ? 'activeAbility1' : 'activeAbility';
-    const select = document.getElementById(selectId);
+function populateActiveAbilityDropdown(pokemon) {
+    const select = document.getElementById('activeAbility');
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
     
     select.innerHTML = '';
@@ -883,12 +853,7 @@ function swap() {
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
     
-    if (selectedP1) {
-        populateActiveAbilityDropdown(selectedP1, 'p1');
-    }
-    if (selectedP2) {
-        populateActiveAbilityDropdown(selectedP2, 'p2');
-    }
+    if (hasFusion) fuse();
 }
 
 function clearSelections() {
@@ -908,48 +873,19 @@ function clearSelections() {
 }
 
 function initNatures() {
-    const selectors = ['activeNature', 'activeNature2'];
+    const select = document.getElementById('activeNature');
+    select.innerHTML = '';
     
-    selectors.forEach(selectId => {
-        const select = document.getElementById(selectId);
-        if (!select) return;
-        
-        select.innerHTML = '';
-        
-        const noneOption = document.createElement('option');
-        noneOption.value = '';
-        noneOption.textContent = 'None';
-        select.appendChild(noneOption);
-        
-        Object.keys(NATURES).sort().forEach(nature => {
-            const option = document.createElement('option');
-            option.value = nature;
-            option.textContent = nature;
-            select.appendChild(option);
-        });
-    });
-}
-
-function initTeraTypes() {
-    const selectors = ['teraType1', 'teraType2', 'teraTypeFusion'];
+    const noneOption = document.createElement('option');
+    noneOption.value = '';
+    noneOption.textContent = 'None';
+    select.appendChild(noneOption);
     
-    selectors.forEach(selectId => {
-        const select = document.getElementById(selectId);
-        if (!select) return;
-        
-        select.innerHTML = '';
-        
-        const noneOption = document.createElement('option');
-        noneOption.value = '';
-        noneOption.textContent = 'None';
-        select.appendChild(noneOption);
-        
-        TERA_TYPES.forEach(type => {
-            const option = document.createElement('option');
-            option.value = type;
-            option.textContent = type;
-            select.appendChild(option);
-        });
+    Object.keys(NATURES).sort().forEach(nature => {
+        const option = document.createElement('option');
+        option.value = nature;
+        option.textContent = nature;
+        select.appendChild(option);
     });
 }
 
@@ -960,7 +896,7 @@ function toggleDisplayOptions() {
 function resetDisplayOptions() {
     displayOptions.p1 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
     displayOptions.p2 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
-    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true };
+    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true };
     
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
         cb.checked = true;
@@ -1185,9 +1121,6 @@ function init() {
     // Initialize natures
     initNatures();
     
-    // Initialize Tera types
-    initTeraTypes();
-    
     // Search handlers
     document.getElementById('search-p1').addEventListener('input', (e) => populateList('list-p1', e.target.value));
     document.getElementById('search-p2').addEventListener('input', (e) => populateList('list-p2', e.target.value));
@@ -1206,27 +1139,13 @@ function init() {
     document.getElementById('applyFiltersBtn').addEventListener('click', applyFilters);
     document.getElementById('clearFiltersBtn').addEventListener('click', clearFilters);
     
-    // Active ability selector (Pokemon 2)
+    // Active ability selector
     document.getElementById('activeAbility').addEventListener('change', () => {
-        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         if (hasFusion) fuse();
     });
     
-    // Active ability selector (Pokemon 1)
-    document.getElementById('activeAbility1').addEventListener('change', () => {
-        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
-        if (hasFusion) fuse();
-    });
-    
-    // Active nature selector (Pokemon 1)
+    // Active nature selector
     document.getElementById('activeNature').addEventListener('change', () => {
-        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
-        if (hasFusion) fuse();
-    });
-    
-    // Active nature selector (Pokemon 2)
-    document.getElementById('activeNature2').addEventListener('change', () => {
-        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         if (hasFusion) fuse();
     });
     
@@ -1234,21 +1153,6 @@ function init() {
     document.getElementById('flipStatChallenge').addEventListener('change', refreshDisplay);
     document.getElementById('inverseBattle').addEventListener('change', refreshDisplay);
     document.getElementById('passiveActive').addEventListener('change', refreshDisplay);
-    
-    // Tera type selectors
-    document.getElementById('teraType1').addEventListener('change', () => {
-        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
-        if (hasFusion) fuse();
-    });
-    
-    document.getElementById('teraType2').addEventListener('change', () => {
-        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
-        if (hasFusion) fuse();
-    });
-    
-    document.getElementById('teraTypeFusion').addEventListener('change', () => {
-        if (hasFusion) fuse();
-    });
     
     // Display options
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
