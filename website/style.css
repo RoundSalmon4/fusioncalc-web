@@ -124,12 +124,15 @@ h4 {
 }
 
 .fusion-top {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .fusion-top h3 {
     text-align: center;
     margin-bottom: 10px;
+    flex: 0 0 auto;
 }
 
 .fusion-notes {
@@ -138,8 +141,11 @@ h4 {
     border-radius: 4px;
     margin-top: 10px;
     border-top: 1px solid #555;
+    flex: 0 0 auto;
+}
+
+.pokemon-details.fusion-details {
     flex: 1 1 auto;
-    overflow-y: auto;
 }
 
 .notes-section {
@@ -322,8 +328,6 @@ h4 {
     padding: 15px;
     border-radius: 4px;
     min-height: 150px;
-    max-height: 400px;
-    overflow-y: auto;
 }
 
 /* Pokemon Details Styling */
@@ -513,7 +517,7 @@ h4 {
 
 .modal-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
 }
 
