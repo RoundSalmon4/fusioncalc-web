@@ -36,7 +36,3 @@ Pokémon data is sourced from [PokeRogue-Dex](https://github.com/Sandstormer/Pok
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-
-## License
-
-BSD 3-Clause License - See LICENSE file for details.
