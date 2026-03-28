@@ -615,6 +615,34 @@ h4 {
     width: 70px;
 }
 
+.type-help {
+    font-size: 11px;
+    color: #888;
+    margin-top: 6px;
+}
+
+.damage-filter-row {
+    margin-bottom: 6px;
+}
+
+.damage-filter-row select,
+.damage-filter-row input {
+    padding: 4px 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #3a3a3a;
+    color: #e0e0e0;
+    font-size: 11px;
+}
+
+.damage-filter-row input[type="number"] {
+    width: 60px;
+}
+
+.damage-filter-row select.damage-filter-type {
+    min-width: 100px;
+}
+
 .stat-filters {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

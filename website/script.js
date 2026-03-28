@@ -34,7 +34,7 @@ const FILTER_STATE = {
     sortAsc: true,
     genFilter: 0,
     typeFilter: { mode: 'any', typeA: '', typeB: '' },
-    damageFilter: { on: false, typeName: '', op: '>=', value: 1.0 },
+    damageFilters: [],
     rules: {
         'HP': { on: false, op: '>=', value: 0 },
         'Attack': { on: false, op: '>=', value: 0 },
@@ -90,31 +90,37 @@ function pokemonPassesFilters(stats) {
     
     // Type filter
     const tf = FILTER_STATE.typeFilter;
-    if (tf.mode !== 'any') {
-        const t1 = (stats.type1 || '').toLowerCase();
-        const t2 = (stats.type2 || '').toLowerCase();
-        const ta = (tf.typeA || '').toLowerCase();
-        const tb = (tf.typeB || '').toLowerCase();
-        const t2Empty = !t2 || t2 === t1;
-        
-        if (tf.mode === 'mono') {
-            if (ta && (t1 !== ta || !t2Empty)) return false;
-        } else if (tf.mode === 'dual') {
-            if (ta && tb) {
-                if (!((t1 === ta && t2 === tb) || (t1 === tb && t2 === ta))) return false;
-            } else if (ta) {
-                if (!(t1 === ta && t2Empty)) return false;
-            }
-        } else if (tf.mode === 'a_or_b') {
-            const hasA = !ta || t1 === ta || t2 === ta;
-            const hasB = !tb || t1 === tb || t2 === tb;
+    const t1 = (stats.type1 || '').toLowerCase();
+    const t2 = (stats.type2 || '').toLowerCase();
+    const ta = (tf.typeA || '').toLowerCase();
+    const tb = (tf.typeB || '').toLowerCase();
+    const t2Empty = !t2 || t2 === t1;
+    
+    if (tf.mode === 'mono') {
+        if (ta && (t1 !== ta || !t2Empty)) return false;
+    } else if (tf.mode === 'dual') {
+        if (ta && tb) {
+            if (!((t1 === ta && t2 === tb) || (t1 === tb && t2 === ta))) return false;
+        } else if (ta) {
+            if (!(t1 === ta && t2Empty)) return false;
+        }
+    } else if (tf.mode === 'a_or_b') {
+        if (ta && tb) {
+            const hasA = t1 === ta || t2 === ta;
+            const hasB = t1 === tb || t2 === tb;
             if (!hasA && !hasB) return false;
+        } else if (ta) {
+            if (t1 !== ta && t2 !== ta) return false;
+        }
+    } else if (tf.mode === 'any') {
+        if (ta) {
+            if (t1 !== ta && t2 !== ta) return false;
         }
     }
     
-    // Damage filter
-    const df = FILTER_STATE.damageFilter;
-    if (df.on && df.typeName) {
+    // Damage filters (all must pass)
+    for (const df of FILTER_STATE.damageFilters) {
+        if (!df.on || !df.typeName) continue;
         const invOn = document.getElementById('inverseBattle').checked;
         const eff = calculateTypeEffectiveness(stats.type1, stats.type2);
         let dmg = parseFloat(eff[df.typeName] || 1.0);
@@ -769,21 +775,88 @@ function toggleFiltersModal() {
     document.getElementById('filtersModal').classList.toggle('show');
 }
 
+function updateTypeFilterUI() {
+    const mode = document.getElementById('typeMode').value;
+    const typeB = document.getElementById('typeB');
+    const typeHelp = document.getElementById('typeHelp');
+    
+    if (mode === 'mono') {
+        typeB.disabled = true;
+        typeB.style.opacity = '0.5';
+        typeHelp.textContent = 'Filter for Pokémon with only this type';
+    } else if (mode === 'dual') {
+        typeB.disabled = false;
+        typeB.style.opacity = '1';
+        typeHelp.textContent = 'Both types required';
+    } else if (mode === 'a_or_b') {
+        typeB.disabled = false;
+        typeB.style.opacity = '1';
+        typeHelp.textContent = 'Both types required';
+    } else {
+        typeB.disabled = false;
+        typeB.style.opacity = '1';
+        typeHelp.textContent = 'Filter Pokémon with selected type(s)';
+    }
+}
+
+function createDamageFilterRow(filter = null) {
+    const row = document.createElement('div');
+    row.className = 'filter-row damage-filter-row';
+    const idx = FILTER_STATE.damageFilters.length;
+    
+    row.innerHTML = `
+        <label>
+            <input type="checkbox" class="damage-filter-enabled" ${filter && filter.on ? 'checked' : ''}>
+        </label>
+        <select class="damage-filter-type">
+            <option value="">Type</option>
+            ${ALL_TYPES.map(t => `<option value="${t}" ${filter && filter.typeName === t ? 'selected' : ''}>${t}</option>`).join('')}
+        </select>
+        <select class="damage-filter-op">
+            <option value=">=" ${!filter || filter.op === '>=' ? 'selected' : ''}>>=</option>
+            <option value="<=" ${filter && filter.op === '<=' ? 'selected' : ''}><=</option>
+            <option value=">" ${filter && filter.op === '>' ? 'selected' : ''}>></option>
+            <option value="<" ${filter && filter.op === '<' ? 'selected' : ''}><</option>
+            <option value="=" ${filter && filter.op === '=' ? 'selected' : ''}>=</option>
+        </select>
+        <input type="number" class="damage-filter-value" value="${filter ? filter.value : 1}" step="0.25" min="0">
+        <button class="damage-filter-remove btn-danger" style="padding: 2px 8px; font-size: 10px;">X</button>
+    `;
+    
+    row.querySelector('.damage-filter-remove').addEventListener('click', () => {
+        const index = Array.from(document.querySelectorAll('.damage-filter-row')).indexOf(row);
+        if (index >= 0) {
+            FILTER_STATE.damageFilters.splice(index, 1);
+            row.remove();
+        }
+    });
+    
+    return row;
+}
+
+function addDamageFilter() {
+    const list = document.getElementById('damageFiltersList');
+    const newFilter = { on: true, typeName: '', op: '>=', value: 1 };
+    FILTER_STATE.damageFilters.push(newFilter);
+    list.appendChild(createDamageFilterRow(newFilter));
+}
+
 function initFilters() {
     // Populate type dropdowns
     const typeA = document.getElementById('typeA');
     const typeB = document.getElementById('typeB');
-    const damageType = document.getElementById('damageType');
-    
-    const defaultOption = document.createElement('option');
-    defaultOption.value = '';
-    defaultOption.textContent = 'Type';
     
     ALL_TYPES.forEach(type => {
         typeA.add(new Option(type, type));
         typeB.add(new Option(type, type));
-        damageType.add(new Option(type, type));
     });
+    
+    // Type mode change handler
+    document.getElementById('typeMode').addEventListener('change', updateTypeFilterUI);
+    updateTypeFilterUI();
+    
+    // Add damage filter button
+    document.getElementById('addDamageFilterBtn').addEventListener('click', addDamageFilter);
     
     // Generate stat filters
     const statFiltersEl = document.getElementById('statFilters');
@@ -834,11 +907,17 @@ function applyFilters() {
         FILTER_STATE.rules[stat].value = parseFloat(row.querySelector('input[type="number"]').value) || 0;
     });
     
-    // Damage filter
-    FILTER_STATE.damageFilter.on = document.getElementById('damageFilterEnabled').checked;
-    FILTER_STATE.damageFilter.typeName = document.getElementById('damageType').value;
-    FILTER_STATE.damageFilter.op = document.getElementById('damageOp').value;
-    FILTER_STATE.damageFilter.value = parseFloat(document.getElementById('damageValue').value) || 1;
+    // Damage filters
+    const damageFilterRows = document.querySelectorAll('.damage-filter-row');
+    FILTER_STATE.damageFilters = [];
+    damageFilterRows.forEach(row => {
+        FILTER_STATE.damageFilters.push({
+            on: row.querySelector('.damage-filter-enabled').checked,
+            typeName: row.querySelector('.damage-filter-type').value,
+            op: row.querySelector('.damage-filter-op').value,
+            value: parseFloat(row.querySelector('.damage-filter-value').value) || 1
+        });
+    });
     
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
@@ -852,7 +931,7 @@ function clearFilters() {
     FILTER_STATE.sortAsc = true;
     FILTER_STATE.genFilter = 0;
     FILTER_STATE.typeFilter = { mode: 'any', typeA: '', typeB: '' };
-    FILTER_STATE.damageFilter = { on: false, typeName: '', op: '>=', value: 1.0 };
+    FILTER_STATE.damageFilters = [];
     
     for (const stat in FILTER_STATE.rules) {
         FILTER_STATE.rules[stat] = { on: false, op: '>=', value: 0 };
@@ -867,10 +946,7 @@ function clearFilters() {
     document.getElementById('typeMode').value = 'any';
     document.getElementById('typeA').value = '';
     document.getElementById('typeB').value = '';
-    document.getElementById('damageFilterEnabled').checked = false;
-    document.getElementById('damageType').value = '';
-    document.getElementById('damageOp').value = '>=';
-    document.getElementById('damageValue').value = '1';
+    document.getElementById('damageFiltersList').innerHTML = '';
     
     document.querySelectorAll('#statFilters .stat-filter-row').forEach(row => {
         const stat = row.querySelector('input[type="checkbox"]').dataset.stat;
@@ -878,6 +954,8 @@ function clearFilters() {
         row.querySelector('.stat-op').value = '>=';
         row.querySelector('input[type="number"]').value = '0';
     });
+    
+    updateTypeFilterUI();
     
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
