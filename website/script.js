@@ -399,29 +399,33 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     const opts = displayOptions[panelKey];
     const flipOn = document.getElementById('flipStatChallenge').checked;
-    let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
     
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
-    const mainAbility = abilities[0] || '';
+    const hiddenAbility = abilities[1] || '';
     const passiveAbility = pokemon.passive || '';
-    const hasWonderGuard = mainAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
+    
+    const natureSelectId = panelKey === 'p1' ? 'activeNature' : 'activeNature2';
+    const abilitySelectId = panelKey === 'p1' ? 'activeAbility1' : 'activeAbility';
+    const activeNature = document.getElementById(natureSelectId)?.value || '';
+    const activeAbility = document.getElementById(abilitySelectId)?.value || abilities[0] || '';
+    const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
+    
+    let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
+    const hasWonderGuard = activeAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
     
     if (flipOn) {
         stats = flipStats(stats);
-        // Wonder Guard prevents HP from being swapped
         if (hasWonderGuard) {
             const originalHP = pokemon.hp;
             stats.HP = originalHP;
         }
     }
     
-    // Wonder Guard enforces HP = 1
     if (hasWonderGuard) {
         stats.HP = 1;
     }
     
     const bst = parseInt(pokemon.bst);
-    const hiddenAbility = abilities[1] || '';
     
     let html = '';
     
@@ -440,8 +444,15 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     }
     
     // Abilities
-    if (opts.abilities && mainAbility) {
-        html += `<div class="ability-line"><span class="ability-label">Ability:</span> ${mainAbility}</div>`;
+    if (opts.abilities && activeAbility) {
+        html += `<div class="ability-line"><span class="ability-label">Active:</span> ${activeAbility}</div>`;
+    }
+    if (activeNature) {
+        const inc = natureEffect.increases;
+        const dec = natureEffect.decreases;
+        const incChange = inc !== dec ? ` (+10% ${inc})` : '';
+        const decChange = inc !== dec ? ` (-10% ${dec})` : '';
+        html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${activeNature}${incChange}${decChange}</div>`;
     }
     if (opts.hidden_ability && hiddenAbility) {
         html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${hiddenAbility}</div>`;
@@ -474,7 +485,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Damage Taken
     if (opts.damage) {
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, mainAbility, pokemon.passive || null);
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, pokemon.passive || null);
         html += renderDamageTable(eff);
     }
     
@@ -667,13 +678,14 @@ function selectPokemon(name, listId) {
         document.getElementById('title-p1').textContent = name;
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
         setupEvolutionLinks('p1');
+        populateActiveAbilityDropdown(selectedP1, 'p1');
     } else {
         selectedP2 = pokemonData[name];
         selectedP2.name = name;
         document.getElementById('title-p2').textContent = name;
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
-        populateActiveAbilityDropdown(selectedP2);
+        populateActiveAbilityDropdown(selectedP2, 'p2');
     }
     
     hasFusion = false;
@@ -722,8 +734,9 @@ function setupEvolutionLinks(panel) {
     });
 }
 
-function populateActiveAbilityDropdown(pokemon) {
-    const select = document.getElementById('activeAbility');
+function populateActiveAbilityDropdown(pokemon, panel) {
+    const selectId = panel === 'p1' ? 'activeAbility1' : 'activeAbility';
+    const select = document.getElementById(selectId);
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
     
     select.innerHTML = '';
@@ -773,8 +786,11 @@ function swap() {
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
     
+    if (selectedP1) {
+        populateActiveAbilityDropdown(selectedP1, 'p1');
+    }
     if (selectedP2) {
-        populateActiveAbilityDropdown(selectedP2);
+        populateActiveAbilityDropdown(selectedP2, 'p2');
     }
 }
 
@@ -795,19 +811,25 @@ function clearSelections() {
 }
 
 function initNatures() {
-    const select = document.getElementById('activeNature');
-    select.innerHTML = '';
+    const selectors = ['activeNature', 'activeNature2'];
     
-    const noneOption = document.createElement('option');
-    noneOption.value = '';
-    noneOption.textContent = 'None';
-    select.appendChild(noneOption);
-    
-    Object.keys(NATURES).sort().forEach(nature => {
-        const option = document.createElement('option');
-        option.value = nature;
-        option.textContent = nature;
-        select.appendChild(option);
+    selectors.forEach(selectId => {
+        const select = document.getElementById(selectId);
+        if (!select) return;
+        
+        select.innerHTML = '';
+        
+        const noneOption = document.createElement('option');
+        noneOption.value = '';
+        noneOption.textContent = 'None';
+        select.appendChild(noneOption);
+        
+        Object.keys(NATURES).sort().forEach(nature => {
+            const option = document.createElement('option');
+            option.value = nature;
+            option.textContent = nature;
+            select.appendChild(option);
+        });
     });
 }
 
@@ -1061,13 +1083,27 @@ function init() {
     document.getElementById('applyFiltersBtn').addEventListener('click', applyFilters);
     document.getElementById('clearFiltersBtn').addEventListener('click', clearFilters);
     
-    // Active ability selector
+    // Active ability selector (Pokemon 2)
     document.getElementById('activeAbility').addEventListener('change', () => {
+        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         if (hasFusion) fuse();
     });
     
-    // Active nature selector
+    // Active ability selector (Pokemon 1)
+    document.getElementById('activeAbility1').addEventListener('change', () => {
+        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
+        if (hasFusion) fuse();
+    });
+    
+    // Active nature selector (Pokemon 1)
     document.getElementById('activeNature').addEventListener('change', () => {
+        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
+        if (hasFusion) fuse();
+    });
+    
+    // Active nature selector (Pokemon 2)
+    document.getElementById('activeNature2').addEventListener('change', () => {
+        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         if (hasFusion) fuse();
     });
     
