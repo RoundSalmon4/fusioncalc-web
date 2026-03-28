@@ -751,6 +751,10 @@ function swap() {
     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
+    
+    if (selectedP2) {
+        populateActiveAbilityDropdown(selectedP2);
+    }
 }
 
 function clearSelections() {
