@@ -721,8 +721,10 @@ function clearSelections() {
     document.getElementById('details-p1').innerHTML = '';
     document.getElementById('details-p2').innerHTML = '';
     document.getElementById('fusion-details').innerHTML = '';
-    populateList('list-p1');
-    populateList('list-p2');
+    document.getElementById('search-p1').value = '';
+    document.getElementById('search-p2').value = '';
+    populateList('list-p1', '');
+    populateList('list-p2', '');
     setStatus('Ready');
 }
 
@@ -939,8 +941,6 @@ function clearFilters() {
     document.getElementById('typeA').value = '';
     document.getElementById('typeB').value = '';
     document.getElementById('damageFiltersList').innerHTML = '';
-    document.getElementById('search-p1').value = '';
-    document.getElementById('search-p2').value = '';
     
     document.querySelectorAll('#statFilters .stat-filter-row').forEach(row => {
         const stat = row.querySelector('input[type="checkbox"]').dataset.stat;
@@ -951,8 +951,8 @@ function clearFilters() {
     
     updateTypeFilterUI();
     
-    populateList('list-p1', '');
-    populateList('list-p2', '');
+    populateList('list-p1', document.getElementById('search-p1').value);
+    populateList('list-p2', document.getElementById('search-p2').value);
     setStatus('Filters cleared');
 }
 
