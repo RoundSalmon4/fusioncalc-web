@@ -669,15 +669,21 @@ function renderFusionDetails(p1, p2) {
         if (opts.ability_effects && activeAbility) {
             const eff = ABILITY_EFFECTS[activeAbility.toUpperCase()];
             let parts = [];
+            let iceScalesNote = '';
             if (eff) {
                 if (eff.immunities) parts.push(`immunities: ${eff.immunities.join(', ')}`);
                 if (eff.halve) parts.push(`halves: ${eff.halve.join(', ')}`);
+                if (eff.halveSpecial) {
+                    parts.push(`halves special damage`);
+                    iceScalesNote = ' title="Reduces special damage by 50%. Shown as general reduction since move category is unknown."';
+                }
+                if (eff.halveSuperEffective) parts.push(`reduces super-effective by 25%`);
             }
             if (activeAbility.toUpperCase() === 'WONDER GUARD') {
                 parts.push('immune to all non-super-effective');
             }
             if (parts.length > 0) {
-                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> ${parts.join('; ')}</div>`;
+                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> <span${iceScalesNote}>${parts.join('; ')}</span></div>`;
             }
         }
         if (passiveAbility && passiveOn) {
