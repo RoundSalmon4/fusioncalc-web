@@ -425,10 +425,13 @@ function getFusionSprite(p1, p2) {
     const imgId1 = p1.img || p1.id;
     const src1 = `website/images/${imgId1}_0.png`;
     const type1 = p2.type1;
-    const typeColor = TYPE_COLORS[type1] || TYPE_COLORS['Normal'];
-    const filterStyle = getTypeFilter(typeColor);
     
-    return `<div class="pokemon-sprite fusion-sprite"><img src="${src1}" style="filter: ${filterStyle};" alt="fusion"></div>`;
+    // Use hue rotation to shift toward Pokemon 2's type color
+    const hue = TYPE_HUE_ROTATIONS[type1] || 0;
+    
+    return `<div class="pokemon-sprite fusion-sprite" title="Fusion sprite (${type1} type tint)">
+        <img src="${src1}" alt="fusion" style="filter: sepia(0.3) saturate(2) hue-rotate(${hue}deg);">
+    </div>`;
 }
 
 const TYPE_COLORS = {
@@ -472,11 +475,6 @@ const TYPE_HUE_ROTATIONS = {
     'Steel': 170,
     'Fairy': 320
 };
-
-function getTypeFilter(typeColor) {
-    const hue = TYPE_HUE_ROTATIONS[typeColor] || 0;
-    return `sepia(0.8) saturate(2) hue-rotate(${hue}deg) brightness(1.1) contrast(1.1)`;
-}
 
 function hexToRgb(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
