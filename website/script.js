@@ -135,7 +135,7 @@ function pokemonPassesFilters(stats) {
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
-    fusion: { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
+    fusion: { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true }
 };
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
@@ -702,14 +702,6 @@ function renderFusionDetails(p1, p2) {
         html += `<div class="total-bst">Total BST: ${formatNumber(fusedBST)}</div>`;
     }
     
-    // Differences
-    if (opts.diffs) {
-        const p1BST = parseInt(p1.bst);
-        const p2BST = parseInt(p2.bst);
-        html += `<div class="stat-line"><span class="stat-label">Diff from ${p1.name}:</span><span class="stat-value">${formatNumber(fusedBST - p1BST)}</span></div>`;
-        html += `<div class="stat-line"><span class="stat-label">Diff from ${p2.name}:</span><span class="stat-value">${formatNumber(fusedBST - p2BST)}</span></div>`;
-    }
-    
     // Damage Taken
     if (opts.damage) {
         const teraType = document.getElementById('teraTypeFusion')?.value || null;
@@ -964,7 +956,7 @@ function toggleDisplayOptions() {
 function resetDisplayOptions() {
     displayOptions.p1 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
     displayOptions.p2 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
-    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true };
+    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true };
     
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
         cb.checked = true;
