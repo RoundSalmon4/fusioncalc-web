@@ -494,19 +494,19 @@ function renderFusionDetails(p1, p2) {
         fusedStats[k] = avgRound(p1BaseStats[k], p2BaseStats[k]);
     }
     
-    // Wonder Guard sets HP to 1
-    const activeAbilityUpper = activeAbility.toUpperCase();
-    const passiveAbilityUpper = passiveAbility.toUpperCase();
-    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
-    if (hasWonderGuard) {
-        fusedStats.HP = 1;
-    }
-    
     const fusedBST = Math.round(Object.values(fusedStats).reduce((a, b) => a + b, 0) * 10) / 10;
     
     let displayStats = fusedStats;
     if (flipOn) {
         displayStats = flipStats(fusedStats);
+    }
+    
+    // Wonder Guard sets HP to 1 (applied after flip if active)
+    const activeAbilityUpper = activeAbility.toUpperCase();
+    const passiveAbilityUpper = passiveAbility.toUpperCase();
+    const hasWonderGuard = activeAbilityUpper === 'WONDER GUARD' || (passiveOn && passiveAbilityUpper === 'WONDER GUARD');
+    if (hasWonderGuard) {
+        displayStats.HP = 1;
     }
     
     const selectedNatureEl = document.getElementById('activeNature');
