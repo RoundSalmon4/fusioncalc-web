@@ -168,6 +168,12 @@ const NATURES = {
     'Timid': { increases: 'Speed', decreases: 'Attack' }
 };
 
+const TERA_TYPES = [
+    'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
+    'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
+    'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy', 'Stellar'
+];
+
 const TYPE_EFFECTIVENESS = {
     Normal: { weaknesses: ['Fighting'], resistances: [], immunities: ['Ghost'] },
     Fire: { weaknesses: ['Water', 'Ground', 'Rock'], resistances: ['Fire', 'Grass', 'Ice', 'Bug', 'Steel', 'Fairy'], immunities: [] },
@@ -237,16 +243,20 @@ function invertValue(v) {
     return 1;
 }
 
-function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility = null) {
+function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility = null, teraType = null) {
     const result = {};
     const types = Object.keys(TYPE_EFFECTIVENESS);
     const inverseOn = document.getElementById('inverseBattle')?.checked || false;
     
+    // Use Tera type if selected (Tera replaces the Pokemon's types)
+    const effectiveT1 = teraType || t1;
+    const effectiveT2 = teraType ? null : t2; // Only use second type if no tera
+    
     for (const atkType of types) {
         let v1 = 1.0, v2 = 1.0;
         
-        if (t1) {
-            const def = TYPE_EFFECTIVENESS[titleCase(t1)];
+        if (effectiveT1) {
+            const def = TYPE_EFFECTIVENESS[titleCase(effectiveT1)];
             if (def) {
                 if (def.weaknesses.includes(titleCase(atkType))) v1 *= 2;
                 if (def.resistances.includes(titleCase(atkType))) v1 *= 0.5;
@@ -254,8 +264,8 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             }
         }
         
-        if (t2 && t2 !== t1) {
-            const def = TYPE_EFFECTIVENESS[titleCase(t2)];
+        if (effectiveT2 && effectiveT2 !== effectiveT1) {
+            const def = TYPE_EFFECTIVENESS[titleCase(effectiveT2)];
             if (def) {
                 if (def.weaknesses.includes(titleCase(atkType))) v2 *= 2;
                 if (def.resistances.includes(titleCase(atkType))) v2 *= 0.5;
@@ -564,7 +574,9 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Damage Taken
     if (opts.damage) {
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, pokemon.passive || null);
+        const teraSelectId = panelKey === 'p1' ? 'teraType1' : 'teraType2';
+        const teraType = document.getElementById(teraSelectId)?.value || null;
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, pokemon.passive || null, teraType);
         html += renderDamageTable(eff);
     }
     
@@ -629,6 +641,11 @@ function renderFusionDetails(p1, p2) {
     // Fused Type
     if (opts.fused_type) {
         html += `<div class="type-line"><span class="ability-label">Fused Type:</span> ${renderTypeBadge(fusedType1)}${fusedType2 ? renderTypeBadge(fusedType2) : ''}</div>`;
+        
+        const teraType = document.getElementById('teraTypeFusion')?.value;
+        if (teraType) {
+            html += `<div class="type-line"><span class="ability-label">Tera Type:</span> ${renderTypeBadge(teraType)} (Terastallized)</div>`;
+        }
     }
     
     // Abilities
@@ -695,7 +712,8 @@ function renderFusionDetails(p1, p2) {
     
     // Damage Taken
     if (opts.damage) {
-        const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
+        const teraType = document.getElementById('teraTypeFusion')?.value || null;
+        const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null, teraType);
         html += renderDamageTable(eff);
     }
     
@@ -911,6 +929,29 @@ function initNatures() {
             const option = document.createElement('option');
             option.value = nature;
             option.textContent = nature;
+            select.appendChild(option);
+        });
+    });
+}
+
+function initTeraTypes() {
+    const selectors = ['teraType1', 'teraType2', 'teraTypeFusion'];
+    
+    selectors.forEach(selectId => {
+        const select = document.getElementById(selectId);
+        if (!select) return;
+        
+        select.innerHTML = '';
+        
+        const noneOption = document.createElement('option');
+        noneOption.value = '';
+        noneOption.textContent = 'None';
+        select.appendChild(noneOption);
+        
+        TERA_TYPES.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type;
+            option.textContent = type;
             select.appendChild(option);
         });
     });
@@ -1148,6 +1189,9 @@ function init() {
     // Initialize natures
     initNatures();
     
+    // Initialize Tera types
+    initTeraTypes();
+    
     // Search handlers
     document.getElementById('search-p1').addEventListener('input', (e) => populateList('list-p1', e.target.value));
     document.getElementById('search-p2').addEventListener('input', (e) => populateList('list-p2', e.target.value));
@@ -1194,6 +1238,21 @@ function init() {
     document.getElementById('flipStatChallenge').addEventListener('change', refreshDisplay);
     document.getElementById('inverseBattle').addEventListener('change', refreshDisplay);
     document.getElementById('passiveActive').addEventListener('change', refreshDisplay);
+    
+    // Tera type selectors
+    document.getElementById('teraType1').addEventListener('change', () => {
+        if (selectedP1) document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
+        if (hasFusion) fuse();
+    });
+    
+    document.getElementById('teraType2').addEventListener('change', () => {
+        if (selectedP2) document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
+        if (hasFusion) fuse();
+    });
+    
+    document.getElementById('teraTypeFusion').addEventListener('change', () => {
+        if (hasFusion) fuse();
+    });
     
     // Display options
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
