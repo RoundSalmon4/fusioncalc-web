@@ -135,7 +135,7 @@ function pokemonPassesFilters(stats) {
 const displayOptions = {
     p1: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
     p2: { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true },
-    fusion: { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true, quick_compare: true }
+    fusion: { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true }
 };
 
 const FLIP_MAP = { HP: 'Speed', Speed: 'HP', Attack: 'Sp. Def', 'Sp. Def': 'Attack', Defense: 'Sp. Atk', 'Sp. Atk': 'Defense' };
@@ -566,60 +566,6 @@ function renderFusionDetails(p1, p2) {
         html += `<div class="stat-line"><span class="stat-label">Diff from ${p2.name}:</span><span class="stat-value">${formatNumber(fusedBST - p2BST)}</span></div>`;
     }
     
-    // Quick Compare
-    if (opts.quick_compare) {
-        const quickCompareTarget = document.getElementById('quickCompareTarget')?.value || 'p2';
-        let targetT1, targetT2, targetName;
-        if (quickCompareTarget === 'p1') {
-            targetT1 = p1.type1;
-            targetT2 = p1.type2;
-            targetName = p1.name;
-        } else {
-            targetT1 = p2.type1;
-            targetT2 = p2.type2;
-            targetName = p2.name;
-        }
-        
-        const effFused = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
-        const effBase = calculateTypeEffectiveness(targetT1, targetT2);
-        
-        const groupEffects = (eff) => {
-            const groups = { 0: new Set(), 0.25: new Set(), 0.5: new Set(), 1: new Set(), 2: new Set(), 4: new Set() };
-            for (const [t, v] of Object.entries(eff)) {
-                const fv = parseFloat(v);
-                if (fv <= 0) groups[0].add(t);
-                else if (fv <= 0.25) groups[0.25].add(t);
-                else if (fv <= 0.5) groups[0.5].add(t);
-                else if (fv >= 4) groups[4].add(t);
-                else if (fv >= 2) groups[2].add(t);
-                else groups[1].add(t);
-            }
-            return groups;
-        };
-        
-        const gf = groupEffects(effFused);
-        const gb = groupEffects(effBase);
-        
-        const newImm = [...gf[0].diff(gb[0])].sort();
-        const lostImm = [...gb[0].diff(gf[0])].sort();
-        const newWk = [...new Set([...gf[2], ...gf[4]].filter(t => !new Set([...gb[2], ...gb[4]]).has(t)))].sort();
-        const lostWk = [...new Set([...gb[2], ...gb[4]].filter(t => !new Set([...gf[2], ...gf[4]]).has(t)))].sort();
-        const newRes = [...new Set([...gf[0.25], ...gf[0.5]].filter(t => !new Set([...gb[0.25], ...gb[0.5]]).has(t)))].sort();
-        const lostRes = [...new Set([...gb[0.25], ...gb[0.5]].filter(t => !new Set([...gf[0.25], ...gf[0.5]]).has(t)))].sort();
-        
-        const hasChanges = newImm.length || lostImm.length || newWk.length || lostWk.length || newRes.length || lostRes.length;
-        
-        html += `<div class="quick-compare"><span class="ability-label">Quick Compare vs ${targetName}:</span>`;
-        if (newImm.length) html += `<div>New immunities: ${newImm.join(', ')}</div>`;
-        if (lostImm.length) html += `<div>Lost immunities: ${lostImm.join(', ')}</div>`;
-        if (newWk.length) html += `<div>Gained weaknesses (2x+): ${newWk.join(', ')}</div>`;
-        if (lostWk.length) html += `<div>Lost weaknesses (2x+): ${lostWk.join(', ')}</div>`;
-        if (newRes.length) html += `<div>Gained resistances (1/2x or less): ${newRes.join(', ')}</div>`;
-        if (lostRes.length) html += `<div>Lost resistances (1/2x or less): ${lostRes.join(', ')}</div>`;
-        if (!hasChanges) html += `<div>No changes in immunities/weaknesses/resistances vs baseline.</div>`;
-        html += '</div>';
-    }
-    
     // Damage Taken
     if (opts.damage) {
         const eff = calculateTypeEffectiveness(fusedType1, fusedType2, activeAbility, passiveOn ? passiveAbility : null);
@@ -837,7 +783,7 @@ function toggleDisplayOptions() {
 function resetDisplayOptions() {
     displayOptions.p1 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
     displayOptions.p2 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
-    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true, quick_compare: true };
+    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, diffs: true, ability_effects: true, damage: true };
     
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
         cb.checked = true;
@@ -1094,11 +1040,6 @@ function init() {
     document.getElementById('flipStatChallenge').addEventListener('change', refreshDisplay);
     document.getElementById('inverseBattle').addEventListener('change', refreshDisplay);
     document.getElementById('passiveActive').addEventListener('change', refreshDisplay);
-    
-    // Quick Compare target selector
-    document.getElementById('quickCompareTarget').addEventListener('change', () => {
-        if (hasFusion) fuse();
-    });
     
     // Display options
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
