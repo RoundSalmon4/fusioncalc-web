@@ -112,10 +112,6 @@ function pokemonPassesFilters(stats) {
         } else if (ta) {
             if (t1 !== ta && t2 !== ta) return false;
         }
-    } else if (tf.mode === 'any') {
-        if (ta) {
-            if (t1 !== ta && t2 !== ta) return false;
-        }
     }
     
     // Damage filters (all must pass)
@@ -792,10 +788,6 @@ function updateTypeFilterUI() {
         typeB.disabled = false;
         typeB.style.opacity = '1';
         typeHelp.textContent = 'Both types required';
-    } else {
-        typeB.disabled = false;
-        typeB.style.opacity = '1';
-        typeHelp.textContent = 'Filter Pokémon with selected type(s)';
     }
 }
 
@@ -930,7 +922,7 @@ function clearFilters() {
     FILTER_STATE.sortKey = 'ID';
     FILTER_STATE.sortAsc = true;
     FILTER_STATE.genFilter = 0;
-    FILTER_STATE.typeFilter = { mode: 'any', typeA: '', typeB: '' };
+    FILTER_STATE.typeFilter = { mode: 'mono', typeA: '', typeB: '' };
     FILTER_STATE.damageFilters = [];
     
     for (const stat in FILTER_STATE.rules) {
