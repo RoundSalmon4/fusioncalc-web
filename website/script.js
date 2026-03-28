@@ -286,7 +286,7 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
     }
     
     // Wonder Guard
-    if ((activeAbility === 'Wonder Guard' || passiveAbility === 'Wonder Guard')) {
+    if ((activeAbility?.toUpperCase() === 'WONDER GUARD' || passiveAbility?.toUpperCase() === 'WONDER GUARD')) {
         for (const k in result) {
             if (result[k] < 2) result[k] = 0;
         }
@@ -533,10 +533,15 @@ function renderFusionDetails(p1, p2) {
         }
         if (opts.ability_effects && activeAbility) {
             const eff = ABILITY_EFFECTS[activeAbility.toUpperCase()];
+            let parts = [];
             if (eff) {
-                let parts = [];
                 if (eff.immunities) parts.push(`immunities: ${eff.immunities.join(', ')}`);
                 if (eff.halve) parts.push(`halves: ${eff.halve.join(', ')}`);
+            }
+            if (activeAbility.toUpperCase() === 'WONDER GUARD') {
+                parts.push('immune to all non-super-effective');
+            }
+            if (parts.length > 0) {
                 html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> ${parts.join('; ')}</div>`;
             }
         }
