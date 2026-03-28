@@ -935,10 +935,12 @@ function clearFilters() {
     document.getElementById('sortKey').value = 'ID';
     document.getElementById('sortOrder').value = 'asc';
     document.getElementById('genFilter').value = '0';
-    document.getElementById('typeMode').value = 'any';
+    document.getElementById('typeMode').value = 'mono';
     document.getElementById('typeA').value = '';
     document.getElementById('typeB').value = '';
     document.getElementById('damageFiltersList').innerHTML = '';
+    document.getElementById('search-p1').value = '';
+    document.getElementById('search-p2').value = '';
     
     document.querySelectorAll('#statFilters .stat-filter-row').forEach(row => {
         const stat = row.querySelector('input[type="checkbox"]').dataset.stat;
@@ -949,8 +951,8 @@ function clearFilters() {
     
     updateTypeFilterUI();
     
-    populateList('list-p1', document.getElementById('search-p1').value);
-    populateList('list-p2', document.getElementById('search-p2').value);
+    populateList('list-p1', '');
+    populateList('list-p2', '');
     setStatus('Filters cleared');
 }
 
