@@ -47,7 +47,10 @@
 
             <div class="fusion-column">
                 <div class="fusion-top">
-                    <h3>Fusion Result</h3>
+                    <h3>Fusion Result <label class="quick-compare-selector">vs <select id="quickCompareTarget">
+                        <option value="p2">Pokémon 2</option>
+                        <option value="p1">Pokémon 1</option>
+                    </select></label></h3>
                     <div class="pokemon-details fusion-details" id="fusion-details"></div>
                 </div>
                 <div class="fusion-notes">
@@ -117,6 +120,7 @@
                     <label><input type="checkbox" checked data-panel="fusion" data-key="diffs"> Differences</label>
                     <label><input type="checkbox" checked data-panel="fusion" data-key="ability_effects"> Ability Effects</label>
                     <label><input type="checkbox" checked data-panel="fusion" data-key="damage"> Damage Taken</label>
+                    <label><input type="checkbox" checked data-panel="fusion" data-key="quick_compare"> Quick Compare</label>
                 </div>
                 <div class="options-column">
                     <h4>Pokémon 2</h4>
