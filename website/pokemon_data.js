@@ -556,7 +556,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25"
   },
   "Partner Pikachu": {
@@ -572,7 +572,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-partner"
   },
   "Cosplay Pikachu": {
@@ -588,7 +588,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Costar",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cosplay"
   },
   "Cool Cosplay Pikachu": {
@@ -604,7 +604,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Iron Fist",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cool-cosplay"
   },
   "Beauty Cosplay Pikachu": {
@@ -620,7 +620,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Queenly Majesty",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-beauty-cosplay"
   },
   "Cute Cosplay Pikachu": {
@@ -636,7 +636,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Misty Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cute-cosplay"
   },
   "Smart Cosplay Pikachu": {
@@ -652,7 +652,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Tinted Lens",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-smart-cosplay"
   },
   "Tough Cosplay Pikachu": {
@@ -668,7 +668,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Libero",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-tough-cosplay"
   },
   "Gigantamax Pikachu": {
@@ -684,7 +684,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod",
     "passive": "Thick Fat",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-gigantamax"
   },
   "Raichu": {
@@ -700,7 +700,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "26"
   },
   "Sandshrew": {
@@ -1663,7 +1663,7 @@ const POKEMON_DATA = {
     "evolution": "Magnemite, Magneton, Magnezone",
     "img": "82"
   },
-  "Farfetchd": {
+  "Farfetch’d": {
     "id": 83,
     "hp": 52,
     "attack": 90,
@@ -1676,7 +1676,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Inner Focus, Defiant",
     "passive": "Sniper",
-    "evolution": "Farfetchd",
+    "evolution": "Farfetch’d",
     "img": "83"
   },
   "Doduo": {
@@ -2351,7 +2351,7 @@ const POKEMON_DATA = {
     "evolution": "Staryu, Starmie",
     "img": "121"
   },
-  "Mr Mime": {
+  "Mr. Mime": {
     "id": 122,
     "hp": 40,
     "attack": 45,
@@ -2364,7 +2364,7 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soundproof, Filter, Technician",
     "passive": "Prankster",
-    "evolution": "Mr Mime, Mime Jr, Mr Rime, Galar Mr Mime",
+    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "122"
   },
   "Scyther": {
@@ -2684,7 +2684,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Trace, Download, Analytic",
     "passive": "Transistor",
-    "evolution": "Porygon, Porygon2, Porygon Z",
+    "evolution": "Porygon, Porygon2, Porygon-Z",
     "img": "137"
   },
   "Omanyte": {
@@ -3308,10 +3308,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172"
   },
-  "Spiky Pichu": {
+  "Spiky-Eared Pichu": {
     "id": 172,
     "hp": 20,
     "attack": 40,
@@ -3324,7 +3324,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172-spiky"
   },
   "Cleffa": {
@@ -4316,7 +4316,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two Segment Dudunsparce, Three Segment Dudunsparce",
+    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "206"
   },
   "Gligar": {
@@ -4812,7 +4812,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Trace, Download, Analytic",
     "passive": "Transistor",
-    "evolution": "Porygon, Porygon2, Porygon Z",
+    "evolution": "Porygon, Porygon2, Porygon-Z",
     "img": "233"
   },
   "Stantler": {
@@ -5087,7 +5087,7 @@ const POKEMON_DATA = {
     "evolution": "Lugia",
     "img": "249"
   },
-  "Ho Oh": {
+  "Ho-Oh": {
     "id": 250,
     "hp": 106,
     "attack": 130,
@@ -5100,7 +5100,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Pressure, Regenerator",
     "passive": "Serene Grace",
-    "evolution": "Ho Oh",
+    "evolution": "Ho-Oh",
     "img": "250"
   },
   "Celebi": {
@@ -8687,7 +8687,7 @@ const POKEMON_DATA = {
     "evolution": "Sudowoodo, Bonsly",
     "img": "438"
   },
-  "Mime Jr": {
+  "Mime Jr.": {
     "id": 439,
     "hp": 20,
     "attack": 25,
@@ -8700,7 +8700,7 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soundproof, Filter, Technician",
     "passive": "Prankster",
-    "evolution": "Mr Mime, Mime Jr, Mr Rime, Galar Mr Mime",
+    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "439"
   },
   "Happiny": {
@@ -9295,7 +9295,7 @@ const POKEMON_DATA = {
     "evolution": "Swinub, Piloswine, Mamoswine",
     "img": "473"
   },
-  "Porygon Z": {
+  "Porygon-Z": {
     "id": 474,
     "hp": 85,
     "attack": 80,
@@ -9308,7 +9308,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Adaptability, Download, Analytic",
     "passive": "Protean",
-    "evolution": "Porygon, Porygon2, Porygon Z",
+    "evolution": "Porygon, Porygon2, Porygon-Z",
     "img": "474"
   },
   "Gallade": {
@@ -10959,7 +10959,7 @@ const POKEMON_DATA = {
     "evolution": "Petilil, Lilligant, Hisui Lilligant",
     "img": "549"
   },
-  "Red Striped Basculin": {
+  "Red-Striped Basculin": {
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -10972,10 +10972,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Reckless, Adaptability, Mold Breaker",
     "passive": "Rock Head",
-    "evolution": "Red Striped Basculin, Blue Striped Basculin, White Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-red-striped"
   },
-  "Blue Striped Basculin": {
+  "Blue-Striped Basculin": {
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -10988,10 +10988,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rock Head, Adaptability, Mold Breaker",
     "passive": "Reckless",
-    "evolution": "Red Striped Basculin, Blue Striped Basculin, White Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-blue-striped"
   },
-  "White Striped Basculin": {
+  "White-Striped Basculin": {
     "id": 550,
     "hp": 70,
     "attack": 92,
@@ -11004,7 +11004,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rattled, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red Striped Basculin, Blue Striped Basculin, White Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "550-white-striped"
   },
   "Sandile": {
@@ -15916,10 +15916,10 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pompom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741"
   },
-  "Pompom Oricorio": {
+  "Pom-Pom Oricorio": {
     "id": 741,
     "hp": 75,
     "attack": 70,
@@ -15932,7 +15932,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pompom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-pompom"
   },
   "Pau Oricorio": {
@@ -15948,7 +15948,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pompom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-pau"
   },
   "Sensu Oricorio": {
@@ -15964,7 +15964,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Dancer",
     "passive": "Adaptability",
-    "evolution": "Baile Oricorio, Pompom Oricorio, Pau Oricorio, Sensu Oricorio",
+    "evolution": "Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",
     "img": "741-sensu"
   },
   "Cutiefly": {
@@ -16511,7 +16511,7 @@ const POKEMON_DATA = {
     "evolution": "Pyukumuku",
     "img": "771"
   },
-  "Type Null": {
+  "Type: Null": {
     "id": 772,
     "hp": 95,
     "attack": 95,
@@ -16524,7 +16524,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Battle Armor",
     "passive": "Clear Body",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "772"
   },
   "Normal Silvally": {
@@ -16540,7 +16540,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773"
   },
   "Fighting Silvally": {
@@ -16556,7 +16556,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fighting"
   },
   "Flying Silvally": {
@@ -16572,7 +16572,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-flying"
   },
   "Poison Silvally": {
@@ -16588,7 +16588,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-poison"
   },
   "Ground Silvally": {
@@ -16604,7 +16604,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ground"
   },
   "Rock Silvally": {
@@ -16620,7 +16620,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-rock"
   },
   "Bug Silvally": {
@@ -16636,7 +16636,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-bug"
   },
   "Ghost Silvally": {
@@ -16652,7 +16652,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ghost"
   },
   "Steel Silvally": {
@@ -16668,7 +16668,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-steel"
   },
   "Fire Silvally": {
@@ -16684,7 +16684,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fire"
   },
   "Water Silvally": {
@@ -16700,7 +16700,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-water"
   },
   "Grass Silvally": {
@@ -16716,7 +16716,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-grass"
   },
   "Electric Silvally": {
@@ -16732,7 +16732,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-electric"
   },
   "Psychic Silvally": {
@@ -16748,7 +16748,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-psychic"
   },
   "Ice Silvally": {
@@ -16764,7 +16764,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ice"
   },
   "Dragon Silvally": {
@@ -16780,7 +16780,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dragon"
   },
   "Dark Silvally": {
@@ -16796,7 +16796,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dark"
   },
   "Fairy Silvally": {
@@ -16812,7 +16812,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Rks System",
     "passive": "Adaptability",
-    "evolution": "Type Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
+    "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fairy"
   },
   "Red Meteor Minior": {
@@ -17167,7 +17167,7 @@ const POKEMON_DATA = {
     "evolution": "Dhelmise",
     "img": "781"
   },
-  "Jangmo O": {
+  "Jangmo-o": {
     "id": 782,
     "hp": 45,
     "attack": 55,
@@ -17180,10 +17180,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo O, Hakamo O, Kommo O",
+    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "782"
   },
-  "Hakamo O": {
+  "Hakamo-o": {
     "id": 783,
     "hp": 55,
     "attack": 75,
@@ -17196,10 +17196,10 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo O, Hakamo O, Kommo O",
+    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "783"
   },
-  "Kommo O": {
+  "Kommo-o": {
     "id": 784,
     "hp": 75,
     "attack": 110,
@@ -17212,7 +17212,7 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Bulletproof, Soundproof, Overcoat",
     "passive": "Dauntless Shield",
-    "evolution": "Jangmo O, Hakamo O, Kommo O",
+    "evolution": "Jangmo-o, Hakamo-o, Kommo-o",
     "img": "784"
   },
   "Tapu Koko": {
@@ -18508,7 +18508,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Rattled, Static, Klutz",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low Key Toxtricity, Gigantamax Toxtricity",
+    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "848"
   },
   "Amped Toxtricity": {
@@ -18524,10 +18524,10 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock, Plus, Technician",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low Key Toxtricity, Gigantamax Toxtricity",
+    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849"
   },
-  "Low Key Toxtricity": {
+  "Low-Key Toxtricity": {
     "id": 849,
     "hp": 75,
     "attack": 98,
@@ -18540,7 +18540,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock, Minus, Technician",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low Key Toxtricity, Gigantamax Toxtricity",
+    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849-lowkey"
   },
   "Gigantamax Toxtricity": {
@@ -18556,7 +18556,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Punk Rock",
     "passive": "Electric Surge",
-    "evolution": "Toxel, Amped Toxtricity, Low Key Toxtricity, Gigantamax Toxtricity",
+    "evolution": "Toxel, Amped Toxtricity, Low-Key Toxtricity, Gigantamax Toxtricity",
     "img": "849-gigantamax"
   },
   "Sizzlipede": {
@@ -18879,7 +18879,7 @@ const POKEMON_DATA = {
     "evolution": "Cursola, Galar Corsola",
     "img": "864"
   },
-  "Sirfetchd": {
+  "Sirfetch’d": {
     "id": 865,
     "hp": 62,
     "attack": 135,
@@ -18892,10 +18892,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Scrappy",
     "passive": "Intrepid Sword",
-    "evolution": "Sirfetchd, Galar Farfetchd",
+    "evolution": "Sirfetch’d, Galar Farfetch’d",
     "img": "865"
   },
-  "Mr Rime": {
+  "Mr. Rime": {
     "id": 866,
     "hp": 80,
     "attack": 85,
@@ -18908,7 +18908,7 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Tangled Feet, Screen Cleaner, Ice Body",
     "passive": "Prankster",
-    "evolution": "Mr Mime, Mime Jr, Mr Rime, Galar Mr Mime",
+    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "866"
   },
   "Runerigus": {
@@ -19580,7 +19580,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Inner Focus",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Urshifu, Gigantamax Rapid Urshifu",
+    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "891"
   },
   "Single Strike Urshifu": {
@@ -19596,7 +19596,7 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Urshifu, Gigantamax Rapid Urshifu",
+    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892"
   },
   "Rapid Strike Urshifu": {
@@ -19612,10 +19612,10 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Urshifu, Gigantamax Rapid Urshifu",
+    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-rapid-strike"
   },
-  "Gigantamax Single Urshifu": {
+  "Gigantamax Single Strike Urshifu": {
     "id": 892,
     "hp": 120,
     "attack": 150,
@@ -19628,10 +19628,10 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Urshifu, Gigantamax Rapid Urshifu",
+    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-gigantamax-single"
   },
-  "Gigantamax Rapid Urshifu": {
+  "Gigantamax Rapid Strike Urshifu": {
     "id": 892,
     "hp": 120,
     "attack": 150,
@@ -19644,7 +19644,7 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Unseen Fist",
     "passive": "Iron Fist",
-    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Urshifu, Gigantamax Rapid Urshifu",
+    "evolution": "Kubfu, Single Strike Urshifu, Rapid Strike Urshifu, Gigantamax Single Strike Urshifu, Gigantamax Rapid Strike Urshifu",
     "img": "892-gigantamax-rapid"
   },
   "Zarude": {
@@ -19852,7 +19852,7 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red Striped Basculin, Blue Striped Basculin, White Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "902"
   },
   "Female Basculegion": {
@@ -19868,7 +19868,7 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red Striped Basculin, Blue Striped Basculin, White Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
     "img": "902-female"
   },
   "Sneasler": {
@@ -21359,7 +21359,7 @@ const POKEMON_DATA = {
     "evolution": "Girafarig, Farigiraf",
     "img": "981"
   },
-  "Two Segment Dudunsparce": {
+  "Two-Segment Dudunsparce": {
     "id": 982,
     "hp": 125,
     "attack": 100,
@@ -21372,10 +21372,10 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two Segment Dudunsparce, Three Segment Dudunsparce",
+    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "982"
   },
-  "Three Segment Dudunsparce": {
+  "Three-Segment Dudunsparce": {
     "id": 982,
     "hp": 125,
     "attack": 100,
@@ -21388,7 +21388,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Serene Grace, Run Away, Rattled",
     "passive": "Unaware",
-    "evolution": "Dunsparce, Two Segment Dudunsparce, Three Segment Dudunsparce",
+    "evolution": "Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",
     "img": "982-three-segment"
   },
   "Kingambit": {
@@ -21695,7 +21695,7 @@ const POKEMON_DATA = {
     "evolution": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
     "img": "1000"
   },
-  "Wo Chien": {
+  "Wo-Chien": {
     "id": 1001,
     "hp": 85,
     "attack": 85,
@@ -21708,10 +21708,10 @@ const POKEMON_DATA = {
     "type2": "Grass",
     "abilities": "Tablets Of Ruin",
     "passive": "Vessel Of Ruin",
-    "evolution": "Wo Chien",
+    "evolution": "Wo-Chien",
     "img": "1001"
   },
-  "Chien Pao": {
+  "Chien-Pao": {
     "id": 1002,
     "hp": 80,
     "attack": 120,
@@ -21724,10 +21724,10 @@ const POKEMON_DATA = {
     "type2": "Ice",
     "abilities": "Sword Of Ruin",
     "passive": "Intimidate",
-    "evolution": "Chien Pao",
+    "evolution": "Chien-Pao",
     "img": "1002"
   },
-  "Ting Lu": {
+  "Ting-Lu": {
     "id": 1003,
     "hp": 155,
     "attack": 110,
@@ -21740,10 +21740,10 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Vessel Of Ruin",
     "passive": "Stamina",
-    "evolution": "Ting Lu",
+    "evolution": "Ting-Lu",
     "img": "1003"
   },
-  "Chi Yu": {
+  "Chi-Yu": {
     "id": 1004,
     "hp": 55,
     "attack": 80,
@@ -21756,7 +21756,7 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Beads Of Ruin",
     "passive": "Berserk",
-    "evolution": "Chi Yu",
+    "evolution": "Chi-Yu",
     "img": "1004"
   },
   "Roaring Moon": {
@@ -22316,7 +22316,7 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Surge Surfer",
     "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "2026"
   },
   "Alola Sandshrew": {
@@ -22655,7 +22655,7 @@ const POKEMON_DATA = {
     "evolution": "Galar Slowpoke, Galar Slowbro, Galar Slowking",
     "img": "4080"
   },
-  "Galar Farfetchd": {
+  "Galar Farfetch’d": {
     "id": 4083,
     "hp": 52,
     "attack": 95,
@@ -22668,7 +22668,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Scrappy",
     "passive": "Stakeout",
-    "evolution": "Sirfetchd, Galar Farfetchd",
+    "evolution": "Sirfetch’d, Galar Farfetch’d",
     "img": "4083"
   },
   "Galar Weezing": {
@@ -22687,7 +22687,7 @@ const POKEMON_DATA = {
     "evolution": "Koffing, Weezing, Galar Weezing",
     "img": "4110"
   },
-  "Galar Mr Mime": {
+  "Galar Mr. Mime": {
     "id": 4122,
     "hp": 50,
     "attack": 65,
@@ -22700,7 +22700,7 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Vital Spirit, Screen Cleaner, Ice Body",
     "passive": "Prankster",
-    "evolution": "Mr Mime, Mime Jr, Mr Rime, Galar Mr Mime",
+    "evolution": "Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",
     "img": "4122"
   },
   "Galar Articuno": {
