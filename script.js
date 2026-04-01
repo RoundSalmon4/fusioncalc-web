@@ -842,6 +842,18 @@ function fuse() {
 }
 
 function swap() {
+    // Save current dropdown values before swapping
+    const p1Values = {
+        nature: document.getElementById('activeNature')?.value || '',
+        ability: document.getElementById('activeAbility1')?.value || '',
+        tera: document.getElementById('teraType1')?.value || ''
+    };
+    const p2Values = {
+        nature: document.getElementById('activeNature2')?.value || '',
+        ability: document.getElementById('activeAbility')?.value || '',
+        tera: document.getElementById('teraType2')?.value || ''
+    };
+    
     const temp = selectedP1;
     selectedP1 = selectedP2;
     selectedP2 = temp;
@@ -852,6 +864,14 @@ function swap() {
     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
     populateList('list-p1', document.getElementById('search-p1').value);
     populateList('list-p2', document.getElementById('search-p2').value);
+    
+    // Restore values - p1 gets p2's old values, p2 gets p1's old values
+    if (document.getElementById('activeNature')) document.getElementById('activeNature').value = p2Values.nature;
+    if (document.getElementById('activeNature2')) document.getElementById('activeNature2').value = p1Values.nature;
+    if (document.getElementById('activeAbility1')) document.getElementById('activeAbility1').value = p2Values.ability;
+    if (document.getElementById('activeAbility')) document.getElementById('activeAbility').value = p1Values.ability;
+    if (document.getElementById('teraType1')) document.getElementById('teraType1').value = p2Values.tera;
+    if (document.getElementById('teraType2')) document.getElementById('teraType2').value = p1Values.tera;
     
     if (hasFusion) fuse();
 }
