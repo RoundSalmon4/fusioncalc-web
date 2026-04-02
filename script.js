@@ -746,13 +746,11 @@ function selectPokemon(name, listId) {
         selectedP1.name = name;
         document.getElementById('title-p1').textContent = name;
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
-        setupEvolutionLinks('p1');
     } else {
         selectedP2 = pokemonData[name];
         selectedP2.name = name;
         document.getElementById('title-p2').textContent = name;
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
-        setupEvolutionLinks('p2');
         populateActiveAbilityDropdown(selectedP2);
     }
     
@@ -770,20 +768,21 @@ function setupEvolutionLinks(panel) {
             if (pokemonData[name]) {
                 const listId = panel === 'p1' ? 'list-p1' : 'list-p2';
                 
+                const targetPokemon = panel === 'p1' ? selectedP1 : selectedP2;
+                const targetTitle = panel === 'p1' ? 'title-p1' : 'title-p2';
+                const targetDetails = panel === 'p1' ? 'details-p1' : 'details-p2';
+                
                 if (panel === 'p1') {
                     selectedP1 = pokemonData[name];
                     selectedP1.name = name;
-                    document.getElementById('title-p1').textContent = name;
-                    document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
-                    setupEvolutionLinks('p1');
                 } else {
                     selectedP2 = pokemonData[name];
                     selectedP2.name = name;
-                    document.getElementById('title-p2').textContent = name;
-                    document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
-                    setupEvolutionLinks('p2');
                     populateActiveAbilityDropdown(selectedP2);
                 }
+                
+                document.getElementById(targetTitle).textContent = name;
+                document.getElementById(targetDetails).innerHTML = renderPokemonDetails(targetPokemon, panel);
                 
                 // Populate and highlight in list
                 populateList(listId, name);
