@@ -19,6 +19,27 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+}
+
+.top-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.external-link {
+    color: #4ecdc4;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 6px 12px;
+    background: #3a3a3a;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.external-link:hover {
+    background: #4a4a4a;
 }
 
 h1 {
