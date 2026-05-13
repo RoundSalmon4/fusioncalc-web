@@ -218,10 +218,6 @@ const ABILITY_EFFECTS = {
 };
 
 // ===== UTILITY FUNCTIONS =====
-function escapeHtml(str) {
-    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-
 function avgRound(a, b) { return Math.ceil((parseFloat(a) + parseFloat(b)) / 2); }
 
 function formatNumber(x) {
@@ -356,11 +352,11 @@ function flipStats(stats) {
 
 // ===== RENDER FUNCTIONS =====
 function renderTypeBadge(type) {
-    return `<span class="type-badge ${escapeHtml(type).toLowerCase()}">${escapeHtml(type)}</span>`;
+    return `<span class="type-badge ${type.toLowerCase()}">${type}</span>`;
 }
 
 function renderStatLine(label, value) {
-    return `<div class="stat-line"><span class="stat-label">${escapeHtml(label)}:</span><span class="stat-value">${escapeHtml(formatNumber(value))}</span></div>`;
+    return `<div class="stat-line"><span class="stat-label">${label}:</span><span class="stat-value">${formatNumber(value)}</span></div>`;
 }
 
 function renderDamageTable(effectiveness) {
@@ -417,23 +413,10 @@ function renderDamageTable(effectiveness) {
     return html;
 }
 
-function createPokemonSprite(pokemon, name) {
-    if (!pokemon || !pokemon.id) return null;
-    const imgId = pokemon.img || pokemon.id;
-    const container = document.createElement('div');
-    container.className = 'pokemon-sprite';
-    const img = document.createElement('img');
-    img.src = `website/images/${imgId}_0.png`;
-    img.alt = name;
-    img.onerror = function() { this.style.display = 'none'; this.parentElement.classList.add('no-sprite'); };
-    container.appendChild(img);
-    return container;
-}
-
 function getPokemonSprite(pokemon, name) {
     if (!pokemon || !pokemon.id) return '';
     const imgId = pokemon.img || pokemon.id;
-    return `<div class="pokemon-sprite"><img src="website/images/${escapeHtml(imgId)}_0.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');"></div>`;
+    return `<div class="pokemon-sprite"><img src="website/images/${imgId}_0.png" alt="${name}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');"></div>`;
 }
 
 function getFusionSprite(p1, p2) {
@@ -539,26 +522,26 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.type) {
         const type1 = pokemon.type1 || '';
         const type2 = pokemon.type2 || '';
-        const types = type2 && type2 !== type1 ? `${escapeHtml(type1)}/${escapeHtml(type2)}` : escapeHtml(type1);
+        const types = type2 && type2 !== type1 ? `${type1}/${type2}` : type1;
         html += `<div class="type-line">${type1 ? renderTypeBadge(type1) : ''}${type2 ? renderTypeBadge(type2) : ''}</div>`;
     }
     
     // Abilities
     if (opts.abilities && activeAbility) {
-        html += `<div class="ability-line"><span class="ability-label">Active:</span> ${escapeHtml(activeAbility)}</div>`;
+        html += `<div class="ability-line"><span class="ability-label">Active:</span> ${activeAbility}</div>`;
     }
     if (activeNature) {
         const inc = natureEffect.increases;
         const dec = natureEffect.decreases;
-        const incChange = inc !== dec ? ` (+10% ${escapeHtml(inc)})` : '';
-        const decChange = inc !== dec ? ` (-10% ${escapeHtml(dec)})` : '';
-        html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${escapeHtml(activeNature)}${incChange}${decChange}</div>`;
+        const incChange = inc !== dec ? ` (+10% ${inc})` : '';
+        const decChange = inc !== dec ? ` (-10% ${dec})` : '';
+        html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${activeNature}${incChange}${decChange}</div>`;
     }
     if (opts.hidden_ability && hiddenAbility) {
-        html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${escapeHtml(hiddenAbility)}</div>`;
+        html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${hiddenAbility}</div>`;
     }
     if (opts.passive && pokemon.passive) {
-        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(pokemon.passive)}</div>`;
+        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${pokemon.passive}</div>`;
     }
     
     // BST
@@ -576,14 +559,14 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     // Total BST
     if (opts.total_bst) {
-        html += `<div class="total-bst">Total BST: ${escapeHtml(formatNumber(bst))}</div>`;
+        html += `<div class="total-bst">Total BST: ${formatNumber(bst)}</div>`;
     }
     
     // Evolution
     if (opts.evolution && pokemon.evolution) {
         const evoList = pokemon.evolution.split(', ');
         html += `<div class="evo-line"><span class="ability-label">Evolution:</span> `;
-        html += evoList.map(e => `<span class="evo-species" data-name="${escapeHtml(e)}">${escapeHtml(e)}</span>`).join(', ');
+        html += evoList.map(e => `<span class="evo-species" data-name="${e}">${e}</span>`).join(', ');
         html += '</div>';
     }
     
@@ -666,20 +649,20 @@ function renderFusionDetails(p1, p2) {
     // Abilities
     if (opts.abilities) {
         if (abilities.length > 0) {
-            html += `<div class="ability-line"><span class="ability-label">Abilities:</span> ${escapeHtml(abilities.join(', '))}</div>`;
+            html += `<div class="ability-line"><span class="ability-label">Abilities:</span> ${abilities.join(', ')}</div>`;
         }
         if (activeAbility) {
-            html += `<div class="ability-line"><span class="ability-label">Active:</span> ${escapeHtml(activeAbility)}</div>`;
+            html += `<div class="ability-line"><span class="ability-label">Active:</span> ${activeAbility}</div>`;
         }
         if (activeNature) {
             const inc = natureEffect.increases;
             const dec = natureEffect.decreases;
-            const incChange = inc !== dec ? ` (+10% ${escapeHtml(inc)})` : '';
-            const decChange = inc !== dec ? ` (-10% ${escapeHtml(dec)})` : '';
-            html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${escapeHtml(activeNature)}${incChange}${decChange}</div>`;
+            const incChange = inc !== dec ? ` (+10% ${inc})` : '';
+            const decChange = inc !== dec ? ` (-10% ${dec})` : '';
+            html += `<div class="ability-line"><span class="ability-label" title="Shown for reference; not applied to BST (no IV data)">Active Nature:</span> ${activeNature}${incChange}${decChange}</div>`;
         }
         if (hiddenAbility && activeAbility === hiddenAbility) {
-            html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${escapeHtml(hiddenAbility)}</div>`;
+            html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${hiddenAbility}</div>`;
         }
         if (opts.ability_effects && activeAbility) {
             const eff = ABILITY_EFFECTS[activeAbility.toUpperCase()];
@@ -698,11 +681,11 @@ function renderFusionDetails(p1, p2) {
                 parts.push('immune to all non-super-effective');
             }
             if (parts.length > 0) {
-                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> <span${iceScalesNote}>${escapeHtml(parts.join('; '))}</span></div>`;
+                html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> <span${iceScalesNote}>${parts.join('; ')}</span></div>`;
             }
         }
         if (passiveAbility && passiveOn) {
-            html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(passiveAbility)} (active)</div>`;
+            html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${passiveAbility} (active)</div>`;
         }
     }
     
@@ -720,7 +703,7 @@ function renderFusionDetails(p1, p2) {
     
     // Total BST
     if (opts.total_bst) {
-        html += `<div class="total-bst">Total BST: ${escapeHtml(formatNumber(fusedBST))}</div>`;
+        html += `<div class="total-bst">Total BST: ${formatNumber(fusedBST)}</div>`;
     }
     
     // Damage Taken
@@ -807,14 +790,6 @@ function selectPokemon(name, listId) {
     setStatus(`Selected ${name}`);
 }
 
-function createPokemonSpriteElement(pokemon, name) {
-    const el = createPokemonSprite(pokemon, name);
-    if (el) return el;
-    const fallback = document.createElement('div');
-    fallback.textContent = 'No sprite';
-    return fallback;
-}
-
 function setupEvolutionLinks(panel) {
     const container = panel === 'p1' ? document.getElementById('details-p1') : document.getElementById('details-p2');
     container.querySelectorAll('.evo-species').forEach(el => {
@@ -894,7 +869,6 @@ function fuse() {
     const activeAbility = activeAbilityEl ? activeAbilityEl.value : '';
     
     setStatus(`Fused: ${selectedP1.name} + ${selectedP2.name} = ${fusedType} (Active: ${activeAbility || 'None'})`);
-}
 }
 
 function swap() {
