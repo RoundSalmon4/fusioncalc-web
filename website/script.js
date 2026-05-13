@@ -895,7 +895,6 @@ function fuse() {
     
     setStatus(`Fused: ${selectedP1.name} + ${selectedP2.name} = ${fusedType} (Active: ${activeAbility || 'None'})`);
 }
-}
 
 function swap() {
     // Save current dropdown values before swapping
