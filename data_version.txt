@@ -1,1 +1,1 @@
-PokeRogue-Dex d78fb1d
+PokeRogue-Dex 6b08189
