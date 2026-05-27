@@ -140,8 +140,8 @@ Chansey,113,250,5,5,35,105,50,450,Normal,,"Natural Cure, Serene Grace, Healer",F
 Tangela,114,65,55,115,100,40,60,435,Grass,,"Chlorophyll, Leaf Guard, Regenerator",Tangling Hair,"Tangela, Tangrowth",114
 Kangaskhan,115,105,95,80,40,80,90,490,Normal,,"Early Bird, Scrappy, Inner Focus",Technician,"Kangaskhan, Mega Kangaskhan",115
 Mega Kangaskhan,115,105,125,100,60,100,100,590,Normal,,Parental Bond,Technician,"Kangaskhan, Mega Kangaskhan",115-mega
-Horsea,116,30,40,70,70,25,60,295,Water,,"Swift Swim, Sniper, Damp",Dragons Maw,"Horsea, Seadra, Kingdra",116
-Seadra,117,55,65,95,95,45,85,440,Water,,"Poison Point, Sniper, Damp",Dragons Maw,"Horsea, Seadra, Kingdra",117
+Horsea,116,30,40,70,70,25,60,295,Water,,"Swift Swim, Sniper, Damp",Dragon’s Maw,"Horsea, Seadra, Kingdra",116
+Seadra,117,55,65,95,95,45,85,440,Water,,"Poison Point, Sniper, Damp",Dragon’s Maw,"Horsea, Seadra, Kingdra",117
 Goldeen,118,45,67,60,35,50,63,320,Water,,"Swift Swim, Water Veil, Lightning Rod",Multiscale,"Goldeen, Seaking",118
 Seaking,119,80,92,65,65,80,68,450,Water,,"Swift Swim, Water Veil, Lightning Rod",Multiscale,"Goldeen, Seaking",119
 Staryu,120,30,45,55,70,55,85,340,Water,,"Illuminate, Natural Cure, Analytic",Regenerator,"Staryu, Starmie",120
@@ -235,14 +235,14 @@ Espeon,196,65,65,60,130,95,110,525,Psychic,,"Synchronize, Magic Bounce",Magician
 Umbreon,197,95,65,110,60,130,65,525,Dark,,"Synchronize, Inner Focus",Toxic Chain,"Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",197
 Murkrow,198,60,85,42,85,42,91,405,Dark,Flying,"Insomnia, Super Luck, Prankster",Unnerve,"Murkrow, Honchkrow",198
 Slowking,199,95,75,80,100,110,30,490,Water,Psychic,"Oblivious, Own Tempo, Regenerator",Unaware,"Slowpoke, Slowbro, Mega Slowbro, Slowking",199
-Misdreavus,200,60,60,60,85,85,85,435,Ghost,,Levitate,Beads Of Ruin,"Misdreavus, Mismagius",200
+Misdreavus,200,60,60,60,85,85,85,435,Ghost,,Levitate,Beads of Ruin,"Misdreavus, Mismagius",200
 A Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Adaptability,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-a
 B Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Beast Boost,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-b
 C Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Contrary,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-c
 D Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Dazzling,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-d
 E Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Emergency Exit,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-e
 F Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Friend Guard,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-f
-G Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Good As Gold,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-g
+G Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Good as Gold,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-g
 H Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Honey Gather,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-h
 I Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Imposter,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-i
 J Unown,201,48,72,48,72,48,48,336,Psychic,,Levitate,Justified,"A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",201-j
@@ -381,9 +381,9 @@ Aron,304,50,70,100,40,40,30,330,Steel,Rock,"Sturdy, Rock Head, Heavy Metal",Eart
 Lairon,305,60,90,140,50,50,40,430,Steel,Rock,"Sturdy, Rock Head, Heavy Metal",Earth Eater,"Aron, Lairon, Aggron, Mega Aggron",305
 Aggron,306,70,110,180,60,60,50,530,Steel,Rock,"Sturdy, Rock Head, Heavy Metal",Earth Eater,"Aron, Lairon, Aggron, Mega Aggron",306
 Mega Aggron,306,70,140,230,60,80,50,630,Steel,,Filter,Rocky Payload,"Aron, Lairon, Aggron, Mega Aggron",306-mega
-Meditite,307,30,40,55,40,55,60,280,Fighting,Psychic,"Pure Power, Telepathy",Minds Eye,"Meditite, Medicham, Mega Medicham",307
-Medicham,308,60,60,75,60,75,80,410,Fighting,Psychic,"Pure Power, Telepathy",Minds Eye,"Meditite, Medicham, Mega Medicham",308
-Mega Medicham,308,60,100,85,80,85,100,510,Fighting,Psychic,Pure Power,Minds Eye,"Meditite, Medicham, Mega Medicham",308-mega
+Meditite,307,30,40,55,40,55,60,280,Fighting,Psychic,"Pure Power, Telepathy",Mind’s Eye,"Meditite, Medicham, Mega Medicham",307
+Medicham,308,60,60,75,60,75,80,410,Fighting,Psychic,"Pure Power, Telepathy",Mind’s Eye,"Meditite, Medicham, Mega Medicham",308
+Mega Medicham,308,60,100,85,80,85,100,510,Fighting,Psychic,Pure Power,Mind’s Eye,"Meditite, Medicham, Mega Medicham",308-mega
 Electrike,309,40,45,40,65,40,65,295,Electric,,"Static, Lightning Rod, Minus",Ball Fetch,"Electrike, Manectric, Mega Manectric",309
 Manectric,310,70,75,60,105,60,105,475,Electric,,"Static, Lightning Rod, Minus",Flash Fire,"Electrike, Manectric, Mega Manectric",310
 Mega Manectric,310,70,75,80,135,80,135,575,Electric,,Intimidate,Flash Fire,"Electrike, Manectric, Mega Manectric",310-mega
@@ -422,8 +422,8 @@ Barboach,339,50,48,43,46,41,60,288,Water,Ground,"Oblivious, Anticipation, Hydrat
 Whiscash,340,110,78,73,76,71,60,468,Water,Ground,"Oblivious, Anticipation, Hydration",Simple,"Barboach, Whiscash",340
 Corphish,341,43,80,65,50,35,35,308,Water,,"Hyper Cutter, Shell Armor, Adaptability",Tough Claws,"Corphish, Crawdaunt",341
 Crawdaunt,342,63,120,85,90,55,55,468,Water,Dark,"Hyper Cutter, Shell Armor, Adaptability",Tough Claws,"Corphish, Crawdaunt",342
-Baltoy,343,40,40,55,40,70,55,300,Ground,Psychic,Levitate,Well Baked Body,"Baltoy, Claydol",343
-Claydol,344,60,70,105,70,120,75,500,Ground,Psychic,Levitate,Well Baked Body,"Baltoy, Claydol",344
+Baltoy,343,40,40,55,40,70,55,300,Ground,Psychic,Levitate,Well-Baked Body,"Baltoy, Claydol",343
+Claydol,344,60,70,105,70,120,75,500,Ground,Psychic,Levitate,Well-Baked Body,"Baltoy, Claydol",344
 Lileep,345,66,41,77,61,87,23,355,Rock,Grass,"Suction Cups, Storm Drain",Seed Sower,"Lileep, Cradily",345
 Cradily,346,86,81,97,81,107,43,495,Rock,Grass,"Suction Cups, Storm Drain",Seed Sower,"Lileep, Cradily",346
 Anorith,347,45,95,50,40,50,75,355,Rock,Bug,"Battle Armor, Swift Swim",Water Absorb,"Anorith, Armaldo",347
@@ -532,7 +532,7 @@ Drifblim,426,150,80,44,90,54,80,498,Ghost,Flying,"Aftermath, Unburden, Flare Boo
 Buneary,427,55,66,44,44,56,85,350,Normal,,"Run Away, Klutz, Limber",Adaptability,"Buneary, Lopunny, Mega Lopunny",427
 Lopunny,428,65,76,84,54,96,105,480,Normal,,"Cute Charm, Klutz, Limber",Adaptability,"Buneary, Lopunny, Mega Lopunny",428
 Mega Lopunny,428,65,136,94,54,96,135,580,Normal,Fighting,Scrappy,Adaptability,"Buneary, Lopunny, Mega Lopunny",428-mega
-Mismagius,429,60,60,60,105,105,105,495,Ghost,,Levitate,Beads Of Ruin,"Misdreavus, Mismagius",429
+Mismagius,429,60,60,60,105,105,105,495,Ghost,,Levitate,Beads of Ruin,"Misdreavus, Mismagius",429
 Honchkrow,430,100,125,52,105,52,71,505,Dark,Flying,"Insomnia, Super Luck, Moxie",Intimidate,"Murkrow, Honchkrow",430
 Glameow,431,49,55,42,42,37,85,310,Normal,,"Limber, Own Tempo, Keen Eye",Intimidate,"Glameow, Purugly",431
 Purugly,432,71,82,64,64,59,112,452,Normal,,"Thick Fat, Own Tempo, Defiant",Intimidate,"Glameow, Purugly",432
@@ -545,15 +545,15 @@ Bonsly,438,50,80,95,10,45,10,290,Rock,,"Sturdy, Rock Head, Rattled",Sap Sipper,"
 Mime Jr.,439,20,25,45,70,90,60,310,Psychic,Fairy,"Soundproof, Filter, Technician",Prankster,"Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",439
 Happiny,440,100,5,5,15,65,30,220,Normal,,"Natural Cure, Serene Grace, Friend Guard",Hospitality,"Chansey, Blissey, Happiny",440
 Chatot,441,76,65,45,92,42,91,411,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Punk Rock,Chatot,441
-Spiritomb,442,50,92,108,92,108,35,485,Ghost,Dark,"Pressure, Infiltrator",Vessel Of Ruin,Spiritomb,442
+Spiritomb,442,50,92,108,92,108,35,485,Ghost,Dark,"Pressure, Infiltrator",Vessel of Ruin,Spiritomb,442
 Gible,443,58,70,45,40,45,42,300,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",443
 Gabite,444,68,90,65,50,55,82,410,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",444
 Garchomp,445,108,130,95,80,85,102,600,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",445
 Mega Garchomp,445,108,170,115,120,95,92,700,Dragon,Ground,Sand Force,Sand Rush,"Gible, Gabite, Garchomp, Mega Garchomp",445-mega
 Munchlax,446,135,85,40,40,85,5,390,Normal,,"Pickup, Thick Fat, Gluttony",Cheek Pouch,"Snorlax, Gigantamax Snorlax, Munchlax",446
-Riolu,447,40,70,40,35,40,60,285,Fighting,,"Steadfast, Inner Focus, Prankster",Minds Eye,"Riolu, Lucario, Mega Lucario",447
-Lucario,448,70,110,70,115,70,90,525,Fighting,Steel,"Steadfast, Inner Focus, Justified",Minds Eye,"Riolu, Lucario, Mega Lucario",448
-Mega Lucario,448,70,145,88,140,70,112,625,Fighting,Steel,Adaptability,Minds Eye,"Riolu, Lucario, Mega Lucario",448-mega
+Riolu,447,40,70,40,35,40,60,285,Fighting,,"Steadfast, Inner Focus, Prankster",Mind’s Eye,"Riolu, Lucario, Mega Lucario",447
+Lucario,448,70,110,70,115,70,90,525,Fighting,Steel,"Steadfast, Inner Focus, Justified",Mind’s Eye,"Riolu, Lucario, Mega Lucario",448
+Mega Lucario,448,70,145,88,140,70,112,625,Fighting,Steel,Adaptability,Mind’s Eye,"Riolu, Lucario, Mega Lucario",448-mega
 Hippopotas,449,68,72,78,38,42,32,330,Ground,,"Sand Stream, Sand Force",Unaware,"Hippopotas, Hippowdon",449
 Hippowdon,450,108,112,118,68,72,47,525,Ground,,"Sand Stream, Sand Force",Unaware,"Hippopotas, Hippowdon",450
 Skorupi,451,40,50,90,30,55,65,330,Poison,Bug,"Battle Armor, Sniper, Keen Eye",Super Luck,"Skorupi, Drapion",451
@@ -644,8 +644,8 @@ Herdier,507,65,80,65,35,65,60,370,Normal,,"Intimidate, Sand Rush, Scrappy",Fur C
 Stoutland,508,85,110,90,45,90,80,500,Normal,,"Intimidate, Sand Rush, Scrappy",Fur Coat,"Lillipup, Herdier, Stoutland",508
 Purrloin,509,41,50,37,50,37,66,281,Dark,,"Limber, Unburden, Prankster",Pickup,"Purrloin, Liepard",509
 Liepard,510,64,88,50,88,50,106,446,Dark,,"Limber, Unburden, Prankster",Pickup,"Purrloin, Liepard",510
-Pansage,511,50,53,48,53,48,64,316,Grass,,"Gluttony, Overgrow",Well Baked Body,"Pansage, Simisage",511
-Simisage,512,75,98,63,98,63,101,498,Grass,,"Gluttony, Overgrow",Well Baked Body,"Pansage, Simisage",512
+Pansage,511,50,53,48,53,48,64,316,Grass,,"Gluttony, Overgrow",Well-Baked Body,"Pansage, Simisage",511
+Simisage,512,75,98,63,98,63,101,498,Grass,,"Gluttony, Overgrow",Well-Baked Body,"Pansage, Simisage",512
 Pansear,513,50,53,48,53,48,64,316,Fire,,"Gluttony, Blaze",Water Absorb,"Pansear, Simisear",513
 Simisear,514,75,98,63,98,63,101,498,Fire,,"Gluttony, Blaze",Water Absorb,"Pansear, Simisear",514
 Panpour,515,50,53,48,53,48,64,316,Water,,"Gluttony, Torrent",Sap Sipper,"Panpour, Simipour",515
@@ -693,7 +693,7 @@ Krookodile,553,95,117,80,65,70,92,519,Ground,Dark,"Intimidate, Moxie, Anger Poin
 Darumaka,554,70,90,45,15,45,50,315,Fire,,"Hustle, Inner Focus",Gorilla Tactics,"Darumaka, Darmanitan, Zen Darmanitan",554
 Darmanitan,555,105,140,55,30,55,95,480,Fire,,"Sheer Force, Zen Mode",Gorilla Tactics,"Darumaka, Darmanitan, Zen Darmanitan",555
 Zen Darmanitan,555,105,30,105,140,105,55,540,Fire,Psychic,"Sheer Force, Zen Mode",Psychic Surge,"Darumaka, Darmanitan, Zen Darmanitan",555-zen
-Maractus,556,75,86,67,106,67,60,461,Grass,,"Water Absorb, Chlorophyll, Storm Drain",Well Baked Body,Maractus,556
+Maractus,556,75,86,67,106,67,60,461,Grass,,"Water Absorb, Chlorophyll, Storm Drain",Well-Baked Body,Maractus,556
 Dwebble,557,50,65,85,35,35,55,325,Bug,Rock,"Sturdy, Shell Armor, Weak Armor",Rocky Payload,"Dwebble, Crustle",557
 Crustle,558,70,105,125,65,75,45,485,Bug,Rock,"Sturdy, Shell Armor, Weak Armor",Rocky Payload,"Dwebble, Crustle",558
 Scraggy,559,50,75,70,35,70,48,348,Dark,Fighting,"Shed Skin, Moxie, Intimidate",Unburden,"Scraggy, Scrafty",559
@@ -749,8 +749,8 @@ Klinklang,601,60,100,115,70,85,90,520,Steel,,"Plus, Minus, Clear Body",Steely Sp
 Tynamo,602,35,55,40,45,40,60,275,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",602
 Eelektrik,603,65,85,70,75,70,40,405,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",603
 Eelektross,604,85,115,80,105,80,50,515,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",604
-Elgyem,605,55,55,55,85,55,30,335,Psychic,,"Telepathy, Synchronize, Analytic",Beads Of Ruin,"Elgyem, Beheeyem",605
-Beheeyem,606,75,75,75,125,95,40,485,Psychic,,"Telepathy, Synchronize, Analytic",Beads Of Ruin,"Elgyem, Beheeyem",606
+Elgyem,605,55,55,55,85,55,30,335,Psychic,,"Telepathy, Synchronize, Analytic",Beads of Ruin,"Elgyem, Beheeyem",605
+Beheeyem,606,75,75,75,125,95,40,485,Psychic,,"Telepathy, Synchronize, Analytic",Beads of Ruin,"Elgyem, Beheeyem",606
 Litwick,607,50,30,55,65,55,20,275,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",607
 Lampent,608,60,40,60,95,60,55,370,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",608
 Chandelure,609,60,55,90,145,90,80,520,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",609
@@ -768,8 +768,8 @@ Mienshao,620,65,125,60,95,60,105,510,Fighting,,"Inner Focus, Regenerator, Reckle
 Druddigon,621,77,120,90,60,90,48,485,Dragon,,"Rough Skin, Sheer Force, Mold Breaker",Intimidate,Druddigon,621
 Golett,622,59,74,50,35,50,35,303,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk",622
 Golurk,623,89,124,80,55,80,55,483,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk",623
-Pawniard,624,45,85,70,40,40,60,340,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword Of Ruin,"Pawniard, Bisharp, Kingambit",624
-Bisharp,625,65,125,100,60,70,70,490,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword Of Ruin,"Pawniard, Bisharp, Kingambit",625
+Pawniard,624,45,85,70,40,40,60,340,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword of Ruin,"Pawniard, Bisharp, Kingambit",624
+Bisharp,625,65,125,100,60,70,70,490,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword of Ruin,"Pawniard, Bisharp, Kingambit",625
 Bouffalant,626,95,110,95,40,95,55,490,Normal,,"Reckless, Sap Sipper, Soundproof",Rock Head,Bouffalant,626
 Rufflet,627,70,83,50,37,50,60,350,Normal,Flying,"Keen Eye, Sheer Force, Hustle",Speed Boost,"Rufflet, Braviary, Hisui Braviary",627
 Braviary,628,100,123,75,57,75,80,510,Normal,Flying,"Keen Eye, Sheer Force, Defiant",Speed Boost,"Rufflet, Braviary, Hisui Braviary",628
@@ -951,11 +951,11 @@ Phantump,708,43,70,48,50,60,38,309,Ghost,Grass,"Natural Cure, Frisk, Harvest",Sh
 Trevenant,709,85,110,76,65,82,56,474,Ghost,Grass,"Natural Cure, Frisk, Harvest",Shadow Tag,"Phantump, Trevenant",709
 Pumpkaboo,710,49,66,70,44,55,51,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
 Small Pumpkaboo,710,44,66,70,44,55,56,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
-Large Pumpkaboo,710,54,66,70,44,55,46,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Well Baked Body,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
+Large Pumpkaboo,710,54,66,70,44,55,46,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
 Super Pumpkaboo,710,59,66,70,44,55,41,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
 Gourgeist,711,65,90,122,58,75,84,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
 Small Gourgeist,711,55,85,122,58,75,99,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
-Large Gourgeist,711,75,95,122,58,75,69,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Well Baked Body,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
+Large Gourgeist,711,75,95,122,58,75,69,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
 Super Gourgeist,711,85,100,122,58,75,54,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
 Bergmite,712,55,69,85,32,35,28,304,Ice,,"Own Tempo, Ice Body, Sturdy",Ice Scales,"Bergmite, Avalugg, Hisui Avalugg",712
 Avalugg,713,95,117,184,44,46,28,514,Ice,,"Own Tempo, Ice Body, Sturdy",Ice Scales,"Bergmite, Avalugg, Hisui Avalugg",713
@@ -963,7 +963,7 @@ Noibat,714,40,30,35,45,40,55,245,Flying,Dragon,"Frisk, Infiltrator, Telepathy",C
 Noivern,715,85,70,80,97,80,123,535,Flying,Dragon,"Frisk, Infiltrator, Telepathy",Punk Rock,"Noibat, Noivern",715
 Neutral Xerneas,716,126,131,95,131,98,99,680,Fairy,,Fairy Aura,Harvest,"Neutral Xerneas, Active Xerneas",716-neutral
 Active Xerneas,716,126,131,95,131,98,99,680,Fairy,,Fairy Aura,Harvest,"Neutral Xerneas, Active Xerneas",716-active
-Yveltal,717,126,131,95,131,98,99,680,Dark,Flying,Dark Aura,Soul Heart,Yveltal,717
+Yveltal,717,126,131,95,131,98,99,680,Dark,Flying,Dark Aura,Soul-Heart,Yveltal,717
 50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718
 10% Zygarde,718,54,100,71,61,85,115,486,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718-10
 Power Construct 50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718
@@ -1017,7 +1017,7 @@ Lurantis,754,70,105,90,80,90,45,480,Grass,,"Leaf Guard, Contrary",Sharpness,"Fom
 Morelull,755,40,35,55,65,75,15,285,Grass,Fairy,"Illuminate, Effect Spore, Rain Dish",Triage,"Morelull, Shiinotic",755
 Shiinotic,756,60,45,80,90,100,30,405,Grass,Fairy,"Illuminate, Effect Spore, Rain Dish",Triage,"Morelull, Shiinotic",756
 Salandit,757,48,44,40,71,40,77,320,Poison,Fire,"Corrosion, Oblivious",Pickup,"Salandit, Salazzle",757
-Salazzle,758,68,64,60,111,60,117,480,Poison,Fire,"Corrosion, Oblivious",Dragons Maw,"Salandit, Salazzle",758
+Salazzle,758,68,64,60,111,60,117,480,Poison,Fire,"Corrosion, Oblivious",Dragon’s Maw,"Salandit, Salazzle",758
 Stufful,759,70,75,50,45,50,50,340,Normal,Fighting,"Fluffy, Klutz, Cute Charm",Scrappy,"Stufful, Bewear",759
 Bewear,760,120,125,80,55,60,60,500,Normal,Fighting,"Fluffy, Klutz, Unnerve",Scrappy,"Stufful, Bewear",760
 Bounsweet,761,42,30,38,30,38,32,210,Grass,,"Leaf Guard, Oblivious, Sweet Veil",Simple,"Bounsweet, Steenee, Tsareena",761
@@ -1032,24 +1032,24 @@ Sandygast,769,55,55,80,70,45,15,320,Ghost,Ground,"Water Compaction, Sand Veil",S
 Palossand,770,85,75,110,100,75,35,480,Ghost,Ground,"Water Compaction, Sand Veil",Sand Spit,"Sandygast, Palossand",770
 Pyukumuku,771,55,60,130,30,130,5,410,Water,,"Innards Out, Unaware",Purifying Salt,Pyukumuku,771
 Type: Null,772,95,95,95,95,95,59,534,Normal,,Battle Armor,Clear Body,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",772
-Normal Silvally,773,95,95,95,95,95,95,570,Normal,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773
-Fighting Silvally,773,95,95,95,95,95,95,570,Fighting,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fighting
-Flying Silvally,773,95,95,95,95,95,95,570,Flying,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-flying
-Poison Silvally,773,95,95,95,95,95,95,570,Poison,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-poison
-Ground Silvally,773,95,95,95,95,95,95,570,Ground,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ground
-Rock Silvally,773,95,95,95,95,95,95,570,Rock,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-rock
-Bug Silvally,773,95,95,95,95,95,95,570,Bug,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-bug
-Ghost Silvally,773,95,95,95,95,95,95,570,Ghost,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ghost
-Steel Silvally,773,95,95,95,95,95,95,570,Steel,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-steel
-Fire Silvally,773,95,95,95,95,95,95,570,Fire,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fire
-Water Silvally,773,95,95,95,95,95,95,570,Water,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-water
-Grass Silvally,773,95,95,95,95,95,95,570,Grass,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-grass
-Electric Silvally,773,95,95,95,95,95,95,570,Electric,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-electric
-Psychic Silvally,773,95,95,95,95,95,95,570,Psychic,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-psychic
-Ice Silvally,773,95,95,95,95,95,95,570,Ice,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ice
-Dragon Silvally,773,95,95,95,95,95,95,570,Dragon,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-dragon
-Dark Silvally,773,95,95,95,95,95,95,570,Dark,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-dark
-Fairy Silvally,773,95,95,95,95,95,95,570,Fairy,,Rks System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fairy
+Normal Silvally,773,95,95,95,95,95,95,570,Normal,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773
+Fighting Silvally,773,95,95,95,95,95,95,570,Fighting,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fighting
+Flying Silvally,773,95,95,95,95,95,95,570,Flying,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-flying
+Poison Silvally,773,95,95,95,95,95,95,570,Poison,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-poison
+Ground Silvally,773,95,95,95,95,95,95,570,Ground,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ground
+Rock Silvally,773,95,95,95,95,95,95,570,Rock,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-rock
+Bug Silvally,773,95,95,95,95,95,95,570,Bug,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-bug
+Ghost Silvally,773,95,95,95,95,95,95,570,Ghost,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ghost
+Steel Silvally,773,95,95,95,95,95,95,570,Steel,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-steel
+Fire Silvally,773,95,95,95,95,95,95,570,Fire,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fire
+Water Silvally,773,95,95,95,95,95,95,570,Water,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-water
+Grass Silvally,773,95,95,95,95,95,95,570,Grass,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-grass
+Electric Silvally,773,95,95,95,95,95,95,570,Electric,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-electric
+Psychic Silvally,773,95,95,95,95,95,95,570,Psychic,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-psychic
+Ice Silvally,773,95,95,95,95,95,95,570,Ice,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-ice
+Dragon Silvally,773,95,95,95,95,95,95,570,Dragon,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-dragon
+Dark Silvally,773,95,95,95,95,95,95,570,Dark,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-dark
+Fairy Silvally,773,95,95,95,95,95,95,570,Fairy,,RKS System,Adaptability,"Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",773-fairy
 Red Meteor Minior,774,60,60,100,60,100,60,440,Rock,Flying,Shields Down,Sturdy,"Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",774-red-meteor
 Orange Meteor Minior,774,60,60,100,60,100,60,440,Rock,Flying,Shields Down,Sturdy,"Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",774-orange-meteor
 Yellow Meteor Minior,774,60,60,100,60,100,60,440,Rock,Flying,Shields Down,Sturdy,"Red Meteor Minior, Orange Meteor Minior, Yellow Meteor Minior, Green Meteor Minior, Blue Meteor Minior, Indigo Meteor Minior, Violet Meteor Minior, Red Minior, Orange Minior, Yellow Minior, Green Minior, Blue Minior, Indigo Minior, Violet Minior",774-yellow-meteor
@@ -1094,8 +1094,8 @@ Necrozma,800,97,107,101,127,89,79,600,Psychic,,Prism Armor,Beast Boost,"Necrozma
 Dusk Mane Necrozma,800,97,157,127,113,109,77,680,Psychic,Steel,Prism Armor,Full Metal Body,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-dusk-mane
 Dawn Wings Necrozma,800,97,113,109,157,127,77,680,Psychic,Ghost,Prism Armor,Shadow Shield,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-dawn-wings
 Ultra Necrozma,800,97,167,97,167,97,129,754,Psychic,Dragon,Neuroforce,Unnerve,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-ultra
-Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul Heart,Mirror Armor,"Magearna, Original Magearna",801
-Original Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul Heart,Mirror Armor,"Magearna, Original Magearna",801-original
+Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna",801
+Original Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna",801-original
 Marshadow,802,90,125,80,90,90,125,600,Fighting,Ghost,Technician,Iron Fist,Marshadow,802
 Poipole,803,67,73,67,73,67,73,420,Poison,,Beast Boost,Levitate,"Poipole, Naganadel",803
 Naganadel,804,73,73,73,127,73,121,540,Poison,Dragon,Beast Boost,Levitate,"Poipole, Naganadel",804
@@ -1145,8 +1145,8 @@ Gigantamax Coalossal,839,140,100,132,95,100,43,610,Rock,Fire,Steam Engine,Solid 
 Applin,840,40,40,80,40,40,20,260,Grass,Dragon,"Ripen, Gluttony, Bulletproof",Sturdy,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",840
 Flapple,841,70,110,80,95,60,70,485,Grass,Dragon,"Ripen, Gluttony, Hustle",No Guard,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",841
 Gigantamax Flapple,841,100,125,90,105,70,95,585,Grass,Dragon,Hustle,No Guard,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",841-gigantamax
-Appletun,842,110,85,80,100,80,30,485,Grass,Dragon,"Ripen, Gluttony, Thick Fat",Well Baked Body,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",842
-Gigantamax Appletun,842,150,100,95,115,95,30,585,Grass,Dragon,Thick Fat,Well Baked Body,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",842-gigantamax
+Appletun,842,110,85,80,100,80,30,485,Grass,Dragon,"Ripen, Gluttony, Thick Fat",Well-Baked Body,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",842
+Gigantamax Appletun,842,150,100,95,115,95,30,585,Grass,Dragon,Thick Fat,Well-Baked Body,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",842-gigantamax
 Silicobra,843,52,57,75,35,50,46,315,Ground,,"Sand Spit, Shed Skin, Sand Veil",Sand Rush,"Silicobra, Sandaconda, Gigantamax Sandaconda",843
 Sandaconda,844,72,107,125,65,70,71,510,Ground,,"Sand Spit, Shed Skin, Sand Veil",Sand Rush,"Silicobra, Sandaconda, Gigantamax Sandaconda",844
 Gigantamax Sandaconda,844,102,137,140,70,80,81,610,Ground,,Sand Spit,Sand Rush,"Silicobra, Sandaconda, Gigantamax Sandaconda",844-gigantamax
@@ -1181,7 +1181,7 @@ Perrserker,863,70,110,100,50,60,50,440,Steel,,"Battle Armor, Tough Claws, Steely
 Cursola,864,60,95,50,145,130,30,510,Ghost,,"Weak Armor, Perish Body",Shadow Shield,"Cursola, Galar Corsola",864
 Sirfetch’d,865,62,135,95,68,82,65,507,Fighting,,"Steadfast, Scrappy",Intrepid Sword,"Sirfetch’d, Galar Farfetch’d",865
 Mr. Rime,866,80,85,75,110,100,70,520,Ice,Psychic,"Tangled Feet, Screen Cleaner, Ice Body",Prankster,"Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",866
-Runerigus,867,58,95,145,50,105,30,483,Ground,Ghost,Wandering Spirit,Tablets Of Ruin,"Runerigus, Galar Yamask",867
+Runerigus,867,58,95,145,50,105,30,483,Ground,Ghost,Wandering Spirit,Tablets of Ruin,"Runerigus, Galar Yamask",867
 Milcery,868,45,40,40,50,61,34,270,Fairy,,"Sweet Veil, Aroma Veil",Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",868
 Vanilla Cream Alcremie,869,65,60,75,110,121,64,495,Fairy,,"Sweet Veil, Aroma Veil",Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",869
 Ruby Cream Alcremie,869,65,60,75,110,121,64,495,Fairy,,"Sweet Veil, Aroma Veil",Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",869-ruby-cream
@@ -1230,7 +1230,7 @@ Gigantamax Rapid Strike Urshifu,892,120,150,115,83,75,107,650,Fighting,Water,Uns
 Zarude,893,105,120,105,70,95,105,600,Dark,Grass,Leaf Guard,Tough Claws,"Zarude, Dada Zarude",893
 Dada Zarude,893,105,120,105,70,95,105,600,Dark,Grass,Leaf Guard,Tough Claws,"Zarude, Dada Zarude",893-dada
 Regieleki,894,80,100,50,100,50,200,580,Electric,,Transistor,Electric Surge,Regieleki,894
-Regidrago,895,200,100,50,100,50,80,580,Dragon,,Dragons Maw,Multiscale,Regidrago,895
+Regidrago,895,200,100,50,100,50,80,580,Dragon,,Dragon’s Maw,Multiscale,Regidrago,895
 Glastrier,896,100,145,130,65,110,30,580,Ice,,Chilling Neigh,Filter,Glastrier,896
 Spectrier,897,100,65,60,145,80,130,580,Ghost,,Grim Neigh,Dazzling,Spectrier,897
 Calyrex,898,100,80,80,80,80,80,500,Psychic,Grass,Unnerve,Harvest,"Calyrex, Ice Calyrex, Shadow Calyrex",898
@@ -1268,7 +1268,7 @@ Tandemaus,924,50,50,45,40,45,75,305,Normal,,"Run Away, Pickup, Own Tempo",Friend
 Four Maushold,925,74,75,70,65,75,111,470,Normal,,"Friend Guard, Cheek Pouch, Technician",Scrappy,"Tandemaus, Four Maushold, Three Maushold",925-four
 Three Maushold,925,74,75,70,65,75,111,470,Normal,,"Friend Guard, Cheek Pouch, Technician",Scrappy,"Tandemaus, Four Maushold, Three Maushold",925-three
 Fidough,926,37,55,70,30,55,65,312,Fairy,,"Own Tempo, Klutz",Water Absorb,"Fidough, Dachsbun",926
-Dachsbun,927,57,80,115,50,80,95,477,Fairy,,"Well Baked Body, Aroma Veil",Water Absorb,"Fidough, Dachsbun",927
+Dachsbun,927,57,80,115,50,80,95,477,Fairy,,"Well-Baked Body, Aroma Veil",Water Absorb,"Fidough, Dachsbun",927
 Smoliv,928,41,35,45,58,51,30,260,Grass,Normal,"Early Bird, Harvest",Ripen,"Smoliv, Dolliv, Arboliva",928
 Dolliv,929,52,53,60,78,78,33,354,Grass,Normal,"Early Bird, Harvest",Ripen,"Smoliv, Dolliv, Arboliva",929
 Arboliva,930,78,69,90,125,109,39,510,Grass,Normal,"Seed Sower, Harvest",Ripen,"Smoliv, Dolliv, Arboliva",930
@@ -1308,8 +1308,8 @@ Wiglett,960,10,55,25,35,25,95,245,Water,,"Gooey, Rattled, Sand Veil",Sturdy,"Wig
 Wugtrio,961,35,100,50,50,70,120,425,Water,,"Gooey, Rattled, Sand Veil",Sturdy,"Wiglett, Wugtrio",961
 Bombirdier,962,70,103,85,60,85,82,485,Flying,Dark,"Big Pecks, Keen Eye, Rocky Payload",Unburden,Bombirdier,962
 Finizen,963,70,45,40,45,40,75,315,Water,,Water Veil,Friend Guard,"Finizen, Zero Palafin, Hero Palafin",963
-Zero Palafin,964,100,70,72,53,62,100,457,Water,,Zero To Hero,Emergency Exit,"Finizen, Zero Palafin, Hero Palafin",964-zero
-Hero Palafin,964,100,160,97,106,87,100,650,Water,,Zero To Hero,Iron Fist,"Finizen, Zero Palafin, Hero Palafin",964-hero
+Zero Palafin,964,100,70,72,53,62,100,457,Water,,Zero to Hero,Emergency Exit,"Finizen, Zero Palafin, Hero Palafin",964-zero
+Hero Palafin,964,100,160,97,106,87,100,650,Water,,Zero to Hero,Iron Fist,"Finizen, Zero Palafin, Hero Palafin",964-hero
 Varoom,965,45,70,63,30,45,47,300,Steel,Poison,"Overcoat, Slow Start",Levitate,"Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",965
 Revavroom,966,80,119,90,54,67,90,500,Steel,Poison,"Overcoat, Filter",Levitate,"Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",966
 Segin Starmobile Revavroom,966,80,129,120,69,97,85,580,Steel,Dark,Overcoat,Intimidate,"Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",966-segin-starmobile
@@ -1327,7 +1327,7 @@ Flamigo,973,82,115,74,75,64,90,500,Flying,Fighting,"Scrappy, Tangled Feet, Costa
 Cetoddle,974,108,68,45,30,40,43,334,Ice,,"Thick Fat, Snow Cloak, Sheer Force",Refrigerate,"Cetoddle, Cetitan",974
 Cetitan,975,170,113,65,45,55,73,521,Ice,,"Thick Fat, Slush Rush, Sheer Force",Refrigerate,"Cetoddle, Cetitan",975
 Veluza,976,90,102,73,78,65,70,478,Water,Psychic,"Mold Breaker, Sharpness",Super Luck,Veluza,976
-Dondozo,977,150,100,115,65,65,35,530,Water,,"Unaware, Oblivious, Water Veil",Dragons Maw,Dondozo,977
+Dondozo,977,150,100,115,65,65,35,530,Water,,"Unaware, Oblivious, Water Veil",Dragon’s Maw,Dondozo,977
 Curly Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-curly
 Droopy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-droopy
 Stretchy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-stretchy
@@ -1336,7 +1336,7 @@ Clodsire,980,130,75,60,45,100,20,430,Poison,Ground,"Poison Point, Water Absorb, 
 Farigiraf,981,120,90,70,110,70,60,520,Normal,Psychic,"Cud Chew, Armor Tail, Sap Sipper",Parental Bond,"Girafarig, Farigiraf",981
 Two-Segment Dudunsparce,982,125,100,80,85,75,55,520,Normal,,"Serene Grace, Run Away, Rattled",Unaware,"Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",982
 Three-Segment Dudunsparce,982,125,100,80,85,75,55,520,Normal,,"Serene Grace, Run Away, Rattled",Unaware,"Dunsparce, Two-Segment Dudunsparce, Three-Segment Dudunsparce",982-three-segment
-Kingambit,983,100,135,120,60,85,50,550,Dark,Steel,"Defiant, Supreme Overlord, Pressure",Sword Of Ruin,"Pawniard, Bisharp, Kingambit",983
+Kingambit,983,100,135,120,60,85,50,550,Dark,Steel,"Defiant, Supreme Overlord, Pressure",Sword of Ruin,"Pawniard, Bisharp, Kingambit",983
 Great Tusk,984,115,131,131,53,53,87,570,Ground,Fighting,Protosynthesis,Intimidate,Great Tusk,984
 Scream Tail,985,115,65,99,65,115,111,570,Fairy,Psychic,Protosynthesis,Unaware,Scream Tail,985
 Brute Bonnet,986,111,127,99,79,99,55,570,Grass,Dark,Protosynthesis,Chlorophyll,Brute Bonnet,986
@@ -1354,11 +1354,11 @@ Arctibax,997,90,95,66,45,65,62,423,Dragon,Ice,"Thermal Exchange, Ice Body",Intim
 Baxcalibur,998,115,145,92,75,86,87,600,Dragon,Ice,"Thermal Exchange, Ice Body",Intimidate,"Frigibax, Arctibax, Baxcalibur",998
 Chest Gimmighoul,999,45,30,70,75,70,10,300,Ghost,,Rattled,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",999
 Roaming Gimmighoul,999,45,30,25,75,45,80,300,Ghost,,Run Away,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",999-roaming
-Gholdengo,1000,87,60,95,133,91,84,550,Steel,Ghost,Good As Gold,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",1000
-Wo-Chien,1001,85,85,100,95,135,70,570,Dark,Grass,Tablets Of Ruin,Vessel Of Ruin,Wo-Chien,1001
-Chien-Pao,1002,80,120,80,90,65,135,570,Dark,Ice,Sword Of Ruin,Intimidate,Chien-Pao,1002
-Ting-Lu,1003,155,110,125,55,80,45,570,Dark,Ground,Vessel Of Ruin,Stamina,Ting-Lu,1003
-Chi-Yu,1004,55,80,80,135,120,100,570,Dark,Fire,Beads Of Ruin,Berserk,Chi-Yu,1004
+Gholdengo,1000,87,60,95,133,91,84,550,Steel,Ghost,Good as Gold,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",1000
+Wo-Chien,1001,85,85,100,95,135,70,570,Dark,Grass,Tablets of Ruin,Vessel of Ruin,Wo-Chien,1001
+Chien-Pao,1002,80,120,80,90,65,135,570,Dark,Ice,Sword of Ruin,Intimidate,Chien-Pao,1002
+Ting-Lu,1003,155,110,125,55,80,45,570,Dark,Ground,Vessel of Ruin,Stamina,Ting-Lu,1003
+Chi-Yu,1004,55,80,80,135,120,100,570,Dark,Fire,Beads of Ruin,Berserk,Chi-Yu,1004
 Roaring Moon,1005,105,139,71,55,101,119,590,Dragon,Dark,Protosynthesis,Intimidate,Roaring Moon,1005
 Iron Valiant,1006,74,130,90,120,60,116,590,Fairy,Fighting,Quark Drive,Neuroforce,Iron Valiant,1006
 Koraidon,1007,100,135,115,85,100,135,670,Fighting,Dragon,Orichalcum Pulse,Thermal Exchange,Koraidon,1007-apex-build
@@ -1377,10 +1377,10 @@ Teal Mask Ogerpon,1017,80,120,84,60,96,110,550,Grass,,Defiant,Opportunist,"Teal 
 Wellspring Mask Ogerpon,1017,80,120,84,60,96,110,550,Grass,Water,Water Absorb,Super Luck,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-wellspring-mask
 Hearthflame Mask Ogerpon,1017,80,120,84,60,96,110,550,Grass,Fire,Mold Breaker,Flash Fire,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-hearthflame-mask
 Cornerstone Mask Ogerpon,1017,80,120,84,60,96,110,550,Grass,Rock,Sturdy,Magic Guard,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-cornerstone-mask
-Teal Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,,Embody Aspect Teal,Opportunist,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-teal-mask-tera
-Wellspring Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Water,Embody Aspect Wellspring,Super Luck,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-wellspring-mask-tera
-Hearthflame Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Fire,Embody Aspect Hearthflame,Flash Fire,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-hearthflame-mask-tera
-Cornerstone Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Rock,Embody Aspect Cornerstone,Magic Guard,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-cornerstone-mask-tera
+Teal Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,,Embody Aspect Speed,Opportunist,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-teal-mask-tera
+Wellspring Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Water,Embody Aspect Sp.&nbspDef,Super Luck,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-wellspring-mask-tera
+Hearthflame Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Fire,Embody Aspect Attack,Flash Fire,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-hearthflame-mask-tera
+Cornerstone Mask Tera Ogerpon,1017,80,120,84,60,96,110,550,Grass,Rock,Embody Aspect Defense,Magic Guard,"Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",1017-cornerstone-mask-tera
 Archaludon,1018,90,105,130,125,65,85,600,Steel,Dragon,"Stamina, Sturdy, Stalwart",Transistor,"Duraludon, Gigantamax Duraludon, Archaludon",1018
 Hydrapple,1019,106,80,110,120,80,44,540,Grass,Dragon,"Supersweet Syrup, Regenerator, Sticky Hold",Parental Bond,"Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",1019
 Gouging Fire,1020,105,115,121,65,93,91,590,Fire,Dragon,Protosynthesis,Beast Boost,Gouging Fire,1020
@@ -1405,8 +1405,8 @@ Alola Persian,2053,65,60,60,75,65,115,440,Dark,,"Fur Coat, Technician, Rattled",
 Alola Geodude,2074,40,80,100,30,30,20,300,Rock,Electric,"Magnet Pull, Sturdy, Galvanize",Dry Skin,"Alola Geodude, Alola Graveler, Alola Golem",2074
 Alola Graveler,2075,55,95,115,45,45,35,390,Rock,Electric,"Magnet Pull, Sturdy, Galvanize",Dry Skin,"Alola Geodude, Alola Graveler, Alola Golem",2075
 Alola Golem,2076,80,120,130,55,65,45,495,Rock,Electric,"Magnet Pull, Sturdy, Galvanize",Dry Skin,"Alola Geodude, Alola Graveler, Alola Golem",2076
-Alola Grimer,2088,80,80,50,40,50,25,325,Poison,Dark,"Poison Touch, Gluttony, Power Of Alchemy",Toxic Debris,"Alola Grimer, Alola Muk",2088
-Alola Muk,2089,105,105,75,65,100,50,500,Poison,Dark,"Poison Touch, Gluttony, Power Of Alchemy",Toxic Debris,"Alola Grimer, Alola Muk",2089
+Alola Grimer,2088,80,80,50,40,50,25,325,Poison,Dark,"Poison Touch, Gluttony, Power of Alchemy",Toxic Debris,"Alola Grimer, Alola Muk",2088
+Alola Muk,2089,105,105,75,65,100,50,500,Poison,Dark,"Poison Touch, Gluttony, Power of Alchemy",Toxic Debris,"Alola Grimer, Alola Muk",2089
 Alola Exeggutor,2103,95,105,85,125,75,45,530,Grass,Dragon,"Frisk, Harvest",Unburden,"Exeggcute, Exeggutor, Alola Exeggutor",2103
 Alola Marowak,2105,60,80,110,50,80,45,425,Fire,Ghost,"Cursed Body, Lightning Rod, Rock Head",Parental Bond,"Cubone, Marowak, Alola Marowak",2105
 Eternal Floette,2670,74,65,67,125,128,92,551,Fairy,,"Flower Veil, Symbiosis",Magic Guard,Eternal Floette,2670
@@ -1428,7 +1428,7 @@ Galar Linoone,4264,78,70,61,50,61,100,420,Dark,Normal,"Pickup, Gluttony, Quick F
 Galar Darumaka,4554,70,90,45,15,45,50,315,Ice,,"Hustle, Inner Focus",Flash Fire,"Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",4554
 Galar Darmanitan,4555,105,140,55,30,55,95,480,Ice,,"Gorilla Tactics, Zen Mode",Flash Fire,"Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",4555
 Zen Galar Darmanitan,4555,105,160,55,30,55,135,540,Ice,Fire,"Gorilla Tactics, Zen Mode",Flash Fire,"Galar Darumaka, Galar Darmanitan, Zen Galar Darmanitan",4555-zen
-Galar Yamask,4562,38,55,85,30,65,30,303,Ground,Ghost,Wandering Spirit,Tablets Of Ruin,"Runerigus, Galar Yamask",4562
+Galar Yamask,4562,38,55,85,30,65,30,303,Ground,Ghost,Wandering Spirit,Tablets of Ruin,"Runerigus, Galar Yamask",4562
 Galar Stunfisk,4618,109,81,99,66,84,32,471,Ground,Steel,Mimicry,Arena Trap,Galar Stunfisk,4618
 Hisui Growlithe,6058,60,75,45,65,50,55,350,Fire,Rock,"Intimidate, Flash Fire, Rock Head",Reckless,"Hisui Growlithe, Hisui Arcanine",6058
 Hisui Arcanine,6059,95,115,80,95,80,90,555,Fire,Rock,"Intimidate, Flash Fire, Rock Head",Reckless,"Hisui Growlithe, Hisui Arcanine",6059
@@ -1450,4 +1450,4 @@ Combat Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,,"Intimidate, Anger 
 Blaze Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,Fire,"Intimidate, Anger Point, Cud Chew",Adaptability,"Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",8128-blaze
 Aqua Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,Water,"Intimidate, Anger Point, Cud Chew",Adaptability,"Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",8128-aqua
 Paldea Wooper,8194,55,45,45,25,25,15,210,Poison,Ground,"Poison Point, Water Absorb, Unaware",Poison Touch,"Clodsire, Paldea Wooper",8194
-Bloodmoon Ursaluna,8901,113,70,120,135,65,52,555,Ground,Normal,Minds Eye,Berserk,Bloodmoon Ursaluna,8901
+Bloodmoon Ursaluna,8901,113,70,120,135,65,52,555,Ground,Normal,Mind’s Eye,Berserk,Bloodmoon Ursaluna,8901

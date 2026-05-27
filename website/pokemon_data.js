@@ -2267,7 +2267,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Swift Swim, Sniper, Damp",
-    "passive": "Dragons Maw",
+    "passive": "Dragon’s Maw",
     "evolution": "Horsea, Seadra, Kingdra",
     "img": "116"
   },
@@ -2283,7 +2283,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Poison Point, Sniper, Damp",
-    "passive": "Dragons Maw",
+    "passive": "Dragon’s Maw",
     "evolution": "Horsea, Seadra, Kingdra",
     "img": "117"
   },
@@ -3787,7 +3787,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Levitate",
-    "passive": "Beads Of Ruin",
+    "passive": "Beads of Ruin",
     "evolution": "Misdreavus, Mismagius",
     "img": "200"
   },
@@ -3899,7 +3899,7 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "",
     "abilities": "Levitate",
-    "passive": "Good As Gold",
+    "passive": "Good as Gold",
     "evolution": "A Unown, B Unown, C Unown, D Unown, E Unown, F Unown, G Unown, H Unown, I Unown, J Unown, K Unown, L Unown, M Unown, N Unown, O Unown, P Unown, Q Unown, R Unown, S Unown, T Unown, U Unown, V Unown, W Unown, X Unown, Y Unown, Z Unown, Exclamation Unown, Question Unown",
     "img": "201-g"
   },
@@ -6123,7 +6123,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Psychic",
     "abilities": "Pure Power, Telepathy",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Meditite, Medicham, Mega Medicham",
     "img": "307"
   },
@@ -6139,7 +6139,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Psychic",
     "abilities": "Pure Power, Telepathy",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Meditite, Medicham, Mega Medicham",
     "img": "308"
   },
@@ -6155,7 +6155,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Psychic",
     "abilities": "Pure Power",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Meditite, Medicham, Mega Medicham",
     "img": "308-mega"
   },
@@ -6779,7 +6779,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Psychic",
     "abilities": "Levitate",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Baltoy, Claydol",
     "img": "343"
   },
@@ -6795,7 +6795,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Psychic",
     "abilities": "Levitate",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Baltoy, Claydol",
     "img": "344"
   },
@@ -8539,7 +8539,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Levitate",
-    "passive": "Beads Of Ruin",
+    "passive": "Beads of Ruin",
     "evolution": "Misdreavus, Mismagius",
     "img": "429"
   },
@@ -8747,7 +8747,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "Dark",
     "abilities": "Pressure, Infiltrator",
-    "passive": "Vessel Of Ruin",
+    "passive": "Vessel of Ruin",
     "evolution": "Spiritomb",
     "img": "442"
   },
@@ -8843,7 +8843,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "",
     "abilities": "Steadfast, Inner Focus, Prankster",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Riolu, Lucario, Mega Lucario",
     "img": "447"
   },
@@ -8859,7 +8859,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Steel",
     "abilities": "Steadfast, Inner Focus, Justified",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Riolu, Lucario, Mega Lucario",
     "img": "448"
   },
@@ -8875,7 +8875,7 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Steel",
     "abilities": "Adaptability",
-    "passive": "Minds Eye",
+    "passive": "Mind’s Eye",
     "evolution": "Riolu, Lucario, Mega Lucario",
     "img": "448-mega"
   },
@@ -10331,7 +10331,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "",
     "abilities": "Gluttony, Overgrow",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Pansage, Simisage",
     "img": "511"
   },
@@ -10347,7 +10347,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "",
     "abilities": "Gluttony, Overgrow",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Pansage, Simisage",
     "img": "512"
   },
@@ -11115,7 +11115,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "",
     "abilities": "Water Absorb, Chlorophyll, Storm Drain",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Maractus",
     "img": "556"
   },
@@ -12011,7 +12011,7 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "",
     "abilities": "Telepathy, Synchronize, Analytic",
-    "passive": "Beads Of Ruin",
+    "passive": "Beads of Ruin",
     "evolution": "Elgyem, Beheeyem",
     "img": "605"
   },
@@ -12027,7 +12027,7 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "",
     "abilities": "Telepathy, Synchronize, Analytic",
-    "passive": "Beads Of Ruin",
+    "passive": "Beads of Ruin",
     "evolution": "Elgyem, Beheeyem",
     "img": "606"
   },
@@ -12315,7 +12315,7 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Steel",
     "abilities": "Defiant, Inner Focus, Pressure",
-    "passive": "Sword Of Ruin",
+    "passive": "Sword of Ruin",
     "evolution": "Pawniard, Bisharp, Kingambit",
     "img": "624"
   },
@@ -12331,7 +12331,7 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Steel",
     "abilities": "Defiant, Inner Focus, Pressure",
-    "passive": "Sword Of Ruin",
+    "passive": "Sword of Ruin",
     "evolution": "Pawniard, Bisharp, Kingambit",
     "img": "625"
   },
@@ -15243,7 +15243,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "710"
   },
@@ -15307,7 +15307,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "Grass",
     "abilities": "Pickup, Frisk, Insomnia",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
     "img": "711"
   },
@@ -15435,7 +15435,7 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Flying",
     "abilities": "Dark Aura",
-    "passive": "Soul Heart",
+    "passive": "Soul-Heart",
     "evolution": "Yveltal",
     "img": "717"
   },
@@ -16299,7 +16299,7 @@ const POKEMON_DATA = {
     "type1": "Poison",
     "type2": "Fire",
     "abilities": "Corrosion, Oblivious",
-    "passive": "Dragons Maw",
+    "passive": "Dragon’s Maw",
     "evolution": "Salandit, Salazzle",
     "img": "758"
   },
@@ -16538,7 +16538,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Normal",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773"
@@ -16554,7 +16554,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Fighting",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fighting"
@@ -16570,7 +16570,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Flying",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-flying"
@@ -16586,7 +16586,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Poison",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-poison"
@@ -16602,7 +16602,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Ground",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ground"
@@ -16618,7 +16618,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Rock",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-rock"
@@ -16634,7 +16634,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Bug",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-bug"
@@ -16650,7 +16650,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Ghost",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ghost"
@@ -16666,7 +16666,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Steel",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-steel"
@@ -16682,7 +16682,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Fire",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fire"
@@ -16698,7 +16698,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Water",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-water"
@@ -16714,7 +16714,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Grass",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-grass"
@@ -16730,7 +16730,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Electric",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-electric"
@@ -16746,7 +16746,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Psychic",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-psychic"
@@ -16762,7 +16762,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Ice",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-ice"
@@ -16778,7 +16778,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dragon",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dragon"
@@ -16794,7 +16794,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dark",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-dark"
@@ -16810,7 +16810,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Fairy",
     "type2": "",
-    "abilities": "Rks System",
+    "abilities": "RKS System",
     "passive": "Adaptability",
     "evolution": "Type: Null, Normal Silvally, Fighting Silvally, Flying Silvally, Poison Silvally, Ground Silvally, Rock Silvally, Bug Silvally, Ghost Silvally, Steel Silvally, Fire Silvally, Water Silvally, Grass Silvally, Electric Silvally, Psychic Silvally, Ice Silvally, Dragon Silvally, Dark Silvally, Fairy Silvally",
     "img": "773-fairy"
@@ -17530,7 +17530,7 @@ const POKEMON_DATA = {
     "bst": 600,
     "type1": "Steel",
     "type2": "Fairy",
-    "abilities": "Soul Heart",
+    "abilities": "Soul-Heart",
     "passive": "Mirror Armor",
     "evolution": "Magearna, Original Magearna",
     "img": "801"
@@ -17546,7 +17546,7 @@ const POKEMON_DATA = {
     "bst": 600,
     "type1": "Steel",
     "type2": "Fairy",
-    "abilities": "Soul Heart",
+    "abilities": "Soul-Heart",
     "passive": "Mirror Armor",
     "evolution": "Magearna, Original Magearna",
     "img": "801-original"
@@ -18347,7 +18347,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "Dragon",
     "abilities": "Ripen, Gluttony, Thick Fat",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "842"
   },
@@ -18363,7 +18363,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "Dragon",
     "abilities": "Thick Fat",
-    "passive": "Well Baked Body",
+    "passive": "Well-Baked Body",
     "evolution": "Applin, Flapple, Gigantamax Flapple, Appletun, Gigantamax Appletun, Dipplin, Hydrapple",
     "img": "842-gigantamax"
   },
@@ -18923,7 +18923,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Ghost",
     "abilities": "Wandering Spirit",
-    "passive": "Tablets Of Ruin",
+    "passive": "Tablets of Ruin",
     "evolution": "Runerigus, Galar Yamask",
     "img": "867"
   },
@@ -19706,7 +19706,7 @@ const POKEMON_DATA = {
     "bst": 580,
     "type1": "Dragon",
     "type2": "",
-    "abilities": "Dragons Maw",
+    "abilities": "Dragon’s Maw",
     "passive": "Multiscale",
     "evolution": "Regidrago",
     "img": "895"
@@ -20314,7 +20314,7 @@ const POKEMON_DATA = {
     "bst": 477,
     "type1": "Fairy",
     "type2": "",
-    "abilities": "Well Baked Body, Aroma Veil",
+    "abilities": "Well-Baked Body, Aroma Veil",
     "passive": "Water Absorb",
     "evolution": "Fidough, Dachsbun",
     "img": "927"
@@ -20954,7 +20954,7 @@ const POKEMON_DATA = {
     "bst": 457,
     "type1": "Water",
     "type2": "",
-    "abilities": "Zero To Hero",
+    "abilities": "Zero to Hero",
     "passive": "Emergency Exit",
     "evolution": "Finizen, Zero Palafin, Hero Palafin",
     "img": "964-zero"
@@ -20970,7 +20970,7 @@ const POKEMON_DATA = {
     "bst": 650,
     "type1": "Water",
     "type2": "",
-    "abilities": "Zero To Hero",
+    "abilities": "Zero to Hero",
     "passive": "Iron Fist",
     "evolution": "Finizen, Zero Palafin, Hero Palafin",
     "img": "964-hero"
@@ -21259,7 +21259,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Unaware, Oblivious, Water Veil",
-    "passive": "Dragons Maw",
+    "passive": "Dragon’s Maw",
     "evolution": "Dondozo",
     "img": "977"
   },
@@ -21403,7 +21403,7 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Steel",
     "abilities": "Defiant, Supreme Overlord, Pressure",
-    "passive": "Sword Of Ruin",
+    "passive": "Sword of Ruin",
     "evolution": "Pawniard, Bisharp, Kingambit",
     "img": "983"
   },
@@ -21690,7 +21690,7 @@ const POKEMON_DATA = {
     "bst": 550,
     "type1": "Steel",
     "type2": "Ghost",
-    "abilities": "Good As Gold",
+    "abilities": "Good as Gold",
     "passive": "Honey Gather",
     "evolution": "Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",
     "img": "1000"
@@ -21706,8 +21706,8 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dark",
     "type2": "Grass",
-    "abilities": "Tablets Of Ruin",
-    "passive": "Vessel Of Ruin",
+    "abilities": "Tablets of Ruin",
+    "passive": "Vessel of Ruin",
     "evolution": "Wo-Chien",
     "img": "1001"
   },
@@ -21722,7 +21722,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dark",
     "type2": "Ice",
-    "abilities": "Sword Of Ruin",
+    "abilities": "Sword of Ruin",
     "passive": "Intimidate",
     "evolution": "Chien-Pao",
     "img": "1002"
@@ -21738,7 +21738,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dark",
     "type2": "Ground",
-    "abilities": "Vessel Of Ruin",
+    "abilities": "Vessel of Ruin",
     "passive": "Stamina",
     "evolution": "Ting-Lu",
     "img": "1003"
@@ -21754,7 +21754,7 @@ const POKEMON_DATA = {
     "bst": 570,
     "type1": "Dark",
     "type2": "Fire",
-    "abilities": "Beads Of Ruin",
+    "abilities": "Beads of Ruin",
     "passive": "Berserk",
     "evolution": "Chi-Yu",
     "img": "1004"
@@ -22058,7 +22058,7 @@ const POKEMON_DATA = {
     "bst": 550,
     "type1": "Grass",
     "type2": "",
-    "abilities": "Embody Aspect Teal",
+    "abilities": "Embody Aspect Speed",
     "passive": "Opportunist",
     "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-teal-mask-tera"
@@ -22074,7 +22074,7 @@ const POKEMON_DATA = {
     "bst": 550,
     "type1": "Grass",
     "type2": "Water",
-    "abilities": "Embody Aspect Wellspring",
+    "abilities": "Embody Aspect Sp.&nbspDef",
     "passive": "Super Luck",
     "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-wellspring-mask-tera"
@@ -22090,7 +22090,7 @@ const POKEMON_DATA = {
     "bst": 550,
     "type1": "Grass",
     "type2": "Fire",
-    "abilities": "Embody Aspect Hearthflame",
+    "abilities": "Embody Aspect Attack",
     "passive": "Flash Fire",
     "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-hearthflame-mask-tera"
@@ -22106,7 +22106,7 @@ const POKEMON_DATA = {
     "bst": 550,
     "type1": "Grass",
     "type2": "Rock",
-    "abilities": "Embody Aspect Cornerstone",
+    "abilities": "Embody Aspect Defense",
     "passive": "Magic Guard",
     "evolution": "Teal Mask Ogerpon, Wellspring Mask Ogerpon, Hearthflame Mask Ogerpon, Cornerstone Mask Ogerpon, Teal Mask Tera Ogerpon, Wellspring Mask Tera Ogerpon, Hearthflame Mask Tera Ogerpon, Cornerstone Mask Tera Ogerpon",
     "img": "1017-cornerstone-mask-tera"
@@ -22506,7 +22506,7 @@ const POKEMON_DATA = {
     "bst": 325,
     "type1": "Poison",
     "type2": "Dark",
-    "abilities": "Poison Touch, Gluttony, Power Of Alchemy",
+    "abilities": "Poison Touch, Gluttony, Power of Alchemy",
     "passive": "Toxic Debris",
     "evolution": "Alola Grimer, Alola Muk",
     "img": "2088"
@@ -22522,7 +22522,7 @@ const POKEMON_DATA = {
     "bst": 500,
     "type1": "Poison",
     "type2": "Dark",
-    "abilities": "Poison Touch, Gluttony, Power Of Alchemy",
+    "abilities": "Poison Touch, Gluttony, Power of Alchemy",
     "passive": "Toxic Debris",
     "evolution": "Alola Grimer, Alola Muk",
     "img": "2089"
@@ -22875,7 +22875,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Ghost",
     "abilities": "Wandering Spirit",
-    "passive": "Tablets Of Ruin",
+    "passive": "Tablets of Ruin",
     "evolution": "Runerigus, Galar Yamask",
     "img": "4562"
   },
@@ -23226,7 +23226,7 @@ const POKEMON_DATA = {
     "bst": 555,
     "type1": "Ground",
     "type2": "Normal",
-    "abilities": "Minds Eye",
+    "abilities": "Mind’s Eye",
     "passive": "Berserk",
     "evolution": "Bloodmoon Ursaluna",
     "img": "8901"
