@@ -9,7 +9,7 @@ let selectedP1 = null;
 let selectedP2 = null;
 let hasFusion = false;
 
-// Generation boundaries and overrides (from fusioncalc.py)
+// Generation boundaries and overrides
 const GEN_BOUNDARIES = [[1,151],[152,251],[252,386],[387,493],[494,649],[650,721],[722,809],[810,905],[906,1025]];
 const GEN_OVERRIDES = {
     2670: 6, 2019: 7, 2020: 7, 2027: 7, 2028: 7, 2037: 7, 2038: 7, 2050: 7, 2051: 7, 2052: 7, 2053: 7, 2074: 7, 2075: 7, 2076: 7, 2088: 7, 2089: 7,
@@ -451,27 +451,6 @@ function getFusionSprite(p1, p2) {
     </div>`;
 }
 
-const TYPE_COLORS = {
-    'Normal': '#A8A878',
-    'Fire': '#EE8130',
-    'Water': '#6390F0',
-    'Electric': '#F7D02C',
-    'Grass': '#7AC74C',
-    'Ice': '#96D9D6',
-    'Fighting': '#C22E28',
-    'Poison': '#A33EA1',
-    'Ground': '#E2BF65',
-    'Flying': '#A98FF3',
-    'Psychic': '#F95587',
-    'Bug': '#A6B91A',
-    'Rock': '#B6A136',
-    'Ghost': '#735797',
-    'Dragon': '#6F35FC',
-    'Dark': '#705746',
-    'Steel': '#B7B7CE',
-    'Fairy': '#D685AD'
-};
-
 const TYPE_HUE_ROTATIONS = {
     'Normal': 0,
     'Fire': -30,
@@ -492,15 +471,6 @@ const TYPE_HUE_ROTATIONS = {
     'Steel': 170,
     'Fairy': 320
 };
-
-function hexToRgb(hex) {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-    } : null;
-}
 
 function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (!pokemon) return '<p>Select a Pokémon...</p>';
@@ -805,14 +775,6 @@ function selectPokemon(name, listId) {
     hasFusion = false;
     document.getElementById('fusion-details').innerHTML = '';
     setStatus(`Selected ${name}`);
-}
-
-function createPokemonSpriteElement(pokemon, name) {
-    const el = createPokemonSprite(pokemon, name);
-    if (el) return el;
-    const fallback = document.createElement('div');
-    fallback.textContent = 'No sprite';
-    return fallback;
 }
 
 function setupEvolutionLinks(panel) {
