@@ -433,7 +433,7 @@ function createPokemonSprite(pokemon, name) {
 function getPokemonSprite(pokemon, name) {
     if (!pokemon || !pokemon.id) return '';
     const imgId = pokemon.img || pokemon.id;
-    return `<div class="pokemon-sprite"><img src="website/images/${escapeHtml(imgId)}_0.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'; this.parentElement.classList.add('no-sprite');"></div>`;
+    return `<div class="pokemon-sprite"><img src="website/images/${escapeHtml(imgId)}_0.png" alt="${escapeHtml(name)}"></div>`;
 }
 
 function getFusionSprite(p1, p2) {
@@ -1204,6 +1204,14 @@ function init() {
     
     // Initialize Tera types
     initTeraTypes();
+    
+    // Sprite error handler (capture phase — error doesn't bubble from <img>)
+    document.addEventListener('error', (e) => {
+        const img = e.target;
+        if (img.tagName !== 'IMG' || !img.closest('.pokemon-sprite')) return;
+        img.style.display = 'none';
+        img.parentElement.classList.add('no-sprite');
+    }, true);
     
     // Search handlers
     document.getElementById('search-p1').addEventListener('input', (e) => populateList('list-p1', e.target.value));
