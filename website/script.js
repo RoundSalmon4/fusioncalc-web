@@ -477,6 +477,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     
     const opts = displayOptions[panelKey];
     const flipOn = document.getElementById('flipStatChallenge').checked;
+    const passiveOn = document.getElementById('passiveActive').checked;
     
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
     const hiddenAbility = abilities[1] || '';
@@ -489,7 +490,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     const natureEffect = activeNature && NATURES[activeNature] ? NATURES[activeNature] : null;
     
     let stats = { HP: pokemon.hp, Attack: pokemon.attack, Defense: pokemon.defense, 'Sp. Atk': pokemon.spAttack, 'Sp. Def': pokemon.spDefense, Speed: pokemon.speed };
-    const hasWonderGuard = activeAbility.toUpperCase() === 'WONDER GUARD' || passiveAbility.toUpperCase() === 'WONDER GUARD';
+    const hasWonderGuard = activeAbility.toUpperCase() === 'WONDER GUARD' || (passiveOn && passiveAbility.toUpperCase() === 'WONDER GUARD');
     
     if (flipOn) {
         stats = flipStats(stats);
@@ -527,8 +528,8 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.hidden_ability && hiddenAbility) {
         html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${escapeHtml(hiddenAbility)}</div>`;
     }
-    if (opts.passive && pokemon.passive) {
-        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(pokemon.passive)}</div>`;
+    if (opts.passive && pokemon.passive && passiveOn) {
+        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(pokemon.passive)} (active)</div>`;
     }
     
     // BST
@@ -561,7 +562,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.damage) {
         const teraSelectId = panelKey === 'p1' ? 'teraType1' : 'teraType2';
         const teraType = document.getElementById(teraSelectId)?.value || null;
-        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, pokemon.passive || null, teraType);
+        const eff = calculateTypeEffectiveness(pokemon.type1, pokemon.type2, activeAbility, passiveOn ? pokemon.passive : null, teraType);
         html += renderDamageTable(eff);
     }
     
