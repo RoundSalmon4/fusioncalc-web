@@ -760,16 +760,16 @@ function selectPokemon(name, listId) {
         selectedP1 = pokemonData[name];
         selectedP1.name = name;
         document.getElementById('title-p1').textContent = name;
+        populateActiveAbilityDropdown(selectedP1, 'p1');
         document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
         setupEvolutionLinks('p1');
-        populateActiveAbilityDropdown(selectedP1, 'p1');
     } else {
         selectedP2 = pokemonData[name];
         selectedP2.name = name;
         document.getElementById('title-p2').textContent = name;
+        populateActiveAbilityDropdown(selectedP2, 'p2');
         document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
         setupEvolutionLinks('p2');
-        populateActiveAbilityDropdown(selectedP2, 'p2');
     }
     
     hasFusion = false;
@@ -790,15 +790,16 @@ function setupEvolutionLinks(panel) {
                     selectedP1 = pokemonData[name];
                     selectedP1.name = name;
                     document.getElementById('title-p1').textContent = name;
+                    populateActiveAbilityDropdown(selectedP1, 'p1');
                     document.getElementById('details-p1').innerHTML = renderPokemonDetails(selectedP1, 'p1');
                     setupEvolutionLinks('p1');
                 } else {
                     selectedP2 = pokemonData[name];
                     selectedP2.name = name;
                     document.getElementById('title-p2').textContent = name;
+                    populateActiveAbilityDropdown(selectedP2, 'p2');
                     document.getElementById('details-p2').innerHTML = renderPokemonDetails(selectedP2, 'p2');
                     setupEvolutionLinks('p2');
-                    populateActiveAbilityDropdown(selectedP2);
                 }
                 
                 // Populate and highlight in list
