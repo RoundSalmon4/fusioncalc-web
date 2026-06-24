@@ -744,12 +744,12 @@ function populateList(listId, filter = '') {
         const item = document.createElement('div');
         item.className = 'pokemon-list-item';
         item.textContent = name;
-        item.addEventListener('click', () => selectPokemon(name, listId));
+        item.addEventListener('click', (e) => selectPokemon(name, listId, e));
         list.appendChild(item);
     }
 }
 
-function selectPokemon(name, listId) {
+function selectPokemon(name, listId, event) {
     const panel = listId.replace('list-', '');
     
     // Update selection visual
@@ -837,6 +837,10 @@ function populateActiveAbilityDropdown(pokemon, panel) {
         option.value = '';
         option.textContent = 'None';
         select.appendChild(option);
+    }
+    
+    if (select.options.length > 0) {
+        select.selectedIndex = 0;
     }
 }
 
