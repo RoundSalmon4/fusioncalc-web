@@ -331,7 +331,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Poison",
     "abilities": "Shield Dust, Run Away",
-    "passive": "Poison Touch",
+    "passive": "Poison Point",
     "evolution": "Weedle, Kakuna, Beedrill, Mega Beedrill",
     "img": "13"
   },
@@ -395,7 +395,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
-    "passive": "Sheer Force",
+    "passive": "Gale Wings",
     "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "16"
   },
@@ -411,7 +411,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "Flying",
     "abilities": "Keen Eye, Tangled Feet, Big Pecks",
-    "passive": "Sheer Force",
+    "passive": "Gale Wings",
     "evolution": "Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",
     "img": "17"
   },
@@ -555,8 +555,8 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "",
     "abilities": "Static, Lightning Rod",
-    "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "passive": "Transistor",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25"
   },
   "Partner Pikachu": {
@@ -572,7 +572,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-partner"
   },
   "Cosplay Pikachu": {
@@ -588,7 +588,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Costar",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cosplay"
   },
   "Cool Cosplay Pikachu": {
@@ -604,7 +604,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Iron Fist",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cool-cosplay"
   },
   "Beauty Cosplay Pikachu": {
@@ -620,7 +620,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Queenly Majesty",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-beauty-cosplay"
   },
   "Cute Cosplay Pikachu": {
@@ -636,7 +636,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Misty Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-cute-cosplay"
   },
   "Smart Cosplay Pikachu": {
@@ -652,7 +652,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Tinted Lens",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-smart-cosplay"
   },
   "Tough Cosplay Pikachu": {
@@ -668,7 +668,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Libero",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-tough-cosplay"
   },
   "Gigantamax Pikachu": {
@@ -684,7 +684,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Lightning Rod",
     "passive": "Thick Fat",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "25-gigantamax"
   },
   "Raichu": {
@@ -699,9 +699,41 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "",
     "abilities": "Static, Lightning Rod",
-    "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "passive": "Transistor",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "26"
+  },
+  "Mega X Raichu": {
+    "id": 26,
+    "hp": 60,
+    "attack": 135,
+    "defense": 95,
+    "spAttack": 90,
+    "spDefense": 95,
+    "speed": 110,
+    "bst": 585,
+    "type1": "Electric",
+    "type2": "",
+    "abilities": "Electric Surge",
+    "passive": "Magic Guard",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "img": "26-mega-x"
+  },
+  "Mega Y Raichu": {
+    "id": 26,
+    "hp": 60,
+    "attack": 100,
+    "defense": 55,
+    "spAttack": 160,
+    "spDefense": 80,
+    "speed": 130,
+    "bst": 585,
+    "type1": "Electric",
+    "type2": "",
+    "abilities": "No Guard",
+    "passive": "Teravolt",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "img": "26-mega-y"
   },
   "Sandshrew": {
     "id": 27,
@@ -715,7 +747,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "",
     "abilities": "Sand Veil, Sand Rush",
-    "passive": "Tough Claws",
+    "passive": "Sand Stream",
     "evolution": "Sandshrew, Sandslash",
     "img": "27"
   },
@@ -731,7 +763,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "",
     "abilities": "Sand Veil, Sand Rush",
-    "passive": "Tough Claws",
+    "passive": "Sand Stream",
     "evolution": "Sandshrew, Sandslash",
     "img": "28"
   },
@@ -844,7 +876,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "evolution": "Clefairy, Clefable, Mega Clefable, Cleffa",
     "img": "35"
   },
   "Clefable": {
@@ -859,9 +891,25 @@ const POKEMON_DATA = {
     "type1": "Fairy",
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Unaware",
-    "passive": "Analytic",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "passive": "Neuroforce",
+    "evolution": "Clefairy, Clefable, Mega Clefable, Cleffa",
     "img": "36"
+  },
+  "Mega Clefable": {
+    "id": 36,
+    "hp": 95,
+    "attack": 80,
+    "defense": 93,
+    "spAttack": 135,
+    "spDefense": 110,
+    "speed": 70,
+    "bst": 583,
+    "type1": "Fairy",
+    "type2": "Flying",
+    "abilities": "Magic Bounce",
+    "passive": "Unaware",
+    "evolution": "Clefairy, Clefable, Mega Clefable, Cleffa",
+    "img": "36-mega"
   },
   "Vulpix": {
     "id": 37,
@@ -1436,7 +1484,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution": "Bellsprout, Weepinbell, Victreebel, Mega Victreebel",
     "img": "69"
   },
   "Weepinbell": {
@@ -1452,7 +1500,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution": "Bellsprout, Weepinbell, Victreebel, Mega Victreebel",
     "img": "70"
   },
   "Victreebel": {
@@ -1468,8 +1516,24 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Chlorophyll, Gluttony",
     "passive": "Flower Gift",
-    "evolution": "Bellsprout, Weepinbell, Victreebel",
+    "evolution": "Bellsprout, Weepinbell, Victreebel, Mega Victreebel",
     "img": "71"
+  },
+  "Mega Victreebel": {
+    "id": 71,
+    "hp": 80,
+    "attack": 125,
+    "defense": 85,
+    "spAttack": 135,
+    "spDefense": 95,
+    "speed": 70,
+    "bst": 590,
+    "type1": "Grass",
+    "type2": "Poison",
+    "abilities": "Innards Out",
+    "passive": "Toxic Debris",
+    "evolution": "Bellsprout, Weepinbell, Victreebel, Mega Victreebel",
+    "img": "71-mega"
   },
   "Tentacool": {
     "id": 72,
@@ -1563,7 +1627,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Run Away, Flash Fire, Flame Body",
-    "passive": "Magic Guard",
+    "passive": "Fire Mane",
     "evolution": "Ponyta, Rapidash",
     "img": "77"
   },
@@ -1579,7 +1643,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Run Away, Flash Fire, Flame Body",
-    "passive": "Magic Guard",
+    "passive": "Fire Mane",
     "evolution": "Ponyta, Rapidash",
     "img": "78"
   },
@@ -2123,7 +2187,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "",
     "abilities": "Own Tempo, Oblivious, Cloud Nine",
-    "passive": "Cheek Pouch",
+    "passive": "Poison Heal",
     "evolution": "Lickitung, Lickilicky",
     "img": "108"
   },
@@ -2332,7 +2396,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Illuminate, Natural Cure, Analytic",
     "passive": "Regenerator",
-    "evolution": "Staryu, Starmie",
+    "evolution": "Staryu, Starmie, Mega Starmie",
     "img": "120"
   },
   "Starmie": {
@@ -2348,8 +2412,24 @@ const POKEMON_DATA = {
     "type2": "Psychic",
     "abilities": "Illuminate, Natural Cure, Analytic",
     "passive": "Regenerator",
-    "evolution": "Staryu, Starmie",
+    "evolution": "Staryu, Starmie, Mega Starmie",
     "img": "121"
+  },
+  "Mega Starmie": {
+    "id": 121,
+    "hp": 60,
+    "attack": 100,
+    "defense": 105,
+    "spAttack": 130,
+    "spDefense": 105,
+    "speed": 120,
+    "bst": 660,
+    "type1": "Water",
+    "type2": "Psychic",
+    "abilities": "Huge Power",
+    "passive": "Regenerator",
+    "evolution": "Staryu, Starmie, Mega Starmie",
+    "img": "121-mega"
   },
   "Mr. Mime": {
     "id": 122,
@@ -2876,7 +2956,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Marvel Scale",
     "passive": "Multiscale",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution": "Dratini, Dragonair, Dragonite, Mega Dragonite",
     "img": "147"
   },
   "Dragonair": {
@@ -2892,7 +2972,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Shed Skin, Marvel Scale",
     "passive": "Multiscale",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution": "Dratini, Dragonair, Dragonite, Mega Dragonite",
     "img": "148"
   },
   "Dragonite": {
@@ -2908,8 +2988,24 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Inner Focus, Multiscale",
     "passive": "Aerilate",
-    "evolution": "Dratini, Dragonair, Dragonite",
+    "evolution": "Dratini, Dragonair, Dragonite, Mega Dragonite",
     "img": "149"
+  },
+  "Mega Dragonite": {
+    "id": 149,
+    "hp": 91,
+    "attack": 124,
+    "defense": 115,
+    "spAttack": 145,
+    "spDefense": 125,
+    "speed": 100,
+    "bst": 700,
+    "type1": "Dragon",
+    "type2": "Flying",
+    "abilities": "Multiscale",
+    "passive": "Aerilate",
+    "evolution": "Dratini, Dragonair, Dragonite, Mega Dragonite",
+    "img": "149-mega"
   },
   "Mewtwo": {
     "id": 150,
@@ -2988,7 +3084,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Cute Charm",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution": "Chikorita, Bayleef, Meganium, Mega Meganium",
     "img": "152"
   },
   "Bayleef": {
@@ -3004,7 +3100,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Thick Fat",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution": "Chikorita, Bayleef, Meganium, Mega Meganium",
     "img": "153"
   },
   "Meganium": {
@@ -3020,8 +3116,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Leaf Guard",
     "passive": "Thick Fat",
-    "evolution": "Chikorita, Bayleef, Meganium",
+    "evolution": "Chikorita, Bayleef, Meganium, Mega Meganium",
     "img": "154"
+  },
+  "Mega Meganium": {
+    "id": 154,
+    "hp": 80,
+    "attack": 92,
+    "defense": 115,
+    "spAttack": 143,
+    "spDefense": 115,
+    "speed": 80,
+    "bst": 625,
+    "type1": "Grass",
+    "type2": "Fairy",
+    "abilities": "Mega Sol",
+    "passive": "Thick Fat",
+    "evolution": "Chikorita, Bayleef, Meganium, Mega Meganium",
+    "img": "154-mega"
   },
   "Cyndaquil": {
     "id": 155,
@@ -3084,7 +3196,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution": "Totodile, Croconaw, Feraligatr, Mega Feraligatr",
     "img": "158"
   },
   "Croconaw": {
@@ -3100,7 +3212,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution": "Totodile, Croconaw, Feraligatr, Mega Feraligatr",
     "img": "159"
   },
   "Feraligatr": {
@@ -3116,8 +3228,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Sheer Force",
     "passive": "Strong Jaw",
-    "evolution": "Totodile, Croconaw, Feraligatr",
+    "evolution": "Totodile, Croconaw, Feraligatr, Mega Feraligatr",
     "img": "160"
+  },
+  "Mega Feraligatr": {
+    "id": 160,
+    "hp": 85,
+    "attack": 160,
+    "defense": 125,
+    "spAttack": 89,
+    "spDefense": 93,
+    "speed": 78,
+    "bst": 630,
+    "type1": "Water",
+    "type2": "Dragon",
+    "abilities": "Dragonize",
+    "passive": "Strong Jaw",
+    "evolution": "Totodile, Croconaw, Feraligatr, Mega Feraligatr",
+    "img": "160-mega"
   },
   "Sentret": {
     "id": 161,
@@ -3307,8 +3435,8 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "",
     "abilities": "Static, Lightning Rod",
-    "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "passive": "Transistor",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172"
   },
   "Spiky-Eared Pichu": {
@@ -3324,7 +3452,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Static, Lightning Rod",
     "passive": "Sturdy",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "172-spiky"
   },
   "Cleffa": {
@@ -3340,7 +3468,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Cute Charm, Magic Guard, Friend Guard",
     "passive": "Prankster",
-    "evolution": "Clefairy, Clefable, Cleffa",
+    "evolution": "Clefairy, Clefable, Mega Clefable, Cleffa",
     "img": "173"
   },
   "Igglybuff": {
@@ -4700,8 +4828,24 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Sturdy, Weak Armor",
     "passive": "Tough Claws",
-    "evolution": "Skarmory",
+    "evolution": "Skarmory, Mega Skarmory",
     "img": "227"
+  },
+  "Mega Skarmory": {
+    "id": 227,
+    "hp": 65,
+    "attack": 140,
+    "defense": 110,
+    "spAttack": 40,
+    "spDefense": 100,
+    "speed": 110,
+    "bst": 565,
+    "type1": "Steel",
+    "type2": "Flying",
+    "abilities": "Stalwart",
+    "passive": "Tough Claws",
+    "evolution": "Skarmory, Mega Skarmory",
+    "img": "227-mega"
   },
   "Houndour": {
     "id": 228,
@@ -5387,7 +5531,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "",
     "abilities": "Shield Dust, Run Away",
-    "passive": "Gluttony",
+    "passive": "Poison Point",
     "evolution": "Wurmple, Silcoon, Beautifly, Cascoon, Dustox",
     "img": "265"
   },
@@ -7084,8 +7228,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Punk Rock",
-    "evolution": "Chimecho, Chingling",
+    "evolution": "Chimecho, Mega Chimecho, Chingling",
     "img": "358"
+  },
+  "Mega Chimecho": {
+    "id": 358,
+    "hp": 75,
+    "attack": 50,
+    "defense": 110,
+    "spAttack": 135,
+    "spDefense": 120,
+    "speed": 65,
+    "bst": 555,
+    "type1": "Psychic",
+    "type2": "Steel",
+    "abilities": "Levitate",
+    "passive": "Punk Rock",
+    "evolution": "Chimecho, Mega Chimecho, Chingling",
+    "img": "358-mega"
   },
   "Absol": {
     "id": 359,
@@ -7099,8 +7259,8 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "",
     "abilities": "Pressure, Super Luck, Justified",
-    "passive": "Sharpness",
-    "evolution": "Absol, Mega Absol",
+    "passive": "Tough Claws",
+    "evolution": "Absol, Mega Absol, Mega Z Absol",
     "img": "359"
   },
   "Mega Absol": {
@@ -7115,9 +7275,25 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "",
     "abilities": "Magic Bounce",
-    "passive": "Sharpness",
-    "evolution": "Absol, Mega Absol",
+    "passive": "Shadow Shield",
+    "evolution": "Absol, Mega Absol, Mega Z Absol",
     "img": "359-mega"
+  },
+  "Mega Z Absol": {
+    "id": 359,
+    "hp": 65,
+    "attack": 154,
+    "defense": 60,
+    "spAttack": 75,
+    "spDefense": 60,
+    "speed": 151,
+    "bst": 565,
+    "type1": "Dark",
+    "type2": "Ghost",
+    "abilities": "Super Luck",
+    "passive": "Sharpness",
+    "evolution": "Absol, Mega Absol, Mega Z Absol",
+    "img": "359-mega-z"
   },
   "Wynaut": {
     "id": 360,
@@ -7147,8 +7323,8 @@ const POKEMON_DATA = {
     "type1": "Ice",
     "type2": "",
     "abilities": "Inner Focus, Ice Body, Moody",
-    "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "passive": "Overcoat",
+    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",
     "img": "361"
   },
   "Glalie": {
@@ -7163,8 +7339,8 @@ const POKEMON_DATA = {
     "type1": "Ice",
     "type2": "",
     "abilities": "Inner Focus, Ice Body, Moody",
-    "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "passive": "Intimidate",
+    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",
     "img": "362"
   },
   "Mega Glalie": {
@@ -7179,8 +7355,8 @@ const POKEMON_DATA = {
     "type1": "Ice",
     "type2": "",
     "abilities": "Refrigerate",
-    "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "passive": "Moody",
+    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",
     "img": "362-mega"
   },
   "Spheal": {
@@ -7355,7 +7531,7 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Flying",
     "abilities": "Intimidate, Moxie",
-    "passive": "Gale Wings",
+    "passive": "Own Tempo",
     "evolution": "Bagon, Shelgon, Salamence, Mega Salamence",
     "img": "373"
   },
@@ -7884,7 +8060,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Keen Eye, Reckless",
     "passive": "Intimidate",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution": "Starly, Staravia, Staraptor, Mega Staraptor",
     "img": "396"
   },
   "Staravia": {
@@ -7900,7 +8076,7 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Reckless",
     "passive": "Rock Head",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution": "Starly, Staravia, Staraptor, Mega Staraptor",
     "img": "397"
   },
   "Staraptor": {
@@ -7916,8 +8092,24 @@ const POKEMON_DATA = {
     "type2": "Flying",
     "abilities": "Intimidate, Reckless",
     "passive": "Rock Head",
-    "evolution": "Starly, Staravia, Staraptor",
+    "evolution": "Starly, Staravia, Staraptor, Mega Staraptor",
     "img": "398"
+  },
+  "Mega Staraptor": {
+    "id": 398,
+    "hp": 85,
+    "attack": 140,
+    "defense": 100,
+    "spAttack": 60,
+    "spDefense": 90,
+    "speed": 110,
+    "bst": 585,
+    "type1": "Fighting",
+    "type2": "Flying",
+    "abilities": "Contrary",
+    "passive": "Rock Head",
+    "evolution": "Starly, Staravia, Staraptor, Mega Staraptor",
+    "img": "398-mega"
   },
   "Bidoof": {
     "id": 399,
@@ -8523,7 +8715,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "Fighting",
     "abilities": "Scrappy",
-    "passive": "Adaptability",
+    "passive": "Super Luck",
     "evolution": "Buneary, Lopunny, Mega Lopunny",
     "img": "428-mega"
   },
@@ -8604,7 +8796,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Punk Rock",
-    "evolution": "Chimecho, Chingling",
+    "evolution": "Chimecho, Mega Chimecho, Chingling",
     "img": "433"
   },
   "Stunky": {
@@ -8764,7 +8956,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
     "img": "443"
   },
   "Gabite": {
@@ -8780,7 +8972,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
     "img": "444"
   },
   "Garchomp": {
@@ -8796,7 +8988,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Sand Veil, Rough Skin",
     "passive": "Arena Trap",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
     "img": "445"
   },
   "Mega Garchomp": {
@@ -8811,9 +9003,25 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Ground",
     "abilities": "Sand Force",
-    "passive": "Sand Rush",
-    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp",
+    "passive": "Mold Breaker",
+    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
     "img": "445-mega"
+  },
+  "Mega Z Garchomp": {
+    "id": 445,
+    "hp": 108,
+    "attack": 130,
+    "defense": 85,
+    "spAttack": 141,
+    "spDefense": 85,
+    "speed": 151,
+    "bst": 700,
+    "type1": "Dragon",
+    "type2": "",
+    "abilities": "Rough Skin",
+    "passive": "Levitate",
+    "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
+    "img": "445-mega-z"
   },
   "Munchlax": {
     "id": 446,
@@ -8844,7 +9052,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Steadfast, Inner Focus, Prankster",
     "passive": "Mind’s Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution": "Riolu, Lucario, Mega Lucario, Mega Z Lucario",
     "img": "447"
   },
   "Lucario": {
@@ -8860,7 +9068,7 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Steadfast, Inner Focus, Justified",
     "passive": "Mind’s Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution": "Riolu, Lucario, Mega Lucario, Mega Z Lucario",
     "img": "448"
   },
   "Mega Lucario": {
@@ -8876,8 +9084,24 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Adaptability",
     "passive": "Mind’s Eye",
-    "evolution": "Riolu, Lucario, Mega Lucario",
+    "evolution": "Riolu, Lucario, Mega Lucario, Mega Z Lucario",
     "img": "448-mega"
+  },
+  "Mega Z Lucario": {
+    "id": 448,
+    "hp": 70,
+    "attack": 100,
+    "defense": 70,
+    "spAttack": 164,
+    "spDefense": 70,
+    "speed": 151,
+    "bst": 625,
+    "type1": "Fighting",
+    "type2": "Steel",
+    "abilities": "Inner Focus",
+    "passive": "Mega Launcher",
+    "evolution": "Riolu, Lucario, Mega Lucario, Mega Z Lucario",
+    "img": "448-mega-z"
   },
   "Hippopotas": {
     "id": 449,
@@ -9131,7 +9355,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "",
     "abilities": "Own Tempo, Oblivious, Cloud Nine",
-    "passive": "Cheek Pouch",
+    "passive": "Poison Heal",
     "evolution": "Lickitung, Lickilicky",
     "img": "463"
   },
@@ -9387,9 +9611,25 @@ const POKEMON_DATA = {
     "type1": "Ice",
     "type2": "Ghost",
     "abilities": "Snow Cloak, Cursed Body",
-    "passive": "Snow Warning",
-    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass",
+    "passive": "Dazzling",
+    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",
     "img": "478"
+  },
+  "Mega Froslass": {
+    "id": 478,
+    "hp": 70,
+    "attack": 80,
+    "defense": 70,
+    "spAttack": 140,
+    "spDefense": 100,
+    "speed": 120,
+    "bst": 580,
+    "type1": "Ice",
+    "type2": "Ghost",
+    "abilities": "Snow Warning",
+    "passive": "Queenly Majesty",
+    "evolution": "Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",
+    "img": "478-mega"
   },
   "Rotom": {
     "id": 479,
@@ -9612,8 +9852,24 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Flash Fire, Flame Body",
     "passive": "Filter",
-    "evolution": "Heatran",
+    "evolution": "Heatran, Mega Heatran",
     "img": "485"
+  },
+  "Mega Heatran": {
+    "id": 485,
+    "hp": 91,
+    "attack": 120,
+    "defense": 106,
+    "spAttack": 175,
+    "spDefense": 141,
+    "speed": 67,
+    "bst": 700,
+    "type1": "Fire",
+    "type2": "Steel",
+    "abilities": "Flash Fire",
+    "passive": "Filter",
+    "evolution": "Heatran, Mega Heatran",
+    "img": "485-mega"
   },
   "Regigigas": {
     "id": 486,
@@ -9724,8 +9980,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Bad Dreams",
     "passive": "Unnerve",
-    "evolution": "Darkrai",
+    "evolution": "Darkrai, Mega Darkrai",
     "img": "491"
+  },
+  "Mega Darkrai": {
+    "id": 491,
+    "hp": 70,
+    "attack": 120,
+    "defense": 130,
+    "spAttack": 165,
+    "spDefense": 130,
+    "speed": 85,
+    "bst": 700,
+    "type1": "Dark",
+    "type2": "",
+    "abilities": "Bad Dreams",
+    "passive": "Unnerve",
+    "evolution": "Darkrai, Mega Darkrai",
+    "img": "491-mega"
   },
   "Land Shaymin": {
     "id": 492,
@@ -10124,7 +10396,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Blaze, Thick Fat",
     "passive": "Gluttony",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution": "Tepig, Pignite, Emboar, Mega Emboar",
     "img": "498"
   },
   "Pignite": {
@@ -10140,7 +10412,7 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Thick Fat",
     "passive": "Rock Head",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution": "Tepig, Pignite, Emboar, Mega Emboar",
     "img": "499"
   },
   "Emboar": {
@@ -10156,8 +10428,24 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Blaze, Reckless",
     "passive": "Rock Head",
-    "evolution": "Tepig, Pignite, Emboar",
+    "evolution": "Tepig, Pignite, Emboar, Mega Emboar",
     "img": "500"
+  },
+  "Mega Emboar": {
+    "id": 500,
+    "hp": 110,
+    "attack": 148,
+    "defense": 75,
+    "spAttack": 110,
+    "spDefense": 110,
+    "speed": 75,
+    "bst": 628,
+    "type1": "Fire",
+    "type2": "Fighting",
+    "abilities": "Mold Breaker",
+    "passive": "Magic Guard",
+    "evolution": "Tepig, Pignite, Emboar, Mega Emboar",
+    "img": "500-mega"
   },
   "Oshawott": {
     "id": 501,
@@ -10620,7 +10908,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Sand Rush, Sand Force, Mold Breaker",
     "passive": "Sturdy",
-    "evolution": "Drilbur, Excadrill",
+    "evolution": "Drilbur, Excadrill, Mega Excadrill",
     "img": "529"
   },
   "Excadrill": {
@@ -10636,8 +10924,24 @@ const POKEMON_DATA = {
     "type2": "Steel",
     "abilities": "Sand Rush, Sand Force, Mold Breaker",
     "passive": "Sturdy",
-    "evolution": "Drilbur, Excadrill",
+    "evolution": "Drilbur, Excadrill, Mega Excadrill",
     "img": "530"
+  },
+  "Mega Excadrill": {
+    "id": 530,
+    "hp": 110,
+    "attack": 165,
+    "defense": 100,
+    "spAttack": 65,
+    "spDefense": 65,
+    "speed": 103,
+    "bst": 608,
+    "type1": "Ground",
+    "type2": "Steel",
+    "abilities": "Piercing Drill",
+    "passive": "Mold Breaker",
+    "evolution": "Drilbur, Excadrill, Mega Excadrill",
+    "img": "530-mega"
   },
   "Audino": {
     "id": 531,
@@ -10860,7 +11164,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution": "Venipede, Whirlipede, Scolipede, Mega Scolipede",
     "img": "543"
   },
   "Whirlipede": {
@@ -10876,7 +11180,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution": "Venipede, Whirlipede, Scolipede, Mega Scolipede",
     "img": "544"
   },
   "Scolipede": {
@@ -10892,8 +11196,24 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Poison Point, Swarm, Speed Boost",
     "passive": "Stamina",
-    "evolution": "Venipede, Whirlipede, Scolipede",
+    "evolution": "Venipede, Whirlipede, Scolipede, Mega Scolipede",
     "img": "545"
+  },
+  "Mega Scolipede": {
+    "id": 545,
+    "hp": 60,
+    "attack": 140,
+    "defense": 149,
+    "spAttack": 75,
+    "spDefense": 99,
+    "speed": 62,
+    "bst": 585,
+    "type1": "Bug",
+    "type2": "Poison",
+    "abilities": "Shell Armor",
+    "passive": "Speed Boost",
+    "evolution": "Venipede, Whirlipede, Scolipede, Mega Scolipede",
+    "img": "545-mega"
   },
   "Cottonee": {
     "id": 546,
@@ -10971,8 +11291,8 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Reckless, Adaptability, Mold Breaker",
-    "passive": "Rock Head",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "passive": "Moxie",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin",
     "img": "550-red-striped"
   },
   "Blue-Striped Basculin": {
@@ -10987,25 +11307,9 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Rock Head, Adaptability, Mold Breaker",
-    "passive": "Reckless",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "passive": "Moxie",
+    "evolution": "Red-Striped Basculin, Blue-Striped Basculin",
     "img": "550-blue-striped"
-  },
-  "White-Striped Basculin": {
-    "id": 550,
-    "hp": 70,
-    "attack": 92,
-    "defense": 65,
-    "spAttack": 80,
-    "spDefense": 55,
-    "speed": 98,
-    "bst": 460,
-    "type1": "Water",
-    "type2": "",
-    "abilities": "Rattled, Adaptability, Mold Breaker",
-    "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
-    "img": "550-white-striped"
   },
   "Sandile": {
     "id": 551,
@@ -11164,7 +11468,7 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Shed Skin, Moxie, Intimidate",
     "passive": "Unburden",
-    "evolution": "Scraggy, Scrafty",
+    "evolution": "Scraggy, Scrafty, Mega Scrafty",
     "img": "559"
   },
   "Scrafty": {
@@ -11180,8 +11484,24 @@ const POKEMON_DATA = {
     "type2": "Fighting",
     "abilities": "Shed Skin, Moxie, Intimidate",
     "passive": "Unburden",
-    "evolution": "Scraggy, Scrafty",
+    "evolution": "Scraggy, Scrafty, Mega Scrafty",
     "img": "560"
+  },
+  "Mega Scrafty": {
+    "id": 560,
+    "hp": 65,
+    "attack": 130,
+    "defense": 135,
+    "spAttack": 55,
+    "spDefense": 135,
+    "speed": 68,
+    "bst": 588,
+    "type1": "Dark",
+    "type2": "Fighting",
+    "abilities": "Intimidate",
+    "passive": "Moxie",
+    "evolution": "Scraggy, Scrafty, Mega Scrafty",
+    "img": "560-mega"
   },
   "Sigilyph": {
     "id": 561,
@@ -11964,7 +12284,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution": "Tynamo, Eelektrik, Eelektross, Mega Eelektross",
     "img": "602"
   },
   "Eelektrik": {
@@ -11980,7 +12300,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution": "Tynamo, Eelektrik, Eelektross, Mega Eelektross",
     "img": "603"
   },
   "Eelektross": {
@@ -11996,8 +12316,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Levitate",
     "passive": "Poison Heal",
-    "evolution": "Tynamo, Eelektrik, Eelektross",
+    "evolution": "Tynamo, Eelektrik, Eelektross, Mega Eelektross",
     "img": "604"
+  },
+  "Mega Eelektross": {
+    "id": 604,
+    "hp": 85,
+    "attack": 145,
+    "defense": 80,
+    "spAttack": 135,
+    "spDefense": 90,
+    "speed": 80,
+    "bst": 615,
+    "type1": "Electric",
+    "type2": "",
+    "abilities": "Eelevate",
+    "passive": "Poison Heal",
+    "evolution": "Tynamo, Eelektrik, Eelektross, Mega Eelektross",
+    "img": "604-mega"
   },
   "Elgyem": {
     "id": 605,
@@ -12044,7 +12380,7 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution": "Litwick, Lampent, Chandelure, Mega Chandelure",
     "img": "607"
   },
   "Lampent": {
@@ -12060,7 +12396,7 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution": "Litwick, Lampent, Chandelure, Mega Chandelure",
     "img": "608"
   },
   "Chandelure": {
@@ -12076,8 +12412,24 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Flash Fire, Flame Body, Infiltrator",
     "passive": "Shadow Tag",
-    "evolution": "Litwick, Lampent, Chandelure",
+    "evolution": "Litwick, Lampent, Chandelure, Mega Chandelure",
     "img": "609"
+  },
+  "Mega Chandelure": {
+    "id": 609,
+    "hp": 60,
+    "attack": 75,
+    "defense": 110,
+    "spAttack": 175,
+    "spDefense": 110,
+    "speed": 90,
+    "bst": 620,
+    "type1": "Ghost",
+    "type2": "Fire",
+    "abilities": "Infiltrator",
+    "passive": "Shadow Tag",
+    "evolution": "Litwick, Lampent, Chandelure, Mega Chandelure",
+    "img": "609-mega"
   },
   "Axew": {
     "id": 610,
@@ -12091,7 +12443,7 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
-    "passive": "Own Tempo",
+    "passive": "Sharpness",
     "evolution": "Axew, Fraxure, Haxorus",
     "img": "610"
   },
@@ -12107,7 +12459,7 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
-    "passive": "Own Tempo",
+    "passive": "Sharpness",
     "evolution": "Axew, Fraxure, Haxorus",
     "img": "611"
   },
@@ -12123,7 +12475,7 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "",
     "abilities": "Rivalry, Mold Breaker, Unnerve",
-    "passive": "Own Tempo",
+    "passive": "Sharpness",
     "evolution": "Axew, Fraxure, Haxorus",
     "img": "612"
   },
@@ -12203,7 +12555,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "",
     "abilities": "Hydration, Sticky Hold, Unburden",
-    "passive": "Protean",
+    "passive": "Tinted Lens",
     "evolution": "Shelmet, Accelgor",
     "img": "617"
   },
@@ -12219,7 +12571,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Electric",
     "abilities": "Static, Limber, Sand Veil",
-    "passive": "Storm Drain",
+    "passive": "Water Absorb",
     "evolution": "Stunfisk",
     "img": "618"
   },
@@ -12267,7 +12619,7 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "",
     "abilities": "Rough Skin, Sheer Force, Mold Breaker",
-    "passive": "Intimidate",
+    "passive": "Dragonize",
     "evolution": "Druddigon",
     "img": "621"
   },
@@ -12284,7 +12636,7 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Iron Fist, Klutz, No Guard",
     "passive": "Shadow Shield",
-    "evolution": "Golett, Golurk",
+    "evolution": "Golett, Golurk, Mega Golurk",
     "img": "622"
   },
   "Golurk": {
@@ -12300,8 +12652,24 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Iron Fist, Klutz, No Guard",
     "passive": "Shadow Shield",
-    "evolution": "Golett, Golurk",
+    "evolution": "Golett, Golurk, Mega Golurk",
     "img": "623"
+  },
+  "Mega Golurk": {
+    "id": 623,
+    "hp": 89,
+    "attack": 159,
+    "defense": 105,
+    "spAttack": 70,
+    "spDefense": 105,
+    "speed": 55,
+    "bst": 583,
+    "type1": "Ground",
+    "type2": "Ghost",
+    "abilities": "Unseen Fist",
+    "passive": "Shadow Shield",
+    "evolution": "Golett, Golurk, Mega Golurk",
+    "img": "623-mega"
   },
   "Pawniard": {
     "id": 624,
@@ -12427,7 +12795,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Gluttony, Flash Fire, White Smoke",
-    "passive": "Contrary",
+    "passive": "Spicy Spray",
     "evolution": "Heatmor",
     "img": "631"
   },
@@ -12827,7 +13195,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Steel",
     "abilities": "Download",
-    "passive": "Protean",
+    "passive": "Heatproof",
     "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649"
   },
@@ -12843,7 +13211,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Steel",
     "abilities": "Download",
-    "passive": "Protean",
+    "passive": "Heatproof",
     "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-shock"
   },
@@ -12859,7 +13227,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Steel",
     "abilities": "Download",
-    "passive": "Protean",
+    "passive": "Heatproof",
     "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-burn"
   },
@@ -12875,7 +13243,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Steel",
     "abilities": "Download",
-    "passive": "Protean",
+    "passive": "Heatproof",
     "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-chill"
   },
@@ -12891,7 +13259,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Steel",
     "abilities": "Download",
-    "passive": "Protean",
+    "passive": "Heatproof",
     "evolution": "Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",
     "img": "649-douse"
   },
@@ -12908,7 +13276,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Overgrow, Bulletproof",
     "passive": "Rough Skin",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "evolution": "Chespin, Quilladin, Chesnaught, Mega Chesnaught",
     "img": "650"
   },
   "Quilladin": {
@@ -12923,8 +13291,8 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "",
     "abilities": "Overgrow, Bulletproof",
-    "passive": "Dauntless Shield",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "passive": "Rough Skin",
+    "evolution": "Chespin, Quilladin, Chesnaught, Mega Chesnaught",
     "img": "651"
   },
   "Chesnaught": {
@@ -12939,9 +13307,25 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "Fighting",
     "abilities": "Overgrow, Bulletproof",
-    "passive": "Dauntless Shield",
-    "evolution": "Chespin, Quilladin, Chesnaught",
+    "passive": "Rough Skin",
+    "evolution": "Chespin, Quilladin, Chesnaught, Mega Chesnaught",
     "img": "652"
+  },
+  "Mega Chesnaught": {
+    "id": 652,
+    "hp": 88,
+    "attack": 137,
+    "defense": 172,
+    "spAttack": 74,
+    "spDefense": 115,
+    "speed": 44,
+    "bst": 630,
+    "type1": "Grass",
+    "type2": "Fighting",
+    "abilities": "Bulletproof",
+    "passive": "Rough Skin",
+    "evolution": "Chespin, Quilladin, Chesnaught, Mega Chesnaught",
+    "img": "652-mega"
   },
   "Fennekin": {
     "id": 653,
@@ -12955,8 +13339,8 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Blaze, Magician",
-    "passive": "Fluffy",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "passive": "Neuroforce",
+    "evolution": "Fennekin, Braixen, Delphox, Mega Delphox",
     "img": "653"
   },
   "Braixen": {
@@ -12971,8 +13355,8 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Blaze, Magician",
-    "passive": "Psychic Surge",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "passive": "Neuroforce",
+    "evolution": "Fennekin, Braixen, Delphox, Mega Delphox",
     "img": "654"
   },
   "Delphox": {
@@ -12987,9 +13371,25 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "Psychic",
     "abilities": "Blaze, Magician",
-    "passive": "Psychic Surge",
-    "evolution": "Fennekin, Braixen, Delphox",
+    "passive": "Neuroforce",
+    "evolution": "Fennekin, Braixen, Delphox, Mega Delphox",
     "img": "655"
+  },
+  "Mega Delphox": {
+    "id": 655,
+    "hp": 75,
+    "attack": 69,
+    "defense": 72,
+    "spAttack": 159,
+    "spDefense": 125,
+    "speed": 134,
+    "bst": 634,
+    "type1": "Fire",
+    "type2": "Psychic",
+    "abilities": "Levitate",
+    "passive": "Magician",
+    "evolution": "Fennekin, Braixen, Delphox, Mega Delphox",
+    "img": "655-mega"
   },
   "Froakie": {
     "id": 656,
@@ -13004,23 +13404,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
-    "img": "656"
-  },
-  "Battle Bond Froakie": {
-    "id": 656,
-    "hp": 41,
-    "attack": 56,
-    "defense": 40,
-    "spAttack": 62,
-    "spDefense": 44,
-    "speed": 71,
-    "bst": 314,
-    "type1": "Water",
-    "type2": "",
-    "abilities": "Torrent",
-    "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution": "Froakie, Frogadier, Greninja, Mega Greninja",
     "img": "656"
   },
   "Frogadier": {
@@ -13036,23 +13420,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
-    "img": "657"
-  },
-  "Battle Bond Frogadier": {
-    "id": 657,
-    "hp": 54,
-    "attack": 63,
-    "defense": 52,
-    "spAttack": 83,
-    "spDefense": 56,
-    "speed": 97,
-    "bst": 405,
-    "type1": "Water",
-    "type2": "",
-    "abilities": "Torrent",
-    "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution": "Froakie, Frogadier, Greninja, Mega Greninja",
     "img": "657"
   },
   "Greninja": {
@@ -13068,40 +13436,24 @@ const POKEMON_DATA = {
     "type2": "Dark",
     "abilities": "Torrent, Protean",
     "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
+    "evolution": "Froakie, Frogadier, Greninja, Mega Greninja",
     "img": "658"
   },
-  "Battle Bond Greninja": {
+  "Mega Greninja": {
     "id": 658,
     "hp": 72,
-    "attack": 95,
-    "defense": 67,
-    "spAttack": 103,
-    "spDefense": 71,
-    "speed": 122,
-    "bst": 530,
+    "attack": 125,
+    "defense": 77,
+    "spAttack": 133,
+    "spDefense": 81,
+    "speed": 142,
+    "bst": 630,
     "type1": "Water",
     "type2": "Dark",
-    "abilities": "Battle Bond",
-    "passive": "Stakeout",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
-    "img": "658"
-  },
-  "Ash Greninja": {
-    "id": 658,
-    "hp": 72,
-    "attack": 145,
-    "defense": 67,
-    "spAttack": 153,
-    "spDefense": 71,
-    "speed": 132,
-    "bst": 640,
-    "type1": "Water",
-    "type2": "Dark",
-    "abilities": "Battle Bond",
-    "passive": "Super Luck",
-    "evolution": "Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",
-    "img": "658-ash"
+    "abilities": "Protean",
+    "passive": "Levitate",
+    "evolution": "Froakie, Frogadier, Greninja, Mega Greninja",
+    "img": "658-mega"
   },
   "Bunnelby": {
     "id": 659,
@@ -14155,8 +14507,8 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
-    "passive": "Drought",
-    "evolution": "Litleo, Pyroar",
+    "passive": "Blaze",
+    "evolution": "Litleo, Pyroar, Mega Pyroar",
     "img": "667"
   },
   "Pyroar": {
@@ -14171,9 +14523,25 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
-    "passive": "Drought",
-    "evolution": "Litleo, Pyroar",
+    "passive": "Beast Boost",
+    "evolution": "Litleo, Pyroar, Mega Pyroar",
     "img": "668"
+  },
+  "Mega Pyroar": {
+    "id": 668,
+    "hp": 86,
+    "attack": 88,
+    "defense": 92,
+    "spAttack": 129,
+    "spDefense": 86,
+    "speed": 126,
+    "bst": 607,
+    "type1": "Fire",
+    "type2": "Normal",
+    "abilities": "Fire Mane",
+    "passive": "Intimidate",
+    "evolution": "Litleo, Pyroar, Mega Pyroar",
+    "img": "668-mega"
   },
   "Red Flabebe": {
     "id": 669,
@@ -14651,8 +15019,8 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Own Tempo",
-    "passive": "Prankster",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "passive": "Fluffy",
+    "evolution": "Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",
     "img": "677"
   },
   "Male Meowstic": {
@@ -14668,7 +15036,7 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Prankster",
     "passive": "Fur Coat",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "evolution": "Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",
     "img": "678"
   },
   "Female Meowstic": {
@@ -14684,8 +15052,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Keen Eye, Infiltrator, Competitive",
     "passive": "Neuroforce",
-    "evolution": "Espurr, Male Meowstic, Female Meowstic",
+    "evolution": "Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",
     "img": "678-female"
+  },
+  "Mega Meowstic": {
+    "id": 678,
+    "hp": 74,
+    "attack": 48,
+    "defense": 76,
+    "spAttack": 143,
+    "spDefense": 101,
+    "speed": 124,
+    "bst": 566,
+    "type1": "Psychic",
+    "type2": "",
+    "abilities": "Trace",
+    "passive": "Psychic Surge",
+    "evolution": "Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",
+    "img": "678-mega"
   },
   "Honedge": {
     "id": 679,
@@ -14731,7 +15115,7 @@ const POKEMON_DATA = {
     "type1": "Steel",
     "type2": "Ghost",
     "abilities": "Stance Change",
-    "passive": "Sharpness",
+    "passive": "Battle Armor",
     "evolution": "Honedge, Doublade, Shield Aegislash, Blade Aegislash",
     "img": "681"
   },
@@ -14827,8 +15211,8 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Psychic",
     "abilities": "Contrary, Suction Cups, Infiltrator",
-    "passive": "Shadow Shield",
-    "evolution": "Inkay, Malamar",
+    "passive": "Gooey",
+    "evolution": "Inkay, Malamar, Mega Malamar",
     "img": "686"
   },
   "Malamar": {
@@ -14843,9 +15227,25 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Psychic",
     "abilities": "Contrary, Suction Cups, Infiltrator",
-    "passive": "Shadow Shield",
-    "evolution": "Inkay, Malamar",
+    "passive": "Psychic Surge",
+    "evolution": "Inkay, Malamar, Mega Malamar",
     "img": "687"
+  },
+  "Mega Malamar": {
+    "id": 687,
+    "hp": 86,
+    "attack": 102,
+    "defense": 88,
+    "spAttack": 98,
+    "spDefense": 120,
+    "speed": 88,
+    "bst": 582,
+    "type1": "Dark",
+    "type2": "Psychic",
+    "abilities": "Contrary",
+    "passive": "Psychic Surge",
+    "evolution": "Inkay, Malamar, Mega Malamar",
+    "img": "687-mega"
   },
   "Binacle": {
     "id": 688,
@@ -14860,7 +15260,7 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Tough Claws, Sniper, Pickpocket",
     "passive": "Sap Sipper",
-    "evolution": "Binacle, Barbaracle",
+    "evolution": "Binacle, Barbaracle, Mega Barbaracle",
     "img": "688"
   },
   "Barbaracle": {
@@ -14876,8 +15276,24 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Tough Claws, Sniper, Pickpocket",
     "passive": "Sap Sipper",
-    "evolution": "Binacle, Barbaracle",
+    "evolution": "Binacle, Barbaracle, Mega Barbaracle",
     "img": "689"
+  },
+  "Mega Barbaracle": {
+    "id": 689,
+    "hp": 72,
+    "attack": 140,
+    "defense": 130,
+    "spAttack": 64,
+    "spDefense": 106,
+    "speed": 88,
+    "bst": 600,
+    "type1": "Rock",
+    "type2": "Fighting",
+    "abilities": "Tough Claws",
+    "passive": "No Guard",
+    "evolution": "Binacle, Barbaracle, Mega Barbaracle",
+    "img": "689-mega"
   },
   "Skrelp": {
     "id": 690,
@@ -14892,7 +15308,7 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Poison Point, Poison Touch, Adaptability",
     "passive": "Water Bubble",
-    "evolution": "Skrelp, Dragalge",
+    "evolution": "Skrelp, Dragalge, Mega Dragalge",
     "img": "690"
   },
   "Dragalge": {
@@ -14907,9 +15323,25 @@ const POKEMON_DATA = {
     "type1": "Poison",
     "type2": "Dragon",
     "abilities": "Poison Point, Poison Touch, Adaptability",
-    "passive": "Regenerator",
-    "evolution": "Skrelp, Dragalge",
+    "passive": "Toxic Chain",
+    "evolution": "Skrelp, Dragalge, Mega Dragalge",
     "img": "691"
+  },
+  "Mega Dragalge": {
+    "id": 691,
+    "hp": 65,
+    "attack": 85,
+    "defense": 105,
+    "spAttack": 132,
+    "spDefense": 163,
+    "speed": 44,
+    "bst": 594,
+    "type1": "Poison",
+    "type2": "Dragon",
+    "abilities": "Regenerator",
+    "passive": "Adaptability",
+    "evolution": "Skrelp, Dragalge, Mega Dragalge",
+    "img": "691-mega"
   },
   "Clauncher": {
     "id": 692,
@@ -14923,7 +15355,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Mega Launcher",
-    "passive": "Protean",
+    "passive": "Quick Draw",
     "evolution": "Clauncher, Clawitzer",
     "img": "692"
   },
@@ -14939,7 +15371,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "",
     "abilities": "Mega Launcher",
-    "passive": "Protean",
+    "passive": "Dragon’s Maw",
     "evolution": "Clauncher, Clawitzer",
     "img": "693"
   },
@@ -14955,7 +15387,7 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "Normal",
     "abilities": "Dry Skin, Sand Veil, Solar Power",
-    "passive": "Protean",
+    "passive": "Flare Boost",
     "evolution": "Helioptile, Heliolisk",
     "img": "694"
   },
@@ -14971,7 +15403,7 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "Normal",
     "abilities": "Dry Skin, Sand Veil, Solar Power",
-    "passive": "Protean",
+    "passive": "Flare Boost",
     "evolution": "Helioptile, Heliolisk",
     "img": "695"
   },
@@ -14987,7 +15419,7 @@ const POKEMON_DATA = {
     "type1": "Rock",
     "type2": "Dragon",
     "abilities": "Strong Jaw, Sturdy",
-    "passive": "Sheer Force",
+    "passive": "Dragonize",
     "evolution": "Tyrunt, Tyrantrum",
     "img": "696"
   },
@@ -15003,7 +15435,7 @@ const POKEMON_DATA = {
     "type1": "Rock",
     "type2": "Dragon",
     "abilities": "Strong Jaw, Rock Head",
-    "passive": "Sheer Force",
+    "passive": "Dragonize",
     "evolution": "Tyrunt, Tyrantrum",
     "img": "697"
   },
@@ -15067,9 +15499,25 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Flying",
     "abilities": "Limber, Unburden, Mold Breaker",
-    "passive": "Moxie",
-    "evolution": "Hawlucha",
+    "passive": "Stamina",
+    "evolution": "Hawlucha, Mega Hawlucha",
     "img": "701"
+  },
+  "Mega Hawlucha": {
+    "id": 701,
+    "hp": 78,
+    "attack": 137,
+    "defense": 100,
+    "spAttack": 74,
+    "spDefense": 93,
+    "speed": 118,
+    "bst": 600,
+    "type1": "Fighting",
+    "type2": "Flying",
+    "abilities": "No Guard",
+    "passive": "Stamina",
+    "evolution": "Hawlucha, Mega Hawlucha",
+    "img": "701-mega"
   },
   "Dedenne": {
     "id": 702,
@@ -15452,7 +15900,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Aura Break",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
     "img": "718"
   },
   "10% Zygarde": {
@@ -15468,7 +15916,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Aura Break",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
     "img": "718-10"
   },
   "Power Construct 50% Zygarde": {
@@ -15484,7 +15932,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
     "img": "718"
   },
   "Power Construct 10% Zygarde": {
@@ -15500,7 +15948,7 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
     "img": "718-10"
   },
   "Complete Zygarde": {
@@ -15516,8 +15964,24 @@ const POKEMON_DATA = {
     "type2": "Ground",
     "abilities": "Power Construct",
     "passive": "Teraform Zero",
-    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
     "img": "718-complete"
+  },
+  "Mega Zygarde": {
+    "id": 718,
+    "hp": 216,
+    "attack": 70,
+    "defense": 91,
+    "spAttack": 216,
+    "spDefense": 85,
+    "speed": 100,
+    "bst": 778,
+    "type1": "Dragon",
+    "type2": "Ground",
+    "abilities": "Aura Break",
+    "passive": "Mold Breaker",
+    "evolution": "50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",
+    "img": "718-mega"
   },
   "Diancie": {
     "id": 719,
@@ -15643,7 +16107,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "Ghost",
     "abilities": "Overgrow, Long Reach",
-    "passive": "Sniper",
+    "passive": "Tinted Lens",
     "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "724"
   },
@@ -15883,8 +16347,8 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "",
     "abilities": "Hyper Cutter, Iron Fist, Anger Point",
-    "passive": "Water Bubble",
-    "evolution": "Crabrawler, Crabominable",
+    "passive": "Opportunist",
+    "evolution": "Crabrawler, Crabominable, Mega Crabominable",
     "img": "739"
   },
   "Crabominable": {
@@ -15899,9 +16363,25 @@ const POKEMON_DATA = {
     "type1": "Fighting",
     "type2": "Ice",
     "abilities": "Hyper Cutter, Iron Fist, Anger Point",
-    "passive": "Water Bubble",
-    "evolution": "Crabrawler, Crabominable",
+    "passive": "Tough Claws",
+    "evolution": "Crabrawler, Crabominable, Mega Crabominable",
     "img": "740"
+  },
+  "Mega Crabominable": {
+    "id": 740,
+    "hp": 97,
+    "attack": 157,
+    "defense": 122,
+    "spAttack": 62,
+    "spDefense": 107,
+    "speed": 33,
+    "bst": 578,
+    "type1": "Fighting",
+    "type2": "Ice",
+    "abilities": "Iron Fist",
+    "passive": "Tough Claws",
+    "evolution": "Crabrawler, Crabominable, Mega Crabominable",
+    "img": "740-mega"
   },
   "Baile Oricorio": {
     "id": 741,
@@ -16075,7 +16555,7 @@ const POKEMON_DATA = {
     "type1": "Rock",
     "type2": "",
     "abilities": "Tough Claws",
-    "passive": "Stakeout",
+    "passive": "Defiant",
     "evolution": "Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",
     "img": "745-dusk"
   },
@@ -16444,7 +16924,7 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Wimp Out, Run Away",
     "passive": "Regenerator",
-    "evolution": "Wimpod, Golisopod",
+    "evolution": "Wimpod, Golisopod, Mega Golisopod",
     "img": "767"
   },
   "Golisopod": {
@@ -16460,8 +16940,24 @@ const POKEMON_DATA = {
     "type2": "Water",
     "abilities": "Emergency Exit, Anticipation",
     "passive": "Regenerator",
-    "evolution": "Wimpod, Golisopod",
+    "evolution": "Wimpod, Golisopod, Mega Golisopod",
     "img": "768"
+  },
+  "Mega Golisopod": {
+    "id": 768,
+    "hp": 75,
+    "attack": 150,
+    "defense": 175,
+    "spAttack": 70,
+    "spDefense": 120,
+    "speed": 40,
+    "bst": 630,
+    "type1": "Bug",
+    "type2": "Steel",
+    "abilities": "Shell Armor",
+    "passive": "Regenerator",
+    "evolution": "Wimpod, Golisopod, Mega Golisopod",
+    "img": "768-mega"
   },
   "Sandygast": {
     "id": 769,
@@ -17147,9 +17643,25 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "Dragon",
     "abilities": "Berserk, Sap Sipper, Cloud Nine",
-    "passive": "Thick Fat",
-    "evolution": "Drampa",
+    "passive": "Fluffy",
+    "evolution": "Drampa, Mega Drampa",
     "img": "780"
+  },
+  "Mega Drampa": {
+    "id": 780,
+    "hp": 78,
+    "attack": 85,
+    "defense": 110,
+    "spAttack": 160,
+    "spDefense": 116,
+    "speed": 36,
+    "bst": 585,
+    "type1": "Normal",
+    "type2": "Dragon",
+    "abilities": "Berserk",
+    "passive": "Adaptability",
+    "evolution": "Drampa, Mega Drampa",
+    "img": "780-mega"
   },
   "Dhelmise": {
     "id": 781,
@@ -17371,7 +17883,7 @@ const POKEMON_DATA = {
     "type1": "Bug",
     "type2": "Fighting",
     "abilities": "Beast Boost",
-    "passive": "Moxie",
+    "passive": "Iron Fist",
     "evolution": "Buzzwole",
     "img": "794"
   },
@@ -17515,7 +18027,7 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "Dragon",
     "abilities": "Neuroforce",
-    "passive": "Unnerve",
+    "passive": "Dazzling",
     "evolution": "Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",
     "img": "800-ultra"
   },
@@ -17532,7 +18044,7 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soul-Heart",
     "passive": "Mirror Armor",
-    "evolution": "Magearna, Original Magearna",
+    "evolution": "Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",
     "img": "801"
   },
   "Original Magearna": {
@@ -17548,8 +18060,40 @@ const POKEMON_DATA = {
     "type2": "Fairy",
     "abilities": "Soul-Heart",
     "passive": "Mirror Armor",
-    "evolution": "Magearna, Original Magearna",
+    "evolution": "Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",
     "img": "801-original"
+  },
+  "Mega Magearna": {
+    "id": 801,
+    "hp": 80,
+    "attack": 125,
+    "defense": 115,
+    "spAttack": 170,
+    "spDefense": 115,
+    "speed": 95,
+    "bst": 700,
+    "type1": "Steel",
+    "type2": "Fairy",
+    "abilities": "Soul-Heart",
+    "passive": "Mirror Armor",
+    "evolution": "Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",
+    "img": "801-mega"
+  },
+  "Mega Original Magearna": {
+    "id": 801,
+    "hp": 80,
+    "attack": 125,
+    "defense": 115,
+    "spAttack": 170,
+    "spDefense": 115,
+    "speed": 95,
+    "bst": 700,
+    "type1": "Steel",
+    "type2": "Fairy",
+    "abilities": "Soul-Heart",
+    "passive": "Mirror Armor",
+    "evolution": "Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",
+    "img": "801-mega-original"
   },
   "Marshadow": {
     "id": 802,
@@ -17643,9 +18187,25 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "",
     "abilities": "Volt Absorb",
-    "passive": "Tough Claws",
-    "evolution": "Zeraora",
+    "passive": "Iron Fist",
+    "evolution": "Zeraora, Mega Zeraora",
     "img": "807"
+  },
+  "Mega Zeraora": {
+    "id": 807,
+    "hp": 88,
+    "attack": 157,
+    "defense": 75,
+    "spAttack": 147,
+    "spDefense": 80,
+    "speed": 153,
+    "bst": 700,
+    "type1": "Electric",
+    "type2": "",
+    "abilities": "Volt Absorb",
+    "passive": "Iron Fist",
+    "evolution": "Zeraora, Mega Zeraora",
+    "img": "807-mega"
   },
   "Meltan": {
     "id": 808,
@@ -18651,7 +19211,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
-    "passive": "Shadow Shield",
+    "passive": "Water Absorb",
     "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "854"
   },
@@ -18667,7 +19227,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
-    "passive": "Shadow Shield",
+    "passive": "Sturdy",
     "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "854"
   },
@@ -18683,7 +19243,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
-    "passive": "Shadow Shield",
+    "passive": "Water Absorb",
     "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "855"
   },
@@ -18699,7 +19259,7 @@ const POKEMON_DATA = {
     "type1": "Ghost",
     "type2": "",
     "abilities": "Weak Armor, Cursed Body",
-    "passive": "Shadow Shield",
+    "passive": "Sturdy",
     "evolution": "Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",
     "img": "855"
   },
@@ -19116,8 +19676,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Battle Armor, Defiant",
     "passive": "Dauntless Shield",
-    "evolution": "Falinks",
+    "evolution": "Falinks, Mega Falinks",
     "img": "870"
+  },
+  "Mega Falinks": {
+    "id": 870,
+    "hp": 65,
+    "attack": 135,
+    "defense": 135,
+    "spAttack": 70,
+    "spDefense": 65,
+    "speed": 100,
+    "bst": 570,
+    "type1": "Fighting",
+    "type2": "",
+    "abilities": "Defiant",
+    "passive": "Dauntless Shield",
+    "evolution": "Falinks, Mega Falinks",
+    "img": "870-mega"
   },
   "Pincurchin": {
     "id": 871,
@@ -19852,7 +20428,7 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Male Basculegion, Female Basculegion, Hisui Basculin",
     "img": "902"
   },
   "Female Basculegion": {
@@ -19868,7 +20444,7 @@ const POKEMON_DATA = {
     "type2": "Ghost",
     "abilities": "Swift Swim, Adaptability, Mold Breaker",
     "passive": "Supreme Overlord",
-    "evolution": "Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",
+    "evolution": "Male Basculegion, Female Basculegion, Hisui Basculin",
     "img": "902-female"
   },
   "Sneasler": {
@@ -19995,7 +20571,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "",
     "abilities": "Blaze, Unaware",
-    "passive": "Gluttony",
+    "passive": "Flame Body",
     "evolution": "Fuecoco, Crocalor, Skeledirge",
     "img": "909"
   },
@@ -20747,8 +21323,8 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "",
     "abilities": "Chlorophyll, Insomnia, Klutz",
-    "passive": "Flower Gift",
-    "evolution": "Capsakid, Scovillain",
+    "passive": "Flash Fire",
+    "evolution": "Capsakid, Scovillain, Mega Scovillain",
     "img": "951"
   },
   "Scovillain": {
@@ -20764,8 +21340,24 @@ const POKEMON_DATA = {
     "type2": "Fire",
     "abilities": "Chlorophyll, Insomnia, Moody",
     "passive": "Parental Bond",
-    "evolution": "Capsakid, Scovillain",
+    "evolution": "Capsakid, Scovillain, Mega Scovillain",
     "img": "952"
+  },
+  "Mega Scovillain": {
+    "id": 952,
+    "hp": 65,
+    "attack": 138,
+    "defense": 85,
+    "spAttack": 138,
+    "spDefense": 85,
+    "speed": 75,
+    "bst": 586,
+    "type1": "Grass",
+    "type2": "Fire",
+    "abilities": "Spicy Spray",
+    "passive": "Parental Bond",
+    "evolution": "Capsakid, Scovillain, Mega Scovillain",
+    "img": "952-mega"
   },
   "Rellor": {
     "id": 953,
@@ -21132,7 +21724,7 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Toxic Debris, Corrosion",
     "passive": "Sturdy",
-    "evolution": "Glimmet, Glimmora",
+    "evolution": "Glimmet, Glimmora, Mega Glimmora",
     "img": "969"
   },
   "Glimmora": {
@@ -21148,8 +21740,24 @@ const POKEMON_DATA = {
     "type2": "Poison",
     "abilities": "Toxic Debris, Corrosion",
     "passive": "Tera Shell",
-    "evolution": "Glimmet, Glimmora",
+    "evolution": "Glimmet, Glimmora, Mega Glimmora",
     "img": "970"
+  },
+  "Mega Glimmora": {
+    "id": 970,
+    "hp": 83,
+    "attack": 90,
+    "defense": 105,
+    "spAttack": 150,
+    "spDefense": 96,
+    "speed": 101,
+    "bst": 625,
+    "type1": "Rock",
+    "type2": "Poison",
+    "abilities": "Adaptability",
+    "passive": "Tera Shell",
+    "evolution": "Glimmet, Glimmora, Mega Glimmora",
+    "img": "970-mega"
   },
   "Greavard": {
     "id": 971,
@@ -21275,8 +21883,8 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
-    "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "passive": "Friend Guard",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
     "img": "978-curly"
   },
   "Droopy Tatsugiri": {
@@ -21291,8 +21899,8 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
-    "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "passive": "Friend Guard",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
     "img": "978-droopy"
   },
   "Stretchy Tatsugiri": {
@@ -21307,9 +21915,57 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Water",
     "abilities": "Commander, Storm Drain",
-    "passive": "Fluffy",
-    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",
+    "passive": "Friend Guard",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
     "img": "978-stretchy"
+  },
+  "Mega Curly Tatsugiri": {
+    "id": 978,
+    "hp": 68,
+    "attack": 65,
+    "defense": 90,
+    "spAttack": 135,
+    "spDefense": 125,
+    "speed": 92,
+    "bst": 575,
+    "type1": "Dragon",
+    "type2": "Water",
+    "abilities": "Storm Drain",
+    "passive": "Parental Bond",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
+    "img": "978-mega-curly"
+  },
+  "Mega Droopy Tatsugiri": {
+    "id": 978,
+    "hp": 68,
+    "attack": 65,
+    "defense": 90,
+    "spAttack": 135,
+    "spDefense": 125,
+    "speed": 92,
+    "bst": 575,
+    "type1": "Dragon",
+    "type2": "Water",
+    "abilities": "Storm Drain",
+    "passive": "Parental Bond",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
+    "img": "978-mega-droopy"
+  },
+  "Mega Stretchy Tatsugiri": {
+    "id": 978,
+    "hp": 68,
+    "attack": 65,
+    "defense": 90,
+    "spAttack": 135,
+    "spDefense": 125,
+    "speed": 92,
+    "bst": 575,
+    "type1": "Dragon",
+    "type2": "Water",
+    "abilities": "Storm Drain",
+    "passive": "Parental Bond",
+    "evolution": "Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",
+    "img": "978-mega-stretchy"
   },
   "Annihilape": {
     "id": 979,
@@ -21611,8 +22267,8 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
-    "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "passive": "Heatproof",
+    "evolution": "Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",
     "img": "996"
   },
   "Arctibax": {
@@ -21627,8 +22283,8 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
-    "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "passive": "Heatproof",
+    "evolution": "Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",
     "img": "997"
   },
   "Baxcalibur": {
@@ -21643,9 +22299,25 @@ const POKEMON_DATA = {
     "type1": "Dragon",
     "type2": "Ice",
     "abilities": "Thermal Exchange, Ice Body",
-    "passive": "Intimidate",
-    "evolution": "Frigibax, Arctibax, Baxcalibur",
+    "passive": "Heatproof",
+    "evolution": "Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",
     "img": "998"
+  },
+  "Mega Baxcalibur": {
+    "id": 998,
+    "hp": 115,
+    "attack": 175,
+    "defense": 117,
+    "spAttack": 105,
+    "spDefense": 101,
+    "speed": 87,
+    "bst": 700,
+    "type1": "Dragon",
+    "type2": "Ice",
+    "abilities": "Thermal Exchange",
+    "passive": "Heatproof",
+    "evolution": "Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",
+    "img": "998-mega"
   },
   "Chest Gimmighoul": {
     "id": 999,
@@ -22315,8 +22987,8 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "Psychic",
     "abilities": "Surge Surfer",
-    "passive": "Electric Surge",
-    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
+    "passive": "Transistor",
+    "evolution": "Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",
     "img": "2026"
   },
   "Alola Sandshrew": {
@@ -22559,6 +23231,38 @@ const POKEMON_DATA = {
     "evolution": "Cubone, Marowak, Alola Marowak",
     "img": "2105"
   },
+  "Battle Bond Greninja": {
+    "id": 2658,
+    "hp": 72,
+    "attack": 95,
+    "defense": 67,
+    "spAttack": 103,
+    "spDefense": 71,
+    "speed": 122,
+    "bst": 530,
+    "type1": "Water",
+    "type2": "Dark",
+    "abilities": "Battle Bond",
+    "passive": "Stakeout",
+    "evolution": "Battle Bond Greninja, Ash Battle Bond Greninja",
+    "img": "2658"
+  },
+  "Ash Battle Bond Greninja": {
+    "id": 2658,
+    "hp": 72,
+    "attack": 145,
+    "defense": 67,
+    "spAttack": 153,
+    "spDefense": 71,
+    "speed": 132,
+    "bst": 640,
+    "type1": "Water",
+    "type2": "Dark",
+    "abilities": "Battle Bond",
+    "passive": "Super Luck",
+    "evolution": "Battle Bond Greninja, Ash Battle Bond Greninja",
+    "img": "2658-ash"
+  },
   "Eternal Floette": {
     "id": 2670,
     "hp": 74,
@@ -22572,8 +23276,24 @@ const POKEMON_DATA = {
     "type2": "",
     "abilities": "Flower Veil, Symbiosis",
     "passive": "Magic Guard",
-    "evolution": "Eternal Floette",
+    "evolution": "Eternal Floette, Mega Eternal Floette",
     "img": "2670"
+  },
+  "Mega Eternal Floette": {
+    "id": 2670,
+    "hp": 74,
+    "attack": 85,
+    "defense": 87,
+    "spAttack": 155,
+    "spDefense": 148,
+    "speed": 102,
+    "bst": 651,
+    "type1": "Fairy",
+    "type2": "",
+    "abilities": "Fairy Aura",
+    "passive": "Magic Guard",
+    "evolution": "Eternal Floette, Mega Eternal Floette",
+    "img": "2670-mega"
   },
   "Galar Meowth": {
     "id": 4052,
@@ -22747,7 +23467,7 @@ const POKEMON_DATA = {
     "type1": "Dark",
     "type2": "Flying",
     "abilities": "Berserk",
-    "passive": "Dark Aura",
+    "passive": "Shadow Shield",
     "evolution": "Galar Moltres",
     "img": "4146"
   },
@@ -23039,6 +23759,22 @@ const POKEMON_DATA = {
     "evolution": "Petilil, Lilligant, Hisui Lilligant",
     "img": "6549"
   },
+  "Hisui Basculin": {
+    "id": 6550,
+    "hp": 70,
+    "attack": 92,
+    "defense": 65,
+    "spAttack": 80,
+    "spDefense": 55,
+    "speed": 98,
+    "bst": 460,
+    "type1": "Water",
+    "type2": "",
+    "abilities": "Rattled, Adaptability, Mold Breaker",
+    "passive": "Reckless",
+    "evolution": "Male Basculegion, Female Basculegion, Hisui Basculin",
+    "img": "6550"
+  },
   "Hisui Zorua": {
     "id": 6570,
     "hp": 35,
@@ -23147,7 +23883,7 @@ const POKEMON_DATA = {
     "type1": "Grass",
     "type2": "Fighting",
     "abilities": "Overgrow, Scrappy",
-    "passive": "Sniper",
+    "passive": "Super Luck",
     "evolution": "Rowlet, Dartrix, Decidueye, Hisui Decidueye",
     "img": "6724"
   },

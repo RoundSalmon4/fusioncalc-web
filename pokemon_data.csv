@@ -19,12 +19,12 @@ Caterpie,10,45,30,35,20,20,45,195,Bug,,"Shield Dust, Run Away",Gluttony,"Caterpi
 Metapod,11,50,20,55,25,25,30,205,Bug,,Shed Skin,Sturdy,"Caterpie, Metapod, Butterfree, Gigantamax Butterfree",11
 Butterfree,12,60,45,50,90,80,70,395,Bug,Flying,"Compound Eyes, Tinted Lens",Magician,"Caterpie, Metapod, Butterfree, Gigantamax Butterfree",12
 Gigantamax Butterfree,12,80,40,75,120,95,85,495,Bug,Flying,Compound Eyes,Magician,"Caterpie, Metapod, Butterfree, Gigantamax Butterfree",12-gigantamax
-Weedle,13,40,35,30,20,20,50,195,Bug,Poison,"Shield Dust, Run Away",Poison Touch,"Weedle, Kakuna, Beedrill, Mega Beedrill",13
+Weedle,13,40,35,30,20,20,50,195,Bug,Poison,"Shield Dust, Run Away",Poison Point,"Weedle, Kakuna, Beedrill, Mega Beedrill",13
 Kakuna,14,45,25,50,25,25,35,205,Bug,Poison,Shed Skin,Sturdy,"Weedle, Kakuna, Beedrill, Mega Beedrill",14
 Beedrill,15,65,90,40,45,80,75,395,Bug,Poison,"Swarm, Sniper",Adaptability,"Weedle, Kakuna, Beedrill, Mega Beedrill",15
 Mega Beedrill,15,65,150,40,15,80,145,495,Bug,Poison,Adaptability,Tinted Lens,"Weedle, Kakuna, Beedrill, Mega Beedrill",15-mega
-Pidgey,16,40,45,40,35,35,56,251,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Sheer Force,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",16
-Pidgeotto,17,63,60,55,50,50,71,349,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Sheer Force,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",17
+Pidgey,16,40,45,40,35,35,56,251,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Gale Wings,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",16
+Pidgeotto,17,63,60,55,50,50,71,349,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Gale Wings,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",17
 Pidgeot,18,83,80,75,70,70,101,479,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Sheer Force,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",18
 Mega Pidgeot,18,83,80,80,135,80,121,579,Normal,Flying,No Guard,Sheer Force,"Pidgey, Pidgeotto, Pidgeot, Mega Pidgeot",18-mega
 Rattata,19,30,56,35,25,35,72,253,Normal,,"Run Away, Guts, Hustle",Strong Jaw,"Rattata, Raticate",19
@@ -33,26 +33,29 @@ Spearow,21,40,60,30,31,31,70,262,Normal,Flying,"Keen Eye, Sniper",Speed Boost,"S
 Fearow,22,65,90,65,61,61,100,442,Normal,Flying,"Keen Eye, Sniper",Speed Boost,"Spearow, Fearow",22
 Ekans,23,35,60,44,40,54,55,288,Poison,,"Intimidate, Shed Skin, Unnerve",Regenerator,"Ekans, Arbok",23
 Arbok,24,60,95,69,65,79,80,448,Poison,,"Intimidate, Shed Skin, Unnerve",Regenerator,"Ekans, Arbok",24
-Pikachu,25,35,55,40,50,50,90,320,Electric,,"Static, Lightning Rod",Electric Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25
-Partner Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Sturdy,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-partner
-Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Costar,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cosplay
-Cool Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Iron Fist,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cool-cosplay
-Beauty Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Queenly Majesty,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-beauty-cosplay
-Cute Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Misty Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cute-cosplay
-Smart Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Tinted Lens,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-smart-cosplay
-Tough Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Libero,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-tough-cosplay
-Gigantamax Pikachu,25,125,95,60,90,70,90,530,Electric,,Lightning Rod,Thick Fat,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-gigantamax
-Raichu,26,60,90,55,90,80,110,485,Electric,,"Static, Lightning Rod",Electric Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",26
-Sandshrew,27,50,75,85,20,30,40,300,Ground,,"Sand Veil, Sand Rush",Tough Claws,"Sandshrew, Sandslash",27
-Sandslash,28,75,100,110,45,55,65,450,Ground,,"Sand Veil, Sand Rush",Tough Claws,"Sandshrew, Sandslash",28
+Pikachu,25,35,55,40,50,50,90,320,Electric,,"Static, Lightning Rod",Transistor,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25
+Partner Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Sturdy,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-partner
+Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Costar,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cosplay
+Cool Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Iron Fist,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cool-cosplay
+Beauty Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Queenly Majesty,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-beauty-cosplay
+Cute Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Misty Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-cute-cosplay
+Smart Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Tinted Lens,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-smart-cosplay
+Tough Cosplay Pikachu,25,45,80,50,75,60,120,430,Electric,,"Static, Lightning Rod",Libero,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-tough-cosplay
+Gigantamax Pikachu,25,125,95,60,90,70,90,530,Electric,,Lightning Rod,Thick Fat,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",25-gigantamax
+Raichu,26,60,90,55,90,80,110,485,Electric,,"Static, Lightning Rod",Transistor,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",26
+Mega X Raichu,26,60,135,95,90,95,110,585,Electric,,Electric Surge,Magic Guard,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",26-mega-x
+Mega Y Raichu,26,60,100,55,160,80,130,585,Electric,,No Guard,Teravolt,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",26-mega-y
+Sandshrew,27,50,75,85,20,30,40,300,Ground,,"Sand Veil, Sand Rush",Sand Stream,"Sandshrew, Sandslash",27
+Sandslash,28,75,100,110,45,55,65,450,Ground,,"Sand Veil, Sand Rush",Sand Stream,"Sandshrew, Sandslash",28
 Female Nidoran,29,55,47,52,40,40,41,275,Poison,,"Poison Point, Rivalry, Hustle",Toxic Debris,"Female Nidoran, Nidorina, Nidoqueen",29
 Nidorina,30,70,62,67,55,55,56,365,Poison,,"Poison Point, Rivalry, Hustle",Toxic Debris,"Female Nidoran, Nidorina, Nidoqueen",30
 Nidoqueen,31,90,92,87,75,85,76,505,Poison,Ground,"Poison Point, Rivalry, Sheer Force",Toxic Debris,"Female Nidoran, Nidorina, Nidoqueen",31
 Male Nidoran,32,46,57,40,40,40,50,273,Poison,,"Poison Point, Rivalry, Hustle",Guts,"Male Nidoran, Nidorino, Nidoking",32
 Nidorino,33,61,72,57,55,55,65,365,Poison,,"Poison Point, Rivalry, Hustle",Guts,"Male Nidoran, Nidorino, Nidoking",33
 Nidoking,34,81,102,77,85,75,85,505,Poison,Ground,"Poison Point, Rivalry, Sheer Force",Guts,"Male Nidoran, Nidorino, Nidoking",34
-Clefairy,35,70,45,48,60,65,35,323,Fairy,,"Cute Charm, Magic Guard, Friend Guard",Prankster,"Clefairy, Clefable, Cleffa",35
-Clefable,36,95,70,73,95,90,60,483,Fairy,,"Cute Charm, Magic Guard, Unaware",Analytic,"Clefairy, Clefable, Cleffa",36
+Clefairy,35,70,45,48,60,65,35,323,Fairy,,"Cute Charm, Magic Guard, Friend Guard",Prankster,"Clefairy, Clefable, Mega Clefable, Cleffa",35
+Clefable,36,95,70,73,95,90,60,483,Fairy,,"Cute Charm, Magic Guard, Unaware",Neuroforce,"Clefairy, Clefable, Mega Clefable, Cleffa",36
+Mega Clefable,36,95,80,93,135,110,70,583,Fairy,Flying,Magic Bounce,Unaware,"Clefairy, Clefable, Mega Clefable, Cleffa",36-mega
 Vulpix,37,38,41,40,50,65,65,299,Fire,,"Flash Fire, Drought",Fur Coat,"Vulpix, Ninetales",37
 Ninetales,38,73,76,75,81,100,100,505,Fire,,"Flash Fire, Drought",Fur Coat,"Vulpix, Ninetales",38
 Jigglypuff,39,115,45,20,45,25,20,270,Normal,Fairy,"Cute Charm, Competitive, Friend Guard",Huge Power,"Jigglypuff, Wigglytuff, Igglybuff",39
@@ -88,16 +91,17 @@ Machop,66,70,80,50,35,35,35,305,Fighting,,"Guts, No Guard, Steadfast",Quick Feet
 Machoke,67,80,100,70,50,60,45,405,Fighting,,"Guts, No Guard, Steadfast",Quick Feet,"Machop, Machoke, Machamp, Gigantamax Machamp",67
 Machamp,68,90,130,80,65,85,55,505,Fighting,,"Guts, No Guard, Steadfast",Quick Feet,"Machop, Machoke, Machamp, Gigantamax Machamp",68
 Gigantamax Machamp,68,120,170,95,80,85,55,605,Fighting,,Guts,Quick Feet,"Machop, Machoke, Machamp, Gigantamax Machamp",68-gigantamax
-Bellsprout,69,50,75,35,70,30,40,300,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel",69
-Weepinbell,70,65,90,50,85,45,55,390,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel",70
-Victreebel,71,80,105,65,100,70,70,490,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel",71
+Bellsprout,69,50,75,35,70,30,40,300,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel, Mega Victreebel",69
+Weepinbell,70,65,90,50,85,45,55,390,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel, Mega Victreebel",70
+Victreebel,71,80,105,65,100,70,70,490,Grass,Poison,"Chlorophyll, Gluttony",Flower Gift,"Bellsprout, Weepinbell, Victreebel, Mega Victreebel",71
+Mega Victreebel,71,80,125,85,135,95,70,590,Grass,Poison,Innards Out,Toxic Debris,"Bellsprout, Weepinbell, Victreebel, Mega Victreebel",71-mega
 Tentacool,72,40,40,35,50,100,70,335,Water,Poison,"Clear Body, Liquid Ooze, Rain Dish",Toxic Chain,"Tentacool, Tentacruel",72
 Tentacruel,73,80,70,65,80,120,100,515,Water,Poison,"Clear Body, Liquid Ooze, Rain Dish",Toxic Chain,"Tentacool, Tentacruel",73
 Geodude,74,40,80,100,30,30,20,300,Rock,Ground,"Rock Head, Sturdy, Sand Veil",Dry Skin,"Geodude, Graveler, Golem",74
 Graveler,75,55,95,115,45,45,35,390,Rock,Ground,"Rock Head, Sturdy, Sand Veil",Dry Skin,"Geodude, Graveler, Golem",75
 Golem,76,80,120,130,55,65,45,495,Rock,Ground,"Rock Head, Sturdy, Sand Veil",Dry Skin,"Geodude, Graveler, Golem",76
-Ponyta,77,50,85,55,65,65,90,410,Fire,,"Run Away, Flash Fire, Flame Body",Magic Guard,"Ponyta, Rapidash",77
-Rapidash,78,65,100,70,80,80,105,500,Fire,,"Run Away, Flash Fire, Flame Body",Magic Guard,"Ponyta, Rapidash",78
+Ponyta,77,50,85,55,65,65,90,410,Fire,,"Run Away, Flash Fire, Flame Body",Fire Mane,"Ponyta, Rapidash",77
+Rapidash,78,65,100,70,80,80,105,500,Fire,,"Run Away, Flash Fire, Flame Body",Fire Mane,"Ponyta, Rapidash",78
 Slowpoke,79,90,65,65,40,40,15,315,Water,Psychic,"Oblivious, Own Tempo, Regenerator",Unaware,"Slowpoke, Slowbro, Mega Slowbro, Slowking",79
 Slowbro,80,95,75,110,100,80,30,490,Water,Psychic,"Oblivious, Own Tempo, Regenerator",Unaware,"Slowpoke, Slowbro, Mega Slowbro, Slowking",80
 Mega Slowbro,80,95,75,180,130,80,30,590,Water,Psychic,Shell Armor,Regenerator,"Slowpoke, Slowbro, Mega Slowbro, Slowking",80-mega
@@ -131,7 +135,7 @@ Cubone,104,50,50,95,40,50,35,320,Ground,,"Rock Head, Lightning Rod, Battle Armor
 Marowak,105,60,80,110,50,80,45,425,Ground,,"Rock Head, Lightning Rod, Battle Armor",Parental Bond,"Cubone, Marowak, Alola Marowak",105
 Hitmonlee,106,50,120,53,35,110,87,455,Fighting,,"Limber, Reckless, Unburden",Sheer Force,"Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",106
 Hitmonchan,107,50,105,79,35,110,76,455,Fighting,,"Keen Eye, Iron Fist, Inner Focus",Moxie,"Hitmonlee, Hitmonchan, Tyrogue, Hitmontop",107
-Lickitung,108,90,55,75,60,75,30,385,Normal,,"Own Tempo, Oblivious, Cloud Nine",Cheek Pouch,"Lickitung, Lickilicky",108
+Lickitung,108,90,55,75,60,75,30,385,Normal,,"Own Tempo, Oblivious, Cloud Nine",Poison Heal,"Lickitung, Lickilicky",108
 Koffing,109,40,65,95,60,45,35,340,Poison,,"Levitate, Neutralizing Gas, Stench",White Smoke,"Koffing, Weezing, Galar Weezing",109
 Weezing,110,65,90,120,85,70,60,490,Poison,,"Levitate, Neutralizing Gas, Stench",Parental Bond,"Koffing, Weezing, Galar Weezing",110
 Rhyhorn,111,80,85,95,30,30,25,345,Ground,Rock,"Lightning Rod, Rock Head, Reckless",Solid Rock,"Rhyhorn, Rhydon, Rhyperior",111
@@ -144,8 +148,9 @@ Horsea,116,30,40,70,70,25,60,295,Water,,"Swift Swim, Sniper, Damp",Dragon’s Ma
 Seadra,117,55,65,95,95,45,85,440,Water,,"Poison Point, Sniper, Damp",Dragon’s Maw,"Horsea, Seadra, Kingdra",117
 Goldeen,118,45,67,60,35,50,63,320,Water,,"Swift Swim, Water Veil, Lightning Rod",Multiscale,"Goldeen, Seaking",118
 Seaking,119,80,92,65,65,80,68,450,Water,,"Swift Swim, Water Veil, Lightning Rod",Multiscale,"Goldeen, Seaking",119
-Staryu,120,30,45,55,70,55,85,340,Water,,"Illuminate, Natural Cure, Analytic",Regenerator,"Staryu, Starmie",120
-Starmie,121,60,75,85,100,85,115,520,Water,Psychic,"Illuminate, Natural Cure, Analytic",Regenerator,"Staryu, Starmie",121
+Staryu,120,30,45,55,70,55,85,340,Water,,"Illuminate, Natural Cure, Analytic",Regenerator,"Staryu, Starmie, Mega Starmie",120
+Starmie,121,60,75,85,100,85,115,520,Water,Psychic,"Illuminate, Natural Cure, Analytic",Regenerator,"Staryu, Starmie, Mega Starmie",121
+Mega Starmie,121,60,100,105,130,105,120,660,Water,Psychic,Huge Power,Regenerator,"Staryu, Starmie, Mega Starmie",121-mega
 Mr. Mime,122,40,45,65,100,120,90,460,Psychic,Fairy,"Soundproof, Filter, Technician",Prankster,"Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",122
 Scyther,123,70,110,80,55,80,105,500,Bug,Flying,"Swarm, Technician, Steadfast",Tinted Lens,"Scyther, Scizor, Mega Scizor, Kleavor",123
 Jynx,124,65,50,35,115,95,95,455,Ice,Psychic,"Oblivious, Forewarn, Dry Skin",Psychic Surge,"Jynx, Smoochum",124
@@ -178,22 +183,25 @@ Gigantamax Snorlax,143,210,130,65,85,120,30,640,Normal,,Harvest,Ripen,"Snorlax, 
 Articuno,144,90,85,100,95,125,85,580,Ice,Flying,"Pressure, Snow Cloak",Snow Warning,Articuno,144
 Zapdos,145,90,90,85,125,90,100,580,Electric,Flying,"Pressure, Static",Drizzle,Zapdos,145
 Moltres,146,90,100,90,125,85,90,580,Fire,Flying,"Pressure, Flame Body",Drought,Moltres,146
-Dratini,147,41,64,45,50,50,50,300,Dragon,,"Shed Skin, Marvel Scale",Multiscale,"Dratini, Dragonair, Dragonite",147
-Dragonair,148,61,84,65,70,70,70,420,Dragon,,"Shed Skin, Marvel Scale",Multiscale,"Dratini, Dragonair, Dragonite",148
-Dragonite,149,91,134,95,100,100,80,600,Dragon,Flying,"Inner Focus, Multiscale",Aerilate,"Dratini, Dragonair, Dragonite",149
+Dratini,147,41,64,45,50,50,50,300,Dragon,,"Shed Skin, Marvel Scale",Multiscale,"Dratini, Dragonair, Dragonite, Mega Dragonite",147
+Dragonair,148,61,84,65,70,70,70,420,Dragon,,"Shed Skin, Marvel Scale",Multiscale,"Dratini, Dragonair, Dragonite, Mega Dragonite",148
+Dragonite,149,91,134,95,100,100,80,600,Dragon,Flying,"Inner Focus, Multiscale",Aerilate,"Dratini, Dragonair, Dragonite, Mega Dragonite",149
+Mega Dragonite,149,91,124,115,145,125,100,700,Dragon,Flying,Multiscale,Aerilate,"Dratini, Dragonair, Dragonite, Mega Dragonite",149-mega
 Mewtwo,150,106,110,90,154,90,130,680,Psychic,,"Pressure, Unnerve",Neuroforce,"Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",150
 Mega X Mewtwo,150,106,190,100,154,100,130,780,Psychic,Fighting,Steadfast,Neuroforce,"Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",150-mega-x
 Mega Y Mewtwo,150,106,150,70,194,120,140,780,Psychic,,Insomnia,Neuroforce,"Mewtwo, Mega X Mewtwo, Mega Y Mewtwo",150-mega-y
 Mew,151,100,100,100,100,100,100,600,Psychic,,Synchronize,Protean,Mew,151
-Chikorita,152,45,49,65,49,65,45,318,Grass,,"Overgrow, Leaf Guard",Cute Charm,"Chikorita, Bayleef, Meganium",152
-Bayleef,153,60,62,80,63,80,60,405,Grass,,"Overgrow, Leaf Guard",Thick Fat,"Chikorita, Bayleef, Meganium",153
-Meganium,154,80,82,100,83,100,80,525,Grass,,"Overgrow, Leaf Guard",Thick Fat,"Chikorita, Bayleef, Meganium",154
+Chikorita,152,45,49,65,49,65,45,318,Grass,,"Overgrow, Leaf Guard",Cute Charm,"Chikorita, Bayleef, Meganium, Mega Meganium",152
+Bayleef,153,60,62,80,63,80,60,405,Grass,,"Overgrow, Leaf Guard",Thick Fat,"Chikorita, Bayleef, Meganium, Mega Meganium",153
+Meganium,154,80,82,100,83,100,80,525,Grass,,"Overgrow, Leaf Guard",Thick Fat,"Chikorita, Bayleef, Meganium, Mega Meganium",154
+Mega Meganium,154,80,92,115,143,115,80,625,Grass,Fairy,Mega Sol,Thick Fat,"Chikorita, Bayleef, Meganium, Mega Meganium",154-mega
 Cyndaquil,155,39,52,43,60,50,65,309,Fire,,"Blaze, Flash Fire",White Smoke,"Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",155
 Quilava,156,58,64,58,80,65,80,405,Fire,,"Blaze, Flash Fire",Drought,"Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",156
 Typhlosion,157,78,84,78,109,85,100,534,Fire,,"Blaze, Flash Fire",Drought,"Cyndaquil, Quilava, Typhlosion, Hisui Typhlosion",157
-Totodile,158,50,65,64,44,48,43,314,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr",158
-Croconaw,159,65,80,80,59,63,58,405,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr",159
-Feraligatr,160,85,105,100,79,83,78,530,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr",160
+Totodile,158,50,65,64,44,48,43,314,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr, Mega Feraligatr",158
+Croconaw,159,65,80,80,59,63,58,405,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr, Mega Feraligatr",159
+Feraligatr,160,85,105,100,79,83,78,530,Water,,"Torrent, Sheer Force",Strong Jaw,"Totodile, Croconaw, Feraligatr, Mega Feraligatr",160
+Mega Feraligatr,160,85,160,125,89,93,78,630,Water,Dragon,Dragonize,Strong Jaw,"Totodile, Croconaw, Feraligatr, Mega Feraligatr",160-mega
 Sentret,161,35,46,34,35,45,20,215,Normal,,"Run Away, Keen Eye, Frisk",Pickup,"Sentret, Furret",161
 Furret,162,85,76,64,45,55,90,415,Normal,,"Run Away, Keen Eye, Frisk",Pickup,"Sentret, Furret",162
 Hoothoot,163,60,30,30,36,56,50,262,Normal,Flying,"Insomnia, Keen Eye, Tinted Lens",Aerilate,"Hoothoot, Noctowl",163
@@ -205,9 +213,9 @@ Ariados,168,70,90,70,60,70,40,400,Bug,Poison,"Swarm, Insomnia, Sniper",Prankster
 Crobat,169,85,90,80,70,80,130,535,Poison,Flying,"Inner Focus, Infiltrator",Intimidate,"Zubat, Golbat, Crobat",169
 Chinchou,170,75,38,38,56,56,67,330,Water,Electric,"Volt Absorb, Illuminate, Water Absorb",Regenerator,"Chinchou, Lanturn",170
 Lanturn,171,125,58,58,76,76,67,460,Water,Electric,"Volt Absorb, Illuminate, Water Absorb",Regenerator,"Chinchou, Lanturn",171
-Pichu,172,20,40,15,35,35,60,205,Electric,,"Static, Lightning Rod",Electric Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",172
-Spiky-Eared Pichu,172,20,40,15,35,35,60,205,Electric,,"Static, Lightning Rod",Sturdy,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",172-spiky
-Cleffa,173,50,25,28,45,55,15,218,Fairy,,"Cute Charm, Magic Guard, Friend Guard",Prankster,"Clefairy, Clefable, Cleffa",173
+Pichu,172,20,40,15,35,35,60,205,Electric,,"Static, Lightning Rod",Transistor,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",172
+Spiky-Eared Pichu,172,20,40,15,35,35,60,205,Electric,,"Static, Lightning Rod",Sturdy,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",172-spiky
+Cleffa,173,50,25,28,45,55,15,218,Fairy,,"Cute Charm, Magic Guard, Friend Guard",Prankster,"Clefairy, Clefable, Mega Clefable, Cleffa",173
 Igglybuff,174,90,30,15,40,20,15,210,Normal,Fairy,"Cute Charm, Competitive, Friend Guard",Huge Power,"Jigglypuff, Wigglytuff, Igglybuff",174
 Togepi,175,35,20,65,40,65,20,245,Fairy,,"Hustle, Serene Grace, Super Luck",Pixilate,"Togepi, Togetic, Togekiss",175
 Togetic,176,55,40,85,80,105,40,405,Fairy,Flying,"Hustle, Serene Grace, Super Luck",Pixilate,"Togepi, Togetic, Togekiss",176
@@ -292,7 +300,8 @@ Remoraid,223,35,65,35,65,35,65,300,Water,,"Hustle, Sniper, Moody",Simple,"Remora
 Octillery,224,75,105,75,105,75,45,480,Water,,"Suction Cups, Sniper, Moody",Simple,"Remoraid, Octillery",224
 Delibird,225,45,55,45,65,45,75,330,Ice,Flying,"Vital Spirit, Hustle, Insomnia",Huge Power,Delibird,225
 Mantine,226,85,40,70,80,140,70,485,Water,Flying,"Swift Swim, Water Absorb, Water Veil",Unaware,"Mantine, Mantyke",226
-Skarmory,227,65,80,140,40,70,70,465,Steel,Flying,"Keen Eye, Sturdy, Weak Armor",Tough Claws,Skarmory,227
+Skarmory,227,65,80,140,40,70,70,465,Steel,Flying,"Keen Eye, Sturdy, Weak Armor",Tough Claws,"Skarmory, Mega Skarmory",227
+Mega Skarmory,227,65,140,110,40,100,110,565,Steel,Flying,Stalwart,Tough Claws,"Skarmory, Mega Skarmory",227-mega
 Houndour,228,45,60,30,80,50,65,330,Dark,Fire,"Early Bird, Flash Fire, Unnerve",Ball Fetch,"Houndour, Houndoom, Mega Houndoom",228
 Houndoom,229,75,90,50,110,80,95,500,Dark,Fire,"Early Bird, Flash Fire, Unnerve",Lightning Rod,"Houndour, Houndoom, Mega Houndoom",229
 Mega Houndoom,229,75,90,90,140,90,115,600,Dark,Fire,Solar Power,Lightning Rod,"Houndour, Houndoom, Mega Houndoom",229-mega
@@ -335,7 +344,7 @@ Poochyena,261,35,55,35,30,30,35,220,Dark,,"Run Away, Quick Feet, Rattled",Tough 
 Mightyena,262,70,90,70,60,60,70,420,Dark,,"Intimidate, Quick Feet, Moxie",Tough Claws,"Poochyena, Mightyena",262
 Zigzagoon,263,38,30,41,30,41,60,240,Normal,,"Pickup, Gluttony, Quick Feet",Run Away,"Zigzagoon, Linoone",263
 Linoone,264,78,70,61,50,61,100,420,Normal,,"Pickup, Gluttony, Quick Feet",Run Away,"Zigzagoon, Linoone",264
-Wurmple,265,45,45,35,20,30,20,195,Bug,,"Shield Dust, Run Away",Gluttony,"Wurmple, Silcoon, Beautifly, Cascoon, Dustox",265
+Wurmple,265,45,45,35,20,30,20,195,Bug,,"Shield Dust, Run Away",Poison Point,"Wurmple, Silcoon, Beautifly, Cascoon, Dustox",265
 Silcoon,266,50,35,55,25,25,15,205,Bug,,Shed Skin,Sturdy,"Wurmple, Silcoon, Beautifly, Cascoon, Dustox",266
 Beautifly,267,60,70,50,100,50,65,395,Bug,Flying,"Swarm, Rivalry",Simple,"Wurmple, Silcoon, Beautifly, Cascoon, Dustox",267
 Cascoon,268,50,35,55,25,25,15,205,Bug,,Shed Skin,Sturdy,"Wurmple, Silcoon, Beautifly, Cascoon, Dustox",268
@@ -441,13 +450,15 @@ Mega Banette,354,64,165,75,93,83,75,555,Ghost,,Prankster,Shadow Shield,"Shuppet,
 Duskull,355,20,40,90,30,90,25,295,Ghost,,"Levitate, Frisk",Unnerve,"Duskull, Dusclops, Dusknoir",355
 Dusclops,356,40,70,130,60,130,25,455,Ghost,,"Pressure, Frisk",Unnerve,"Duskull, Dusclops, Dusknoir",356
 Tropius,357,99,68,83,72,87,51,460,Grass,Flying,"Chlorophyll, Solar Power, Harvest",Ripen,Tropius,357
-Chimecho,358,75,50,80,95,90,65,455,Psychic,,Levitate,Punk Rock,"Chimecho, Chingling",358
-Absol,359,65,130,60,75,60,75,465,Dark,,"Pressure, Super Luck, Justified",Sharpness,"Absol, Mega Absol",359
-Mega Absol,359,65,150,60,115,60,115,565,Dark,,Magic Bounce,Sharpness,"Absol, Mega Absol",359-mega
+Chimecho,358,75,50,80,95,90,65,455,Psychic,,Levitate,Punk Rock,"Chimecho, Mega Chimecho, Chingling",358
+Mega Chimecho,358,75,50,110,135,120,65,555,Psychic,Steel,Levitate,Punk Rock,"Chimecho, Mega Chimecho, Chingling",358-mega
+Absol,359,65,130,60,75,60,75,465,Dark,,"Pressure, Super Luck, Justified",Tough Claws,"Absol, Mega Absol, Mega Z Absol",359
+Mega Absol,359,65,150,60,115,60,115,565,Dark,,Magic Bounce,Shadow Shield,"Absol, Mega Absol, Mega Z Absol",359-mega
+Mega Z Absol,359,65,154,60,75,60,151,565,Dark,Ghost,Super Luck,Sharpness,"Absol, Mega Absol, Mega Z Absol",359-mega-z
 Wynaut,360,95,23,48,23,48,23,260,Psychic,,"Shadow Tag, Telepathy",Sturdy,"Wobbuffet, Wynaut",360
-Snorunt,361,50,50,50,50,50,50,300,Ice,,"Inner Focus, Ice Body, Moody",Snow Warning,"Snorunt, Glalie, Mega Glalie, Froslass",361
-Glalie,362,80,80,80,80,80,80,480,Ice,,"Inner Focus, Ice Body, Moody",Snow Warning,"Snorunt, Glalie, Mega Glalie, Froslass",362
-Mega Glalie,362,80,120,80,120,80,100,580,Ice,,Refrigerate,Snow Warning,"Snorunt, Glalie, Mega Glalie, Froslass",362-mega
+Snorunt,361,50,50,50,50,50,50,300,Ice,,"Inner Focus, Ice Body, Moody",Overcoat,"Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",361
+Glalie,362,80,80,80,80,80,80,480,Ice,,"Inner Focus, Ice Body, Moody",Intimidate,"Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",362
+Mega Glalie,362,80,120,80,120,80,100,580,Ice,,Refrigerate,Moody,"Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",362-mega
 Spheal,363,70,40,50,55,50,25,290,Ice,Water,"Thick Fat, Ice Body, Oblivious",Unaware,"Spheal, Sealeo, Walrein",363
 Sealeo,364,90,60,70,75,70,45,410,Ice,Water,"Thick Fat, Ice Body, Oblivious",Unaware,"Spheal, Sealeo, Walrein",364
 Walrein,365,110,80,90,95,90,65,530,Ice,Water,"Thick Fat, Ice Body, Oblivious",Unaware,"Spheal, Sealeo, Walrein",365
@@ -458,7 +469,7 @@ Relicanth,369,100,90,130,45,65,55,485,Water,Rock,"Swift Swim, Rock Head, Sturdy"
 Luvdisc,370,43,30,55,40,65,97,330,Water,,"Swift Swim, Hydration",Multiscale,Luvdisc,370
 Bagon,371,45,75,60,40,30,50,300,Dragon,,"Rock Head, Sheer Force",Intimidate,"Bagon, Shelgon, Salamence, Mega Salamence",371
 Shelgon,372,65,95,100,60,50,50,420,Dragon,,"Rock Head, Overcoat",Anger Shell,"Bagon, Shelgon, Salamence, Mega Salamence",372
-Salamence,373,95,135,80,110,80,100,600,Dragon,Flying,"Intimidate, Moxie",Gale Wings,"Bagon, Shelgon, Salamence, Mega Salamence",373
+Salamence,373,95,135,80,110,80,100,600,Dragon,Flying,"Intimidate, Moxie",Own Tempo,"Bagon, Shelgon, Salamence, Mega Salamence",373
 Mega Salamence,373,95,145,130,120,90,120,700,Dragon,Flying,Aerilate,Rock Head,"Bagon, Shelgon, Salamence, Mega Salamence",373-mega
 Beldum,374,40,55,80,35,60,30,300,Steel,Psychic,"Clear Body, Light Metal",Rock Head,"Beldum, Metang, Metagross, Mega Metagross",374
 Metang,375,60,75,100,55,80,50,420,Steel,Psychic,"Clear Body, Light Metal",Iron Fist,"Beldum, Metang, Metagross, Mega Metagross",375
@@ -491,9 +502,10 @@ Infernape,392,76,104,71,104,71,108,534,Fire,Fighting,"Blaze, Iron Fist",Battle B
 Piplup,393,53,51,53,61,56,40,314,Water,,"Torrent, Competitive",Cute Charm,"Piplup, Prinplup, Empoleon",393
 Prinplup,394,64,66,68,81,76,50,405,Water,,"Torrent, Competitive",Drizzle,"Piplup, Prinplup, Empoleon",394
 Empoleon,395,84,86,88,111,101,60,530,Water,Steel,"Torrent, Competitive",Drizzle,"Piplup, Prinplup, Empoleon",395
-Starly,396,40,55,30,30,30,60,245,Normal,Flying,"Keen Eye, Reckless",Intimidate,"Starly, Staravia, Staraptor",396
-Staravia,397,55,75,50,40,40,80,340,Normal,Flying,"Intimidate, Reckless",Rock Head,"Starly, Staravia, Staraptor",397
-Staraptor,398,85,120,70,50,60,100,485,Normal,Flying,"Intimidate, Reckless",Rock Head,"Starly, Staravia, Staraptor",398
+Starly,396,40,55,30,30,30,60,245,Normal,Flying,"Keen Eye, Reckless",Intimidate,"Starly, Staravia, Staraptor, Mega Staraptor",396
+Staravia,397,55,75,50,40,40,80,340,Normal,Flying,"Intimidate, Reckless",Rock Head,"Starly, Staravia, Staraptor, Mega Staraptor",397
+Staraptor,398,85,120,70,50,60,100,485,Normal,Flying,"Intimidate, Reckless",Rock Head,"Starly, Staravia, Staraptor, Mega Staraptor",398
+Mega Staraptor,398,85,140,100,60,90,110,585,Fighting,Flying,Contrary,Rock Head,"Starly, Staravia, Staraptor, Mega Staraptor",398-mega
 Bidoof,399,59,45,40,35,40,31,250,Normal,,"Simple, Unaware, Moody",Sap Sipper,"Bidoof, Bibarel",399
 Bibarel,400,79,85,60,55,60,71,410,Normal,Water,"Simple, Unaware, Moody",Sap Sipper,"Bidoof, Bibarel",400
 Kricketot,401,37,25,41,25,41,25,194,Bug,,"Shed Skin, Run Away",Honey Gather,"Kricketot, Kricketune",401
@@ -531,12 +543,12 @@ Drifloon,425,90,50,34,60,44,70,348,Ghost,Flying,"Aftermath, Unburden, Flare Boos
 Drifblim,426,150,80,44,90,54,80,498,Ghost,Flying,"Aftermath, Unburden, Flare Boost",Magic Guard,"Drifloon, Drifblim",426
 Buneary,427,55,66,44,44,56,85,350,Normal,,"Run Away, Klutz, Limber",Adaptability,"Buneary, Lopunny, Mega Lopunny",427
 Lopunny,428,65,76,84,54,96,105,480,Normal,,"Cute Charm, Klutz, Limber",Adaptability,"Buneary, Lopunny, Mega Lopunny",428
-Mega Lopunny,428,65,136,94,54,96,135,580,Normal,Fighting,Scrappy,Adaptability,"Buneary, Lopunny, Mega Lopunny",428-mega
+Mega Lopunny,428,65,136,94,54,96,135,580,Normal,Fighting,Scrappy,Super Luck,"Buneary, Lopunny, Mega Lopunny",428-mega
 Mismagius,429,60,60,60,105,105,105,495,Ghost,,Levitate,Beads of Ruin,"Misdreavus, Mismagius",429
 Honchkrow,430,100,125,52,105,52,71,505,Dark,Flying,"Insomnia, Super Luck, Moxie",Intimidate,"Murkrow, Honchkrow",430
 Glameow,431,49,55,42,42,37,85,310,Normal,,"Limber, Own Tempo, Keen Eye",Intimidate,"Glameow, Purugly",431
 Purugly,432,71,82,64,64,59,112,452,Normal,,"Thick Fat, Own Tempo, Defiant",Intimidate,"Glameow, Purugly",432
-Chingling,433,45,30,50,65,50,45,285,Psychic,,Levitate,Punk Rock,"Chimecho, Chingling",433
+Chingling,433,45,30,50,65,50,45,285,Psychic,,Levitate,Punk Rock,"Chimecho, Mega Chimecho, Chingling",433
 Stunky,434,63,63,47,41,41,74,329,Poison,Dark,"Stench, Aftermath, Keen Eye",Neutralizing Gas,"Stunky, Skuntank",434
 Skuntank,435,103,93,67,71,61,84,479,Poison,Dark,"Stench, Aftermath, Keen Eye",Neutralizing Gas,"Stunky, Skuntank",435
 Bronzor,436,57,24,86,24,86,23,300,Steel,Psychic,"Levitate, Heatproof, Heavy Metal",Mirror Armor,"Bronzor, Bronzong",436
@@ -546,14 +558,16 @@ Mime Jr.,439,20,25,45,70,90,60,310,Psychic,Fairy,"Soundproof, Filter, Technician
 Happiny,440,100,5,5,15,65,30,220,Normal,,"Natural Cure, Serene Grace, Friend Guard",Hospitality,"Chansey, Blissey, Happiny",440
 Chatot,441,76,65,45,92,42,91,411,Normal,Flying,"Keen Eye, Tangled Feet, Big Pecks",Punk Rock,Chatot,441
 Spiritomb,442,50,92,108,92,108,35,485,Ghost,Dark,"Pressure, Infiltrator",Vessel of Ruin,Spiritomb,442
-Gible,443,58,70,45,40,45,42,300,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",443
-Gabite,444,68,90,65,50,55,82,410,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",444
-Garchomp,445,108,130,95,80,85,102,600,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp",445
-Mega Garchomp,445,108,170,115,120,95,92,700,Dragon,Ground,Sand Force,Sand Rush,"Gible, Gabite, Garchomp, Mega Garchomp",445-mega
+Gible,443,58,70,45,40,45,42,300,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",443
+Gabite,444,68,90,65,50,55,82,410,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",444
+Garchomp,445,108,130,95,80,85,102,600,Dragon,Ground,"Sand Veil, Rough Skin",Arena Trap,"Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",445
+Mega Garchomp,445,108,170,115,120,95,92,700,Dragon,Ground,Sand Force,Mold Breaker,"Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",445-mega
+Mega Z Garchomp,445,108,130,85,141,85,151,700,Dragon,,Rough Skin,Levitate,"Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",445-mega-z
 Munchlax,446,135,85,40,40,85,5,390,Normal,,"Pickup, Thick Fat, Gluttony",Cheek Pouch,"Snorlax, Gigantamax Snorlax, Munchlax",446
-Riolu,447,40,70,40,35,40,60,285,Fighting,,"Steadfast, Inner Focus, Prankster",Mind’s Eye,"Riolu, Lucario, Mega Lucario",447
-Lucario,448,70,110,70,115,70,90,525,Fighting,Steel,"Steadfast, Inner Focus, Justified",Mind’s Eye,"Riolu, Lucario, Mega Lucario",448
-Mega Lucario,448,70,145,88,140,70,112,625,Fighting,Steel,Adaptability,Mind’s Eye,"Riolu, Lucario, Mega Lucario",448-mega
+Riolu,447,40,70,40,35,40,60,285,Fighting,,"Steadfast, Inner Focus, Prankster",Mind’s Eye,"Riolu, Lucario, Mega Lucario, Mega Z Lucario",447
+Lucario,448,70,110,70,115,70,90,525,Fighting,Steel,"Steadfast, Inner Focus, Justified",Mind’s Eye,"Riolu, Lucario, Mega Lucario, Mega Z Lucario",448
+Mega Lucario,448,70,145,88,140,70,112,625,Fighting,Steel,Adaptability,Mind’s Eye,"Riolu, Lucario, Mega Lucario, Mega Z Lucario",448-mega
+Mega Z Lucario,448,70,100,70,164,70,151,625,Fighting,Steel,Inner Focus,Mega Launcher,"Riolu, Lucario, Mega Lucario, Mega Z Lucario",448-mega-z
 Hippopotas,449,68,72,78,38,42,32,330,Ground,,"Sand Stream, Sand Force",Unaware,"Hippopotas, Hippowdon",449
 Hippowdon,450,108,112,118,68,72,47,525,Ground,,"Sand Stream, Sand Force",Unaware,"Hippopotas, Hippowdon",450
 Skorupi,451,40,50,90,30,55,65,330,Poison,Bug,"Battle Armor, Sniper, Keen Eye",Super Luck,"Skorupi, Drapion",451
@@ -569,7 +583,7 @@ Abomasnow,460,90,92,75,92,85,60,494,Grass,Ice,"Snow Warning, Soundproof",Slush R
 Mega Abomasnow,460,90,132,105,132,105,30,594,Grass,Ice,Snow Warning,Grassy Surge,"Snover, Abomasnow, Mega Abomasnow",460-mega
 Weavile,461,70,120,65,45,85,125,510,Dark,Ice,"Pressure, Pickpocket",Tough Claws,"Sneasel, Weavile",461
 Magnezone,462,70,70,115,130,90,60,535,Electric,Steel,"Magnet Pull, Sturdy, Analytic",Levitate,"Magnemite, Magneton, Magnezone",462
-Lickilicky,463,110,85,95,80,95,50,515,Normal,,"Own Tempo, Oblivious, Cloud Nine",Cheek Pouch,"Lickitung, Lickilicky",463
+Lickilicky,463,110,85,95,80,95,50,515,Normal,,"Own Tempo, Oblivious, Cloud Nine",Poison Heal,"Lickitung, Lickilicky",463
 Rhyperior,464,115,140,130,55,55,40,535,Ground,Rock,"Lightning Rod, Solid Rock, Reckless",Filter,"Rhyhorn, Rhydon, Rhyperior",464
 Tangrowth,465,100,100,125,110,50,50,535,Grass,,"Chlorophyll, Leaf Guard, Regenerator",Tangling Hair,"Tangela, Tangrowth",465
 Electivire,466,75,123,67,95,85,95,540,Electric,,"Motor Drive, Vital Spirit",Sheer Force,"Electabuzz, Elekid, Electivire",466
@@ -585,7 +599,8 @@ Gallade,475,68,125,65,65,115,80,518,Psychic,Fighting,"Steadfast, Sharpness, Just
 Mega Gallade,475,68,165,95,65,115,110,618,Psychic,Fighting,Inner Focus,Sharpness,"Ralts, Kirlia, Gardevoir, Mega Gardevoir, Gallade, Mega Gallade",475-mega
 Probopass,476,60,55,145,75,150,40,525,Rock,Steel,"Sturdy, Magnet Pull, Sand Force",Levitate,"Nosepass, Probopass",476
 Dusknoir,477,45,100,135,65,135,45,525,Ghost,,"Pressure, Frisk",Levitate,"Duskull, Dusclops, Dusknoir",477
-Froslass,478,70,80,70,80,70,110,480,Ice,Ghost,"Snow Cloak, Cursed Body",Snow Warning,"Snorunt, Glalie, Mega Glalie, Froslass",478
+Froslass,478,70,80,70,80,70,110,480,Ice,Ghost,"Snow Cloak, Cursed Body",Dazzling,"Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",478
+Mega Froslass,478,70,80,70,140,100,120,580,Ice,Ghost,Snow Warning,Queenly Majesty,"Snorunt, Glalie, Mega Glalie, Froslass, Mega Froslass",478-mega
 Rotom,479,50,50,77,95,77,91,440,Electric,Ghost,Levitate,Hadron Engine,"Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",479
 Heat Rotom,479,50,65,107,105,107,86,520,Electric,Fire,Levitate,Hadron Engine,"Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",479-heat
 Wash Rotom,479,50,65,107,105,107,86,520,Electric,Water,Levitate,Hadron Engine,"Rotom, Heat Rotom, Wash Rotom, Frost Rotom, Fan Rotom, Mow Rotom",479-wash
@@ -599,14 +614,16 @@ Dialga,483,100,120,120,150,100,90,680,Steel,Dragon,"Pressure, Telepathy",Berserk
 Origin Dialga,483,100,100,120,150,120,90,680,Steel,Dragon,"Pressure, Telepathy",Berserk,"Dialga, Origin Dialga",483-origin
 Palkia,484,90,120,100,150,120,100,680,Water,Dragon,"Pressure, Telepathy",Berserk,"Palkia, Origin Palkia",484
 Origin Palkia,484,90,100,100,150,120,120,680,Water,Dragon,"Pressure, Telepathy",Berserk,"Palkia, Origin Palkia",484-origin
-Heatran,485,91,90,106,130,106,77,600,Fire,Steel,"Flash Fire, Flame Body",Filter,Heatran,485
+Heatran,485,91,90,106,130,106,77,600,Fire,Steel,"Flash Fire, Flame Body",Filter,"Heatran, Mega Heatran",485
+Mega Heatran,485,91,120,106,175,141,67,700,Fire,Steel,Flash Fire,Filter,"Heatran, Mega Heatran",485-mega
 Regigigas,486,110,160,110,80,110,100,670,Normal,,"Slow Start, Normalize",Scrappy,Regigigas,486
 Altered Giratina,487,150,100,120,100,120,90,680,Ghost,Dragon,"Pressure, Telepathy",Shadow Shield,"Altered Giratina, Origin Giratina",487-altered
 Origin Giratina,487,150,120,100,120,100,90,680,Ghost,Dragon,Levitate,Shadow Shield,"Altered Giratina, Origin Giratina",487-origin
 Cresselia,488,120,70,110,75,120,85,580,Psychic,,Levitate,Shadow Shield,Cresselia,488
 Phione,489,80,80,80,80,80,80,480,Water,,Hydration,Simple,Phione,489
 Manaphy,490,100,100,100,100,100,100,600,Water,,Hydration,Primordial Sea,Manaphy,490
-Darkrai,491,70,90,90,135,90,125,600,Dark,,Bad Dreams,Unnerve,Darkrai,491
+Darkrai,491,70,90,90,135,90,125,600,Dark,,Bad Dreams,Unnerve,"Darkrai, Mega Darkrai",491
+Mega Darkrai,491,70,120,130,165,130,85,700,Dark,,Bad Dreams,Unnerve,"Darkrai, Mega Darkrai",491-mega
 Land Shaymin,492,100,100,100,100,100,100,600,Grass,,Natural Cure,Grassy Surge,"Land Shaymin, Sky Shaymin",492-land
 Sky Shaymin,492,100,103,75,120,75,127,600,Grass,Flying,Serene Grace,Delta Stream,"Land Shaymin, Sky Shaymin",492-sky
 Normal Arceus,493,120,120,120,120,120,120,720,Normal,,Multitype,Adaptability,"Normal Arceus, Fighting Arceus, Flying Arceus, Poison Arceus, Ground Arceus, Rock Arceus, Bug Arceus, Ghost Arceus, Steel Arceus, Fire Arceus, Water Arceus, Grass Arceus, Electric Arceus, Psychic Arceus, Ice Arceus, Dragon Arceus, Dark Arceus, Fairy Arceus",493-normal
@@ -631,9 +648,10 @@ Victini,494,100,100,100,100,100,100,600,Psychic,Fire,Victory Star,Serene Grace,V
 Snivy,495,45,45,55,45,55,63,308,Grass,,"Overgrow, Contrary",Multiscale,"Snivy, Servine, Serperior",495
 Servine,496,60,60,75,60,75,83,413,Grass,,"Overgrow, Contrary",Multiscale,"Snivy, Servine, Serperior",496
 Serperior,497,75,75,95,75,95,113,528,Grass,,"Overgrow, Contrary",Multiscale,"Snivy, Servine, Serperior",497
-Tepig,498,65,63,45,45,45,45,308,Fire,,"Blaze, Thick Fat",Gluttony,"Tepig, Pignite, Emboar",498
-Pignite,499,90,93,55,70,55,55,418,Fire,Fighting,"Blaze, Thick Fat",Rock Head,"Tepig, Pignite, Emboar",499
-Emboar,500,110,123,65,100,65,65,528,Fire,Fighting,"Blaze, Reckless",Rock Head,"Tepig, Pignite, Emboar",500
+Tepig,498,65,63,45,45,45,45,308,Fire,,"Blaze, Thick Fat",Gluttony,"Tepig, Pignite, Emboar, Mega Emboar",498
+Pignite,499,90,93,55,70,55,55,418,Fire,Fighting,"Blaze, Thick Fat",Rock Head,"Tepig, Pignite, Emboar, Mega Emboar",499
+Emboar,500,110,123,65,100,65,65,528,Fire,Fighting,"Blaze, Reckless",Rock Head,"Tepig, Pignite, Emboar, Mega Emboar",500
+Mega Emboar,500,110,148,75,110,110,75,628,Fire,Fighting,Mold Breaker,Magic Guard,"Tepig, Pignite, Emboar, Mega Emboar",500-mega
 Oshawott,501,55,55,45,63,45,45,308,Water,,"Torrent, Shell Armor",Mold Breaker,"Oshawott, Dewott, Samurott, Hisui Samurott",501
 Dewott,502,75,75,60,83,60,60,413,Water,,"Torrent, Shell Armor",Mold Breaker,"Oshawott, Dewott, Samurott, Hisui Samurott",502
 Samurott,503,95,100,85,108,70,70,528,Water,,"Torrent, Shell Armor",Lightning Rod,"Oshawott, Dewott, Samurott, Hisui Samurott",503
@@ -662,8 +680,9 @@ Boldore,525,70,105,105,50,40,20,390,Rock,,"Sturdy, Weak Armor, Sand Force",Solid
 Gigalith,526,85,135,130,60,80,25,515,Rock,,"Sturdy, Sand Stream, Sand Force",Solid Rock,"Roggenrola, Boldore, Gigalith",526
 Woobat,527,65,45,43,55,43,72,323,Psychic,Flying,"Unaware, Klutz, Simple",Opportunist,"Woobat, Swoobat",527
 Swoobat,528,67,57,55,77,55,114,425,Psychic,Flying,"Unaware, Klutz, Simple",Opportunist,"Woobat, Swoobat",528
-Drilbur,529,60,85,40,30,45,68,328,Ground,,"Sand Rush, Sand Force, Mold Breaker",Sturdy,"Drilbur, Excadrill",529
-Excadrill,530,110,135,60,50,65,88,508,Ground,Steel,"Sand Rush, Sand Force, Mold Breaker",Sturdy,"Drilbur, Excadrill",530
+Drilbur,529,60,85,40,30,45,68,328,Ground,,"Sand Rush, Sand Force, Mold Breaker",Sturdy,"Drilbur, Excadrill, Mega Excadrill",529
+Excadrill,530,110,135,60,50,65,88,508,Ground,Steel,"Sand Rush, Sand Force, Mold Breaker",Sturdy,"Drilbur, Excadrill, Mega Excadrill",530
+Mega Excadrill,530,110,165,100,65,65,103,608,Ground,Steel,Piercing Drill,Mold Breaker,"Drilbur, Excadrill, Mega Excadrill",530-mega
 Audino,531,103,60,86,60,86,50,445,Normal,,"Healer, Regenerator, Klutz",Friend Guard,"Audino, Mega Audino",531
 Mega Audino,531,103,60,126,80,126,50,545,Normal,Fairy,Regenerator,Fairy Aura,"Audino, Mega Audino",531-mega
 Timburr,532,75,80,55,25,35,35,305,Fighting,,"Guts, Sheer Force, Iron Fist",Rocky Payload,"Timburr, Gurdurr, Conkeldurr",532
@@ -677,16 +696,16 @@ Sawk,539,75,125,75,30,75,85,465,Fighting,,"Sturdy, Inner Focus, Mold Breaker",Sc
 Sewaddle,540,45,53,70,40,60,42,310,Bug,Grass,"Swarm, Chlorophyll, Overcoat",Shield Dust,"Sewaddle, Swadloon, Leavanny",540
 Swadloon,541,55,63,90,50,80,42,380,Bug,Grass,"Leaf Guard, Chlorophyll, Overcoat",Shield Dust,"Sewaddle, Swadloon, Leavanny",541
 Leavanny,542,75,103,80,70,80,92,500,Bug,Grass,"Swarm, Chlorophyll, Overcoat",Sharpness,"Sewaddle, Swadloon, Leavanny",542
-Venipede,543,30,45,59,30,39,57,260,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede",543
-Whirlipede,544,40,55,99,40,79,47,360,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede",544
-Scolipede,545,60,100,89,55,69,112,485,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede",545
+Venipede,543,30,45,59,30,39,57,260,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede, Mega Scolipede",543
+Whirlipede,544,40,55,99,40,79,47,360,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede, Mega Scolipede",544
+Scolipede,545,60,100,89,55,69,112,485,Bug,Poison,"Poison Point, Swarm, Speed Boost",Stamina,"Venipede, Whirlipede, Scolipede, Mega Scolipede",545
+Mega Scolipede,545,60,140,149,75,99,62,585,Bug,Poison,Shell Armor,Speed Boost,"Venipede, Whirlipede, Scolipede, Mega Scolipede",545-mega
 Cottonee,546,40,27,60,37,50,66,280,Grass,Fairy,"Prankster, Infiltrator, Chlorophyll",Fluffy,"Cottonee, Whimsicott",546
 Whimsicott,547,60,67,85,77,75,116,480,Grass,Fairy,"Prankster, Infiltrator, Chlorophyll",Fluffy,"Cottonee, Whimsicott",547
 Petilil,548,45,35,50,70,50,30,280,Grass,,"Chlorophyll, Own Tempo, Leaf Guard",Flower Veil,"Petilil, Lilligant, Hisui Lilligant",548
 Lilligant,549,70,60,75,110,75,90,480,Grass,,"Chlorophyll, Own Tempo, Leaf Guard",Grassy Surge,"Petilil, Lilligant, Hisui Lilligant",549
-Red-Striped Basculin,550,70,92,65,80,55,98,460,Water,,"Reckless, Adaptability, Mold Breaker",Rock Head,"Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",550-red-striped
-Blue-Striped Basculin,550,70,92,65,80,55,98,460,Water,,"Rock Head, Adaptability, Mold Breaker",Reckless,"Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",550-blue-striped
-White-Striped Basculin,550,70,92,65,80,55,98,460,Water,,"Rattled, Adaptability, Mold Breaker",Supreme Overlord,"Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",550-white-striped
+Red-Striped Basculin,550,70,92,65,80,55,98,460,Water,,"Reckless, Adaptability, Mold Breaker",Moxie,"Red-Striped Basculin, Blue-Striped Basculin",550-red-striped
+Blue-Striped Basculin,550,70,92,65,80,55,98,460,Water,,"Rock Head, Adaptability, Mold Breaker",Moxie,"Red-Striped Basculin, Blue-Striped Basculin",550-blue-striped
 Sandile,551,50,72,35,35,35,65,292,Ground,Dark,"Intimidate, Moxie, Anger Point",Tough Claws,"Sandile, Krokorok, Krookodile",551
 Krokorok,552,60,82,45,45,45,74,351,Ground,Dark,"Intimidate, Moxie, Anger Point",Tough Claws,"Sandile, Krokorok, Krookodile",552
 Krookodile,553,95,117,80,65,70,92,519,Ground,Dark,"Intimidate, Moxie, Anger Point",Tough Claws,"Sandile, Krokorok, Krookodile",553
@@ -696,8 +715,9 @@ Zen Darmanitan,555,105,30,105,140,105,55,540,Fire,Psychic,"Sheer Force, Zen Mode
 Maractus,556,75,86,67,106,67,60,461,Grass,,"Water Absorb, Chlorophyll, Storm Drain",Well-Baked Body,Maractus,556
 Dwebble,557,50,65,85,35,35,55,325,Bug,Rock,"Sturdy, Shell Armor, Weak Armor",Rocky Payload,"Dwebble, Crustle",557
 Crustle,558,70,105,125,65,75,45,485,Bug,Rock,"Sturdy, Shell Armor, Weak Armor",Rocky Payload,"Dwebble, Crustle",558
-Scraggy,559,50,75,70,35,70,48,348,Dark,Fighting,"Shed Skin, Moxie, Intimidate",Unburden,"Scraggy, Scrafty",559
-Scrafty,560,65,90,115,45,115,58,488,Dark,Fighting,"Shed Skin, Moxie, Intimidate",Unburden,"Scraggy, Scrafty",560
+Scraggy,559,50,75,70,35,70,48,348,Dark,Fighting,"Shed Skin, Moxie, Intimidate",Unburden,"Scraggy, Scrafty, Mega Scrafty",559
+Scrafty,560,65,90,115,45,115,58,488,Dark,Fighting,"Shed Skin, Moxie, Intimidate",Unburden,"Scraggy, Scrafty, Mega Scrafty",560
+Mega Scrafty,560,65,130,135,55,135,68,588,Dark,Fighting,Intimidate,Moxie,"Scraggy, Scrafty, Mega Scrafty",560-mega
 Sigilyph,561,72,58,80,103,80,97,490,Psychic,Flying,"Wonder Skin, Magic Guard, Tinted Lens",Flare Boost,Sigilyph,561
 Yamask,562,38,30,85,55,65,30,303,Ghost,,Mummy,Purifying Salt,"Yamask, Cofagrigus",562
 Cofagrigus,563,58,50,145,95,105,30,483,Ghost,,Mummy,Purifying Salt,"Yamask, Cofagrigus",563
@@ -746,28 +766,31 @@ Ferrothorn,598,74,94,131,54,116,20,489,Grass,Steel,"Iron Barbs, Anticipation",Ro
 Klink,599,40,55,70,45,60,30,300,Steel,,"Plus, Minus, Clear Body",Steely Spirit,"Klink, Klang, Klinklang",599
 Klang,600,60,80,95,70,85,50,440,Steel,,"Plus, Minus, Clear Body",Steely Spirit,"Klink, Klang, Klinklang",600
 Klinklang,601,60,100,115,70,85,90,520,Steel,,"Plus, Minus, Clear Body",Steely Spirit,"Klink, Klang, Klinklang",601
-Tynamo,602,35,55,40,45,40,60,275,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",602
-Eelektrik,603,65,85,70,75,70,40,405,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",603
-Eelektross,604,85,115,80,105,80,50,515,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross",604
+Tynamo,602,35,55,40,45,40,60,275,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross, Mega Eelektross",602
+Eelektrik,603,65,85,70,75,70,40,405,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross, Mega Eelektross",603
+Eelektross,604,85,115,80,105,80,50,515,Electric,,Levitate,Poison Heal,"Tynamo, Eelektrik, Eelektross, Mega Eelektross",604
+Mega Eelektross,604,85,145,80,135,90,80,615,Electric,,Eelevate,Poison Heal,"Tynamo, Eelektrik, Eelektross, Mega Eelektross",604-mega
 Elgyem,605,55,55,55,85,55,30,335,Psychic,,"Telepathy, Synchronize, Analytic",Beads of Ruin,"Elgyem, Beheeyem",605
 Beheeyem,606,75,75,75,125,95,40,485,Psychic,,"Telepathy, Synchronize, Analytic",Beads of Ruin,"Elgyem, Beheeyem",606
-Litwick,607,50,30,55,65,55,20,275,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",607
-Lampent,608,60,40,60,95,60,55,370,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",608
-Chandelure,609,60,55,90,145,90,80,520,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure",609
-Axew,610,46,87,60,30,40,57,320,Dragon,,"Rivalry, Mold Breaker, Unnerve",Own Tempo,"Axew, Fraxure, Haxorus",610
-Fraxure,611,66,117,70,40,50,67,410,Dragon,,"Rivalry, Mold Breaker, Unnerve",Own Tempo,"Axew, Fraxure, Haxorus",611
-Haxorus,612,76,147,90,60,70,97,540,Dragon,,"Rivalry, Mold Breaker, Unnerve",Own Tempo,"Axew, Fraxure, Haxorus",612
+Litwick,607,50,30,55,65,55,20,275,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure, Mega Chandelure",607
+Lampent,608,60,40,60,95,60,55,370,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure, Mega Chandelure",608
+Chandelure,609,60,55,90,145,90,80,520,Ghost,Fire,"Flash Fire, Flame Body, Infiltrator",Shadow Tag,"Litwick, Lampent, Chandelure, Mega Chandelure",609
+Mega Chandelure,609,60,75,110,175,110,90,620,Ghost,Fire,Infiltrator,Shadow Tag,"Litwick, Lampent, Chandelure, Mega Chandelure",609-mega
+Axew,610,46,87,60,30,40,57,320,Dragon,,"Rivalry, Mold Breaker, Unnerve",Sharpness,"Axew, Fraxure, Haxorus",610
+Fraxure,611,66,117,70,40,50,67,410,Dragon,,"Rivalry, Mold Breaker, Unnerve",Sharpness,"Axew, Fraxure, Haxorus",611
+Haxorus,612,76,147,90,60,70,97,540,Dragon,,"Rivalry, Mold Breaker, Unnerve",Sharpness,"Axew, Fraxure, Haxorus",612
 Cubchoo,613,55,70,40,60,40,40,305,Ice,,"Snow Cloak, Slush Rush, Rattled",Fur Coat,"Cubchoo, Beartic",613
 Beartic,614,95,130,80,70,80,50,505,Ice,,"Snow Cloak, Slush Rush, Swift Swim",Fur Coat,"Cubchoo, Beartic",614
 Cryogonal,615,80,50,50,95,135,105,515,Ice,,Levitate,Snow Warning,Cryogonal,615
 Shelmet,616,50,40,85,40,65,25,305,Bug,,"Hydration, Shell Armor, Overcoat",Stamina,"Shelmet, Accelgor",616
-Accelgor,617,80,70,40,100,60,145,495,Bug,,"Hydration, Sticky Hold, Unburden",Protean,"Shelmet, Accelgor",617
-Stunfisk,618,109,66,84,81,99,32,471,Ground,Electric,"Static, Limber, Sand Veil",Storm Drain,Stunfisk,618
+Accelgor,617,80,70,40,100,60,145,495,Bug,,"Hydration, Sticky Hold, Unburden",Tinted Lens,"Shelmet, Accelgor",617
+Stunfisk,618,109,66,84,81,99,32,471,Ground,Electric,"Static, Limber, Sand Veil",Water Absorb,Stunfisk,618
 Mienfoo,619,45,85,50,55,50,65,350,Fighting,,"Inner Focus, Regenerator, Reckless",No Guard,"Mienfoo, Mienshao",619
 Mienshao,620,65,125,60,95,60,105,510,Fighting,,"Inner Focus, Regenerator, Reckless",No Guard,"Mienfoo, Mienshao",620
-Druddigon,621,77,120,90,60,90,48,485,Dragon,,"Rough Skin, Sheer Force, Mold Breaker",Intimidate,Druddigon,621
-Golett,622,59,74,50,35,50,35,303,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk",622
-Golurk,623,89,124,80,55,80,55,483,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk",623
+Druddigon,621,77,120,90,60,90,48,485,Dragon,,"Rough Skin, Sheer Force, Mold Breaker",Dragonize,Druddigon,621
+Golett,622,59,74,50,35,50,35,303,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk, Mega Golurk",622
+Golurk,623,89,124,80,55,80,55,483,Ground,Ghost,"Iron Fist, Klutz, No Guard",Shadow Shield,"Golett, Golurk, Mega Golurk",623
+Mega Golurk,623,89,159,105,70,105,55,583,Ground,Ghost,Unseen Fist,Shadow Shield,"Golett, Golurk, Mega Golurk",623-mega
 Pawniard,624,45,85,70,40,40,60,340,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword of Ruin,"Pawniard, Bisharp, Kingambit",624
 Bisharp,625,65,125,100,60,70,70,490,Dark,Steel,"Defiant, Inner Focus, Pressure",Sword of Ruin,"Pawniard, Bisharp, Kingambit",625
 Bouffalant,626,95,110,95,40,95,55,490,Normal,,"Reckless, Sap Sipper, Soundproof",Rock Head,Bouffalant,626
@@ -775,7 +798,7 @@ Rufflet,627,70,83,50,37,50,60,350,Normal,Flying,"Keen Eye, Sheer Force, Hustle",
 Braviary,628,100,123,75,57,75,80,510,Normal,Flying,"Keen Eye, Sheer Force, Defiant",Speed Boost,"Rufflet, Braviary, Hisui Braviary",628
 Vullaby,629,70,55,75,45,65,60,370,Dark,Flying,"Big Pecks, Overcoat, Weak Armor",Thick Fat,"Vullaby, Mandibuzz",629
 Mandibuzz,630,110,65,105,55,95,80,510,Dark,Flying,"Big Pecks, Overcoat, Weak Armor",Thick Fat,"Vullaby, Mandibuzz",630
-Heatmor,631,85,97,66,105,66,65,484,Fire,,"Gluttony, Flash Fire, White Smoke",Contrary,Heatmor,631
+Heatmor,631,85,97,66,105,66,65,484,Fire,,"Gluttony, Flash Fire, White Smoke",Spicy Spray,Heatmor,631
 Durant,632,58,109,112,48,48,109,484,Bug,Steel,"Swarm, Hustle, Truant",Compound Eyes,Durant,632
 Deino,633,52,65,50,45,50,38,300,Dark,Dragon,Hustle,No Guard,"Deino, Zweilous, Hydreigon",633
 Zweilous,634,72,85,70,65,70,58,420,Dark,Dragon,Hustle,No Guard,"Deino, Zweilous, Hydreigon",634
@@ -800,24 +823,23 @@ Ordinary Keldeo,647,91,72,90,129,90,108,580,Water,Fighting,Justified,Grim Neigh,
 Resolute Keldeo,647,91,72,90,129,90,108,580,Water,Fighting,Justified,Grim Neigh,"Ordinary Keldeo, Resolute Keldeo",647-resolute
 Aria Meloetta,648,100,77,77,128,128,90,600,Normal,Psychic,Serene Grace,Punk Rock,"Aria Meloetta, Pirouette Meloetta",648-aria
 Pirouette Meloetta,648,100,128,90,77,77,128,600,Normal,Fighting,Serene Grace,Scrappy,"Aria Meloetta, Pirouette Meloetta",648-pirouette
-Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Protean,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649
-Shock Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Protean,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-shock
-Burn Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Protean,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-burn
-Chill Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Protean,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-chill
-Douse Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Protean,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-douse
-Chespin,650,56,61,65,48,45,38,313,Grass,,"Overgrow, Bulletproof",Rough Skin,"Chespin, Quilladin, Chesnaught",650
-Quilladin,651,61,78,95,56,58,57,405,Grass,,"Overgrow, Bulletproof",Dauntless Shield,"Chespin, Quilladin, Chesnaught",651
-Chesnaught,652,88,107,122,74,75,64,530,Grass,Fighting,"Overgrow, Bulletproof",Dauntless Shield,"Chespin, Quilladin, Chesnaught",652
-Fennekin,653,40,45,40,62,60,60,307,Fire,,"Blaze, Magician",Fluffy,"Fennekin, Braixen, Delphox",653
-Braixen,654,59,59,58,90,70,73,409,Fire,,"Blaze, Magician",Psychic Surge,"Fennekin, Braixen, Delphox",654
-Delphox,655,75,69,72,114,100,104,534,Fire,Psychic,"Blaze, Magician",Psychic Surge,"Fennekin, Braixen, Delphox",655
-Froakie,656,41,56,40,62,44,71,314,Water,,"Torrent, Protean",Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",656
-Battle Bond Froakie,656,41,56,40,62,44,71,314,Water,,Torrent,Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",656
-Frogadier,657,54,63,52,83,56,97,405,Water,,"Torrent, Protean",Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",657
-Battle Bond Frogadier,657,54,63,52,83,56,97,405,Water,,Torrent,Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",657
-Greninja,658,72,95,67,103,71,122,530,Water,Dark,"Torrent, Protean",Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",658
-Battle Bond Greninja,658,72,95,67,103,71,122,530,Water,Dark,Battle Bond,Stakeout,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",658
-Ash Greninja,658,72,145,67,153,71,132,640,Water,Dark,Battle Bond,Super Luck,"Froakie, Battle Bond Froakie, Frogadier, Battle Bond Frogadier, Greninja, Battle Bond Greninja, Ash Greninja",658-ash
+Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Heatproof,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649
+Shock Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Heatproof,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-shock
+Burn Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Heatproof,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-burn
+Chill Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Heatproof,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-chill
+Douse Genesect,649,71,120,95,120,95,99,600,Bug,Steel,Download,Heatproof,"Genesect, Shock Genesect, Burn Genesect, Chill Genesect, Douse Genesect",649-douse
+Chespin,650,56,61,65,48,45,38,313,Grass,,"Overgrow, Bulletproof",Rough Skin,"Chespin, Quilladin, Chesnaught, Mega Chesnaught",650
+Quilladin,651,61,78,95,56,58,57,405,Grass,,"Overgrow, Bulletproof",Rough Skin,"Chespin, Quilladin, Chesnaught, Mega Chesnaught",651
+Chesnaught,652,88,107,122,74,75,64,530,Grass,Fighting,"Overgrow, Bulletproof",Rough Skin,"Chespin, Quilladin, Chesnaught, Mega Chesnaught",652
+Mega Chesnaught,652,88,137,172,74,115,44,630,Grass,Fighting,Bulletproof,Rough Skin,"Chespin, Quilladin, Chesnaught, Mega Chesnaught",652-mega
+Fennekin,653,40,45,40,62,60,60,307,Fire,,"Blaze, Magician",Neuroforce,"Fennekin, Braixen, Delphox, Mega Delphox",653
+Braixen,654,59,59,58,90,70,73,409,Fire,,"Blaze, Magician",Neuroforce,"Fennekin, Braixen, Delphox, Mega Delphox",654
+Delphox,655,75,69,72,114,100,104,534,Fire,Psychic,"Blaze, Magician",Neuroforce,"Fennekin, Braixen, Delphox, Mega Delphox",655
+Mega Delphox,655,75,69,72,159,125,134,634,Fire,Psychic,Levitate,Magician,"Fennekin, Braixen, Delphox, Mega Delphox",655-mega
+Froakie,656,41,56,40,62,44,71,314,Water,,"Torrent, Protean",Stakeout,"Froakie, Frogadier, Greninja, Mega Greninja",656
+Frogadier,657,54,63,52,83,56,97,405,Water,,"Torrent, Protean",Stakeout,"Froakie, Frogadier, Greninja, Mega Greninja",657
+Greninja,658,72,95,67,103,71,122,530,Water,Dark,"Torrent, Protean",Stakeout,"Froakie, Frogadier, Greninja, Mega Greninja",658
+Mega Greninja,658,72,125,77,133,81,142,630,Water,Dark,Protean,Levitate,"Froakie, Frogadier, Greninja, Mega Greninja",658-mega
 Bunnelby,659,38,36,38,32,36,57,237,Normal,,"Pickup, Cheek Pouch, Huge Power",Inner Focus,"Bunnelby, Diggersby",659
 Diggersby,660,85,56,77,50,77,78,423,Normal,Ground,"Pickup, Cheek Pouch, Huge Power",Thick Fat,"Bunnelby, Diggersby",660
 Fletchling,661,45,50,43,40,38,62,278,Normal,Flying,"Big Pecks, Gale Wings",Flame Body,"Fletchling, Fletchinder, Talonflame",661
@@ -883,8 +905,9 @@ Ocean Vivillon,666,80,52,50,90,50,89,411,Bug,Flying,"Shield Dust, Compound Eyes,
 Jungle Vivillon,666,80,52,50,90,50,89,411,Bug,Flying,"Shield Dust, Compound Eyes, Friend Guard",Prankster,"Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",666-jungle
 Fancy Vivillon,666,80,52,50,90,50,89,411,Bug,Flying,"Shield Dust, Compound Eyes, Friend Guard",Prankster,"Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",666-fancy
 Poke Ball Vivillon,666,80,52,50,90,50,89,411,Bug,Flying,"Shield Dust, Compound Eyes, Friend Guard",Prankster,"Meadow Scatterbug, Icy Snow Scatterbug, Polar Scatterbug, Tundra Scatterbug, Continental Scatterbug, Garden Scatterbug, Elegant Scatterbug, Modern Scatterbug, Marine Scatterbug, Archipelago Scatterbug, High Plains Scatterbug, Sandstorm Scatterbug, River Scatterbug, Monsoon Scatterbug, Savanna Scatterbug, Sun Scatterbug, Ocean Scatterbug, Jungle Scatterbug, Fancy Scatterbug, Poke Ball Scatterbug, Meadow Spewpa, Icy Snow Spewpa, Polar Spewpa, Tundra Spewpa, Continental Spewpa, Garden Spewpa, Elegant Spewpa, Modern Spewpa, Marine Spewpa, Archipelago Spewpa, High Plains Spewpa, Sandstorm Spewpa, River Spewpa, Monsoon Spewpa, Savanna Spewpa, Sun Spewpa, Ocean Spewpa, Jungle Spewpa, Fancy Spewpa, Poke Ball Spewpa, Meadow Vivillon, Icy Snow Vivillon, Polar Vivillon, Tundra Vivillon, Continental Vivillon, Garden Vivillon, Elegant Vivillon, Modern Vivillon, Marine Vivillon, Archipelago Vivillon, High Plains Vivillon, Sandstorm Vivillon, River Vivillon, Monsoon Vivillon, Savanna Vivillon, Sun Vivillon, Ocean Vivillon, Jungle Vivillon, Fancy Vivillon, Poke Ball Vivillon",666-poke-ball
-Litleo,667,62,50,58,73,54,72,369,Fire,Normal,"Rivalry, Unnerve, Moxie",Drought,"Litleo, Pyroar",667
-Pyroar,668,86,68,72,109,66,106,507,Fire,Normal,"Rivalry, Unnerve, Moxie",Drought,"Litleo, Pyroar",668
+Litleo,667,62,50,58,73,54,72,369,Fire,Normal,"Rivalry, Unnerve, Moxie",Blaze,"Litleo, Pyroar, Mega Pyroar",667
+Pyroar,668,86,68,72,109,66,106,507,Fire,Normal,"Rivalry, Unnerve, Moxie",Beast Boost,"Litleo, Pyroar, Mega Pyroar",668
+Mega Pyroar,668,86,88,92,129,86,126,607,Fire,Normal,Fire Mane,Intimidate,"Litleo, Pyroar, Mega Pyroar",668-mega
 Red Flabebe,669,44,38,39,61,79,42,303,Fairy,,"Flower Veil, Symbiosis",Grassy Surge,"Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",669-red
 Yellow Flabebe,669,44,38,39,61,79,42,303,Fairy,,"Flower Veil, Symbiosis",Grassy Surge,"Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",669-yellow
 Orange Flabebe,669,44,38,39,61,79,42,303,Fairy,,"Flower Veil, Symbiosis",Grassy Surge,"Red Flabebe, Yellow Flabebe, Orange Flabebe, Blue Flabebe, White Flabebe, Red Floette, Yellow Floette, Orange Floette, Blue Floette, White Floette, Red Florges, Yellow Florges, Orange Florges, Blue Florges, White Florges",669-orange
@@ -914,33 +937,38 @@ Dandy Furfrou,676,75,80,60,65,90,102,472,Normal,,Fur Coat,Fluffy,"Furfrou, Heart
 La Reine Furfrou,676,75,80,60,65,90,102,472,Normal,,Fur Coat,Fluffy,"Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",676-la-reine
 Kabuki Furfrou,676,75,80,60,65,90,102,472,Normal,,Fur Coat,Fluffy,"Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",676-kabuki
 Pharaoh Furfrou,676,75,80,60,65,90,102,472,Normal,,Fur Coat,Fluffy,"Furfrou, Heart Furfrou, Star Furfrou, Diamond Furfrou, Debutante Furfrou, Matron Furfrou, Dandy Furfrou, La Reine Furfrou, Kabuki Furfrou, Pharaoh Furfrou",676-pharaoh
-Espurr,677,62,48,54,63,60,68,355,Psychic,,"Keen Eye, Infiltrator, Own Tempo",Prankster,"Espurr, Male Meowstic, Female Meowstic",677
-Male Meowstic,678,74,48,76,83,81,104,466,Psychic,,"Keen Eye, Infiltrator, Prankster",Fur Coat,"Espurr, Male Meowstic, Female Meowstic",678
-Female Meowstic,678,74,48,76,83,81,104,466,Psychic,,"Keen Eye, Infiltrator, Competitive",Neuroforce,"Espurr, Male Meowstic, Female Meowstic",678-female
+Espurr,677,62,48,54,63,60,68,355,Psychic,,"Keen Eye, Infiltrator, Own Tempo",Fluffy,"Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",677
+Male Meowstic,678,74,48,76,83,81,104,466,Psychic,,"Keen Eye, Infiltrator, Prankster",Fur Coat,"Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",678
+Female Meowstic,678,74,48,76,83,81,104,466,Psychic,,"Keen Eye, Infiltrator, Competitive",Neuroforce,"Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",678-female
+Mega Meowstic,678,74,48,76,143,101,124,566,Psychic,,Trace,Psychic Surge,"Espurr, Male Meowstic, Female Meowstic, Mega Meowstic",678-mega
 Honedge,679,45,80,100,35,37,28,325,Steel,Ghost,No Guard,Sharpness,"Honedge, Doublade, Shield Aegislash, Blade Aegislash",679
 Doublade,680,59,110,150,45,49,35,448,Steel,Ghost,No Guard,Sharpness,"Honedge, Doublade, Shield Aegislash, Blade Aegislash",680
-Shield Aegislash,681,60,50,140,50,140,60,500,Steel,Ghost,Stance Change,Sharpness,"Honedge, Doublade, Shield Aegislash, Blade Aegislash",681
+Shield Aegislash,681,60,50,140,50,140,60,500,Steel,Ghost,Stance Change,Battle Armor,"Honedge, Doublade, Shield Aegislash, Blade Aegislash",681
 Blade Aegislash,681,60,140,50,140,50,60,500,Steel,Ghost,Stance Change,Sharpness,"Honedge, Doublade, Shield Aegislash, Blade Aegislash",681-blade
 Spritzee,682,78,52,60,63,65,23,341,Fairy,,"Healer, Aroma Veil",Fur Coat,"Spritzee, Aromatisse",682
 Aromatisse,683,101,72,72,99,89,29,462,Fairy,,"Healer, Aroma Veil",Fur Coat,"Spritzee, Aromatisse",683
 Swirlix,684,62,48,66,59,57,49,341,Fairy,,"Sweet Veil, Unburden",Ripen,"Swirlix, Slurpuff",684
 Slurpuff,685,82,80,86,85,75,72,480,Fairy,,"Sweet Veil, Unburden",Ripen,"Swirlix, Slurpuff",685
-Inkay,686,53,54,53,37,46,45,288,Dark,Psychic,"Contrary, Suction Cups, Infiltrator",Shadow Shield,"Inkay, Malamar",686
-Malamar,687,86,92,88,68,75,73,482,Dark,Psychic,"Contrary, Suction Cups, Infiltrator",Shadow Shield,"Inkay, Malamar",687
-Binacle,688,42,52,67,39,56,50,306,Rock,Water,"Tough Claws, Sniper, Pickpocket",Sap Sipper,"Binacle, Barbaracle",688
-Barbaracle,689,72,105,115,54,86,68,500,Rock,Water,"Tough Claws, Sniper, Pickpocket",Sap Sipper,"Binacle, Barbaracle",689
-Skrelp,690,50,60,60,60,60,30,320,Poison,Water,"Poison Point, Poison Touch, Adaptability",Water Bubble,"Skrelp, Dragalge",690
-Dragalge,691,65,75,90,97,123,44,494,Poison,Dragon,"Poison Point, Poison Touch, Adaptability",Regenerator,"Skrelp, Dragalge",691
-Clauncher,692,50,53,62,58,63,44,330,Water,,Mega Launcher,Protean,"Clauncher, Clawitzer",692
-Clawitzer,693,71,73,88,120,89,59,500,Water,,Mega Launcher,Protean,"Clauncher, Clawitzer",693
-Helioptile,694,44,38,33,61,43,70,289,Electric,Normal,"Dry Skin, Sand Veil, Solar Power",Protean,"Helioptile, Heliolisk",694
-Heliolisk,695,62,55,52,109,94,109,481,Electric,Normal,"Dry Skin, Sand Veil, Solar Power",Protean,"Helioptile, Heliolisk",695
-Tyrunt,696,58,89,77,45,45,48,362,Rock,Dragon,"Strong Jaw, Sturdy",Sheer Force,"Tyrunt, Tyrantrum",696
-Tyrantrum,697,82,121,119,69,59,71,521,Rock,Dragon,"Strong Jaw, Rock Head",Sheer Force,"Tyrunt, Tyrantrum",697
+Inkay,686,53,54,53,37,46,45,288,Dark,Psychic,"Contrary, Suction Cups, Infiltrator",Gooey,"Inkay, Malamar, Mega Malamar",686
+Malamar,687,86,92,88,68,75,73,482,Dark,Psychic,"Contrary, Suction Cups, Infiltrator",Psychic Surge,"Inkay, Malamar, Mega Malamar",687
+Mega Malamar,687,86,102,88,98,120,88,582,Dark,Psychic,Contrary,Psychic Surge,"Inkay, Malamar, Mega Malamar",687-mega
+Binacle,688,42,52,67,39,56,50,306,Rock,Water,"Tough Claws, Sniper, Pickpocket",Sap Sipper,"Binacle, Barbaracle, Mega Barbaracle",688
+Barbaracle,689,72,105,115,54,86,68,500,Rock,Water,"Tough Claws, Sniper, Pickpocket",Sap Sipper,"Binacle, Barbaracle, Mega Barbaracle",689
+Mega Barbaracle,689,72,140,130,64,106,88,600,Rock,Fighting,Tough Claws,No Guard,"Binacle, Barbaracle, Mega Barbaracle",689-mega
+Skrelp,690,50,60,60,60,60,30,320,Poison,Water,"Poison Point, Poison Touch, Adaptability",Water Bubble,"Skrelp, Dragalge, Mega Dragalge",690
+Dragalge,691,65,75,90,97,123,44,494,Poison,Dragon,"Poison Point, Poison Touch, Adaptability",Toxic Chain,"Skrelp, Dragalge, Mega Dragalge",691
+Mega Dragalge,691,65,85,105,132,163,44,594,Poison,Dragon,Regenerator,Adaptability,"Skrelp, Dragalge, Mega Dragalge",691-mega
+Clauncher,692,50,53,62,58,63,44,330,Water,,Mega Launcher,Quick Draw,"Clauncher, Clawitzer",692
+Clawitzer,693,71,73,88,120,89,59,500,Water,,Mega Launcher,Dragon’s Maw,"Clauncher, Clawitzer",693
+Helioptile,694,44,38,33,61,43,70,289,Electric,Normal,"Dry Skin, Sand Veil, Solar Power",Flare Boost,"Helioptile, Heliolisk",694
+Heliolisk,695,62,55,52,109,94,109,481,Electric,Normal,"Dry Skin, Sand Veil, Solar Power",Flare Boost,"Helioptile, Heliolisk",695
+Tyrunt,696,58,89,77,45,45,48,362,Rock,Dragon,"Strong Jaw, Sturdy",Dragonize,"Tyrunt, Tyrantrum",696
+Tyrantrum,697,82,121,119,69,59,71,521,Rock,Dragon,"Strong Jaw, Rock Head",Dragonize,"Tyrunt, Tyrantrum",697
 Amaura,698,77,59,50,67,63,46,362,Rock,Ice,"Refrigerate, Snow Warning",Ice Scales,"Amaura, Aurorus",698
 Aurorus,699,123,77,72,99,92,58,521,Rock,Ice,"Refrigerate, Snow Warning",Ice Scales,"Amaura, Aurorus",699
 Sylveon,700,95,65,65,110,130,60,525,Fairy,,"Cute Charm, Pixilate",Competitive,"Eevee, Partner Eevee, Gigantamax Eevee, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Sylveon",700
-Hawlucha,701,78,92,75,74,63,118,500,Fighting,Flying,"Limber, Unburden, Mold Breaker",Moxie,Hawlucha,701
+Hawlucha,701,78,92,75,74,63,118,500,Fighting,Flying,"Limber, Unburden, Mold Breaker",Stamina,"Hawlucha, Mega Hawlucha",701
+Mega Hawlucha,701,78,137,100,74,93,118,600,Fighting,Flying,No Guard,Stamina,"Hawlucha, Mega Hawlucha",701-mega
 Dedenne,702,67,58,57,81,67,101,431,Electric,Fairy,"Cheek Pouch, Pickup, Plus",Pixilate,Dedenne,702
 Carbink,703,50,50,150,50,150,50,500,Rock,Fairy,"Clear Body, Sturdy",Solid Rock,Carbink,703
 Goomy,704,45,50,35,55,75,40,300,Dragon,,"Sap Sipper, Hydration, Gooey",Regenerator,"Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",704
@@ -964,11 +992,12 @@ Noivern,715,85,70,80,97,80,123,535,Flying,Dragon,"Frisk, Infiltrator, Telepathy"
 Neutral Xerneas,716,126,131,95,131,98,99,680,Fairy,,Fairy Aura,Harvest,"Neutral Xerneas, Active Xerneas",716-neutral
 Active Xerneas,716,126,131,95,131,98,99,680,Fairy,,Fairy Aura,Harvest,"Neutral Xerneas, Active Xerneas",716-active
 Yveltal,717,126,131,95,131,98,99,680,Dark,Flying,Dark Aura,Soul-Heart,Yveltal,717
-50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718
-10% Zygarde,718,54,100,71,61,85,115,486,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718-10
-Power Construct 50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718
-Power Construct 10% Zygarde,718,54,100,71,61,85,115,486,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718-10
-Complete Zygarde,718,216,100,121,91,95,85,708,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde",718-complete
+50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718
+10% Zygarde,718,54,100,71,61,85,115,486,Dragon,Ground,Aura Break,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718-10
+Power Construct 50% Zygarde,718,108,100,121,81,95,95,600,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718
+Power Construct 10% Zygarde,718,54,100,71,61,85,115,486,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718-10
+Complete Zygarde,718,216,100,121,91,95,85,708,Dragon,Ground,Power Construct,Teraform Zero,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718-complete
+Mega Zygarde,718,216,70,91,216,85,100,778,Dragon,Ground,Aura Break,Mold Breaker,"50% Zygarde, 10% Zygarde, Power Construct 50% Zygarde, Power Construct 10% Zygarde, Complete Zygarde, Mega Zygarde",718-mega
 Diancie,719,50,100,150,100,150,50,600,Rock,Fairy,Clear Body,Solid Rock,"Diancie, Mega Diancie",719
 Mega Diancie,719,50,160,110,160,110,110,700,Rock,Fairy,Magic Bounce,Prism Armor,"Diancie, Mega Diancie",719-mega
 Hoopa,720,80,110,60,150,130,70,600,Psychic,Ghost,Magician,Opportunist,"Hoopa, Unbound Hoopa",720
@@ -976,7 +1005,7 @@ Unbound Hoopa,720,80,160,60,170,130,80,680,Psychic,Dark,Magician,Opportunist,"Ho
 Volcanion,721,80,110,120,130,90,70,600,Fire,Water,Water Absorb,Neutralizing Gas,Volcanion,721
 Rowlet,722,68,55,55,50,50,42,320,Grass,Flying,"Overgrow, Long Reach",Wind Rider,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",722
 Dartrix,723,78,75,75,70,70,52,420,Grass,Flying,"Overgrow, Long Reach",Wind Rider,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",723
-Decidueye,724,78,107,75,100,100,70,530,Grass,Ghost,"Overgrow, Long Reach",Sniper,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",724
+Decidueye,724,78,107,75,100,100,70,530,Grass,Ghost,"Overgrow, Long Reach",Tinted Lens,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",724
 Litten,725,45,65,40,60,40,70,320,Fire,,"Blaze, Intimidate",Tough Claws,"Litten, Torracat, Incineroar",725
 Torracat,726,65,85,50,80,50,90,420,Fire,,"Blaze, Intimidate",Tough Claws,"Litten, Torracat, Incineroar",726
 Incineroar,727,95,115,90,80,90,60,530,Fire,Dark,"Blaze, Intimidate",Tough Claws,"Litten, Torracat, Incineroar",727
@@ -991,8 +1020,9 @@ Gumshoos,735,88,110,60,55,60,45,418,Normal,,"Stakeout, Strong Jaw, Adaptability"
 Grubbin,736,47,62,45,55,45,46,300,Bug,,Swarm,Shield Dust,"Grubbin, Charjabug, Vikavolt",736
 Charjabug,737,57,82,95,55,75,36,400,Bug,Electric,Battery,Power Spot,"Grubbin, Charjabug, Vikavolt",737
 Vikavolt,738,77,70,90,145,75,43,500,Bug,Electric,Levitate,Speed Boost,"Grubbin, Charjabug, Vikavolt",738
-Crabrawler,739,47,82,57,42,47,63,338,Fighting,,"Hyper Cutter, Iron Fist, Anger Point",Water Bubble,"Crabrawler, Crabominable",739
-Crabominable,740,97,132,77,62,67,43,478,Fighting,Ice,"Hyper Cutter, Iron Fist, Anger Point",Water Bubble,"Crabrawler, Crabominable",740
+Crabrawler,739,47,82,57,42,47,63,338,Fighting,,"Hyper Cutter, Iron Fist, Anger Point",Opportunist,"Crabrawler, Crabominable, Mega Crabominable",739
+Crabominable,740,97,132,77,62,67,43,478,Fighting,Ice,"Hyper Cutter, Iron Fist, Anger Point",Tough Claws,"Crabrawler, Crabominable, Mega Crabominable",740
+Mega Crabominable,740,97,157,122,62,107,33,578,Fighting,Ice,Iron Fist,Tough Claws,"Crabrawler, Crabominable, Mega Crabominable",740-mega
 Baile Oricorio,741,75,70,70,98,70,93,476,Fire,Flying,Dancer,Adaptability,"Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",741
 Pom-Pom Oricorio,741,75,70,70,98,70,93,476,Electric,Flying,Dancer,Adaptability,"Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",741-pompom
 Pau Oricorio,741,75,70,70,98,70,93,476,Psychic,Flying,Dancer,Adaptability,"Baile Oricorio, Pom-Pom Oricorio, Pau Oricorio, Sensu Oricorio",741-pau
@@ -1003,7 +1033,7 @@ Rockruff,744,45,65,40,30,40,60,280,Rock,,"Keen Eye, Vital Spirit, Steadfast",Pic
 Own Tempo Rockruff,744,45,65,40,30,40,60,280,Rock,,Own Tempo,Pickup,"Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",744
 Midday Lycanroc,745,75,115,65,55,65,112,487,Rock,,"Keen Eye, Sand Rush, Steadfast",Sturdy,"Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",745
 Midnight Lycanroc,745,85,115,75,55,75,82,487,Rock,,"Keen Eye, Vital Spirit, No Guard",Intimidate,"Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",745-midnight
-Dusk Lycanroc,745,75,117,65,55,65,110,487,Rock,,Tough Claws,Stakeout,"Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",745-dusk
+Dusk Lycanroc,745,75,117,65,55,65,110,487,Rock,,Tough Claws,Defiant,"Rockruff, Own Tempo Rockruff, Midday Lycanroc, Midnight Lycanroc, Dusk Lycanroc",745-dusk
 Wishiwashi,746,45,20,20,25,25,40,175,Water,,Schooling,Regenerator,"Wishiwashi, School Wishiwashi",746
 School Wishiwashi,746,45,140,130,140,135,30,620,Water,,Schooling,Regenerator,"Wishiwashi, School Wishiwashi",746-school
 Mareanie,747,50,53,62,43,52,45,305,Poison,Water,"Merciless, Limber, Regenerator",Toxic Debris,"Mareanie, Toxapex",747
@@ -1026,8 +1056,9 @@ Tsareena,763,72,120,98,50,98,72,510,Grass,,"Leaf Guard, Queenly Majesty, Sweet V
 Comfey,764,51,52,90,82,110,100,485,Fairy,,"Flower Veil, Triage, Natural Cure",Friend Guard,Comfey,764
 Oranguru,765,90,60,80,90,110,60,490,Normal,Psychic,"Inner Focus, Telepathy, Symbiosis",Power Spot,Oranguru,765
 Passimian,766,100,120,90,40,60,80,490,Fighting,,"Receiver, Defiant",Libero,Passimian,766
-Wimpod,767,25,35,40,20,30,80,230,Bug,Water,"Wimp Out, Run Away",Regenerator,"Wimpod, Golisopod",767
-Golisopod,768,75,125,140,60,90,40,530,Bug,Water,"Emergency Exit, Anticipation",Regenerator,"Wimpod, Golisopod",768
+Wimpod,767,25,35,40,20,30,80,230,Bug,Water,"Wimp Out, Run Away",Regenerator,"Wimpod, Golisopod, Mega Golisopod",767
+Golisopod,768,75,125,140,60,90,40,530,Bug,Water,"Emergency Exit, Anticipation",Regenerator,"Wimpod, Golisopod, Mega Golisopod",768
+Mega Golisopod,768,75,150,175,70,120,40,630,Bug,Steel,Shell Armor,Regenerator,"Wimpod, Golisopod, Mega Golisopod",768-mega
 Sandygast,769,55,55,80,70,45,15,320,Ghost,Ground,"Water Compaction, Sand Veil",Sand Spit,"Sandygast, Palossand",769
 Palossand,770,85,75,110,100,75,35,480,Ghost,Ground,"Water Compaction, Sand Veil",Sand Spit,"Sandygast, Palossand",770
 Pyukumuku,771,55,60,130,30,130,5,410,Water,,"Innards Out, Unaware",Purifying Salt,Pyukumuku,771
@@ -1070,7 +1101,8 @@ Togedemaru,777,65,98,63,40,73,96,435,Electric,Steel,"Iron Barbs, Lightning Rod, 
 Disguised Mimikyu,778,55,90,80,50,105,96,476,Ghost,Fairy,Disguise,Tough Claws,"Disguised Mimikyu, Busted Mimikyu",778-disguised
 Busted Mimikyu,778,55,90,80,50,105,96,476,Ghost,Fairy,Disguise,Tough Claws,"Disguised Mimikyu, Busted Mimikyu",778-busted
 Bruxish,779,68,105,70,70,70,92,475,Water,Psychic,"Dazzling, Strong Jaw, Wonder Skin",Multiscale,Bruxish,779
-Drampa,780,78,60,85,135,91,36,485,Normal,Dragon,"Berserk, Sap Sipper, Cloud Nine",Thick Fat,Drampa,780
+Drampa,780,78,60,85,135,91,36,485,Normal,Dragon,"Berserk, Sap Sipper, Cloud Nine",Fluffy,"Drampa, Mega Drampa",780
+Mega Drampa,780,78,85,110,160,116,36,585,Normal,Dragon,Berserk,Adaptability,"Drampa, Mega Drampa",780-mega
 Dhelmise,781,70,131,100,86,90,40,517,Ghost,Grass,Steelworker,Water Bubble,Dhelmise,781
 Jangmo-o,782,45,55,65,45,45,45,300,Dragon,,"Bulletproof, Soundproof, Overcoat",Dauntless Shield,"Jangmo-o, Hakamo-o, Kommo-o",782
 Hakamo-o,783,55,75,90,65,70,65,420,Dragon,Fighting,"Bulletproof, Soundproof, Overcoat",Dauntless Shield,"Jangmo-o, Hakamo-o, Kommo-o",783
@@ -1084,7 +1116,7 @@ Cosmoem,790,43,29,131,29,131,37,400,Psychic,,Sturdy,Power Spot,"Cosmog, Cosmoem,
 Solgaleo,791,137,137,107,113,89,97,680,Psychic,Steel,Full Metal Body,Beast Boost,"Cosmog, Cosmoem, Solgaleo, Lunala",791
 Lunala,792,137,113,89,137,107,97,680,Psychic,Ghost,Shadow Shield,Beast Boost,"Cosmog, Cosmoem, Solgaleo, Lunala",792
 Nihilego,793,109,53,47,127,131,103,570,Rock,Poison,Beast Boost,Levitate,Nihilego,793
-Buzzwole,794,107,139,139,53,53,79,570,Bug,Fighting,Beast Boost,Moxie,Buzzwole,794
+Buzzwole,794,107,139,139,53,53,79,570,Bug,Fighting,Beast Boost,Iron Fist,Buzzwole,794
 Pheromosa,795,71,137,37,137,37,151,570,Bug,Fighting,Beast Boost,Tinted Lens,Pheromosa,795
 Xurkitree,796,83,89,71,173,71,83,570,Electric,,Beast Boost,Transistor,Xurkitree,796
 Celesteela,797,97,101,103,107,101,61,570,Steel,Flying,Beast Boost,Heatproof,Celesteela,797
@@ -1093,15 +1125,18 @@ Guzzlord,799,223,101,53,97,53,43,570,Dark,Dragon,Beast Boost,Poison Heal,Guzzlor
 Necrozma,800,97,107,101,127,89,79,600,Psychic,,Prism Armor,Beast Boost,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800
 Dusk Mane Necrozma,800,97,157,127,113,109,77,680,Psychic,Steel,Prism Armor,Full Metal Body,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-dusk-mane
 Dawn Wings Necrozma,800,97,113,109,157,127,77,680,Psychic,Ghost,Prism Armor,Shadow Shield,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-dawn-wings
-Ultra Necrozma,800,97,167,97,167,97,129,754,Psychic,Dragon,Neuroforce,Unnerve,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-ultra
-Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna",801
-Original Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna",801-original
+Ultra Necrozma,800,97,167,97,167,97,129,754,Psychic,Dragon,Neuroforce,Dazzling,"Necrozma, Dusk Mane Necrozma, Dawn Wings Necrozma, Ultra Necrozma",800-ultra
+Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",801
+Original Magearna,801,80,95,115,130,115,65,600,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",801-original
+Mega Magearna,801,80,125,115,170,115,95,700,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",801-mega
+Mega Original Magearna,801,80,125,115,170,115,95,700,Steel,Fairy,Soul-Heart,Mirror Armor,"Magearna, Original Magearna, Mega Magearna, Mega Original Magearna",801-mega-original
 Marshadow,802,90,125,80,90,90,125,600,Fighting,Ghost,Technician,Iron Fist,Marshadow,802
 Poipole,803,67,73,67,73,67,73,420,Poison,,Beast Boost,Levitate,"Poipole, Naganadel",803
 Naganadel,804,73,73,73,127,73,121,540,Poison,Dragon,Beast Boost,Levitate,"Poipole, Naganadel",804
 Stakataka,805,61,131,211,53,101,13,570,Rock,Steel,Beast Boost,Solid Rock,Stakataka,805
 Blacephalon,806,53,127,53,151,79,107,570,Fire,Ghost,Beast Boost,Magic Guard,Blacephalon,806
-Zeraora,807,88,112,75,102,80,143,600,Electric,,Volt Absorb,Tough Claws,Zeraora,807
+Zeraora,807,88,112,75,102,80,143,600,Electric,,Volt Absorb,Iron Fist,"Zeraora, Mega Zeraora",807
+Mega Zeraora,807,88,157,75,147,80,153,700,Electric,,Volt Absorb,Iron Fist,"Zeraora, Mega Zeraora",807-mega
 Meltan,808,46,65,65,55,35,34,300,Steel,,Magnet Pull,Heatproof,"Meltan, Melmetal, Gigantamax Melmetal",808
 Melmetal,809,135,143,143,80,65,34,600,Steel,,Iron Fist,Heatproof,"Meltan, Melmetal, Gigantamax Melmetal",809
 Gigantamax Melmetal,809,161,169,154,106,76,34,700,Steel,,Iron Fist,Full Metal Body,"Meltan, Melmetal, Gigantamax Melmetal",809-gigantamax
@@ -1164,10 +1199,10 @@ Centiskorch,851,100,115,65,90,90,65,525,Fire,Bug,"Flash Fire, White Smoke, Flame
 Gigantamax Centiskorch,851,130,125,75,94,100,101,625,Fire,Bug,Flash Fire,Hustle,"Sizzlipede, Centiskorch, Gigantamax Centiskorch",851-gigantamax
 Clobbopus,852,50,68,60,50,50,32,310,Fighting,,"Limber, Technician",Water Bubble,"Clobbopus, Grapploct",852
 Grapploct,853,80,118,90,70,80,42,480,Fighting,,"Limber, Technician",Water Bubble,"Clobbopus, Grapploct",853
-Phony Sinistea,854,40,45,45,74,54,50,308,Ghost,,"Weak Armor, Cursed Body",Shadow Shield,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",854
-Antique Sinistea,854,40,45,45,74,54,50,308,Ghost,,"Weak Armor, Cursed Body",Shadow Shield,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",854
-Phony Polteageist,855,60,65,65,134,114,70,508,Ghost,,"Weak Armor, Cursed Body",Shadow Shield,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",855
-Antique Polteageist,855,60,65,65,134,114,70,508,Ghost,,"Weak Armor, Cursed Body",Shadow Shield,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",855
+Phony Sinistea,854,40,45,45,74,54,50,308,Ghost,,"Weak Armor, Cursed Body",Water Absorb,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",854
+Antique Sinistea,854,40,45,45,74,54,50,308,Ghost,,"Weak Armor, Cursed Body",Sturdy,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",854
+Phony Polteageist,855,60,65,65,134,114,70,508,Ghost,,"Weak Armor, Cursed Body",Water Absorb,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",855
+Antique Polteageist,855,60,65,65,134,114,70,508,Ghost,,"Weak Armor, Cursed Body",Sturdy,"Phony Sinistea, Antique Sinistea, Phony Polteageist, Antique Polteageist",855
 Hatenna,856,42,30,45,56,53,39,265,Psychic,,"Healer, Anticipation, Magic Bounce",Fairy Aura,"Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",856
 Hattrem,857,57,40,65,86,73,49,370,Psychic,,"Healer, Anticipation, Magic Bounce",Fairy Aura,"Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",857
 Hatterene,858,57,90,95,136,103,29,510,Psychic,Fairy,"Healer, Anticipation, Magic Bounce",Fairy Aura,"Hatenna, Hattrem, Hatterene, Gigantamax Hatterene",858
@@ -1193,7 +1228,8 @@ Ruby Swirl Alcremie,869,65,60,75,110,121,64,495,Fairy,,"Sweet Veil, Aroma Veil",
 Caramel Swirl Alcremie,869,65,60,75,110,121,64,495,Fairy,,"Sweet Veil, Aroma Veil",Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",869-caramel-swirl
 Rainbow Swirl Alcremie,869,65,60,75,110,121,64,495,Fairy,,"Sweet Veil, Aroma Veil",Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",869-rainbow-swirl
 Gigantamax Alcremie,869,105,70,85,130,141,64,595,Fairy,,Misty Surge,Regenerator,"Milcery, Vanilla Cream Alcremie, Ruby Cream Alcremie, Matcha Cream Alcremie, Mint Cream Alcremie, Lemon Cream Alcremie, Salted Cream Alcremie, Ruby Swirl Alcremie, Caramel Swirl Alcremie, Rainbow Swirl Alcremie, Gigantamax Alcremie",869-gigantamax
-Falinks,870,65,100,100,70,60,75,470,Fighting,,"Battle Armor, Defiant",Dauntless Shield,Falinks,870
+Falinks,870,65,100,100,70,60,75,470,Fighting,,"Battle Armor, Defiant",Dauntless Shield,"Falinks, Mega Falinks",870
+Mega Falinks,870,65,135,135,70,65,100,570,Fighting,,Defiant,Dauntless Shield,"Falinks, Mega Falinks",870-mega
 Pincurchin,871,48,101,95,91,85,15,435,Electric,,"Lightning Rod, Electric Surge",Electromorphosis,Pincurchin,871
 Snom,872,30,25,35,45,30,20,185,Ice,Bug,"Shield Dust, Ice Scales",Snow Warning,"Snom, Frosmoth",872
 Frosmoth,873,70,65,60,125,90,65,475,Ice,Bug,"Shield Dust, Ice Scales",Snow Warning,"Snom, Frosmoth",873
@@ -1239,8 +1275,8 @@ Shadow Calyrex,898,100,85,80,165,100,150,680,Psychic,Ghost,As One Spectrier,Dazz
 Wyrdeer,899,103,105,72,105,75,65,525,Normal,Psychic,"Intimidate, Frisk, Sap Sipper",Speed Boost,"Stantler, Wyrdeer",899
 Kleavor,900,70,135,95,45,70,85,500,Bug,Rock,"Swarm, Sheer Force, Sharpness",Weak Armor,"Scyther, Scizor, Mega Scizor, Kleavor",900
 Ursaluna,901,130,140,105,45,80,50,550,Ground,Normal,"Guts, Bulletproof, Unnerve",Thick Fat,"Teddiursa, Ursaring, Ursaluna",901
-Male Basculegion,902,120,112,65,80,75,78,530,Water,Ghost,"Swift Swim, Adaptability, Mold Breaker",Supreme Overlord,"Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",902
-Female Basculegion,902,120,92,65,100,75,78,530,Water,Ghost,"Swift Swim, Adaptability, Mold Breaker",Supreme Overlord,"Red-Striped Basculin, Blue-Striped Basculin, White-Striped Basculin, Male Basculegion, Female Basculegion",902-female
+Male Basculegion,902,120,112,65,80,75,78,530,Water,Ghost,"Swift Swim, Adaptability, Mold Breaker",Supreme Overlord,"Male Basculegion, Female Basculegion, Hisui Basculin",902
+Female Basculegion,902,120,92,65,100,75,78,530,Water,Ghost,"Swift Swim, Adaptability, Mold Breaker",Supreme Overlord,"Male Basculegion, Female Basculegion, Hisui Basculin",902-female
 Sneasler,903,80,130,60,40,80,120,510,Fighting,Poison,"Pressure, Unburden, Poison Touch",Scrappy,"Sneasler, Hisui Sneasel",903
 Overqwil,904,85,115,95,65,65,85,510,Dark,Poison,"Poison Point, Swift Swim, Intimidate",Merciless,"Overqwil, Hisui Qwilfish",904
 Incarnate Enamorus,905,74,115,70,135,80,106,580,Fairy,Flying,"Cute Charm, Contrary",Fairy Aura,"Incarnate Enamorus, Therian Enamorus",905-incarnate
@@ -1248,7 +1284,7 @@ Therian Enamorus,905,74,115,110,135,100,46,580,Fairy,Flying,Overcoat,Fairy Aura,
 Sprigatito,906,40,61,54,45,45,65,310,Grass,,"Overgrow, Protean",Pickup,"Sprigatito, Floragato, Meowscarada",906
 Floragato,907,61,80,63,60,63,83,410,Grass,,"Overgrow, Protean",Magician,"Sprigatito, Floragato, Meowscarada",907
 Meowscarada,908,76,110,70,81,70,123,530,Grass,Dark,"Overgrow, Protean",Magician,"Sprigatito, Floragato, Meowscarada",908
-Fuecoco,909,67,45,59,63,40,36,310,Fire,,"Blaze, Unaware",Gluttony,"Fuecoco, Crocalor, Skeledirge",909
+Fuecoco,909,67,45,59,63,40,36,310,Fire,,"Blaze, Unaware",Flame Body,"Fuecoco, Crocalor, Skeledirge",909
 Crocalor,910,81,55,78,90,58,49,411,Fire,,"Blaze, Unaware",Punk Rock,"Fuecoco, Crocalor, Skeledirge",910
 Skeledirge,911,104,75,100,110,75,66,530,Fire,Ghost,"Blaze, Unaware",Punk Rock,"Fuecoco, Crocalor, Skeledirge",911
 Quaxly,912,55,65,45,50,45,50,310,Water,,"Torrent, Moxie",Opportunist,"Quaxly, Quaxwell, Quaquaval",912
@@ -1295,8 +1331,9 @@ Brambleghast,947,55,115,70,80,70,90,480,Grass,Ghost,"Wind Rider, Infiltrator",Sh
 Toedscool,948,40,40,35,50,100,70,335,Ground,Grass,Mycelium Might,Run Away,"Toedscool, Toedscruel",948
 Toedscruel,949,80,70,65,80,120,100,515,Ground,Grass,Mycelium Might,Prankster,"Toedscool, Toedscruel",949
 Klawf,950,70,100,115,35,55,75,450,Rock,,"Anger Shell, Shell Armor, Regenerator",Water Absorb,Klawf,950
-Capsakid,951,50,62,40,62,40,50,304,Grass,,"Chlorophyll, Insomnia, Klutz",Flower Gift,"Capsakid, Scovillain",951
-Scovillain,952,65,108,65,108,65,75,486,Grass,Fire,"Chlorophyll, Insomnia, Moody",Parental Bond,"Capsakid, Scovillain",952
+Capsakid,951,50,62,40,62,40,50,304,Grass,,"Chlorophyll, Insomnia, Klutz",Flash Fire,"Capsakid, Scovillain, Mega Scovillain",951
+Scovillain,952,65,108,65,108,65,75,486,Grass,Fire,"Chlorophyll, Insomnia, Moody",Parental Bond,"Capsakid, Scovillain, Mega Scovillain",952
+Mega Scovillain,952,65,138,85,138,85,75,586,Grass,Fire,Spicy Spray,Parental Bond,"Capsakid, Scovillain, Mega Scovillain",952-mega
 Rellor,953,41,50,60,31,58,30,270,Bug,,"Compound Eyes, Shed Skin",Prankster,"Rellor, Rabsca",953
 Rabsca,954,75,50,85,115,100,45,470,Bug,Psychic,"Synchronize, Telepathy",Prankster,"Rellor, Rabsca",954
 Flittle,955,30,35,30,55,30,75,255,Psychic,,"Anticipation, Frisk, Speed Boost",Dazzling,"Flittle, Espathra",955
@@ -1319,8 +1356,9 @@ Ruchbah Starmobile Revavroom,966,80,129,120,69,97,85,580,Steel,Fairy,Overcoat,Mi
 Caph Starmobile Revavroom,966,80,129,120,69,97,85,580,Steel,Fighting,Overcoat,Stamina,"Varoom, Revavroom, Segin Starmobile Revavroom, Schedar Starmobile Revavroom, Navi Starmobile Revavroom, Ruchbah Starmobile Revavroom, Caph Starmobile Revavroom",966-caph-starmobile
 Cyclizar,967,70,95,65,85,65,121,501,Dragon,Normal,"Shed Skin, Regenerator",Protean,Cyclizar,967
 Orthworm,968,70,85,145,60,55,65,480,Steel,,"Earth Eater, Sand Veil",Regenerator,Orthworm,968
-Glimmet,969,48,35,42,105,60,60,350,Rock,Poison,"Toxic Debris, Corrosion",Sturdy,"Glimmet, Glimmora",969
-Glimmora,970,83,55,90,130,81,86,525,Rock,Poison,"Toxic Debris, Corrosion",Tera Shell,"Glimmet, Glimmora",970
+Glimmet,969,48,35,42,105,60,60,350,Rock,Poison,"Toxic Debris, Corrosion",Sturdy,"Glimmet, Glimmora, Mega Glimmora",969
+Glimmora,970,83,55,90,130,81,86,525,Rock,Poison,"Toxic Debris, Corrosion",Tera Shell,"Glimmet, Glimmora, Mega Glimmora",970
+Mega Glimmora,970,83,90,105,150,96,101,625,Rock,Poison,Adaptability,Tera Shell,"Glimmet, Glimmora, Mega Glimmora",970-mega
 Greavard,971,50,61,60,30,55,34,290,Ghost,,"Pickup, Fluffy",Unaware,"Greavard, Houndstone",971
 Houndstone,972,72,101,100,50,97,68,488,Ghost,,"Sand Rush, Fluffy",Unaware,"Greavard, Houndstone",972
 Flamigo,973,82,115,74,75,64,90,500,Flying,Fighting,"Scrappy, Tangled Feet, Costar",Moxie,Flamigo,973
@@ -1328,9 +1366,12 @@ Cetoddle,974,108,68,45,30,40,43,334,Ice,,"Thick Fat, Snow Cloak, Sheer Force",Re
 Cetitan,975,170,113,65,45,55,73,521,Ice,,"Thick Fat, Slush Rush, Sheer Force",Refrigerate,"Cetoddle, Cetitan",975
 Veluza,976,90,102,73,78,65,70,478,Water,Psychic,"Mold Breaker, Sharpness",Super Luck,Veluza,976
 Dondozo,977,150,100,115,65,65,35,530,Water,,"Unaware, Oblivious, Water Veil",Dragon’s Maw,Dondozo,977
-Curly Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-curly
-Droopy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-droopy
-Stretchy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Fluffy,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri",978-stretchy
+Curly Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Friend Guard,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-curly
+Droopy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Friend Guard,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-droopy
+Stretchy Tatsugiri,978,68,50,60,120,95,82,475,Dragon,Water,"Commander, Storm Drain",Friend Guard,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-stretchy
+Mega Curly Tatsugiri,978,68,65,90,135,125,92,575,Dragon,Water,Storm Drain,Parental Bond,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-mega-curly
+Mega Droopy Tatsugiri,978,68,65,90,135,125,92,575,Dragon,Water,Storm Drain,Parental Bond,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-mega-droopy
+Mega Stretchy Tatsugiri,978,68,65,90,135,125,92,575,Dragon,Water,Storm Drain,Parental Bond,"Curly Tatsugiri, Droopy Tatsugiri, Stretchy Tatsugiri, Mega Curly Tatsugiri, Mega Droopy Tatsugiri, Mega Stretchy Tatsugiri",978-mega-stretchy
 Annihilape,979,110,115,80,50,90,90,535,Fighting,Ghost,"Vital Spirit, Inner Focus, Defiant",Iron Fist,"Mankey, Primeape, Annihilape",979
 Clodsire,980,130,75,60,45,100,20,430,Poison,Ground,"Poison Point, Water Absorb, Unaware",Thick Fat,"Clodsire, Paldea Wooper",980
 Farigiraf,981,120,90,70,110,70,60,520,Normal,Psychic,"Cud Chew, Armor Tail, Sap Sipper",Parental Bond,"Girafarig, Farigiraf",981
@@ -1349,9 +1390,10 @@ Iron Hands,992,154,140,108,50,68,50,570,Fighting,Electric,Quark Drive,Iron Fist,
 Iron Jugulis,993,94,80,86,122,80,108,570,Dark,Flying,Quark Drive,Lightning Rod,Iron Jugulis,993
 Iron Moth,994,80,70,60,140,110,110,570,Fire,Poison,Quark Drive,Levitate,Iron Moth,994
 Iron Thorns,995,100,134,110,70,84,72,570,Rock,Electric,Quark Drive,Sand Stream,Iron Thorns,995
-Frigibax,996,65,75,45,35,45,55,320,Dragon,Ice,"Thermal Exchange, Ice Body",Intimidate,"Frigibax, Arctibax, Baxcalibur",996
-Arctibax,997,90,95,66,45,65,62,423,Dragon,Ice,"Thermal Exchange, Ice Body",Intimidate,"Frigibax, Arctibax, Baxcalibur",997
-Baxcalibur,998,115,145,92,75,86,87,600,Dragon,Ice,"Thermal Exchange, Ice Body",Intimidate,"Frigibax, Arctibax, Baxcalibur",998
+Frigibax,996,65,75,45,35,45,55,320,Dragon,Ice,"Thermal Exchange, Ice Body",Heatproof,"Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",996
+Arctibax,997,90,95,66,45,65,62,423,Dragon,Ice,"Thermal Exchange, Ice Body",Heatproof,"Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",997
+Baxcalibur,998,115,145,92,75,86,87,600,Dragon,Ice,"Thermal Exchange, Ice Body",Heatproof,"Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",998
+Mega Baxcalibur,998,115,175,117,105,101,87,700,Dragon,Ice,Thermal Exchange,Heatproof,"Frigibax, Arctibax, Baxcalibur, Mega Baxcalibur",998-mega
 Chest Gimmighoul,999,45,30,70,75,70,10,300,Ghost,,Rattled,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",999
 Roaming Gimmighoul,999,45,30,25,75,45,80,300,Ghost,,Run Away,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",999-roaming
 Gholdengo,1000,87,60,95,133,91,84,550,Steel,Ghost,Good as Gold,Honey Gather,"Chest Gimmighoul, Roaming Gimmighoul, Gholdengo",1000
@@ -1393,7 +1435,7 @@ Stellar Terapagos,1024,160,105,110,130,110,85,700,Normal,,Teraform Zero,Shield D
 Pecharunt,1025,88,88,160,88,88,88,600,Poison,Ghost,Poison Puppeteer,Toxic Chain,Pecharunt,1025
 Alola Rattata,2019,30,56,35,25,35,72,253,Dark,Normal,"Gluttony, Hustle, Thick Fat",Adaptability,"Alola Rattata, Alola Raticate",2019
 Alola Raticate,2020,75,71,70,40,80,77,413,Dark,Normal,"Gluttony, Hustle, Thick Fat",Adaptability,"Alola Rattata, Alola Raticate",2020
-Alola Raichu,2026,60,85,50,95,85,110,485,Electric,Psychic,Surge Surfer,Electric Surge,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",2026
+Alola Raichu,2026,60,85,50,95,85,110,485,Electric,Psychic,Surge Surfer,Transistor,"Pikachu, Partner Pikachu, Cosplay Pikachu, Cool Cosplay Pikachu, Beauty Cosplay Pikachu, Cute Cosplay Pikachu, Smart Cosplay Pikachu, Tough Cosplay Pikachu, Gigantamax Pikachu, Raichu, Mega X Raichu, Mega Y Raichu, Pichu, Spiky-Eared Pichu, Alola Raichu",2026
 Alola Sandshrew,2027,50,75,90,10,35,40,300,Ice,Steel,"Snow Cloak, Slush Rush",Ice Scales,"Alola Sandshrew, Alola Sandslash",2027
 Alola Sandslash,2028,75,100,120,25,65,65,450,Ice,Steel,"Snow Cloak, Slush Rush",Ice Scales,"Alola Sandshrew, Alola Sandslash",2028
 Alola Vulpix,2037,38,41,40,50,65,65,299,Ice,,"Snow Cloak, Snow Warning",Ice Body,"Alola Vulpix, Alola Ninetales",2037
@@ -1409,7 +1451,10 @@ Alola Grimer,2088,80,80,50,40,50,25,325,Poison,Dark,"Poison Touch, Gluttony, Pow
 Alola Muk,2089,105,105,75,65,100,50,500,Poison,Dark,"Poison Touch, Gluttony, Power of Alchemy",Toxic Debris,"Alola Grimer, Alola Muk",2089
 Alola Exeggutor,2103,95,105,85,125,75,45,530,Grass,Dragon,"Frisk, Harvest",Unburden,"Exeggcute, Exeggutor, Alola Exeggutor",2103
 Alola Marowak,2105,60,80,110,50,80,45,425,Fire,Ghost,"Cursed Body, Lightning Rod, Rock Head",Parental Bond,"Cubone, Marowak, Alola Marowak",2105
-Eternal Floette,2670,74,65,67,125,128,92,551,Fairy,,"Flower Veil, Symbiosis",Magic Guard,Eternal Floette,2670
+Battle Bond Greninja,2658,72,95,67,103,71,122,530,Water,Dark,Battle Bond,Stakeout,"Battle Bond Greninja, Ash Battle Bond Greninja",2658
+Ash Battle Bond Greninja,2658,72,145,67,153,71,132,640,Water,Dark,Battle Bond,Super Luck,"Battle Bond Greninja, Ash Battle Bond Greninja",2658-ash
+Eternal Floette,2670,74,65,67,125,128,92,551,Fairy,,"Flower Veil, Symbiosis",Magic Guard,"Eternal Floette, Mega Eternal Floette",2670
+Mega Eternal Floette,2670,74,85,87,155,148,102,651,Fairy,,Fairy Aura,Magic Guard,"Eternal Floette, Mega Eternal Floette",2670-mega
 Galar Meowth,4052,50,65,55,40,40,40,290,Steel,,"Pickup, Tough Claws, Unnerve",Unburden,"Perrserker, Galar Meowth",4052
 Galar Ponyta,4077,50,85,55,65,65,90,410,Psychic,,"Run Away, Pastel Veil, Anticipation",Chilling Neigh,"Galar Ponyta, Galar Rapidash",4077
 Galar Rapidash,4078,65,100,70,80,80,105,500,Psychic,Fairy,"Run Away, Pastel Veil, Anticipation",Chilling Neigh,"Galar Ponyta, Galar Rapidash",4078
@@ -1420,7 +1465,7 @@ Galar Weezing,4110,65,90,120,85,70,60,490,Poison,Fairy,"Levitate, Neutralizing G
 Galar Mr. Mime,4122,50,65,65,90,90,100,460,Ice,Psychic,"Vital Spirit, Screen Cleaner, Ice Body",Prankster,"Mr. Mime, Mime Jr., Mr. Rime, Galar Mr. Mime",4122
 Galar Articuno,4144,90,85,85,125,100,95,580,Psychic,Flying,Competitive,Serene Grace,Galar Articuno,4144
 Galar Zapdos,4145,90,125,90,85,90,100,580,Fighting,Flying,Defiant,Tough Claws,Galar Zapdos,4145
-Galar Moltres,4146,90,85,90,100,125,90,580,Dark,Flying,Berserk,Dark Aura,Galar Moltres,4146
+Galar Moltres,4146,90,85,90,100,125,90,580,Dark,Flying,Berserk,Shadow Shield,Galar Moltres,4146
 Galar Slowking,4199,95,65,80,110,110,30,490,Poison,Psychic,"Curious Medicine, Own Tempo, Regenerator",Intimidate,"Galar Slowpoke, Galar Slowbro, Galar Slowking",4199
 Galar Corsola,4222,60,55,100,65,100,30,410,Ghost,,"Weak Armor, Cursed Body",Shadow Shield,"Cursola, Galar Corsola",4222
 Galar Zigzagoon,4263,38,30,41,30,41,60,240,Dark,Normal,"Pickup, Gluttony, Quick Feet",Poison Heal,"Obstagoon, Galar Zigzagoon, Galar Linoone",4263
@@ -1439,13 +1484,14 @@ Hisui Qwilfish,6211,65,95,85,55,55,85,440,Dark,Poison,"Poison Point, Swift Swim,
 Hisui Sneasel,6215,55,95,55,35,75,115,430,Fighting,Poison,"Inner Focus, Keen Eye, Pickpocket",Scrappy,"Sneasler, Hisui Sneasel",6215
 Hisui Samurott,6503,90,108,80,100,65,85,528,Water,Dark,"Torrent, Sharpness",Mold Breaker,"Oshawott, Dewott, Samurott, Hisui Samurott",6503
 Hisui Lilligant,6549,70,105,75,50,75,105,480,Grass,Fighting,"Chlorophyll, Hustle, Leaf Guard",Flower Veil,"Petilil, Lilligant, Hisui Lilligant",6549
+Hisui Basculin,6550,70,92,65,80,55,98,460,Water,,"Rattled, Adaptability, Mold Breaker",Reckless,"Male Basculegion, Female Basculegion, Hisui Basculin",6550
 Hisui Zorua,6570,35,60,40,85,40,70,330,Normal,Ghost,Illusion,Shadow Shield,"Hisui Zorua, Hisui Zoroark",6570
 Hisui Zoroark,6571,55,100,60,125,60,110,510,Normal,Ghost,Illusion,Shadow Shield,"Hisui Zorua, Hisui Zoroark",6571
 Hisui Braviary,6628,110,83,70,112,70,65,510,Psychic,Flying,"Keen Eye, Sheer Force, Tinted Lens",Speed Boost,"Rufflet, Braviary, Hisui Braviary",6628
 Hisui Sliggoo,6705,58,75,83,83,113,40,452,Steel,Dragon,"Sap Sipper, Shell Armor, Gooey",Regenerator,"Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",6705
 Hisui Goodra,6706,80,100,100,110,150,60,600,Steel,Dragon,"Sap Sipper, Shell Armor, Gooey",Regenerator,"Goomy, Sliggoo, Goodra, Hisui Sliggoo, Hisui Goodra",6706
 Hisui Avalugg,6713,95,127,184,34,36,38,514,Ice,Rock,"Strong Jaw, Ice Body, Sturdy",Ice Scales,"Bergmite, Avalugg, Hisui Avalugg",6713
-Hisui Decidueye,6724,88,112,80,95,95,60,530,Grass,Fighting,"Overgrow, Scrappy",Sniper,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",6724
+Hisui Decidueye,6724,88,112,80,95,95,60,530,Grass,Fighting,"Overgrow, Scrappy",Super Luck,"Rowlet, Dartrix, Decidueye, Hisui Decidueye",6724
 Combat Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,,"Intimidate, Anger Point, Cud Chew",Stamina,"Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",8128
 Blaze Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,Fire,"Intimidate, Anger Point, Cud Chew",Adaptability,"Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",8128-blaze
 Aqua Paldea Tauros,8128,75,110,105,30,70,100,490,Fighting,Water,"Intimidate, Anger Point, Cud Chew",Adaptability,"Combat Paldea Tauros, Blaze Paldea Tauros, Aqua Paldea Tauros",8128-aqua
