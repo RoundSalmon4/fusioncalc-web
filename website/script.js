@@ -528,8 +528,8 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     if (opts.hidden_ability && hiddenAbility) {
         html += `<div class="ability-line"><span class="ability-label">Hidden:</span> ${escapeHtml(hiddenAbility)}</div>`;
     }
-    if (opts.passive && pokemon.passive && passiveOn) {
-        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(pokemon.passive)} (active)</div>`;
+    if (opts.passive && pokemon.passive) {
+        html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(pokemon.passive)} (${passiveOn ? 'active' : 'inactive'})</div>`;
     }
     
     // BST
@@ -672,8 +672,8 @@ function renderFusionDetails(p1, p2) {
                 html += `<div class="ability-line"><span class="ability-label">Active Effect:</span> <span${iceScalesNote}>${escapeHtml(parts.join('; '))}</span></div>`;
             }
         }
-        if (passiveAbility && passiveOn) {
-            html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(passiveAbility)} (active)</div>`;
+        if (passiveAbility) {
+            html += `<div class="passive-line"><span class="ability-label">Passive:</span> ${escapeHtml(passiveAbility)} (${passiveOn ? 'active' : 'inactive'})</div>`;
         }
     }
     
