@@ -2423,7 +2423,7 @@ const POKEMON_DATA = {
     "spAttack": 130,
     "spDefense": 105,
     "speed": 120,
-    "bst": 660,
+    "bst": 620,
     "type1": "Water",
     "type2": "Psychic",
     "abilities": "Huge Power",
@@ -8763,7 +8763,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "",
     "abilities": "Limber, Own Tempo, Keen Eye",
-    "passive": "Intimidate",
+    "passive": "Pickup",
     "evolution": "Glameow, Purugly",
     "img": "431"
   },
@@ -8779,7 +8779,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "",
     "abilities": "Thick Fat, Own Tempo, Defiant",
-    "passive": "Intimidate",
+    "passive": "Fur Coat",
     "evolution": "Glameow, Purugly",
     "img": "432"
   },
@@ -14507,7 +14507,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
-    "passive": "Blaze",
+    "passive": "Intimidate",
     "evolution": "Litleo, Pyroar, Mega Pyroar",
     "img": "667"
   },
@@ -14523,7 +14523,7 @@ const POKEMON_DATA = {
     "type1": "Fire",
     "type2": "Normal",
     "abilities": "Rivalry, Unnerve, Moxie",
-    "passive": "Beast Boost",
+    "passive": "Intimidate",
     "evolution": "Litleo, Pyroar, Mega Pyroar",
     "img": "668"
   },
