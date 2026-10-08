@@ -978,7 +978,7 @@ function toggleDisplayOptions() {
 function resetDisplayOptions() {
     displayOptions.p1 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
     displayOptions.p2 = { type: true, abilities: true, hidden_ability: true, passive: true, bst: true, total_bst: true, evolution: true, damage: true };
-    displayOptions.fusion = { fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true };
+    displayOptions.fusion = { fused_sprite: true, fused_type: true, abilities: true, bst: true, total_bst: true, ability_effects: true, damage: true };
     
     document.querySelectorAll('#displayOptionsModal input[type="checkbox"]').forEach(cb => {
         cb.checked = true;
