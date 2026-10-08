@@ -183,6 +183,9 @@ jobs:
             const passiveCode = rec.pa;
             const passive = (passiveCode != null && abMap[Number(passiveCode)]) ? abMap[Number(passiveCode)] : '';
 
+            const hiddenCode = rec.ha;
+            const hidden = (hiddenCode != null && abMap[Number(hiddenCode)]) ? abMap[Number(hiddenCode)] : '';
+
             // evolution line
             let evoLine = '';
             const fa = rec.fa;
@@ -208,13 +211,13 @@ jobs:
               id: idVal,
               hp, attack: atk, defense: dfn, spAttack: spa, spDefense: spd, speed: spe,
               bst, type1, type2,
-              abilities, passive, 'evolution line': evoLine, img: imgVal
+              abilities, passive, hidden, 'evolution line': evoLine, img: imgVal
             });
           });
 
           // ---- Write CSV ----
           const cols = ['name','id','hp','attack','defense','spAttack','spDefense','speed','bst',
-                        'type1','type2','abilities','passive','evolution line','img'];
+                        'type1','type2','abilities','passive','hidden','evolution line','img'];
 
           function esc(v) {
             if (v === null || v === undefined) v = '';
@@ -242,6 +245,7 @@ jobs:
               type2: r.type2,
               abilities: r.abilities,
               passive: r.passive,
+              hidden: r.hidden,
               evolution: r['evolution line'],
               img: r.img
             };

@@ -480,7 +480,7 @@ function renderPokemonDetails(pokemon, panelKey, isFusion = false) {
     const passiveOn = document.getElementById('passiveActive').checked;
     
     const abilities = (pokemon.abilities || '').split(', ').filter(a => a);
-    const hiddenAbility = abilities[1] || '';
+    const hiddenAbility = pokemon.hidden !== undefined ? pokemon.hidden : (abilities.length > 1 ? abilities[abilities.length - 1] : '');
     const passiveAbility = pokemon.passive || '';
     
     const natureSelectId = panelKey === 'p1' ? 'activeNature' : 'activeNature2';
@@ -590,7 +590,7 @@ function renderFusionDetails(p1, p2) {
     const abilities = (p2.abilities || '').split(', ').filter(a => a);
     const selectedAbilityEl = document.getElementById('activeAbility');
     const activeAbility = selectedAbilityEl && selectedAbilityEl.value ? selectedAbilityEl.value : (abilities[0] || '');
-    const hiddenAbility = abilities[1] || '';
+    const hiddenAbility = p2.hidden !== undefined ? p2.hidden : (abilities.length > 1 ? abilities[abilities.length - 1] : '');
     const passiveAbility = p1.passive || '';
     
     const activeAbilityUpper = activeAbility.toUpperCase();
