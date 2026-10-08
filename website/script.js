@@ -1,6 +1,7 @@
 /**
  * PokéRogue Fusion Calculator - BSD 3-Clause License
- * Copyright (c) 2024
+ * Copyright (c) 2024 Scarecrow-g59
+ * Copyright (c) 2026 RoundSalmon4
  */
 
 // ===== DATA & STATE =====

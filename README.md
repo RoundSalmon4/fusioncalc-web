@@ -34,3 +34,10 @@ Pokémon data is sourced from [PokeRogue-Dex](https://github.com/Sandstormer/Pok
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
+
+## License
+
+BSD 3-Clause — see [LICENSE](LICENSE). The bundled sprites and the
+generated Pokédex data come from PokéRogue / PokeRogue-Dex under their
+own licenses (CC BY-NC-SA 4.0 and AGPL-3.0); details in
+[NOTICE.md](NOTICE.md).
