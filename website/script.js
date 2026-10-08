@@ -215,7 +215,10 @@ const ABILITY_EFFECTS = {
     'FILTER': { halveSuperEffective: 0.75 },
     'SOLID ROCK': { halveSuperEffective: 0.75 },
     'PRISM ARMOR': { halveSuperEffective: 0.75 },
-    'ICE SCALES': { halveSpecial: 0.5 }
+    'ICE SCALES': { halveSpecial: 0.5 },
+    'FUR COAT': { halvePhysical: 0.5 },
+    'FLUFFY': { multiply: { Fire: 2 } },
+    'EELEVATE': { immunities: ['Ground'] }
 };
 
 // ===== UTILITY FUNCTIONS =====
@@ -310,6 +313,12 @@ function calculateTypeEffectiveness(t1, t2, activeAbility = null, passiveAbility
             if (eff.halveSpecial) {
                 for (const k in result) {
                     result[k] *= eff.halveSpecial;
+                }
+            }
+            // Fur Coat - reduce physical damage, same general reduction treatment as Ice Scales
+            if (eff.halvePhysical) {
+                for (const k in result) {
+                    result[k] *= eff.halvePhysical;
                 }
             }
         }
@@ -660,9 +669,18 @@ function renderFusionDetails(p1, p2) {
             if (eff) {
                 if (eff.immunities) parts.push(`immunities: ${eff.immunities.join(', ')}`);
                 if (eff.halve) parts.push(`halves: ${eff.halve.join(', ')}`);
+                if (eff.multiply) {
+                    const items = [];
+                    for (const [t, m] of Object.entries(eff.multiply)) items.push(t + ' ' + m + 'x');
+                    parts.push('increased damage taken: ' + items.join(', '));
+                }
                 if (eff.halveSpecial) {
                     parts.push(`halves special damage`);
                     iceScalesNote = ' title="Reduces special damage by 50%. Shown as general reduction since move category is unknown."';
+                }
+                if (eff.halvePhysical) {
+                    parts.push(`halves physical damage`);
+                    iceScalesNote = ' title="Reduces physical damage by 50%. Shown as general reduction since move category is unknown."';
                 }
                 if (eff.halveSuperEffective) parts.push(`reduces super-effective by 25%`);
             }
