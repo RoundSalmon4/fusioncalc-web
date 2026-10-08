@@ -6,18 +6,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "scarecrow-g59",
-  "license": "MIT",
+  "author": "roundsalmon4",
+  "license": "BSD-3-Clause",
   "description": "A Pokemon Fusion application",
   "devDependencies": {
     "http-server": "^14.1.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Scarecrow-g59/pokerogue-fusion.git#main"
+    "url": "git+https://github.com/RoundSalmon4/fusioncalc-web.git#main"
   },
   "bugs": {
-    "url": "https://github.com/Scarecrow-g59/pokerogue-fusion/issues"
+    "url": "https://github.com/RoundSalmon4/fusioncalc-web/issues"
   },
-  "homepage": "https://github.com/Scarecrow-g59/pokerogue-fusion/tree/main#readme"
+  "homepage": "https://roundsalmon4.github.io/fusioncalc-web/"
 }
