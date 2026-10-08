@@ -370,10 +370,10 @@ function renderDamageTable(effectiveness) {
     for (const [type, val] of Object.entries(effectiveness)) {
         const v = parseFloat(val);
         if (v === 0) grouped[0].push(type);
-        else if (v <= 0.25) grouped[0.25].push(type);
-        else if (v <= 0.5) grouped[0.5].push(type);
-        else if (v >= 4) grouped[4].push(type);
-        else if (v >= 2) grouped[2].push(type);
+        else if (v === 0.25) grouped[0.25].push(type);
+        else if (v === 0.5) grouped[0.5].push(type);
+        else if (v === 4) grouped[4].push(type);
+        else if (v === 2) grouped[2].push(type);
         else if (v === 1) grouped[1].push(type);
         else {
             if (!otherGroups[v]) otherGroups[v] = [];
