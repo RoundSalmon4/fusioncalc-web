@@ -446,7 +446,7 @@ function getFusionSprite(p1, p2) {
     // Use hue rotation to shift toward Pokemon 2's type color
     const hue = TYPE_HUE_ROTATIONS[type1] || 0;
     
-    return `<div class="pokemon-sprite fusion-sprite" title="Fusion sprite (${type1} type tint)">
+    return `<div class="pokemon-sprite" title="Fusion sprite (${type1} type tint)">
         <img src="${src1}" alt="fusion" style="filter: sepia(0.3) saturate(2) hue-rotate(${hue}deg);">
     </div>`;
 }
