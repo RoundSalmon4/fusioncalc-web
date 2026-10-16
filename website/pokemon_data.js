@@ -5791,7 +5791,7 @@ const POKEMON_DATA = {
     "type1": "Water",
     "type2": "Ground",
     "abilities": "Swift Swim",
-    "passive": "Drizzle",
+    "passive": "Regenerator",
     "hidden": "",
     "evolution": "Mudkip, Marshtomp, Swampert, Mega Swampert",
     "img": "260-mega"
@@ -6777,7 +6777,7 @@ const POKEMON_DATA = {
     "type1": "Electric",
     "type2": "",
     "abilities": "Minus, Volt Absorb",
-    "passive": "Power Spot",
+    "passive": "Friend Guard",
     "hidden": "Volt Absorb",
     "evolution": "Minun",
     "img": "312"
@@ -7745,8 +7745,8 @@ const POKEMON_DATA = {
     "bst": 565,
     "type1": "Dark",
     "type2": "Ghost",
-    "abilities": "Super Luck",
-    "passive": "Sharpness",
+    "abilities": "Sharpness",
+    "passive": "Super Luck",
     "hidden": "",
     "evolution": "Absol, Mega Absol, Mega Z Absol",
     "img": "359-mega-z"
@@ -9259,7 +9259,7 @@ const POKEMON_DATA = {
     "type1": "Normal",
     "type2": "Fighting",
     "abilities": "Scrappy",
-    "passive": "Super Luck",
+    "passive": "Long Reach",
     "hidden": "",
     "evolution": "Buneary, Lopunny, Mega Lopunny",
     "img": "428-mega"
@@ -9581,8 +9581,8 @@ const POKEMON_DATA = {
     "bst": 700,
     "type1": "Dragon",
     "type2": "",
-    "abilities": "Rough Skin",
-    "passive": "Levitate",
+    "abilities": "Levitate",
+    "passive": "Intimidate",
     "hidden": "",
     "evolution": "Gible, Gabite, Garchomp, Mega Garchomp, Mega Z Garchomp",
     "img": "445-mega-z"
@@ -9666,8 +9666,8 @@ const POKEMON_DATA = {
     "bst": 625,
     "type1": "Fighting",
     "type2": "Steel",
-    "abilities": "Inner Focus",
-    "passive": "Mega Launcher",
+    "abilities": "Aura Guard",
+    "passive": "Neuroforce",
     "hidden": "",
     "evolution": "Riolu, Lucario, Mega Lucario, Mega Z Lucario",
     "img": "448-mega-z"
@@ -10347,7 +10347,7 @@ const POKEMON_DATA = {
     "type1": "Psychic",
     "type2": "",
     "abilities": "Levitate",
-    "passive": "Magic Bounce",
+    "passive": "Aura Guard",
     "hidden": "",
     "evolution": "Uxie",
     "img": "480"
@@ -18013,7 +18013,7 @@ const POKEMON_DATA = {
     "bst": 630,
     "type1": "Bug",
     "type2": "Steel",
-    "abilities": "Shell Armor",
+    "abilities": "Tough Claws",
     "passive": "Regenerator",
     "hidden": "",
     "evolution": "Wimpod, Golisopod, Mega Golisopod",
@@ -21771,7 +21771,7 @@ const POKEMON_DATA = {
     "type1": "Fairy",
     "type2": "Flying",
     "abilities": "Cute Charm, Contrary",
-    "passive": "Fairy Aura",
+    "passive": "Cloud Nine",
     "hidden": "Contrary",
     "evolution": "Incarnate Enamorus, Therian Enamorus",
     "img": "905-incarnate"
@@ -22604,7 +22604,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Grass",
     "abilities": "Mycelium Might",
-    "passive": "Run Away",
+    "passive": "Water Absorb",
     "hidden": "",
     "evolution": "Toedscool, Toedscruel",
     "img": "948"
@@ -22621,7 +22621,7 @@ const POKEMON_DATA = {
     "type1": "Ground",
     "type2": "Grass",
     "abilities": "Mycelium Might",
-    "passive": "Prankster",
+    "passive": "Water Absorb",
     "hidden": "",
     "evolution": "Toedscool, Toedscruel",
     "img": "949"
