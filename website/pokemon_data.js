@@ -16639,7 +16639,7 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
     "img": "710"
   },
   "Small Pumpkaboo": {
@@ -16656,8 +16656,8 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-small"
   },
   "Large Pumpkaboo": {
     "id": 710,
@@ -16673,10 +16673,10 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well-Baked Body",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-large"
   },
-  "Super Pumpkaboo": {
+  "Jumbo Pumpkaboo": {
     "id": 710,
     "hp": 59,
     "attack": 66,
@@ -16690,8 +16690,8 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "710"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "710-jumbo"
   },
   "Gourgeist": {
     "id": 711,
@@ -16707,7 +16707,7 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Illuminate",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
     "img": "711"
   },
   "Small Gourgeist": {
@@ -16724,8 +16724,8 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Adaptability",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-small"
   },
   "Large Gourgeist": {
     "id": 711,
@@ -16741,10 +16741,10 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Well-Baked Body",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-large"
   },
-  "Super Gourgeist": {
+  "Jumbo Gourgeist": {
     "id": 711,
     "hp": 85,
     "attack": 100,
@@ -16758,8 +16758,8 @@ const POKEMON_DATA = {
     "abilities": "Pickup, Frisk, Insomnia",
     "passive": "Seed Sower",
     "hidden": "Insomnia",
-    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",
-    "img": "711"
+    "evolution": "Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",
+    "img": "711-jumbo"
   },
   "Bergmite": {
     "id": 712,

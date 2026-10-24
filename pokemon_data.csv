@@ -977,14 +977,14 @@ Goodra,706,90,100,70,110,150,80,600,Dragon,,"Sap Sipper, Hydration, Gooey",Poiso
 Klefki,707,57,80,91,80,87,75,470,Steel,Fairy,"Prankster, Magician",Levitate,Magician,Klefki,707
 Phantump,708,43,70,48,50,60,38,309,Ghost,Grass,"Natural Cure, Frisk, Harvest",Shadow Tag,Harvest,"Phantump, Trevenant",708
 Trevenant,709,85,110,76,65,82,56,474,Ghost,Grass,"Natural Cure, Frisk, Harvest",Shadow Tag,Harvest,"Phantump, Trevenant",709
-Pumpkaboo,710,49,66,70,44,55,51,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
-Small Pumpkaboo,710,44,66,70,44,55,56,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
-Large Pumpkaboo,710,54,66,70,44,55,46,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
-Super Pumpkaboo,710,59,66,70,44,55,41,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",710
-Gourgeist,711,65,90,122,58,75,84,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
-Small Gourgeist,711,55,85,122,58,75,99,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
-Large Gourgeist,711,75,95,122,58,75,69,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
-Super Gourgeist,711,85,100,122,58,75,54,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Super Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Super Gourgeist",711
+Pumpkaboo,710,49,66,70,44,55,51,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",710
+Small Pumpkaboo,710,44,66,70,44,55,56,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",710-small
+Large Pumpkaboo,710,54,66,70,44,55,46,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",710-large
+Jumbo Pumpkaboo,710,59,66,70,44,55,41,335,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",710-jumbo
+Gourgeist,711,65,90,122,58,75,84,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Illuminate,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",711
+Small Gourgeist,711,55,85,122,58,75,99,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Adaptability,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",711-small
+Large Gourgeist,711,75,95,122,58,75,69,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Well-Baked Body,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",711-large
+Jumbo Gourgeist,711,85,100,122,58,75,54,494,Ghost,Grass,"Pickup, Frisk, Insomnia",Seed Sower,Insomnia,"Pumpkaboo, Small Pumpkaboo, Large Pumpkaboo, Jumbo Pumpkaboo, Gourgeist, Small Gourgeist, Large Gourgeist, Jumbo Gourgeist",711-jumbo
 Bergmite,712,55,69,85,32,35,28,304,Ice,,"Own Tempo, Ice Body, Sturdy",Ice Scales,Sturdy,"Bergmite, Avalugg, Hisui Avalugg",712
 Avalugg,713,95,117,184,44,46,28,514,Ice,,"Own Tempo, Ice Body, Sturdy",Ice Scales,Sturdy,"Bergmite, Avalugg, Hisui Avalugg",713
 Noibat,714,40,30,35,45,40,55,245,Flying,Dragon,"Frisk, Infiltrator, Telepathy",Cheek Pouch,Telepathy,"Noibat, Noivern",714
